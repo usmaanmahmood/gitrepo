@@ -8,6 +8,14 @@
     <meta name="author" content="">
 
     <title>Prototype</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
@@ -44,7 +52,7 @@
         <p class="lead">Lead paragraph</p>
 	<p>Paragraph 2</p>
 <?php
-$result = shell_exec('perlscript.pl'); # in linux $result = shell_exec(perl perlscript.pl)
+$result = exec('perlscript.pl'); # in linux $result = shell_exec(perl perlscript.pl)
 echo $result;
 ?>
       </div>
