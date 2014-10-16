@@ -37,7 +37,7 @@ sub runQuery
   print SOCK "$groups\n";
   print SOCK "$students\n";
   print SOCK "$courses\n";
-  my $OldSelect = select SOCK; $|=1; select $OldSelect;
+  #my $OldSelect = select SOCK; $|=1; select $OldSelect;
   my $result = "";
   my $line;
   while (defined($line = <SOCK>))
@@ -52,7 +52,7 @@ sub runQuery
 
 sub getProfile
 {
-  runQuery("registration-details", "", "", "", "");
+  runQuery("profile", "", "", "", "");
 } # getProfile
 
 
@@ -64,5 +64,5 @@ $results = getProfile;
 #print "\n\n------****------\n\n\n";
 
 
-#$results = runQuery("marks-table: all", "11-12-1", "", "", "162L 181L");
+$results = runQuery("marks-table: all", "11-12-1", "", "", "162L 181L");
 print $results;

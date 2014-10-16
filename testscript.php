@@ -11,7 +11,7 @@ function queryServer($command)
  // connect to the server on the specified port (4000).
  // here, the server is 127.0.0.1, referring to the local machine,
  // which is forwarded on to carousel (Section 5.2.1)
- socket_connect ( $sock , "carousel", 4000 );
+ socket_connect ($sock , "carousel", 4000);
 
  // log in to the server
  socket_write($sock, "LKJHGFDSA\n");
@@ -37,6 +37,6 @@ function queryServer($command)
  return $results;
 }
 
-echo queryserver("full-story: with notes\n \n \n \n \n");
+echo queryserver("marks-table: all\n 11-12-1\n \n \n 162L 181L\n");
 
 ?>
