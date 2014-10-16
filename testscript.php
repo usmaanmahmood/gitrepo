@@ -15,8 +15,8 @@ function queryServer($command)
 
  // log in to the server
  socket_write($sock, "LKJHGFDSA\n");
- socket_write($sock, "parsonb4\n");
- socket_write($sock, "GYLBUWNDID\n");
+ socket_write($sock, "mahmoou1\n");
+ socket_write($sock, "LQKUGRIRDE\n");
 
  // $command is the variable taken from the web application
  socket_write($sock, $command . "\n");
@@ -24,7 +24,6 @@ function queryServer($command)
  // wait for the results
  while ($line = socket_read($sock, "10000"))
  {
-
 	 // “++WORKING” is sent by the server to indicate that the
 	 // request is being processed
 	 if ($line != "++WORKING\n")
@@ -40,6 +39,6 @@ function queryServer($command)
  return $results;
 }
 
-queryServer("marks-table: all", "11-12-1", "", "", "162L 181L");
+queryServer("marks-table: all(11-12-1 ; ; ; 162L 181L");
 
 ?>
