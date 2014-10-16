@@ -11,7 +11,7 @@ function queryServer($command)
  // connect to the server on the specified port (4000).
  // here, the server is 127.0.0.1, referring to the local machine,
  // which is forwarded on to carousel (Section 5.2.1)
- socket_connect ( $sock , "127.0.0.1", 4000 );
+ socket_connect ( $sock , "carousel.cs.man.ac.uk", 4000 );
 
  // log in to the server
  socket_write($sock, "LKJHGFDSA\n");
