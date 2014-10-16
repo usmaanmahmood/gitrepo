@@ -39,6 +39,6 @@ function queryServer($command)
  return $results;
 }
 
-echo queryServer("marks-table: all(11-12-1 ; ; ; 162L 181L");
-echo "\nhello";
+echo queryServer("registration-details: with lab groups(; ; ; )");
+echo "hello";
 ?>
