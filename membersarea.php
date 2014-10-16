@@ -93,7 +93,7 @@
 	 return nl2br(str_replace(' ', '&nbsp;', $results));
 	}
 
-	echo queryserver("marks-table: all\n 11-12-1\n \n \n 162L 181L\n");
+	echo queryserver("marks-table: all\n 11-12-1\n \n \n 161L 181L\n");
 ?></p>
       </div>
 
