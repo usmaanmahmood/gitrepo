@@ -51,6 +51,7 @@
         <h1>Heading</h1>
         <p class="lead">Lead paragraph</p>
 	<p>Paragraph 2</p>
+<p style="font-family: Courier New;" ">
 <?php
 	function queryServer($command)
 	{
@@ -93,7 +94,7 @@
 	}
 
 	echo nl2br(queryserver("marks-table: all\n 11-12-1\n \n \n 162L 181L\n"));
-?>
+?></p>
       </div>
 
     </div><!-- /.container -->

@@ -51,7 +51,7 @@
         <h1>Heading</h1>
         <p class="lead">Lead paragraph</p>
 	<p>Paragraph 2</p>
-<p style="font-family: "Lucida Console", Monaco, monospace">
+<p style="font-family: Courier New; text-align:left;" ">
 <?php
 	function queryServer($command)
 	{
