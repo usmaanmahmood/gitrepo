@@ -40,5 +40,5 @@ function queryServer($command)
 }
 
 echo queryServer("marks-table: all(11-12-1 ; ; ; 162L 181L");
-echo "\nhello":
+echo "\nhello";
 ?>
