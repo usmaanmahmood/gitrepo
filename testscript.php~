@@ -11,7 +11,7 @@ function queryServer($command)
  // connect to the server on the specified port (4000).
  // here, the server is 127.0.0.1, referring to the local machine,
  // which is forwarded on to carousel (Section 5.2.1)
- socket_connect ( $sock , "carousel.cs.man.ac.uk", 4000 );
+ socket_connect ( $sock , "carousel", 4000 );
 
  // log in to the server
  socket_write($sock, "LKJHGFDSA\n");
@@ -19,19 +19,17 @@ function queryServer($command)
  socket_write($sock, "LQKUGRIRDE\n");
 
  // $command is the variable taken from the web application
- socket_write($sock, $command . "\n");
+ socket_write($sock, $command);
 
  // wait for the results
- while ($line = socket_read($sock, "10000"))
+ while ($line = socket_read($sock, "100000"))
  {
-	 // “++WORKING” is sent by the server to indicate that the
-	 // request is being processed
-	 if ($line != "++WORKING\n")
-		 $results .= $line;
+ 	$results .= $line;
  }
 
  // remember to shut down the server connection to
  // allow other requests
+ $results.=socket_strerror(socket_last_error($sock))
  socket_shutdown($sock, 2);
  socket_close($sock);
 
@@ -39,6 +37,6 @@ function queryServer($command)
  return $results;
 }
 
-echo queryServer("registration-details: with lab groups(; ; ; )");
-echo "hello";
+echo queryserver("full-story: with notes\n \n \n \n \n");
+
 ?>

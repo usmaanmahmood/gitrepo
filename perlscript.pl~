@@ -52,7 +52,7 @@ sub runQuery
 
 sub getProfile
 {
-  runQuery("profile", "", "", "", "");
+  runQuery("registration-details", "", "", "", "");
 } # getProfile
 
 
