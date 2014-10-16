@@ -24,8 +24,8 @@ function queryServer($command)
  // wait for the results
  while ($line = socket_read($sock, "100000"))
  {
- 	$results .= $line;
-	$results .= "<br />";
+ 	$results = $line;
+	#$results .= "<br />";
  }
 
  // remember to shut down the server connection to
@@ -35,9 +35,11 @@ function queryServer($command)
  socket_close($sock);
 
  // the results from the server are returned
+
+
  return $results;
 }
 
-echo queryserver("marks-table: all\n 11-12-1\n \n \n 162L 181L\n");
+echo nl2br(queryserver("marks-table: all\n 11-12-1\n \n \n 162L 181L\n"));
 
 ?>
