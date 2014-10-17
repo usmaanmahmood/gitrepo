@@ -9,9 +9,7 @@ function queryServer($command)
  // create a new socket object
  $sock = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
 
- // connect to the server on the specified port (4000).
- // here, the server is 127.0.0.1, referring to the local machine,
- // which is forwarded on to carousel (Section 5.2.1)
+ // connect to the server on the specified port (4000)
  socket_connect ($sock , "carousel", 4000);
 
  // log in to the server
@@ -19,7 +17,6 @@ function queryServer($command)
  socket_write($sock, "mahmoou1\n");
  socket_write($sock, "LQKUGRIRDE\n");
 
- // $command is the variable taken from the web application
  socket_write($sock, $command);
 
  // wait for the results

@@ -1,4 +1,4 @@
-<span style="font-family: "Lucida Console", Monaco, monospace">
+<p style="font-family: "Lucida Console", Monaco, monospace">
 <?php
 
 function queryServer($command)
@@ -43,4 +43,4 @@ function queryServer($command)
 
 echo nl2br(queryserver("marks-table: all\n 11-12-1\n \n \n 162L 181L\n"));
 
-?></span>
+?></p>
