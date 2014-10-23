@@ -39,5 +39,5 @@ header("location:querylist.php");
 }
 else {
 echo "Wrong Username or Password";
-}*/
+}
 ?>
