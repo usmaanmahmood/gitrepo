@@ -34,8 +34,8 @@ $num_rows = $result->num_rows;
 if($num_rows=1){
 
 // Register $myusername, $mypassword and redirect to file "customer_area.php"
-session_register("username");
-session_register("password"); 
+$_SESSION['username'] = $username;
+$_SESSION['password'] = $password;
 header("location:querylist.php");
 }
 else {
