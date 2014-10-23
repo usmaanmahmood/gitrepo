@@ -27,7 +27,8 @@
 session_start();
 if(empty($_SESSION['username']))
 {
-header("location:login.php");
+echo 'USERNAME IS EMPTY';
+//header("location:login.php");
 }
 
 include 'config.php' ?>
