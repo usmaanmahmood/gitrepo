@@ -25,8 +25,10 @@
   <body>
 <?php
 session_start();
-if(!isset(username)){
+if(empty($_SESSION['username']))
+{
 header("location:login.php");
+}
 
 include 'config.php' ?>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
