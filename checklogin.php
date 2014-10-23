@@ -8,7 +8,7 @@ $database_pass = 'manchester';
 $database_name = 'mmapxum2';
 
 // Connect to the database
-$mysqli = new mysqli($database_host, $database_user, $database_pass, $database_name);
+$mysqli = mysqli_connect($database_host, $database_user, $database_pass, $database_name);
 
 // Check for errors before doing anything else
 if($mysqli -> connect_error) {
