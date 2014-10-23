@@ -47,7 +47,8 @@ include 'config.php' ?>
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#login">Login</a></li>
+            <li><a href="login.php">Login</a></li>
+		<li><a href="logout.php">Logout</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
