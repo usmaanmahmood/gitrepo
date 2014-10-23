@@ -27,6 +27,8 @@ $password = mysqli_real_escape_string($mysqli, $password);
 $sql="SELECT * FROM Users WHERE username='$username' and password='$password'";
 $result=mysqli_query($mysqli, $sql);
 
+echo $result;
+
 // Mysql_num_row is counting table row
 $count=mysqli_num_rows($result);
 
