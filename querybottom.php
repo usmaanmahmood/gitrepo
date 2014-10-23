@@ -1,19 +1,19 @@
-<a href="querylist.php">profile</a>
-<a href="Welcome-and-help.php">Welcome and help</a>
-<a href="If-the-data-is-wrong.php">If the data is wrong</a><a href="registration-details.php">registration-details</a>
-<a href="registration-details--with-lab-groups.php">registration-details: with lab groups</a>
-<a href="display-picture.php">display-picture</a>
-<a href="time-table--remaining.php">time-table: remaining</a>
-<a href="time-table--full.php">time-table: full</a><a href="attendance-summary.php">attendance-summary</a>
-<a href="marks-table--all.php">marks-table: all</a>
-<a href="marks-table--fails-only.php">marks-table: fails only</a>
-<a href="expected.php">expected</a>
-<a href="excuses.php">excuses</a>
-<a href="irregularities.php">irregularities</a>
-<a href="failure-predictions.php">failure-predictions</a>
-<a href="full-story--with-notes.php">full-story: with notes</a>
-<a href="full-story--without-notes.php">full-story: without notes</a>
-<a href="full-story--chronological.php">full-story: chronological</a>
+<br /><a href="querylist.php">profile</a>
+<br /><a href="Welcome-and-help.php">Welcome and help</a>
+<br /><a href="If-the-data-is-wrong.php">If the data is wrong</a><br /><a href="registration-details.php">registration-details</a>
+<br /><a href="registration-details--with-lab-groups.php">registration-details: with lab groups</a>
+<br /><a href="display-picture.php">display-picture</a>
+<br /><a href="time-table--remaining.php">time-table: remaining</a>
+<br /><a href="time-table--full.php">time-table: full</a><br /><a href="attendance-summary.php">attendance-summary</a>
+<br /><a href="marks-table--all.php">marks-table: all</a>
+<br /><a href="marks-table--fails-only.php">marks-table: fails only</a>
+<br /><a href="expected.php">expected</a>
+<br /><a href="excuses.php">excuses</a>
+<br /><a href="irregularities.php">irregularities</a>
+<br /><a href="failure-predictions.php">failure-predictions</a>
+<br /><a href="full-story--with-notes.php">full-story: with notes</a>
+<br /><a href="full-story--without-notes.php">full-story: without notes</a>
+<br /><a href="full-story--chronological.php">full-story: chronological</a>
       </div>
 
     </div><!-- /.container -->
