@@ -1,43 +1,32 @@
 <p style="font-family: "Lucida Console", Monaco, monospace">
 <?php
 
-function queryServer($command)
+function query($command)
 {
- // create a new variable to hold the results
- $results = '';
+	$socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP); // create new socket
+	socket_connect ($socket , "carousel", 4000); // connect to arcade on port 4000
 
- // create a new socket object
- $sock = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
+	socket_write($socket, "LKJHGFDSA\n"); // hello token
+	socket_write($socket, "mahmoou1\n"); // arcade user
+	socket_write($socket, "LQKUGRIRDE\n"); // arcade pass
+	socket_write($socket, $command); // this sends it off
 
- // connect to the server on the specified port (4000)
- socket_connect ($sock , "carousel", 4000);
+	$results = "";
 
- // log in to the server
- socket_write($sock, "LKJHGFDSA\n");
- socket_write($sock, "mahmoou1\n");
- socket_write($sock, "LQKUGRIRDE\n");
+	// accept data until remote host closes the connection
+	while ($socketoutput = socket_read($socket, "100000"))
+	{
+		$results .= $socketoutput;
+		$results .= "<br />";
+	}
 
- socket_write($sock, $command);
+	$results.=socket_strerror(socket_last_error($socket)); // debugging
+	socket_shutdown($socket, 2); // 2 = shutdown reading and writing
+	socket_close($socket);
 
- // wait for the results
- while ($line = socket_read($sock, "100000"))
- {
- 	$results = $line;
-	#$results .= "<br />";
- }
-
- // remember to shut down the server connection to
- // allow other requests
- $results.=socket_strerror(socket_last_error($sock));
- socket_shutdown($sock, 2);
- socket_close($sock);
-
- // the results from the server are returned
-
-
- return $results;
+	return $results;
 }
 
-echo nl2br(queryserver("marks-table: all\n 11-12-1\n \n \n 162L 181L\n"));
+echo nl2br(query("marks-table: all\n 11-12-1\n \n \n 162L 181L\n"));
 
 ?></p>

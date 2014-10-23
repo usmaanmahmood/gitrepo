@@ -52,7 +52,7 @@
         <p class="lead">Lead paragraph</p>
 	<p>Paragraph 2</p>
 <p style="text-align:left;font-family:monospace,monospace;font-size:1em;">
-<?php include 'testscript.php' ?></p>
+<?php include testscript.php ?></p>
       </div>
 
     </div><!-- /.container -->
