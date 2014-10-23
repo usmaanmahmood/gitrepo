@@ -26,7 +26,7 @@ $username = mysqli_real_escape_string($mysqli, $username);
 $password = mysqli_real_escape_string($mysqli, $password);
 
 $sql="SELECT * FROM User WHERE CentralUsername='$username' and WebPassword='$password'";
-$result=mysqli_query($mysqli, $sql);
+$result=$mysqli->query($sql);
 
 
 // If result matched $username and $password, table row must be 1 row
