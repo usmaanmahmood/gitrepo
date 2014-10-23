@@ -25,7 +25,7 @@
   <body>
 <?php
 session_start();
-if(!session_is_registered(username)){
+if(!isset(username)){
 header("location:login.php");
 
 include 'config.php' ?>
