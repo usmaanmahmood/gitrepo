@@ -53,9 +53,20 @@
 	<p>Paragraph 2</p>
 <p style="text-align:left;font-family:monospace,monospace;font-size:1em;">
 <?php 
-echo nl2br(str_replace(' ', '&nbsp;', classicQuery("marks-table: all\n 11-12-1\n \n \n 162L 181L\n"))); 
+$query		= "profile";
+$database	= "";
+$group		= "";
+$student	= "";
+$module		= "";
+
+
+
+echo nl2br(str_replace(' ', '&nbsp;', classicQuery($query, $database, $group, $student, $module))); 
+
+
 
  ?></p>
+<a href="
       </div>
 
     </div><!-- /.container -->
