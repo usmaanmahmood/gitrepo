@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(empty($_SESSION['username']))
+{
+echo 'USERNAME IS EMPTY';
+//header("location:login.php");
+}
+
+include 'config.php' ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,15 +32,7 @@
   </head>
 
   <body>
-<?php
-session_start();
-if(empty($_SESSION['username']))
-{
-echo 'USERNAME IS EMPTY';
-//header("location:login.php");
-}
 
-include 'config.php' ?>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
