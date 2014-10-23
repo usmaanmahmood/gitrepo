@@ -1,7 +1,7 @@
 <?php include "querytop.php" ?>
 <p style="text-align:left;font-family:monospace,monospace;font-size:1em;">
 <?php 
-$query		= "profile";
+$query		= "irregularities";
 $database	= "";
 $group		= "";
 $student	= "";
