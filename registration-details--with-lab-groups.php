@@ -2,7 +2,7 @@
 <p style="text-align:left;font-family:monospace,monospace;font-size:1em;">
 <?php 
 $query		= "registration-details: with lab groups";
-$database	= "";
+$database	= "12-13-2X 12-13-2 11-12-1X 11-12-1";
 $group		= "";
 $student	= "";
 $module		= "";

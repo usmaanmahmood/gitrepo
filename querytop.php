@@ -23,7 +23,12 @@
   </head>
 
   <body>
-<?php include 'config.php' ?>
+<?php
+session_start();
+if(!session_is_registered(username)){
+header("location:login.php");
+
+include 'config.php' ?>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">

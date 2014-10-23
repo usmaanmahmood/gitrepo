@@ -32,10 +32,10 @@
 
     <div class="container">
 
-      <form class="form-signin" role="form">
+      <form class="form-signin" role="form" method="post" action"checklogin.php">
         <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="text" class="form-control" placeholder="Central Username" required autofocus maxlength=8>
-        <input type="password" class="form-control" placeholder="Web Password" required maxlength=8>
+        <input type="text" class="form-control" placeholder="Central Username" name="username" required autofocus maxlength=8>
+        <input type="password" class="form-control" placeholder="Web Password" name="password" required maxlength=8>
         <label class="checkbox">
           <input type="checkbox" value="remember-me"> Remember me
         </label>
