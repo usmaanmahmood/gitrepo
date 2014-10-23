@@ -22,13 +22,13 @@ $password=$_POST['password'];
 // To protect MySQL injection
 $username = stripslashes($username);
 $password = stripslashes($password);
-$username = mysql_real_escape_string($username);
-$password = mysql_real_escape_string($password);
+$username = mysqli_real_escape_string($username);
+$password = mysqli_real_escape_string($password);
 $sql="SELECT * FROM Users WHERE username='$username' and password='$password'";
-$result=mysql_query($sql);
+$result=mysqli_query($sql);
 
 // Mysql_num_row is counting table row
-$count=mysql_num_rows($result);
+$count=mysqli_num_rows($result);
 
 // If result matched $username and $password, table row must be 1 row
 if($count==1){
