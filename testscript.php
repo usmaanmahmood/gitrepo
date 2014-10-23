@@ -1,4 +1,3 @@
-<p style="font-family: "Lucida Console", Monaco, monospace">
 <?php
 
 function query($command)
