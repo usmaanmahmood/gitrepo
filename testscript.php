@@ -27,6 +27,6 @@ function query($command)
 	return $results;
 }
 
-echo nl2br(query("marks-table: all\n 11-12-1\n \n \n 162L 181L\n"));
+echo nl2br(str_replace(' ', '&nbsp;', query("marks-table: all\n 11-12-1\n \n \n 162L 181L\n"))); 
 
 ?></p>
