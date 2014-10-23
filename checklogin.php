@@ -24,7 +24,7 @@ $username = stripslashes($username);
 $password = stripslashes($password);
 $username = mysql_real_escape_string($username);
 $password = mysql_real_escape_string($password);
-$sql="SELECT * FROM $tbl_name WHERE username='$username' and password='$password'";
+$sql="SELECT * FROM Users WHERE username='$username' and password='$password'";
 $result=mysql_query($sql);
 
 // Mysql_num_row is counting table row
