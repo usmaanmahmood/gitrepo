@@ -34,9 +34,11 @@ $num_rows = $result->num_rows;
 if($num_rows=1){
 
 // Register $myusername, $mypassword and redirect to file "customer_area.php"
-$_SESSION['username'] = $username;
-$_SESSION['password'] = $password;
-header("location:querylist.php");
+$_SESSION["username"] = $username;
+$_SESSION["password"] = $password;
+echo $num_rows;
+echo $_SESSION["username"];
+//header("location:querylist.php");
 }
 else {
 echo "Wrong Username or Password";
