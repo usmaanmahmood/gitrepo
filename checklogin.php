@@ -8,7 +8,7 @@ $database_pass = 'manchester';
 $database_name = 'mmapxum2';
 
 // Connect to the database
-$mysqli = mysqli_connect($database_host, $database_user, $database_pass, $database_name);
+$mysqli = new mysqli($database_host, $database_user, $database_pass, $database_name);
 
 // Check for errors before doing anything else
 if($mysqli -> connect_error) {
@@ -24,7 +24,7 @@ $username = stripslashes($username);
 $password = stripslashes($password);
 $username = mysqli_real_escape_string($mysqli, $username);
 $password = mysqli_real_escape_string($mysqli, $password);
-$sql="SELECT * FROM Users WHERE username='$username' and password='$password'";
+$sql="SELECT * FROM User WHERE username='$username' and password='$password'";
 $result=mysqli_query($mysqli, $sql);
 
 echo $result;
