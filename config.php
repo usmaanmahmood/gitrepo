@@ -31,11 +31,11 @@ function classicQuery($query, $database, $group, $student, $module)
 	socket_connect ($socket , "carousel", 4000); // connect to arcade on port 4000
 
 	$username = $_SESSION['username']; 
-	$arcadepassword = $_SESSION['arcade']; 
+	$arcadepassword = $_SESSION['arcadepassword']; 
 
 	socket_write($socket, "LKJHGFDSA\n"); // hello token
 	socket_write($socket, $username . "\n"); // arcade user
-	socket_write($socket, "LQKUGRIRDE\n"); // arcade pass
+	socket_write($socket, $arcadepassword . "\n"); // arcade pass
 	$fullquery = $query . "\n" . $database . "\n" . $group . "\n" . $student . "\n" . $module . "\n";
 	socket_write($socket, $fullquery); // this sends it off
 
