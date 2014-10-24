@@ -17,7 +17,7 @@ if($mysqli -> connect_error) {
 
 // SELECT ALL THE THINGS
 if($result = $mysqli -> query("SELECT * FROM User")) {
-    printf("Select returned %d rows.\n", $result -> num_rows);
+    //printf("Select returned %d rows.\n", $result -> num_rows);
 
     $result -> close(); // Remember to release the result set
 }

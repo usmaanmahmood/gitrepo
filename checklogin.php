@@ -37,9 +37,12 @@ session_start();
 // Register $myusername, $mypassword and redirect to file "customer_area.php"
 $_SESSION["username"] = $username;
 $_SESSION["arcadepassword"] = $result->fetch_assoc()['ArcadePassword'];
+$result -> close();
+$mysqli -> close();
 header("location:querylist.php");
 }
 else {
 echo "Wrong Username or Password";
+$mysqli -> close();
 }
 ?>
