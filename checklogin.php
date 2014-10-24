@@ -25,21 +25,22 @@ $password = stripslashes($password);
 $username = mysqli_real_escape_string($mysqli, $username);
 $password = mysqli_real_escape_string($mysqli, $password);
 
-$sql="SELECT * FROM User WHERE CentralUsername='$username' and WebPassword='$password'";
+$sql="SELECT ArcadePassword FROM User WHERE CentralUsername='$username' and WebPassword='$password'";
 $result=$mysqli->query($sql);
 
 $num_rows = $result->num_rows;
+
 
 // If result matched $username and $password, table row must be 1 row
 if($num_rows==1){
 session_start();
 // Register $myusername, $mypassword and redirect to file "customer_area.php"
 $_SESSION["username"] = $username;
-$_SESSION["password"] = $password;
+//$_SESSION["arcadepassword"] = ;
+  echo $result->fetch_assoc()['ArcadePassword'];
 //header("location:querylist.php");
 }
 else {
 echo "Wrong Username or Password";
 }
-echo $num_rows . ' ' . $username . ' ' . $password;
 ?>
