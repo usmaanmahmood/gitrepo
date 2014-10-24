@@ -31,7 +31,7 @@ $result=$mysqli->query($sql);
 $num_rows = $result->num_rows;
 
 // If result matched $username and $password, table row must be 1 row
-if($num_rows=1){
+if($num_rows==1){
 session_start();
 // Register $myusername, $mypassword and redirect to file "customer_area.php"
 $_SESSION["username"] = $username;
