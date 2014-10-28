@@ -33,7 +33,7 @@ $result=$mysqli->query($sql) or die($mysqli->error.__LINE__);;
 
 if ($result == false)
 {
-echo "registration failed."
+echo "registration failed.";
 }
 else
 {
