@@ -33,10 +33,8 @@ $result=$mysqli->query($sql) or die($mysqli->error.__LINE__);
 
 if ($mysqli->affected_rows <> -1)
 {
-while ($row = $result->fetch_array(MYSQLI_NUM)) {
-        echo $row[0];
-    }
-
+$row = $result->fetch_array(MYSQLI_NUM));
+echo $row[0];
 echo "Username is new ok";
 session_start();
 // Register $myusername, $mypassword and redirect to file "customer_area.php"
