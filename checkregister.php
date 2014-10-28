@@ -31,24 +31,24 @@ $arcadepassword = mysqli_real_escape_string($mysqli, $arcadepassword);
 $sql="INSERT INTO User VALUES ('$centralusername','$webpassword','$arcadepassword')";
 $result=$mysqli->query($sql) or die($mysqli->error.__LINE__);;
 
-
+if ($result == false)
+{
+echo "registration failed."
+}
+else
+{
 // If result matched $username and $password, table row must be 1 row
 while ($row = $result->fetch_array(MYSQLI_NUM)) {
         echo $row[0];
     }
-if (strpos($row[0],'Duplicate') !== true)
-{
-	echo "Username is new ok";
-	session_start();
-	// Register $myusername, $mypassword and redirect to file "customer_area.php"
-	$_SESSION["username"] = $centralusername;
-	$_SESSION["arcadepassword"] = $arcadepassword;
-	$result -> close();
-	$mysqli -> close();
-	//header("location:querylist.php");
-}
-else {
-	echo "Username already exists";
-	$mysqli -> close();
+
+echo "Username is new ok";
+session_start();
+// Register $myusername, $mypassword and redirect to file "customer_area.php"
+$_SESSION["username"] = $centralusername;
+$_SESSION["arcadepassword"] = $arcadepassword;
+$result -> close();
+$mysqli -> close();
+//header("location:querylist.php");
 }
 ?>
