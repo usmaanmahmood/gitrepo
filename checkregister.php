@@ -31,7 +31,7 @@ $arcadepassword = mysqli_real_escape_string($mysqli, $arcadepassword);
 $sql="INSERT INTO User VALUES ('$centralusername','$webpassword','$arcadepassword')";
 $result=$mysqli->query($sql) or die($mysqli->error.__LINE__);
 
-if ($mysqli->affected_rows == 1)
+if ($mysqli->affected_rows <> -1)
 {
 while ($row = $result->fetch_array(MYSQLI_NUM)) {
         echo $row[0];
