@@ -33,10 +33,12 @@ $result=$mysqli->query($sql) or die($mysqli->error.__LINE__);;
 
 
 // If result matched $username and $password, table row must be 1 row
-if($result->num_rows==1){
 while ($row = $result->fetch_array(MYSQLI_NUM)) {
         echo $row[0];
     }
+if (strpos($row[0],'Duplicate') !== true)
+{
+	echo "Username is new ok";
 	session_start();
 	// Register $myusername, $mypassword and redirect to file "customer_area.php"
 	$_SESSION["username"] = $centralusername;
