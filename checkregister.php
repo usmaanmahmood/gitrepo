@@ -31,16 +31,11 @@ $arcadepassword = mysqli_real_escape_string($mysqli, $arcadepassword);
 $sql="INSERT INTO User VALUES ('$centralusername','$webpassword','$arcadepassword')";
 $result=$mysqli->query($sql) or die($mysqli->error.__LINE__);;
 echo $result;
-if ($result == false)
+if ($result)
 {
-echo "registration failed.";
-}
-else
-{
-// If result matched $username and $password, table row must be 1 row
-//while ($row = $result->fetch_array(MYSQLI_NUM)) {
- //       echo $row[0];
- //   }
+while ($row = $result->fetch_array(MYSQLI_NUM)) {
+        echo $row[0];
+    }
 
 echo "Username is new ok";
 session_start();
@@ -50,5 +45,9 @@ $_SESSION["arcadepassword"] = $arcadepassword;
 $result -> close();
 $mysqli -> close();
 //header("location:querylist.php");
+}
+else
+{
+echo "registration failed.";
 }
 ?>
