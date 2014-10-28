@@ -29,12 +29,10 @@ $webpassword = mysqli_real_escape_string($mysqli, $webpassword);
 $arcadepassword = mysqli_real_escape_string($mysqli, $arcadepassword);
 
 $sql="INSERT INTO User VALUES ('$centralusername','$webpassword','$arcadepassword')";
-$result=$mysqli->query($sql) or die($mysqli->error.__LINE__);
-
-if ($mysqli->affected_rows <> -1)
+if($mysqli->query($sql) === true)
 {
 $row = $result->fetch_array(MYSQLI_NUM);
-echo $row[0];
+echo $row[0];             
 echo "Username is new ok";
 session_start();
 // Register $myusername, $mypassword and redirect to file "customer_area.php"
