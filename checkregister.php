@@ -31,16 +31,16 @@ $arcadepassword = mysqli_real_escape_string($mysqli, $arcadepassword);
 $sql="INSERT INTO User VALUES ('$centralusername','$webpassword','$arcadepassword')";
 if($mysqli->query($sql) === true)
 {       
-echo "Username is new ok";
 session_start();
 // Register $myusername, $mypassword and redirect to file "customer_area.php"
 $_SESSION["username"] = $centralusername;
 $_SESSION["arcadepassword"] = $arcadepassword;
 $mysqli -> close();
-//header("location:querylist.php");
+header("location:querylist.php");
 }
 else
 {
-echo "registration failed.";
+$mysqli -> close();
+header("location:registrationfailed.php");
 }
 ?>
