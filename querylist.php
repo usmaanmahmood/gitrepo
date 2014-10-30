@@ -12,14 +12,14 @@ $result2 = nl2br($result);
 $result3 = preg_replace("/(?<=\s)\x20|\x20(?=\s)/", "&#160;", $result2);
 //echo $result3;
 
-echo "------------------------------------------------------------------------------\n";
+echo "------------------------------------------------------------------------------<br />";
 
 $startposition = strrpos($result, "++MODULESORTORDER"); // start of final ++MODULESTOORDER
 $stringcleanedup = substr($result, $startposition); // trim down to start (2 garbage lines still need removing)
 $lines = preg_split('/\r\n|\r|\n/', $stringcleanedup, 2); // remove first line
 $lines = preg_split('/\r\n|\r|\n/', $lines[1], 2); // remove second line so just have required list
 $lines = $lines[1];
-echo $lines . "\n";
+echo $lines . "<br />";
 
 $rowbyrow = explode("\n", $lines);
 
