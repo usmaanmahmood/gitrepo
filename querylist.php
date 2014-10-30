@@ -27,7 +27,7 @@ array_pop($rowbyrow); // remove the last line because its just empty space
 $sql = array();
 foreach( $rowbyrow as $row ) {
     $colsarray = explode(" ", $row);
-    $sql[] = '("mahmoou1", '.$colsarray[0].'", "'.$colsarray[1].'", "'.$colsarray[2].'", "'.$colsarray[3].'", "'.$colsarray[4].'")';
+    $sql[] = '("mahmoou1", "'.$colsarray[0].'", "'.$colsarray[1].'", "'.$colsarray[2].'", "'.$colsarray[3].'", "'.$colsarray[4].'")';
 }
 echo $sql[0];
 $mysqli -> query("INSERT INTO ProfileCache (arcadeusername, databasename, groupname, studentusername, studentname, module) VALUES ".implode(',', $sql));
