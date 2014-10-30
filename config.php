@@ -43,7 +43,8 @@ function classicQuery($query, $database, $group, $student, $module)
 
 	// accept data until remote host closes the connection
 	while ($socketoutput = socket_read($socket, "100000"))	{
-		$results .= $socketoutput;
+		if ($socketoutput <> '++WORKING')
+            $results .= $socketoutput;
 	}
 
 	$results.=socket_strerror(socket_last_error($socket)); // debugging
