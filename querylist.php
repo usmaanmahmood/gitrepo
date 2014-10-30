@@ -10,8 +10,6 @@ $module		= "";
 $result = classicQuery($query, $database, $group, $student, $module);
 $result = nl2br($result);
 $result = preg_replace("/(?<=\s)\x20|\x20(?=\s)/", "&#160;", $result);
-
-
 echo $result;
 
 
