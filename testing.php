@@ -203,16 +203,20 @@ $stringcleanedup = substr($string, $startposition); // trim down to start (2 gar
 $lines = preg_split('/\r\n|\r|\n/', $stringcleanedup, 2); // remove first line
 $lines = preg_split('/\r\n|\r|\n/', $lines[1], 2); // remove second line so just have required list
 $lines = $lines[1];
-echo $lines . "\n";
+//echo $lines . "\n";
 
 $rowbyrow = explode("\n", $lines);
+array_pop($rowbyrow); // remove the last line because its just empty space);
 
 $sql = array();
-foreach( $rowbyrow as $row ) {
+foreach( $rowbyrow as $key => $row ) {
     $colsarray = explode(" ", $row);
+    $rowbyrow[$key] = explode(" ", $row);
     $sql[] = '("'.$colsarray[0].'", "'.$colsarray[1].'", "'.$colsarray[2].'", "'.$colsarray[3].'", "'.$colsarray[4].'")';
 }
-echo $sql[0];
+unset($row);
+echo $rowbyrow[0][4] . "\n";
+echo $rowbyrow[1] . "\n";
 //mysql_query('INSERT INTO ProfileCache (arcadeusername, databasename, groupname, studentusername, studentname, module) VALUES '.implode(',', $sql));
 
 ?>
