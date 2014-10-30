@@ -22,6 +22,7 @@ $lines = $lines[1];
 echo nl2br($lines);
 
 $rowbyrow = explode("\n", $lines);
+array_pop($rowbyrow); // remove the last line because its just empty space
 
 $sql = array();
 foreach( $rowbyrow as $row ) {
