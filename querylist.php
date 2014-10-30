@@ -29,6 +29,6 @@ foreach( $rowbyrow as $row ) {
     $sql[] = '("'.$colsarray[0].'", "'.$colsarray[1].'", "'.$colsarray[2].'", "'.$colsarray[3].'", "'.$colsarray[4].'")';
 }
 echo $sql[0];
-//mysql_query('INSERT INTO ProfileCache (arcadeusername, databasename, groupname, studentusername, studentname, module) VALUES '.implode(',', $sql));
+mysql_query('INSERT INTO ProfileCache (arcadeusername, databasename, groupname, studentusername, studentname, module) VALUES '.implode(',', $sql));
  ?></p>
 <?php include "querybottom.php" ?>

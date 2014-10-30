@@ -47,7 +47,7 @@ function classicQuery($query, $database, $group, $student, $module)
             $results .= $socketoutput;
 	}
 
-	$results.=socket_strerror(socket_last_error($socket)); // debugging
+	//$results.=socket_strerror(socket_last_error($socket)); // debugging
 	socket_shutdown($socket, 2); // 2 = shutdown reading and writing
 	socket_close($socket);
 
