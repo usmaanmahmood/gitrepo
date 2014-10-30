@@ -23,7 +23,7 @@ if($result = $mysqli -> query("SELECT * FROM User")) {
 }
 
 // Always close your connection to the database cleanly!
-$mysqli -> close();
+
 
 function classicQuery($query, $database, $group, $student, $module)
 {
