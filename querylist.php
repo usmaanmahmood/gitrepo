@@ -8,9 +8,12 @@ $student	= "";
 $module		= "";
 
 $result = classicQuery($query, $database, $group, $student, $module);
-$result2 = nl2br($result);
-$result3 = preg_replace("/(?<=\s)\x20|\x20(?=\s)/", "&#160;", $result2);
-//echo $result3;
+
+
+
+//$result2 = nl2br($result);
+//$result3 = preg_replace("/(?<=\s)\x20|\x20(?=\s)/", "&#160;", $result2);
+echo "<pre>" . $result . "</pre>";
 
 echo "------------------------------------------------------------------------------<br />";
 
@@ -19,7 +22,7 @@ $stringcleanedup = substr($result, $startposition); // trim down to start (2 gar
 $lines = preg_split('/\r\n|\r|\n/', $stringcleanedup, 2); // remove first line
 $lines = preg_split('/\r\n|\r|\n/', $lines[1], 2); // remove second line so just have required list
 $lines = $lines[1];
-echo nl2br($lines);
+echo "<pre>" . $lines . "</pre>";
 
 $rowbyrow = explode("\n", $lines);
 array_pop($rowbyrow); // remove the last line because its just empty space

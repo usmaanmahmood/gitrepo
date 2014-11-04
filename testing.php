@@ -211,12 +211,18 @@ array_pop($rowbyrow); // remove the last line because its just empty space);
 $sql = array();
 foreach( $rowbyrow as $key => $row ) {
     $colsarray = explode(" ", $row);
-    $rowbyrow[$key] = explode(" ", $row);
+    array_pop($colsarray); // remove last one because its just empty space
+    $rowbyrow[$key] = $colsarray;
     $sql[] = '("'.$colsarray[0].'", "'.$colsarray[1].'", "'.$colsarray[2].'", "'.$colsarray[3].'", "'.$colsarray[4].'")';
 }
 unset($row);
 echo $rowbyrow[0][4] . "\n";
 echo $rowbyrow[1] . "\n";
+
+foreach ($rowbyrow as $vals) {
+    echo $vals['comment_content'] . "\n";
+    RecursiveWrite($vals['child']);
+}
 //mysql_query('INSERT INTO ProfileCache (arcadeusername, databasename, groupname, studentusername, studentname, module) VALUES '.implode(',', $sql));
 
 ?>
