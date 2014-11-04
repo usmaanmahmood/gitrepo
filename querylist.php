@@ -13,7 +13,7 @@ $result = classicQuery($query, $database, $group, $student, $module);
 
 //$result2 = nl2br($result);
 //$result3 = preg_replace("/(?<=\s)\x20|\x20(?=\s)/", "&#160;", $result2);
-echo "<pre>" . $result . "</pre>";
+//echo "<pre>" . $result . "</pre>";
 
 echo "------------------------------------------------------------------------------<br />";
 

@@ -205,24 +205,33 @@ $lines = preg_split('/\r\n|\r|\n/', $lines[1], 2); // remove second line so just
 $lines = $lines[1];
 //echo $lines . "\n";
 
-$rowbyrow = explode("\n", $lines);
-array_pop($rowbyrow); // remove the last line because its just empty space);
+$rowbyrow = explode("\n", trim($lines)); // split $lines into array of strings, line by line, after trimming whitespace
 
 $sql = array();
 foreach( $rowbyrow as $key => $row ) {
-    $colsarray = explode(" ", $row);
-    array_pop($colsarray); // remove last one because its just empty space
+    $colsarray = explode(" ", trim($row)); // split row into array of strings, delimiter is space, after trimming whitespace
     $rowbyrow[$key] = $colsarray;
     $sql[] = '("'.$colsarray[0].'", "'.$colsarray[1].'", "'.$colsarray[2].'", "'.$colsarray[3].'", "'.$colsarray[4].'")';
 }
 unset($row);
-echo $rowbyrow[0][4] . "\n";
-echo $rowbyrow[1] . "\n";
 
-foreach ($rowbyrow as $vals) {
-    echo $vals['comment_content'] . "\n";
-    RecursiveWrite($vals['child']);
+class
+
+/* print them all
+$out  = "";
+$out .= "<table>";
+foreach($rowbyrow as $key => $element){
+    $out .= "<tr>";
+    foreach($element as $subkey => $subelement){
+        $out .= "<td>$subelement</td>";
+    }
+    $out .= "</tr>";
 }
+$out .= "</table>";
+
+echo $out;
+*/
+
 //mysql_query('INSERT INTO ProfileCache (arcadeusername, databasename, groupname, studentusername, studentname, module) VALUES '.implode(',', $sql));
 
 ?>
