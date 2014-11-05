@@ -28,7 +28,7 @@ $rowbyrow = explode("\n", $lines);
 array_pop($rowbyrow); // remove the last line because its just empty space
 
 $sql = array();
-foreach( $rowbyrow as $row ) {
+foreach($rowbyrow as $row) {
     $colsarray = explode(" ", $row);
     $sql[] = '("mahmoou1", "'.$colsarray[0].'", "'.$colsarray[1].'", "'.$colsarray[2].'", "'.$colsarray[3].'", "'.$colsarray[4].'")';
 }
