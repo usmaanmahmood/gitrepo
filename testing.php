@@ -302,28 +302,28 @@ $arcadeQuery = new Query($string);
 //echo $arcadeQuery;
 //var_dump($arcadeQuery->filterArray);
 ?>
-<select multiple class="form-control" class="pull-left">
+<select multiple class="form-control" style="float:left" size=10>
 <?php foreach($arcadeQuery->getList("database") as $option) { ?>
     <option>
         <?php echo $option ?>
     </option>
 <?php }?>
 </select>
-<select multiple class="form-control" class="pull-left">
+<select multiple class="form-control" style="float:left" size=10>
     <?php foreach($arcadeQuery->getList("group") as $option) { ?>
         <option>
             <?php echo $option ?>
         </option>
     <?php }?>
 </select>
-<select multiple class="form-control" class="pull-left">
+<select multiple class="form-control" style="float:left" size=10>
     <?php foreach($arcadeQuery->getList("studentFullname") as $option) { ?>
         <option>
             <?php echo $option ?>
         </option>
     <?php }?>
 </select>
-<select multiple class="form-control" class="pull-left">
+<select multiple class="form-control" style="float:left" size=10>
     <?php foreach($arcadeQuery->getList("module") as $option) { ?>
         <option>
             <?php echo $option ?>
