@@ -271,15 +271,13 @@ class Query {
         return $out;
     }
 
-    // requires lowercase, returns Array of list - use array_column 5.5 onwards
+    // requires exact name, returns Array of list - use array_column 5.5 onwards
     public function getList($inListName) {
-
-                $array = array();
-                foreach($this->filterArray as $filter) {
-                    array_push($array, $filter->database);
-                }
-               return array_unique($array);
-
+        $array = array();
+        foreach($this->filterArray as $filter) {
+            array_push($array, $filter->$inListName);
+        }
+       return array_unique($array);
     }
 
     //incomplete
@@ -305,10 +303,31 @@ $arcadeQuery = new Query($string);
 //var_dump($arcadeQuery->filterArray);
 ?>
 <select multiple class="form-control">
-<?php foreach($arcadeQuery->getList("databases") as $option) { ?>
+<?php foreach($arcadeQuery->getList("database") as $option) { ?>
     <option>
         <?php echo $option ?>
     </option>
 <?php }?>
+</select>
+<select multiple class="form-control">
+    <?php foreach($arcadeQuery->getList("group") as $option) { ?>
+        <option>
+            <?php echo $option ?>
+        </option>
+    <?php }?>
+</select>
+<select multiple class="form-control">
+    <?php foreach($arcadeQuery->getList("studentFullname") as $option) { ?>
+        <option>
+            <?php echo $option ?>
+        </option>
+    <?php }?>
+</select>
+<select multiple class="form-control">
+    <?php foreach($arcadeQuery->getList("module") as $option) { ?>
+        <option>
+            <?php echo $option ?>
+        </option>
+    <?php }?>
 </select>
 <?php include "querybottom.php" ?>
