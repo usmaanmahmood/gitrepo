@@ -1,4 +1,6 @@
 <?php
+
+
 /**
  * Created by PhpStorm.
  * User: mmapxum2
@@ -196,24 +198,6 @@ Sem2Summary
 11-12-1 X6 mahmoou1 Mahmood,Usmaan_Ali Tut1 
 11-12-1 X6 mahmoou1 Mahmood,Usmaan_Ali Tut2 ';
 
-//echo $string;
-//echo "----------\n";
-$startposition = strrpos($string, "++MODULESORTORDER"); // start of final ++MODULESTOORDER
-$stringcleanedup = substr($string, $startposition); // trim down to start (2 garbage lines still need removing)
-$lines = preg_split('/\r\n|\r|\n/', $stringcleanedup, 2); // remove first line
-$lines = preg_split('/\r\n|\r|\n/', $lines[1], 2); // remove second line so just have required list
-$lines = $lines[1];
-//echo $lines . "\n";
-
-$rowbyrow = explode("\n", trim($lines)); // split $lines into array of strings, line by line, after trimming whitespace
-/*
-$sql = array();
-foreach( $rowbyrow as $key => $row ) {
-    $colsarray = explode(" ", trim($row)); // split row into array of strings, delimiter is space, after trimming whitespace
-    $rowbyrow[$key] = $colsarray;
-    $sql[] = '("'.$colsarray[0].'", "'.$colsarray[1].'", "'.$colsarray[2].'", "'.$colsarray[3].'", "'.$colsarray[4].'")';
-}
-*/
 
 class Filter {
     public  $database = "";
@@ -241,10 +225,25 @@ class Query {
 
     public $arcadeUsername = 'mahmoou1';
 
-    public function __construct($inProfile) {
+    //performs cleanup of ProfileQuery result, and creates 2D array for filter data
+    public function __construct($string) {
         $this->filterArray = array();
+
+        $startposition = strrpos($string, "++MODULESORTORDER"); // start of final ++MODULESTOORDER
+        $stringcleanedup = substr($string, $startposition); // trim down to start (2 garbage lines still need removing)
+        $lines = preg_split('/\r\n|\r|\n/', $stringcleanedup, 2); // remove first line
+        $lines = preg_split('/\r\n|\r|\n/', $lines[1], 2); // remove second line so just have required list
+        $lines = $lines[1];
+        $rowbyrow = explode("\n", trim($lines)); // split $lines into array of strings, line by line, after trimming whitespace
+
+        // create
+        foreach($rowbyrow as $key => $row) {
+            $colsarray = explode(" ", trim($row)); // split row into array of strings, delimiter is space, after trimming whitespace
+            $rowbyrow[$key] = $colsarray;
+        }
+
         // populate
-        foreach($inProfile as $filter){
+        foreach($rowbyrow as $filter){
                 $newFilter = new Filter($filter[0], $filter[1], $filter[2], $filter[3], $filter[4]);
                 $this->addFilter($newFilter);
         }
@@ -253,6 +252,7 @@ class Query {
     public function addFilter(Filter $newFilter) {
         array_push($this->filterArray, $newFilter);
     }
+
     //returns as html table
     public function __toString() {
         $out  = "";
@@ -268,6 +268,18 @@ class Query {
 
         return $out;
     }
+
+    // requires lowercase, returns Array of list
+    public function getList($inListName) {
+        switch($inListName) {
+            case "databases": return array_unique(array_column($this->filterArray, 0));
+            case "groups": return array_unique(array_column($this->filterArray, 1));
+            case "studentusernames": return array_unique(array_column($this->filterArray, 2));
+            case "studentfullnames": return array_unique(array_column($this->filterArray, 3));
+            case "modules": return array_unique(array_column($this->filterArray, 4));
+        }
+    }
+
     //incomplete
     public function returnSQLValues()
     {
@@ -285,13 +297,17 @@ class Query {
     }
 }
 
-$arcadeQuery = new Query($rowbyrow);
+$arcadeQuery = new Query($string);
 
-echo $arcadeQuery;
+//echo $arcadeQuery;
 
-
-
-
-
+echo phpversion();
 
 ?>
+<select multiple class="form-control">
+<?php foreach($arcadeQuery->getList("databases") as $option) { ?>
+    <option>
+        <?php echo $option ?>
+    </option>
+<?php }?>
+</select>
