@@ -206,32 +206,92 @@ $lines = $lines[1];
 //echo $lines . "\n";
 
 $rowbyrow = explode("\n", trim($lines)); // split $lines into array of strings, line by line, after trimming whitespace
-
+/*
 $sql = array();
 foreach( $rowbyrow as $key => $row ) {
     $colsarray = explode(" ", trim($row)); // split row into array of strings, delimiter is space, after trimming whitespace
     $rowbyrow[$key] = $colsarray;
     $sql[] = '("'.$colsarray[0].'", "'.$colsarray[1].'", "'.$colsarray[2].'", "'.$colsarray[3].'", "'.$colsarray[4].'")';
 }
-unset($row);
-
-class
-
-/* print them all
-$out  = "";
-$out .= "<table>";
-foreach($rowbyrow as $key => $element){
-    $out .= "<tr>";
-    foreach($element as $subkey => $subelement){
-        $out .= "<td>$subelement</td>";
-    }
-    $out .= "</tr>";
-}
-$out .= "</table>";
-
-echo $out;
 */
 
-//mysql_query('INSERT INTO ProfileCache (arcadeusername, databasename, groupname, studentusername, studentname, module) VALUES '.implode(',', $sql));
+class Filter {
+    public  $database = "";
+    public  $group = "";
+    public  $studentUsername = "";
+    public  $studentFullname = "";
+    public  $module = "";
+
+    public function __construct($inDatabase, $inGroup, $inStudentUsername, $inStudentFullname, $inModule) {
+        $this->database = $inDatabase;
+        $this->group = $inGroup;
+        $this->studentUsername = $inStudentUsername;
+        $this->studentFullname = $inStudentFullname;
+        $this->module = $inModule;
+    }
+
+    public function returnSQLValues() {
+        return '("'.$this->database.'", "'.$this->group.'", "'.$this->studentUsername.'", "'.$this->studentFullname.'", "'.$this->module.'")';
+    }
+}
+
+
+class Query {
+    public $filterArray;
+
+    public $arcadeUsername = 'mahmoou1';
+
+    public function __construct($inProfile) {
+        $this->filterArray = array();
+        // populate
+        foreach($inProfile as $filter){
+                $newFilter = new Filter($filter[0], $filter[1], $filter[2], $filter[3], $filter[4]);
+                $this->addFilter($newFilter);
+        }
+    }
+
+    public function addFilter(Filter $newFilter) {
+        array_push($this->filterArray, $newFilter);
+    }
+    //returns as html table
+    public function __toString() {
+        $out  = "";
+        $out .= "<table>";
+        foreach($this->filterArray as $key => $element){
+            $out .= "<tr>";
+            foreach($element as $subkey => $subelement){
+                $out .= "<td>$subelement</td>";
+            }
+            $out .= "</tr>";
+        }
+        $out .= "</table>";
+
+        return $out;
+    }
+    //incomplete
+    public function returnSQLValues()
+    {
+        $sql = array();
+        foreach ($this->filterArray as $filter) {
+            array_push($sql, $this->arcadeUsername . $filter->returnSQLValues() . ",");
+        }
+        return $sql;
+    }
+    //incomplete
+    public function insertIntoDatabase(){
+        $valuesString = $this->returnSQLValues();
+        rtrim($valuesString, ",");
+        mysql_query('INSERT INTO ProfileCache (arcadeusername, databasename, groupname, studentusername, studentname, module) VALUES '. implode(",", $valuesString));
+    }
+}
+
+$arcadeQuery = new Query($rowbyrow);
+
+echo $arcadeQuery;
+
+
+
+
+
 
 ?>
