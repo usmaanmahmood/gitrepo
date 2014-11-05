@@ -1,3 +1,5 @@
+<?php include "querytop.php" ?>
+
 <?php
 
 
@@ -269,15 +271,15 @@ class Query {
         return $out;
     }
 
-    // requires lowercase, returns Array of list
+    // requires lowercase, returns Array of list - use array_column 5.5 onwards
     public function getList($inListName) {
-        switch($inListName) {
-            case "databases": return array_unique(array_column($this->filterArray, 0));
-            case "groups": return array_unique(array_column($this->filterArray, 1));
-            case "studentusernames": return array_unique(array_column($this->filterArray, 2));
-            case "studentfullnames": return array_unique(array_column($this->filterArray, 3));
-            case "modules": return array_unique(array_column($this->filterArray, 4));
-        }
+
+                $array = array();
+                foreach($this->filterArray as $filter) {
+                    array_push($array, $filter->database);
+                }
+               return array_unique($array);
+
     }
 
     //incomplete
@@ -300,9 +302,7 @@ class Query {
 $arcadeQuery = new Query($string);
 
 //echo $arcadeQuery;
-
-echo phpversion();
-
+//var_dump($arcadeQuery->filterArray);
 ?>
 <select multiple class="form-control">
 <?php foreach($arcadeQuery->getList("databases") as $option) { ?>
@@ -311,3 +311,4 @@ echo phpversion();
     </option>
 <?php }?>
 </select>
+<?php include "querybottom.php" ?>
