@@ -29,15 +29,15 @@
     $( "#registration-details" ).click(function(){
         alert("button clicked");
 
-//        $.ajax ({
-//            url: 'runQuery.php',
-//            data: { command: "registration-details"  },
-//            type: 'get',
-//            success: function(result)
-//            {
-//                $('#resultspane').HTML(result);
-//            }
-//        });
+        $.ajax ({
+            url: 'runQuery.php',
+            data: { command: "registration-details"  },
+            type: 'get',
+            success: function(result)
+            {
+                $('#resultspane').HTML(result);
+            }
+        });
     });
 
 </script>
