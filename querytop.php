@@ -14,7 +14,8 @@ include 'config.php' ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <title>Prototype</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -27,7 +28,7 @@ include 'config.php' ?>
 
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
-<script type="javascript">
+<script>
     $("#submit").click(function(){
         alert("button clicked");
 
