@@ -26,7 +26,7 @@ include 'config.php' ?>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
     <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">
+<!--    <link href="starter-template.css" rel="stylesheet">z-->
 
   </head>
 

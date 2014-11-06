@@ -328,7 +328,7 @@ $arcadeFilters = new ProfileQuery($string);
 
 ?>
 <div class="col-md-4">
-<select multiple class="form-control" size=10>
+<select class="form-control" size=10>
     <?php foreach($arcadeFilters->getCommandList() as $command) { ?>
         <option><?php echo $command ?></option>
     <?php }?>
