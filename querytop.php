@@ -31,22 +31,7 @@ include 'config.php' ?>
   </head>
 
   <body>
-  <script>
-      $( "#registration-details" ).click(function(){
-          alert("button clicked");
 
-        $.ajax ({
-            url: 'runQuery.php',
-            data: { command: "registration-details"  },
-            type: 'get',
-            success: function(result)
-            {
-                $('#resultspane').HTML(result);
-            }
-        });
-      });
-
-  </script>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
