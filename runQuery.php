@@ -10,5 +10,5 @@ include "ArcadeQuery.php";
 
 $arcadeQuery = new ArcadeQuery($_GET["command"]);
 $arcadeQuery->addFilter(new Filter("", "", "", "", ""));
-return $arcadeQuery->sendQuery();
+echo $arcadeQuery->sendQuery();
 ?>
