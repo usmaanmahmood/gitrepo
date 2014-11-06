@@ -327,7 +327,7 @@ class ProfileQuery {
 $arcadeFilters = new ProfileQuery($string);
 
 ?>
-<div class="btn-group btn-group-vertical col-md-4">
+<div class="btn-group-vertical col-md-4">
     <?php foreach($arcadeFilters->getCommandList() as $command) { ?>
         <button class="btn"><?php echo $command ?></button>
     <?php }?>
