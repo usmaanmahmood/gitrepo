@@ -327,7 +327,7 @@ class ProfileQuery {
 $arcadeFilters = new ProfileQuery($string);
 
 ?>
-<div class="col-md-3">
+<div class="col-md-4">
 <select multiple class="form-control" size=10>
     <?php foreach($arcadeFilters->getCommandList() as $command) { ?>
         <option><?php echo $command ?></option>
@@ -348,7 +348,7 @@ $arcadeFilters = new ProfileQuery($string);
     <?php }?>
 </select>
 </div>
-<div class="col-md-3">
+<div class="col-md-2">
 <select multiple class="form-control" size=10>
     <?php foreach($arcadeFilters->getList("studentFullname") as $option) { ?>
         <option><?php echo $option ?></option>
