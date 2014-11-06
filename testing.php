@@ -200,41 +200,11 @@ Sem2Summary
 11-12-1 X6 mahmoou1 Mahmood,Usmaan_Ali Tut1 
 11-12-1 X6 mahmoou1 Mahmood,Usmaan_Ali Tut2 ';
 
-class ArcadeCommand {
-
-}
-
-class Filter {
-    public  $database = "";
-    public  $group = "";
-    public  $studentUsername = "";
-    public  $studentFullname = "";
-    public  $module = "";
-
-    public function __construct($inDatabase, $inGroup, $inStudentUsername, $inStudentFullname, $inModule) {
-        $this->database = $inDatabase;
-        $this->group = $inGroup;
-        $this->studentUsername = $inStudentUsername;
-        $this->studentFullname = $inStudentFullname;
-        $this->module = $inModule;
-    }
-
-    //getters
-    public function getDatabase() { return $this->database; }
-    public function getGroup() { return $this->group; }
-    public function getStudentUsername() { return $this->studentUsername; }
-    public function getStudentFullname() { return $this->studentFullname; }
-    public function getModule() { return $this->module; }
-
-    public function returnSQLValues() {
-        return '("'.$this->database.'", "'.$this->group.'", "'.$this->studentUsername.'", "'.$this->studentFullname.'", "'.$this->module.'")';
-    }
-}
-
+include "ArcadeQuery.php";
 
 class ProfileQuery {
-    public $filterArray;
     public $commandArray;
+    public $filterList; // will contain all the filters
 
     public $arcadeUsername = 'mahmoou1';
 
@@ -245,6 +215,7 @@ class ProfileQuery {
 
         $tempCommandString = $string;
         // while there is a COMMAND remaining
+        // maybe use array shift here instead
         while(($startCommandPos = strpos($tempCommandString, "++COMMAND")) > -1) {
             $tempCommandString = substr($tempCommandString, $startCommandPos); // move to start of ++COMMAND line
             $commandLine = preg_split('/\r\n|\r|\n/', $tempCommandString, 2); // split into ++COMMAND and rest
@@ -254,7 +225,6 @@ class ProfileQuery {
         }
 
         // create array of filters
-        $this->filterArray = array();
 
         $startposition = strrpos($string, "++MODULESORTORDER"); // start of final ++MODULESTOORDER
         $stringcleanedup = substr($string, $startposition); // trim down to start (2 garbage lines still need removing)
@@ -263,21 +233,20 @@ class ProfileQuery {
         $lines = $lines[1];
         $rowbyrow = explode("\n", trim($lines)); // split $lines into array of strings, line by line, after trimming whitespace
 
+
+
         // create
         foreach($rowbyrow as $key => $row) {
             $colsarray = explode(" ", trim($row)); // split row into array of strings, delimiter is space, after trimming whitespace
             $rowbyrow[$key] = $colsarray;
         }
 
-        // populate
-        foreach($rowbyrow as $filter){
-                $newFilter = new Filter($filter[0], $filter[1], $filter[2], $filter[3], $filter[4]);
-                $this->addFilter($newFilter);
+        $this->filterList = new FilterList();
+        // populate List
+        foreach($rowbyrow as $filter) {
+            $newFilter = new Filter($filter[0], $filter[1], $filter[2], $filter[3], $filter[4]);
+            $this->filterList->addFilter($newFilter);
         }
-    }
-
-    public function addFilter(Filter $newFilter) {
-        array_push($this->filterArray, $newFilter);
     }
 
     //returns as html table
@@ -297,13 +266,7 @@ class ProfileQuery {
     }
 
     // requires exact name, returns Array of list - use array_column 5.5 onwards
-    public function getList($inListName) {
-        $array = array();
-        foreach($this->filterArray as $filter) {
-            array_push($array, $filter->$inListName);
-        }
-       return array_unique($array);
-    }
+    public function getList($inListName) {  $this->filterList->getList($inListName); }
 
     public function getCommandList() {  return $this->commandArray; }
 
@@ -311,7 +274,7 @@ class ProfileQuery {
     public function returnSQLValues()
     {
         $sql = array();
-        foreach ($this->filterArray as $filter) {
+        foreach($this->filterArray as $filter) {
             array_push($sql, $this->arcadeUsername . $filter->returnSQLValues() . ",");
         }
         return $sql;
@@ -324,47 +287,51 @@ class ProfileQuery {
     }
 }
 
-$arcadeFilters = new ProfileQuery($string);
+$arcadeProfile = new ProfileQuery($string);
+//$arcadeQuery = new ArcadeQuery("registration-details");
+//$arcadeQuery->addFilter(new Filter("", "", "", "", ""));
+//echo "<pre>" . $arcadeQuery->sendQuery() . "</pre>";
 
 ?>
 <div class="col-md-4">
 <select class="form-control" size=10>
-    <?php foreach($arcadeFilters->getCommandList() as $command) { ?>
+    <?php foreach($arcadeProfile->getCommandList() as $command) { ?>
         <option><?php echo $command ?></option>
     <?php }?>
 </select>
 </div>
 <div class="col-md-2">
 <select multiple class="form-control" size=10>
-<?php foreach($arcadeFilters->getList("database") as $option) { ?>
+<?php foreach($arcadeProfile->filterList->getList("database") as $option) { ?>
     <option><?php echo $option ?></option>
 <?php }?>
 </select>
 </div>
 <div class="col-md-2">
 <select multiple class="form-control" size=10>
-    <?php foreach($arcadeFilters->getList("group") as $option) { ?>
+    <?php foreach($arcadeProfile->filterList->getList("group") as $option) { ?>
         <option><?php echo $option ?></option>
     <?php }?>
 </select>
 </div>
 <div class="col-md-2">
 <select multiple class="form-control" size=10>
-    <?php foreach($arcadeFilters->getList("studentFullname") as $option) { ?>
+    <?php foreach($arcadeProfile->filterList->getList("studentUsername") as $option) { ?>
         <option><?php echo $option ?></option>
     <?php }?>
 </select>
 </div>
 <div class="col-md-2">
 <select multiple class="form-control" size=10>
-    <?php foreach($arcadeFilters->getList("module") as $option) { ?>
+    <?php foreach($arcadeProfile->filterList->getList("module") as $option) { ?>
         <option><?php echo $option ?></option>
     <?php }?>
 </select>
 </div>
 
 
+<button type="button" class="btn btn-default" id="submit">Submit</button>
 
-
+<pre id="resultspane"></pre>
 <?php include "querybottom.php" ?>
 

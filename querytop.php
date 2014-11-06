@@ -26,8 +26,21 @@ include 'config.php' ?>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
     <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">z
+    <link href="starter-template.css" rel="stylesheet">
+<script type="javascript">
+    $('#submit').click(function(){
+        $.ajax ({
+            url: 'runQuery.php',
+            data: { command: "registration-details"  },
+            type: 'get',
+            success: function(result)
+            {
+                $('#resultspane').HTML(result);
+            }
+        });
+    });
 
+</script>
   </head>
 
   <body>
