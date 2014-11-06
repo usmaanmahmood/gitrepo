@@ -293,7 +293,7 @@ $arcadeProfile = new ProfileQuery($string);
 //echo "<pre>" . $arcadeQuery->sendQuery() . "</pre>";
 
 ?>
-<div class="col-md-4">
+<div class="col-md-4" name="CommandList">
 <select class="form-control" size=10>
     <?php foreach($arcadeProfile->getCommandList() as $command) { ?>
         <option><?php echo $command ?></option>

@@ -26,12 +26,12 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
-    $( "#registration-details" ).click(function(){
-        alert("button clicked");
+    $( "#submit" ).click(function(){
+        $command = $('#CommandList').find(":selected").text();
 
         $.ajax ({
             url: 'runQuery.php',
-            data: { command: "registration-details"  },
+            data: { command: $command  },
             type: 'get',
             success: function(result)
             {
