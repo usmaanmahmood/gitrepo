@@ -29,13 +29,16 @@ include 'config.php' ?>
     <link href="starter-template.css" rel="stylesheet">
 <script type="javascript">
     $('#submit').click(function(){
+        alert("button clicked");
+
         $.ajax ({
             url: 'runQuery.php',
             data: { command: "registration-details"  },
             type: 'get',
             success: function(result)
             {
-                $('#resultspane').HTML(result);
+                alert(result);
+                //$('#resultspane').HTML(result);
             }
         });
     });

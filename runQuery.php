@@ -9,3 +9,4 @@
 $arcadeQuery = new ArcadeQuery($_GET["command"]);
 $arcadeQuery->addFilter(new Filter("", "", "", "", ""));
 return $arcadeQuery->sendQuery();
+?>
