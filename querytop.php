@@ -28,7 +28,7 @@ include 'config.php' ?>
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
 <script type="javascript">
-    $('#submit').click(function(){
+    $("#submit").click(function(){
         alert("button clicked");
 
         $.ajax ({
