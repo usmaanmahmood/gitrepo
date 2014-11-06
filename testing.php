@@ -200,6 +200,9 @@ Sem2Summary
 11-12-1 X6 mahmoou1 Mahmood,Usmaan_Ali Tut1 
 11-12-1 X6 mahmoou1 Mahmood,Usmaan_Ali Tut2 ';
 
+class ArcadeCommand {
+
+}
 
 class Filter {
     public  $database = "";
@@ -216,19 +219,41 @@ class Filter {
         $this->module = $inModule;
     }
 
+    //getters
+    public function getDatabase() { return $this->database; }
+    public function getGroup() { return $this->group; }
+    public function getStudentUsername() { return $this->studentUsername; }
+    public function getStudentFullname() { return $this->studentFullname; }
+    public function getModule() { return $this->module; }
+
     public function returnSQLValues() {
         return '("'.$this->database.'", "'.$this->group.'", "'.$this->studentUsername.'", "'.$this->studentFullname.'", "'.$this->module.'")';
     }
 }
 
 
-class Query {
+class ProfileQuery {
     public $filterArray;
+    public $commandArray;
 
     public $arcadeUsername = 'mahmoou1';
 
-    //performs cleanup of ProfileQuery result, and creates 2D array for filter data
+    //performs cleanup of ProfileQuery result, and creates 2D array for command and filter data
     public function __construct($string) {
+        // create array of commands
+        $this->commandArray = array();
+
+        $tempCommandString = $string;
+        // while there is a COMMAND remaining
+        while(($startCommandPos = strpos($tempCommandString, "++COMMAND")) > -1) {
+            $tempCommandString = substr($tempCommandString, $startCommandPos); // move to start of ++COMMAND line
+            $commandLine = preg_split('/\r\n|\r|\n/', $tempCommandString, 2); // split into ++COMMAND and rest
+            $commandName = preg_split('/\r\n|\r|\n/', $commandLine[1], 2);// split into Command Name and rest
+            array_push($this->commandArray, $commandName[0]); //push Command Name
+            $tempCommandString = $commandName[1]; // reset string
+        }
+
+        // create array of filters
         $this->filterArray = array();
 
         $startposition = strrpos($string, "++MODULESORTORDER"); // start of final ++MODULESTOORDER
@@ -280,6 +305,8 @@ class Query {
        return array_unique($array);
     }
 
+    public function getCommandList() {  return $this->commandArray; }
+
     //incomplete
     public function returnSQLValues()
     {
@@ -297,45 +324,45 @@ class Query {
     }
 }
 
-$arcadeQuery = new Query($string);
+$arcadeFilters = new ProfileQuery($string);
 
-//echo $arcadeQuery;
-//var_dump($arcadeQuery->filterArray);
 ?>
-<div class="col-md-3">
+<div class="btn-group btn-group-vertical col-md-4">
+    <?php foreach($arcadeFilters->getCommandList() as $command) { ?>
+        <button class="btn"><?php echo $command ?></button>
+    <?php }?>
+</div>
+<div class="col-md-2">
 <select multiple class="form-control" size=10>
-<?php foreach($arcadeQuery->getList("database") as $option) { ?>
-    <option>
-        <?php echo $option ?>
-    </option>
+<?php foreach($arcadeFilters->getList("database") as $option) { ?>
+    <option><?php echo $option ?></option>
 <?php }?>
 </select>
 </div>
-<div class="col-md-3">
+<div class="col-md-2">
 <select multiple class="form-control" size=10>
-    <?php foreach($arcadeQuery->getList("group") as $option) { ?>
-        <option>
-            <?php echo $option ?>
-        </option>
+    <?php foreach($arcadeFilters->getList("group") as $option) { ?>
+        <option><?php echo $option ?></option>
     <?php }?>
 </select>
 </div>
-<div class="col-md-3">
+<div class="col-md-2">
 <select multiple class="form-control" size=10>
-    <?php foreach($arcadeQuery->getList("studentFullname") as $option) { ?>
-        <option>
-            <?php echo $option ?>
-        </option>
+    <?php foreach($arcadeFilters->getList("studentFullname") as $option) { ?>
+        <option><?php echo $option ?></option>
     <?php }?>
 </select>
 </div>
-<div class="col-md-3">
+<div class="col-md-2">
 <select multiple class="form-control" size=10>
-    <?php foreach($arcadeQuery->getList("module") as $option) { ?>
-        <option>
-            <?php echo $option ?>
-        </option>
+    <?php foreach($arcadeFilters->getList("module") as $option) { ?>
+        <option><?php echo $option ?></option>
     <?php }?>
 </select>
 </div>
+
+
+
+
 <?php include "querybottom.php" ?>
+
