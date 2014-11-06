@@ -28,10 +28,10 @@
 <script>
     $( "#submit" ).click(function(){
         $command = $( "#CommandList option:selected" ).text()
-
+    alert($command);
         $.ajax ({
             url: 'runQuery.php',
-            data: { command: $command},
+            data: { "command": $command},
             type: 'get',
             success: function(result)
             {
