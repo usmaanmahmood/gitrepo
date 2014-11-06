@@ -327,10 +327,12 @@ class ProfileQuery {
 $arcadeFilters = new ProfileQuery($string);
 
 ?>
-<div class="btn-group-vertical col-md-3">
+<div class="col-md-3">
+<select multiple class="form-control" size=10>
     <?php foreach($arcadeFilters->getCommandList() as $command) { ?>
-        <button class="btn"><?php echo $command ?></button>
+        <option><?php echo $command ?></option>
     <?php }?>
+</select>
 </div>
 <div class="col-md-2">
 <select multiple class="form-control" size=10>
