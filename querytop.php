@@ -29,19 +29,19 @@ include 'config.php' ?>
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
 <script>
-    $("#submit").click(function(){
+    $( "#registration-details" ).click(function(){
         alert("button clicked");
 
-        $.ajax ({
-            url: 'runQuery.php',
-            data: { command: "registration-details"  },
-            type: 'get',
-            success: function(result)
-            {
-                alert(result);
-                //$('#resultspane').HTML(result);
-            }
-        });
+//        $.ajax ({
+//            url: 'runQuery.php',
+//            data: { command: "registration-details"  },
+//            type: 'get',
+//            success: function(result)
+//            {
+//                alert(result);
+//                //$('#resultspane').HTML(result);
+//            }
+//        });
     });
 
 </script>
