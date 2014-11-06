@@ -27,7 +27,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
     $( "#submit" ).click(function(){
-        $command = $( "#CommandList option:selected" ).text();
+        var $command = $( "#CommandList option:selected" ).text();
         alert($command);
         $.ajax ({
             url: 'runQuery.php',
