@@ -35,7 +35,7 @@
             type: 'get',
             success: function(result)
             {
-                $('#resultspane').HTML(result);
+                $('#resultspane').html(result);
             }
         });
     });
