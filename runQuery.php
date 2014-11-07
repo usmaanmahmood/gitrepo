@@ -9,7 +9,7 @@
 include "ArcadeQuery.php";
 
 $command = $_GET["command"];
-$databases = $_GET["databases"];
+$databases = rtrim($_GET["databases"]);
 $groups = $_GET["groups"];
 $students = $_GET["students"];
 $modules = $_GET["modules"];
