@@ -288,9 +288,6 @@ class ProfileQuery {
 }
 
 $arcadeProfile = new ProfileQuery($string);
-//$arcadeQuery = new ArcadeQuery("registration-details");
-//$arcadeQuery->addFilter(new Filter("", "", "", "", ""));
-//echo "<pre>" . $arcadeQuery->sendQuery() . "</pre>";
 
 ?>
 <div class="row">
