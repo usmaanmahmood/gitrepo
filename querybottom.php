@@ -28,7 +28,8 @@
 <script>
     $( "#submit" ).click(function(){
         $command = $( "#CommandList option:selected" ).text();
-        var $submitbutton = $(this).button('loading');
+
+        var $submitbutton = $('#submit').button('loading');
 
         $.ajax ({
             url: 'runQuery.php',
