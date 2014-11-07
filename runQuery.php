@@ -8,7 +8,11 @@
 
 include "ArcadeQuery.php";
 
-$arcadeQuery = new ArcadeQuery($_GET["command"]);
+$command = $_GET["command"];
+$databases = $_GET["databases"];
+
+$arcadeQuery = new ArcadeQuery($command);
+
 $arcadeQuery->addFilter(new Filter("", "", "", "", ""));
-echo $arcadeQuery->sendQuery();
+echo var_dump($databases) . $arcadeQuery->sendQuery();
 ?>

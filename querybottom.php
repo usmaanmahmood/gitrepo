@@ -32,7 +32,8 @@
 <script>
     $( "#submit" ).click(function(){
         $command = $("#CommandList option:selected").text();
-        alert($("#DatabaseList option:selected" ).text());
+        $databases = $("#DatabaseList option:selected").text();
+
 
         var $submitbutton = $('#submit').button('loading');
 
@@ -40,7 +41,9 @@
 
         $.ajax ({
             url: 'runQuery.php',
-            data: { "command": $command},
+            data: { "command": $command,
+                    "databases": $databases
+                    },
             type: 'get',
             success: function(result)
             {
