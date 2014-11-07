@@ -14,11 +14,11 @@ class Filter {
     public  $module;
 
     public function __construct($inDatabase, $inGroup, $inStudentUsername, $inStudentFullname, $inModule) {
-        $this->database = $inDatabase;
-        $this->group = $inGroup;
-        $this->studentUsername = $inStudentUsername;
-        $this->studentFullname = $inStudentFullname;
-        $this->module = $inModule;
+        $this->database = empty($inDatabase) ? $inDatabase : " ";
+        $this->group =  empty($inGroup) ? $inGroup : " ";
+        $this->studentUsername =  empty($inStudentUsername) ? $inStudentUsername : " ";
+        $this->studentFullname =  empty($inStudentFullname) ? $inStudentFullname : " ";
+        $this->module =  empty($inModule) ? $inModule : " ";
     }
 
     //getters

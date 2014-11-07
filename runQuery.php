@@ -14,11 +14,6 @@ $groups = rtrim($_GET["groups"]);
 $students = rtrim($_GET["students"]);
 $modules = rtrim($_GET["modules"]);
 
-if (empty($databases)) $databases = " ";
-if (empty($groups)) $groups = " ";
-if (empty($students)) $students = " ";
-if (empty($modules)) $modules = " ";
-
 $arcadeQuery = new ArcadeQuery($command);
 
 $arcadeQuery->addFilter(new Filter($databases, $groups, $students, $students, $modules));
