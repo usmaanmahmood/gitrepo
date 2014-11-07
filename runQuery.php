@@ -16,6 +16,6 @@ $modules = rtrim($_GET["modules"]);
 
 $arcadeQuery = new ArcadeQuery($command);
 
-$arcadeQuery->addFilter(new Filter($databases, "", "", "", ""));
-echo var_dump($databases) . var_dump($groups) . var_dump($students) . var_dump($modules) . $arcadeQuery->sendQuery();
+$arcadeQuery->addFilter(new Filter($databases, $groups, "", $students, $modules));
+echo $arcadeQuery->sendQuery();
 ?>

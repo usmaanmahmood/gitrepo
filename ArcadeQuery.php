@@ -89,7 +89,7 @@ class ArcadeQuery {
             . implode(' ', $this->getDatabases()). "\n"
             . implode(' ', $this->getGroups()) . "\n"
             . implode(' ', $this->getStudentUsernames()) . "\n"
-            . implode(' ', $this->getDatabases()) . "\n";
+            . implode(' ', $this->getModules()) . "\n";
 
         socket_write($socket, $fullquery); // this sends it off
 
