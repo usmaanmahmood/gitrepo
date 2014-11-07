@@ -332,6 +332,6 @@ $arcadeProfile = new ProfileQuery($string);
 
 <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing Query..." id="submit">Execute Query</button>
 
-<pre id="resultspane"></pre>
+<pre id="resultspane"><h1>Results Pane</h1></pre>
 <?php include "querybottom.php" ?>
 

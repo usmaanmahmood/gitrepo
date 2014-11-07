@@ -30,7 +30,7 @@
 
         var $submitbutton = $('#submit').button('loading');
 
-        //$('#resultspane').fadeOut('slow');
+        $('#resultspane').fadeOut('slow');
 
         $.ajax ({
             url: 'runQuery.php',
