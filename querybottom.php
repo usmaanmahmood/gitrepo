@@ -38,7 +38,7 @@
         $modules = $("#ModuleList option:selected").text();
 
 
-        var $submitbutton = $('#submit').button('loading');
+        $submitbutton = $('#submit').button('loading');
 
         $('#resultspane').fadeOut('slow');
 
