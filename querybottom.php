@@ -30,7 +30,7 @@
 
         var $submitbutton = $('#submit').button('loading');
 
-        $('#resultspane').fadeOut('fast');
+        //$('#resultspane').fadeOut('slow');
 
         $.ajax ({
             url: 'runQuery.php',
@@ -39,7 +39,7 @@
             success: function(result)
             {
                 $('#resultspane').html(result);
-                $('#resultspane').fadeIn('fast');
+                $('#resultspane').fadeIn('slow');
                 $submitbutton.button('reset');
             }
         });
