@@ -301,35 +301,35 @@ $arcadeProfile = new ProfileQuery($string);
     </select>
 </div>
 <div class="col-md-8">
-    <div class="col-md-2">
+    <div class="col-md-3">
         <select multiple class="form-control" size=10>
         <?php foreach($arcadeProfile->filterList->getList("database") as $option) { ?>
             <option><?php echo $option ?></option>
         <?php }?>
         </select>
     </div>
-    <div class="col-md-2">
+    <div class="col-md-3">
         <select multiple class="form-control" size=10>
             <?php foreach($arcadeProfile->filterList->getList("group") as $option) { ?>
                 <option><?php echo $option ?></option>
             <?php }?>
         </select>
     </div>
-    <div class="col-md-2">
+    <div class="col-md-3">
         <select multiple class="form-control" size=10>
             <?php foreach($arcadeProfile->filterList->getList("studentUsername") as $option) { ?>
                 <option><?php echo $option ?></option>
             <?php }?>
         </select>
     </div>
-    <div class="col-md-2">
+    <div class="col-md-3">
         <select multiple class="form-control" size=10>
             <?php foreach($arcadeProfile->filterList->getList("module") as $option) { ?>
                 <option><?php echo $option ?></option>
             <?php }?>
         </select>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-12">
         <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..." id="submit">Execute Query</button>
     </div>
 </div>
