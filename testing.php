@@ -293,44 +293,50 @@ $arcadeProfile = new ProfileQuery($string);
 //echo "<pre>" . $arcadeQuery->sendQuery() . "</pre>";
 
 ?>
-<div class="col-md-4">
-    <select class="form-control" size=10 id="CommandList">
-        <?php foreach($arcadeProfile->getCommandList() as $command) { ?>
-            <option><?php echo $command ?></option>
-        <?php }?>
-    </select>
-</div>
-<div class="col-md-8">
-    <div class="col-md-3">
-        <select multiple class="form-control" size=10>
-        <?php foreach($arcadeProfile->filterList->getList("database") as $option) { ?>
-            <option><?php echo $option ?></option>
-        <?php }?>
-        </select>
-    </div>
-    <div class="col-md-3">
-        <select multiple class="form-control" size=10>
-            <?php foreach($arcadeProfile->filterList->getList("group") as $option) { ?>
-                <option><?php echo $option ?></option>
+<div class="row">
+    <div class="col-md-4">
+        <select class="form-control" size=10 id="CommandList">
+            <?php foreach($arcadeProfile->getCommandList() as $command) { ?>
+                <option><?php echo $command ?></option>
             <?php }?>
         </select>
     </div>
-    <div class="col-md-3">
-        <select multiple class="form-control" size=10>
-            <?php foreach($arcadeProfile->filterList->getList("studentUsername") as $option) { ?>
-                <option><?php echo $option ?></option>
-            <?php }?>
-        </select>
-    </div>
-    <div class="col-md-3">
-        <select multiple class="form-control" size=10>
-            <?php foreach($arcadeProfile->filterList->getList("module") as $option) { ?>
-                <option><?php echo $option ?></option>
-            <?php }?>
-        </select>
-    </div>
-    <div class="col-md-12">
-        <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..." id="submit">Execute Query</button>
+    <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-3">
+                <select multiple class="form-control" size=10>
+                <?php foreach($arcadeProfile->filterList->getList("database") as $option) { ?>
+                    <option><?php echo $option ?></option>
+                <?php }?>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select multiple class="form-control" size=10>
+                    <?php foreach($arcadeProfile->filterList->getList("group") as $option) { ?>
+                        <option><?php echo $option ?></option>
+                    <?php }?>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select multiple class="form-control" size=10>
+                    <?php foreach($arcadeProfile->filterList->getList("studentUsername") as $option) { ?>
+                        <option><?php echo $option ?></option>
+                    <?php }?>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select multiple class="form-control" size=10>
+                    <?php foreach($arcadeProfile->filterList->getList("module") as $option) { ?>
+                        <option><?php echo $option ?></option>
+                    <?php }?>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..." id="submit">Execute Query</button>
+            </div>
+        </div>
     </div>
 </div>
 <div class="col-md-12">
