@@ -307,7 +307,7 @@ $arcadeProfile = new ProfileQuery($string);
             <div class="col-md-3">
                 <p>Databases</p>
                 <select multiple class="form-control" size=10 id="DatabaseList">
-                <?php foreach($arcadeProfile->filterList->getList("database") as option) { ?>
+                <?php foreach($arcadeProfile->filterList->getList("database") as $option) { ?>
                     <option><?php echo $option . " " ?></option>
                 <?php }?>
                 </select>
