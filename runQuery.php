@@ -9,10 +9,13 @@
 include "ArcadeQuery.php";
 
 $command = $_GET["command"];
-$databases = $_GET["databases"];
+$databases = implode(" ", $_GET["databases"]);
+$groups = implode(" ", $_GET["groups"]);
+$students = implode(" ", $_GET["students"]);
+$modules = implode(" ", $_GET["modules"]);
 
 $arcadeQuery = new ArcadeQuery($command);
 
 $arcadeQuery->addFilter(new Filter("", "", "", "", ""));
-echo var_dump($databases) . $arcadeQuery->sendQuery();
+echo var_dump($databases) . var_dump($groups) . $arcadeQuery->sendQuery();
 ?>

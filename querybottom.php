@@ -33,6 +33,9 @@
     $( "#submit" ).click(function(){
         $command = $("#CommandList option:selected").text();
         $databases = $("#DatabaseList option:selected").text();
+        $groups = $("#GroupList option:selected").text();
+        $students = $("#StudentList option:selected").text();
+        $modules = $("#ModuleList option:selected").text();
 
 
         var $submitbutton = $('#submit').button('loading');
@@ -42,8 +45,11 @@
         $.ajax ({
             url: 'runQuery.php',
             data: { "command": $command,
-                    "databases": $databases
-                    },
+                    "databases": $databases,
+                    "groups": $groups,
+                    "students": $students,
+                    "modules": $modules
+            },
             type: 'get',
             success: function(result)
             {
