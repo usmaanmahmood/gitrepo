@@ -295,6 +295,7 @@ $arcadeProfile = new ProfileQuery($string);
 ?>
 <div class="row">
     <div class="col-md-4">
+        <p>Command</p>
         <select class="form-control" size=10 id="CommandList">
             <?php foreach($arcadeProfile->getCommandList() as $command) { ?>
                 <option><?php echo $command ?></option>
@@ -304,28 +305,32 @@ $arcadeProfile = new ProfileQuery($string);
     <div class="col-md-8">
         <div class="row">
             <div class="col-md-3">
-                <select multiple class="form-control" size=10>
+                <p>Databases</p>
+                <select multiple class="form-control" size=10 id="DatabaseList">
                 <?php foreach($arcadeProfile->filterList->getList("database") as $option) { ?>
                     <option><?php echo $option ?></option>
                 <?php }?>
                 </select>
             </div>
             <div class="col-md-3">
-                <select multiple class="form-control" size=10>
+                <p>Groups</p>
+                <select multiple class="form-control" size=10 id="GroupList">
                     <?php foreach($arcadeProfile->filterList->getList("group") as $option) { ?>
                         <option><?php echo $option ?></option>
                     <?php }?>
                 </select>
             </div>
             <div class="col-md-3">
-                <select multiple class="form-control" size=10>
+                <p>Students</p>
+                <select multiple class="form-control" size=10 id="StudentList">
                     <?php foreach($arcadeProfile->filterList->getList("studentUsername") as $option) { ?>
                         <option><?php echo $option ?></option>
                     <?php }?>
                 </select>
             </div>
             <div class="col-md-3">
-                <select multiple class="form-control" size=10>
+                <p>Modules</p>
+                <select multiple class="form-control" size=10 id="ModuleList">
                     <?php foreach($arcadeProfile->filterList->getList("module") as $option) { ?>
                         <option><?php echo $option ?></option>
                     <?php }?>
