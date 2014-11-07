@@ -28,7 +28,7 @@
 <script>
     $( "#submit" ).click(function(){
         $command = $( "#CommandList option:selected" ).text();
-        $('submit').prop('disabled', true);
+        $('submit').addClass("disabled");
         $.ajax ({
             url: 'runQuery.php',
             data: { "command": $command},
@@ -36,7 +36,7 @@
             success: function(result)
             {
                 $('#resultspane').html(result);
-                $('submit').prop('disabled', false);
+                $('submit').removeClass("disabled");
             }
         });
     });
