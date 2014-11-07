@@ -330,7 +330,7 @@ $arcadeProfile = new ProfileQuery($string);
 </div>
 
 
-<button type="button" class="btn btn-default btn-lg btn-block" id="submit">submit</button>
+<button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Retrieving..." id="submit">submit</button>
 
 <pre id="resultspane"></pre>
 <?php include "querybottom.php" ?>
