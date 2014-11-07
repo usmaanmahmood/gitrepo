@@ -17,5 +17,5 @@ $modules = $_GET["modules"];
 $arcadeQuery = new ArcadeQuery($command);
 
 $arcadeQuery->addFilter(new Filter($databases, $groups, $students, $students, $modules));
-echo var_dump($databases) . var_dump($groups) . $arcadeQuery->sendQuery();
+echo var_dump($databases) . var_dump($groups) . var_dump($students) . var_dump($modules) . $arcadeQuery->sendQuery();
 ?>
