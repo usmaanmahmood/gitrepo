@@ -15,18 +15,13 @@ include 'config.php' ?>
     <meta name="description" content="">
     <meta name="author" content="">
 
-
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <title>Prototype</title>
 	<!-- Latest compiled and minified CSS -->
       <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-
-
-	<!-- Latest compiled and minified JavaScript -->
-      <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+      
 
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
