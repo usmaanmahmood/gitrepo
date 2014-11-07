@@ -10,9 +10,14 @@ include "ArcadeQuery.php";
 
 $command = $_GET["command"];
 $databases = rtrim($_GET["databases"]);
-$groups = $_GET["groups"];
-$students = $_GET["students"];
-$modules = $_GET["modules"];
+$groups = rtrim($_GET["groups"]);
+$students = rtrim($_GET["students"]);
+$modules = rtrim($_GET["modules"]);
+
+if (empty($databases)) $databases = " ";
+if (empty($groups)) $groups = " ";
+if (empty($students)) $students = " ";
+if (empty($modules)) $modules = " ";
 
 $arcadeQuery = new ArcadeQuery($command);
 
