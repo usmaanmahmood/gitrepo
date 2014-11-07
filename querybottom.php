@@ -32,7 +32,7 @@
 <script>
     $( "#submit" ).click(function(){
         $command = $("#CommandList option:selected").text();
-        alert($("#DatabaseList option:selected" ).text(););
+        alert($("#DatabaseList option:selected" ).text());
 
         var $submitbutton = $('#submit').button('loading');
 
