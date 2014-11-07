@@ -61,6 +61,6 @@ include 'config.php' ?>
     <div class="container">
 
       <div class="starter-template">
-        <h1>Heading</h1>
-        <p class="lead">Lead paragraph</p>
-	<p>Paragraph 2</p>
+        <h1>Classic Web ARCADE</h1>
+        <p class="lead">Select your input parameters.</p>
+	<p>This is a replica of the functionality available through the classic JAVA GUI for ARCADE.*</p>
