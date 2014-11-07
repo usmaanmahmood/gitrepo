@@ -332,10 +332,13 @@ $arcadeProfile = new ProfileQuery($string);
     <div class="col-md-12">
         <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..." id="submit">Execute Query</button>
     </div>
+    <div class="col-md-12">
+        <pre id="resultspane"><h1>Results Pane</h1></pre>
+    </div>
 </div>
 
 
 
-<pre id="resultspane"><h1>Results Pane</h1></pre>
+
 <?php include "querybottom.php" ?>
 
