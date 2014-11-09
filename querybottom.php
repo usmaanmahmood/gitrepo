@@ -58,7 +58,7 @@
         });
 
         $filterListJSON = <?php echo json_encode($arcadeProfile->getFilterList()); ?> ;
-        $filterObject = parseJSON($filterListJSON);
+        $filterObject = jQuery.parseJSON($filterListJSON);
         alert ($filterObject.FilterList);
 
     //$databaseList = <?php echo json_encode($arcadeProfile->getFilterList()->getList("database")); ?> ;
