@@ -53,7 +53,7 @@ class ArcadeProfile {
     public function selectDatabase($inDatabase) {
         foreach($this->filterList as $filter)
         {
-            if ($filter->getDatabase() <> $inDatabase)
+            if (strcmp($filter->getDatabase() ,$inDatabase) <> 0)
                 $this->filterList->removeFilter($filter);
         }
     }
