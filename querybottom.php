@@ -74,21 +74,32 @@
 
         }
 
-        $('#DatabaseList').empty();
+//        $('#DatabaseList').empty();
         $('#GroupList').empty();
         $('#StudentList').empty();
         $('#ModuleList').empty();
+
+//        var $uniqueDatabases = [];
+        var $uniqueGroups = [];
+        var $uniqueStudentUsernames = [];
+        var $uniqueModules = [];
 
         for (var i = 0; i < $json.length; i++)
         {
             if ($json[i].visible)
             {
-                $('#DatabaseList').append("<option>" + $json[i].database + "</option>");
-                $('#GroupList').append("<option>" + $json[i].group + "</option>");
-                $('#StudentList').append("<option>" + $json[i].studentUsername + "</option>");
-                $('#ModuleList').append("<option>" + $json[i].module + "</option>");
+//                if ($.inArray($json[i].database, $uniqueDatabases) == -1) { $uniqueDatabases.push($json[i].database); }
+                if ($.inArray($json[i].group, $uniqueGroups) == -1) { $uniqueGroups.push($json[i].group); }
+                if ($.inArray($json[i].studentUsername, $uniqueStudentUsernames) == -1) { $uniqueStudentUsernames.push($json[i].studentUsername); }
+                if ($.inArray($json[i].module, $uniqueModules) == -1) { $uniqueModules.push($json[i].module); }
             }
         }
+
+        $.each($uniqueModules, function(key, value) {
+            $('#ModuleList').append("<option value =" + value + ">" + value + "</option>");
+        });
+
+
     });
 
 
