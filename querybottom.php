@@ -135,7 +135,7 @@
 
         $.each($stringDatabasesList, function(key, value) {
             if ($.inArray(value, $stringDatabasesAdded) == -1) {
-                $moduleList.append("<option value=\"" + value + "\">" + value + "</option>");
+                $databaseList.append("<option value=\"" + value + "\">" + value + "</option>");
                 $stringDatabasesAdded.push(value);
             }
         });
