@@ -59,10 +59,8 @@ include "ArcadeQuery.php";
 
 if (!isset($_SESSION['arcadeprofilestring']))
 {
-    $profileQuery = new ArcadeQuery("profile"); // set up new profile query
-    $profileQuery->sendQuery(); // execute profile query
-    $arcadeProfileString = $profileQuery->getResult(); // save profile strnig
-    $_SESSION['arcadeprofilestring'] = $arcadeProfileString; // store profilestring in session
+    $profileQuery = new ArcadeQuery("profile"); // set up new profile query + auto send
+    $_SESSION['arcadeprofilestring']  = $profileQuery->getResult(); // save profile strnig in session
     $arcadeProfile = new ArcadeProfile($_SESSION['arcadeprofilestring']); // create new object
     unset($profileQuery);
 }

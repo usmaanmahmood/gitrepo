@@ -25,9 +25,11 @@ class ArcadeQuery {
 
         if ($inCommand <> "profile")
         {
-//            $arcadeProfile = new ArcadeProfile($_SESSION("arcadeProfileString")); // create arcade profile object
+//          $arcadeProfile = new ArcadeProfile($_SESSION("arcadeProfileString")); // create arcade profile object
             $this->filterList = $arcadeProfile->getFilterList();
         }
+        else
+            $this->sendQuery();
 
     }
 
@@ -75,7 +77,7 @@ class ArcadeQuery {
         socket_shutdown($socket, 2); // 2 = shutdown reading and writing
         socket_close($socket);
 
-        $queryOutput = $results;
+        $this->queryOutput = $results;
     }
 }
 
