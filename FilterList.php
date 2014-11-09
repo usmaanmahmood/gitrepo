@@ -40,6 +40,10 @@ class FilterList {
         }
     }
 
+    public function getFilterList() {
+        return $this->filterList;
+    }
+
     public function getList($inListName) {
         $array = array();
         foreach($this->filterList as $filter) {

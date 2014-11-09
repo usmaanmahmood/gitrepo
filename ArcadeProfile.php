@@ -71,6 +71,10 @@ class ArcadeProfile {
 
     public function getFilterList() { return $this->filterList; }
 
+    public function getArrayOfFilters() {
+        return $this->filterList->getFilterList();
+    }
+
     public function getCommandList() {  return $this->commandArray; }
 
     //incomplete

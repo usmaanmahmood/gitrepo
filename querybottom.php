@@ -72,7 +72,7 @@
 
             return $data;
         }
-        $filterlistout = object_to_array($arcadeProfile->getFilterList());
+        $filterlistout = object_to_array($arcadeProfile->getArrayOfFilters());
         ?>
 
         $filterListJSON = <?php echo json_encode($filterlistout); ?> ;

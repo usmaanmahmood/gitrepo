@@ -35,9 +35,6 @@ class ArcadeQuery {
 
     public function addFilter(Filter $inFilter) { $this->filterList->addFilter($inFilter); }
     public function addFilters(Filter $inFilters) { $this->filterList->addFilters($inFilters); }
-    public function selectFilter(Filter $inFilter) {
-
-    }
 
     //getters
     public function getCommand() { return $this->command; }
