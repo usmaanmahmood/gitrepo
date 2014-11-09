@@ -52,7 +52,7 @@
     });
 
     $("#DatabaseList").click(function() {
-       var  $selectedDatabases = $("#DatabaseList option:selected").val();
+       var  $selectedDatabases = $("#DatabaseList").val();
 
         for (var i = 0; i < $json.length; i++)
         {
