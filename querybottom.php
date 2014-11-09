@@ -50,7 +50,7 @@
         $json = json;
     });
 
-      $("#DatabaseList").click(function() {
+    $("#DatabaseList").click(function() {
         var $databaseList = $("#DatabaseList");
         var $moduleList = $("#ModuleList");
         var $selectedDatabases = $databaseList.val();
