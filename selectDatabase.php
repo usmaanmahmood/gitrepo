@@ -17,7 +17,7 @@ if (!isset($_SESSION['currentarcadeprofile']))
 
 $currentArcadeProfile = unserialize($_SESSION['currentarcadeprofile']); // put into variable to make life easier
 
-//$currentArcadeProfile->selectDatabase($databases);
+$currentArcadeProfile->selectDatabase($databases);
 
 
 $_SESSION['currentarcadeprofile'] = serialize($currentArcadeProfile); // save it after changing it
