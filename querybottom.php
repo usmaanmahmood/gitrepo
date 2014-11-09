@@ -103,61 +103,6 @@
         });
     });
 
-    //$("#ModuleList").click(function() {
-    //  var $databaseList = $("#DatabaseList");
-    //  var $groupList = $("#GroupList");
-    //  var $studentList = $("#StudentList");
-    //  var $moduleList = $("#ModuleList");
-    //  var $selectedModules = $moduleList.val();
-    //
-    //    $databaseList.empty();
-    //    $groupList.empty();
-    //  $studentList.empty();
-    //
-    //    var $stringDatabasesList = [];
-    //    var $stringDatabasesAdded = [];
-    //
-    //  var $stringGroupsList = [];
-    //  var $stringGroupsAdded = [];
-    //
-    //  var $stringStudentsList = [];
-    //  var $stringStudentsAdded = [];
-    //
-    //
-    //  for (var i = 0; i < $json.length; i++) {   // if nothing is selected, show all the modules. if the one that is selected = current filter, then that filter is visible.
-    //      if (($selectedModules == null) || ($.inArray($json[i].module, $selectedModules) > -1)) {
-    //          $json[i].visible = true;
-    //          $stringDatabasesList.push($json[i].database);
-    //          $stringGroupsList.push($json[i].group);
-    //          $stringStudentsList.push($json[i].studentUsername);
-    //      }
-    //  }
-    //
-    //    $.each($stringDatabasesList, function(key, value) {
-    //        if ($.inArray(value, $stringDatabasesAdded) == -1) {
-    //            $databaseList.append("<option value=\"" + value + "\">" + value + "</option>");
-    //            $stringDatabasesAdded.push(value);
-    //        }
-    //    });
-    //
-    //  $.each($stringGroupsList, function(key, value) {
-    //      if ($.inArray(value, $stringGroupsAdded) == -1) {
-    //          $groupList.append("<option value=\"" + value + "\">" + value + "</option>");
-    //          $stringGroupsAdded.push(value);
-    //      }
-    //  });
-    //
-    //  $.each($stringStudentsList, function(key, value) {
-    //      if ($.inArray(value, $stringStudentsAdded) == -1) {
-    //          $studentList.append("<option value=\"" + value + "\">" + value + "</option>");
-    //          $stringStudentsAdded.push(value);
-    //      }
-    //  });
-    //
-    //
-    //});
-
-
 
 
 
