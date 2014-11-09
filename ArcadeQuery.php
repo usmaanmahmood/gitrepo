@@ -81,7 +81,7 @@ class ArcadeQuery {
         $username = $_SESSION['username'];
         $arcadepassword = $_SESSION['arcadepassword'];
 
-        socket_write($socket, "LKJHGFDSA\n"); // hello token
+        socket_write($socket, "LKJHGFDSA" . "\n"); // hello token
         socket_write($socket, $username . "\n"); // arcade user
         socket_write($socket, $arcadepassword . "\n"); // arcade pass
 
