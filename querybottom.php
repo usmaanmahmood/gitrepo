@@ -92,7 +92,8 @@
 
         $("#target_table_id tbody").html(tbl_body);
 
-        var obj = $.parseJSON($filterListJSON);
+        var obj = jQuery.parseJSON($filterListJSON);
+    alert(obj.database);
 
 
 </script>
