@@ -89,7 +89,10 @@
             tbl_body += "<tr class=\""+( odd_even ? "odd" : "even")+"\">"+tbl_row+"</tr>";
             odd_even = !odd_even;
         })
+
         $("#target_table_id tbody").html(tbl_body);
+
+        var obj = $.parseJSON($filterListJSON);
 
 
 </script>
