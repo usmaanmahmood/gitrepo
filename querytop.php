@@ -46,7 +46,7 @@ include 'config.php' ?>
             <li><a href="#about">About</a></li>
               <li><a href="testing.php">Testing</a></li>
 
-              <li><a href="login.php">Login</a></li>
+<!--              <li><a href="login.php">Login</a></li>-->
 		<li><a href="logout.php">Logout</a></li>
           </ul>
         </div><!--/.nav-collapse -->
