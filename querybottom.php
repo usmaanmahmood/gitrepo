@@ -69,6 +69,8 @@
                 $json[i].visible = false;
                 console.log($json[i].database, $databases, $json[i].visible);
             }
+            else
+                $json[i].visible = true;
         }
 
         $('#ModuleList').empty();
