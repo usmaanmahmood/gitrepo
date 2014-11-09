@@ -25,7 +25,7 @@ class ArcadeQuery {
 
         if ($inCommand <> "profile")
         {
-            $arcadeProfileString = $_SESSION("arcadeprofilestring");
+            $arcadeProfileString = $_SESSION["arcadeprofilestring"];
             $arcadeProfile = new ArcadeProfile($arcadeProfileString); // create arcade profile object
             $this->filterList = $arcadeProfile->getFilterList();
         }
