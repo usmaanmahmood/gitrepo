@@ -52,12 +52,11 @@
     });
 
     $("#DatabaseList").click(function() {
-       var  $databases = $("#DatabaseList option:selected").text();
+       var  $selectedDatabases = $("#DatabaseList option:selected").val();
 
         for (var i = 0; i < $json.length; i++)
         {
-            if ($json[i].database != $databases)
-            {
+            if ($.inArray($json[i].database, $selectedDatabases) == -1) {
                 $json[i].visible = false;
             }
             else
