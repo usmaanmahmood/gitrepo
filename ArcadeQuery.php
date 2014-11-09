@@ -10,19 +10,31 @@ if(session_id() == '') {
 }
 
 include "FilterList.php";
+include "ArcadeProfile.php";
+
 
 class ArcadeQuery {
     public  $command;
     public  $filterList;
     public  $queryOutput;
 
-    public function __construct($inCommand) {
+    // if profile object is passed, auto add the filterlist
+    public function __construct($inCommand, ArcadeProfile $inProfile) {
         $this->command = $inCommand;
         $this->filterList = new FilterList();
+
+        if (isset($inProfile))
+        {
+            $this->filterList = $inProfile->getFilterList();
+        }
+
     }
 
     public function addFilter(Filter $inFilter) { $this->filterList->addFilter($inFilter); }
     public function addFilters(Filter $inFilters) { $this->filterList->addFilters($inFilters); }
+    public function selectFilter(Filter $inFilter) {
+
+    }
 
     //getters
     public function getCommand() { return $this->command; }

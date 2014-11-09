@@ -10,9 +10,8 @@ class ArcadeProfile {
     public $commandArray;
     public $filterList; // will contain all the filters
 
-//    public $arcadeUsername = 'mahmoou1';
 
-    //performs cleanup of ProfileQuery result, and creates 2D array for command and filter data
+    //performs cleanup of profile string from ArcadeQuery, and creates 2D array for command and filter data
     public function __construct($string) {
         // create array of commands
         $this->commandArray = array();
@@ -36,8 +35,6 @@ class ArcadeProfile {
         $lines = preg_split('/\r\n|\r|\n/', $lines[1], 2); // remove second line so just have required list
         $lines = $lines[1];
         $rowbyrow = explode("\n", trim($lines)); // split $lines into array of strings, line by line, after trimming whitespace
-
-
 
         // create
         foreach($rowbyrow as $key => $row) {
@@ -71,6 +68,8 @@ class ArcadeProfile {
 
     // requires exact name, returns Array of list - use array_column 5.5 onwards
     public function getList($inListName) {  $this->filterList->getList($inListName); }
+
+    public function getFilterList() { return $this->filterList; }
 
     public function getCommandList() {  return $this->commandArray; }
 

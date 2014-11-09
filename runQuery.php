@@ -14,7 +14,7 @@ $groups = rtrim($_GET["groups"]);
 $students = rtrim($_GET["students"]);
 $modules = rtrim($_GET["modules"]);
 
-$arcadeQuery = new ArcadeQuery($command);
+$arcadeQuery = new ArcadeQuery($command, $_SESSION['arcadeprofile']);
 
 $arcadeQuery->addFilter(new Filter($databases, $groups, $students, "", $modules));
 $arcadeQuery->sendQuery();

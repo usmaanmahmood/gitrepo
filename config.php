@@ -54,4 +54,11 @@ function classicQuery($query, $database, $group, $student, $module)
 	return $results;
 }
 
+
+include "ArcadeQuery.php";
+
+$profileQuery = new ArcadeQuery("profile"); // set up new profile query
+$arcadeProfileString = $profileQuery->sendQuery(); // execute profile query
+$arcadeProfile = new ArcadeProfile($arcadeProfileString); // create arcade profile object
+$_SESSION['arcadeprofile'] = $profileQuery; // store profile in session
 ?>
