@@ -15,12 +15,12 @@ $databases = rtrim($_GET["databases"]);
 if (!isset($_SESSION['currentarcadeprofile']))
     $_SESSION['currentarcadeprofile'] = $_SESSION['arcadeprofile'];
 
-$currentArcadeProfile = $_SESSION['currentarcadeprofile']; // put into variable to make life easier
+$currentArcadeProfile = unserialize($_SESSION['currentarcadeprofile']); // put into variable to make life easier
 
 $currentArcadeProfile->selectDatabase($databases);
 
 
-$_SESSION['currentarcadeprofile'] = $currentArcadeProfile; // save it after changing it
+$_SESSION['currentarcadeprofile'] = serialize($currentArcadeProfile); // save it after changing it
 
 
 foreach($currentArcadeProfile->filterList->getList("module") as $option) { ?>

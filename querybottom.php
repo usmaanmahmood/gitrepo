@@ -54,7 +54,7 @@
             type: 'get',
             success: function(result)
             {
-                $('#DatabaseList').html(result);
+                $('#ModuleList').html(result);
             }
         });
     }

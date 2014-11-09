@@ -87,9 +87,9 @@ if (!isset($_SESSION['arcadeprofile']))
 {
     $profileQuery = new ArcadeQuery("profile"); // set up new profile query + auto send
     $arcadeProfile = new ArcadeProfile($profileQuery->getResult()); // create new object
-    $_SESSION['arcadeprofile'] = $arcadeProfile; // save into session
+    $_SESSION['arcadeprofile'] = serialize($arcadeProfile); // save into session
 }
 else
-    $arcadeProfile = $_SESSION['arcadeprofile'];
+    $arcadeProfile = unserialize($_SESSION['arcadeprofile']);
 
 ?>
