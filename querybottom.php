@@ -57,11 +57,25 @@
             });
         });
 
-        $filterListJSON = <?php echo json_encode($arcadeProfile->getFilterList()); ?> ;
-        $filterObject = jQuery.parseJSON($filterListJSON);
-        alert ($filterObject.FilterList);
+        <?php function object_to_array($data)
+        {
+            if(is_array($data) || is_object($data))
+            {
+                $result = array();
 
-    //$databaseList = <?php echo json_encode($arcadeProfile->getFilterList()->getList("database")); ?> ;
+                foreach($data as $key => $value) {
+                $result[$key] = $this->object_to_array($value);
+            }
+
+                return $result;
+            }
+
+            return $data;
+        }
+        $filterlistout = object_to_array($arcadeProfile->getFilterList());
+        ?>
+
+        $filterListJSON = <?php echo json_encode($filterlistout); ?> ;
 
 
 </script>
