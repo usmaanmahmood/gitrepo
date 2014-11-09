@@ -43,57 +43,23 @@
                 $submitbutton.button('reset');
             }
         });
-        });
+    });
 
-        $("#DatabaseList").click(function() {
-            $databases = $("#DatabaseList option:selected").text();
+    $("#DatabaseList").click(function() {
+        $databases = $("#DatabaseList option:selected").text();
 
-            $.ajax ({
-                url: 'selectDatabase.php',
-                data: {"databases": $databases},
-                type: 'get',
-                success: function(result)
-                {
-                    $('#ModuleList').html(result);
-                }
-            });
-        });
-
-        <?php function object_to_array($data)
-        {
-            if(is_array($data) || is_object($data))
+        $.ajax ({
+            url: 'selectDatabase.php',
+            data: {"databases": $databases},
+            type: 'get',
+            success: function(result)
             {
-                $result = array();
-
-                foreach($data as $key => $value) {
-                $result[$key] = object_to_array($value);
+                $('#ModuleList').html(result);
             }
+        });
+    });
 
-                return $result;
-            }
-
-            return $data;
-        }
-        $filterlistout = object_to_array($arcadeProfile->getArrayOfFilters());
-        ?>
-
-        var $filterListJSON = <?php echo json_encode($filterlistout); ?> ;
-
-        var tbl_body = "";
-        var odd_even = false;
-        $.each($filterListJSON, function() {
-            var tbl_row = "";
-            $.each(this, function(k , v) {
-                tbl_row += "<td>"+v+"</td>";
-            })
-            tbl_body += "<tr class=\""+( odd_even ? "odd" : "even")+"\">"+tbl_row+"</tr>";
-            odd_even = !odd_even;
-        })
-
-        $("#target_table_id tbody").html(tbl_body);
-
-        var $filterlistarray = $.parseJSON($filterListJSON);
-        
+    
 
 
 </script>
