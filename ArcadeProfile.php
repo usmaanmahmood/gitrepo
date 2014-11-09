@@ -9,6 +9,7 @@
 class ArcadeProfile {
     public $commandArray;
     public $filterList; // will contain all the filters
+    public $currentFilterList; // temp filter lists
 
 
     //performs cleanup of profile string from ArcadeQuery, and creates 2D array for command and filter data
@@ -47,11 +48,12 @@ class ArcadeProfile {
         foreach($rowbyrow as $filter) {
             $newFilter = new Filter($filter[0], $filter[1], $filter[2], $filter[3], $filter[4]);
             $this->filterList->addFilter($newFilter);
+            $this->currentFilterList->addFilter($newFilter);
         }
     }
 
     public function selectDatabase($inDatabase) {
-        $this->filterList->removeFilterByDB($inDatabase);
+        $this->currentFilterList->removeFilterByDB($inDatabase);
     }
 
     //returns as html table

@@ -41,22 +41,24 @@
                 $submitbutton.button('reset');
             }
         });
-    });
-
-    $("#DatabaseList").click(function() {
-        $databases = $("#DatabaseList option:selected").text();
-
-        $.ajax ({
-            url: 'selectDatabase.php',
-            data: {"databases": $databases},
-            type: 'get',
-            success: function(result)
-            {
-                $('#ModuleList').html(result);
-            }
         });
-    });
 
+        $("#DatabaseList").click(function() {
+            $databases = $("#DatabaseList option:selected").text();
+
+            $.ajax ({
+                url: 'selectDatabase.php',
+                data: {"databases": $databases},
+                type: 'get',
+                success: function(result)
+                {
+                    $('#ModuleList').html(result);
+                }
+            });
+        });
+
+        $jqueryProfile = <?php echo json_encode($arcadeProfile); ?> ;
+        alert ($jqueryProfile);
 </script>
   </body>
 </html>
