@@ -60,16 +60,33 @@
         $moduleList.empty();
 
 
+
         for (var i = 0; i < $json.length; i++) {   // if nothing is selected, show all the modules. if the one that is selected = current filter, then that filter is visible.
             if (($selectedDatabases == null) || ($.inArray($json[i].database, $selectedDatabases) > -1)) {
                 $json[i].visible = true;
-
-                if ($moduleList.find('option[value='+$json[i].module +']').length = 0)
-                    $moduleList.append("<option value=\"" + $json[i].module + "\">" + $json[i].module + "</option>");
-
-
             }
         };
+
+        var $uniqueModules = [];
+
+        $moduleList.each(function()
+        {
+            $uniqueModules.push($moduleList.text());
+        });
+
+        function unique(array) {
+            return $.grep(array, function(el, index) {
+                return index === $.inArray(el, array);
+            });
+        }
+
+        $uniqueModules = unique($uniqueModules);
+
+
+        for (var i = 0; i < $uniqueModules.length; i++)
+        {
+                $moduleList.append("<option value=\"" + $uniqueModules[i] + "\">" + $uniqueModules[i] + "</option>");
+        }
 
     });
 
