@@ -71,7 +71,7 @@
 
         for (var i = 0; i < $json.length; i++)
         {
-            if ($json[i].visible = true)
+            if ($json[i].visible)
             {
                 $('#ModuleList').append("<option>" + $json[i].module + "</option>");
             }
