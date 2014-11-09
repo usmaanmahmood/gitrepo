@@ -17,7 +17,7 @@ if($mysqli -> connect_error) {
 
 // username and password sent from form 
 $username=$_POST['username']; 
-$password=$_POST['password']; 
+$password=$_POST['password'];
 
 // To protect MySQL injection
 $username = stripslashes($username);
@@ -33,16 +33,16 @@ $num_rows = $result->num_rows;
 
 // If result matched $username and $password, table row must be 1 row
 if($num_rows==1){
-session_start();
-// Register $myusername, $mypassword and redirect to file "customer_area.php"
-$_SESSION["username"] = $username;
-$_SESSION["arcadepassword"] = $result->fetch_assoc()['ArcadePassword'];
-$result -> close();
-$mysqli -> close();
-header("location:querylist.php");
+    session_start();
+    // Register $myusername, $mypassword and redirect to file "customer_area.php"
+    $_SESSION["username"] = $username;
+    $_SESSION["arcadepassword"] = $result->fetch_assoc()['ArcadePassword'];
+    $result -> close();
+    $mysqli -> close();
+    header("location:querylist.php");
 }
 else {
-echo "Wrong Username or Password";
-$mysqli -> close();
+    echo "Wrong Username or Password";
+    $mysqli -> close();
 }
 ?>
