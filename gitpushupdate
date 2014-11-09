@@ -6,3 +6,4 @@ git commit -m "script auto commit"
 git push
 curl https://web.cs.manchester.ac.uk/dashboard/update?token=Em6kg%2B3vYPsW3yck3fgpLwmSa%2FPHeOq701PMO%2FIbAT0 -o status.json
 cat ./status.json
+zenity --info --text 'DONE'
