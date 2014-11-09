@@ -62,8 +62,8 @@
         {
             if ($json[i].database != $databases)
             {
-                console.log($json[i].database, $databases);
                 $json[i].visible = false;
+                console.log($json[i].database, $databases, $json[i].visible);
             }
         }
 
