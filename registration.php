@@ -36,7 +36,7 @@
         <h2 class="form-signin-heading">Please Register</h2>
         <input type="text" class="form-control" placeholder="Central Username" name="centralusername" required autofocus maxlength=8>
         <input type="password" class="form-control" placeholder="Web Password" name="webpassword" required>
-	<input type="password" class="form-control" placeholder="ARCADE Password" name="arcadepassword" required> "cat $HOME/.ARCADE/serverAuthentication"
+	<input type="password" class="form-control" placeholder="ARCADE Password" name="arcadepassword" required> run: cat $HOME/.ARCADE/serverAuthentication
         <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
       </form>
 
