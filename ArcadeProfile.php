@@ -10,7 +10,7 @@ class ArcadeProfile {
     public $commandArray;
     public $filterList; // will contain all the filters
 
-    public $arcadeUsername = 'mahmoou1';
+//    public $arcadeUsername = 'mahmoou1';
 
     //performs cleanup of ProfileQuery result, and creates 2D array for command and filter data
     public function __construct($string) {

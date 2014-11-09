@@ -14,6 +14,7 @@ include "FilterList.php";
 class ArcadeQuery {
     public  $command;
     public  $filterList;
+    public  $queryOutput;
 
     public function __construct($inCommand) {
         $this->command = $inCommand;
@@ -29,6 +30,7 @@ class ArcadeQuery {
     public function getGroups() { return $this->filterList->getList('group'); }
     public function getStudentUsernames() { return $this->filterList->getList('studentUsername'); }
     public function getModules() { return $this->filterList->getList('module'); }
+    public function getResult() { return $this->queryOutput; }
 
     public function sendQuery() {
         $socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP); // create new socket
@@ -53,14 +55,14 @@ class ArcadeQuery {
 
         // accept data until remote host closes the connection
         while ($socketoutput = socket_read($socket, "100000"))	{
-            if ($socketoutput <> '++WORKING')
+            if ($socketoutput <> '++WORKING\n')
                 $results .= $socketoutput;
         }
 
         socket_shutdown($socket, 2); // 2 = shutdown reading and writing
         socket_close($socket);
 
-        return $results;
+        $queryOutput = $results;
     }
 }
 
