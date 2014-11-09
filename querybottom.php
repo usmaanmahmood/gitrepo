@@ -62,7 +62,7 @@
         for (var i = 0; i < $json.length; i++) {   // if nothing is selected, show all the modules. if the one that is selected = current filter, then that filter is visible.
             if (($selectedDatabases == null) || ($.inArray($json[i].database, $selectedDatabases) > -1)) {
                 $json[i].visible = true;
-                $moduleList.append("<option value=\"" + $json[i].group + "\">" + $json[i].group + "</option>");
+                $groupList.append("<option value=\"" + $json[i].group + "\">" + $json[i].group + "</option>");
                 $moduleList.append("<option value=\"" + $json[i].module + "\">" + $json[i].module + "</option>");
             }
         };
