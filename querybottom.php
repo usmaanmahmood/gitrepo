@@ -58,7 +58,8 @@
         });
 
         $filterList = <?php echo json_encode($arcadeProfile->getFilterList()); ?> ;
-        
+    $databaseList = <?php echo json_encode($arcadeProfile->getFilterList()->getList("database")); ?> ;
+
 
 </script>
   </body>
