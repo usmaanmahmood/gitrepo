@@ -67,6 +67,16 @@
                 $json[i].visible = false;
             }
         }
+
+        $('#ModuleList').empty();
+
+        for (var i = 0; i < $json.length; i++)
+        {
+            if ($json[i].visible = true)
+            {
+                $('#ModuleList').append("<option>" + $json[i].module + "</option>");
+            }
+        }
     });
 
 
