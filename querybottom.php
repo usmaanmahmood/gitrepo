@@ -62,7 +62,7 @@
 
         for (var i = 0; i < $json.length; i++)
         {
-            if ($json[i].database <> $databases)
+            if ($json[i].database != $databases)
             {
                 json[i].visible = false;
             }
