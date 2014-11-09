@@ -67,7 +67,7 @@ class ArcadeQuery {
 
         // accept data until remote host closes the connection
         while ($socketoutput = socket_read($socket, "100000"))	{
-            if ($socketoutput != '++WORKING\n')
+            if ($socketoutput <> '++WORKING\n')
                 $results .= $socketoutput;
         }
 
