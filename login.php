@@ -34,8 +34,8 @@
 
       <form class="form-signin" role="form" method="post" action="checklogin.php">
         <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="text" class="form-control" placeholder="Central Username" name="username" required autofocus maxlength=8>
-        <input type="password" class="form-control" placeholder="Web Password" name="password" required>
+        <input type="text" class="form-control" placeholder="Central Username" name="username" required autofocus maxlength=8 value="mahmoou1">
+        <input type="password" class="form-control" placeholder="Web Password" name="password" required value="webpassword">
         <label class="checkbox">
           <input type="checkbox" value="remember-me"> Remember me
         </label>

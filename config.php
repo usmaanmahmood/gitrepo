@@ -64,6 +64,7 @@ if (!isset($_SESSION['arcadeprofilestring']))
     $arcadeProfileString = $profileQuery->getResult(); // save profile strnig
     $_SESSION['arcadeprofilestring'] = $arcadeProfileString; // store profilestring in session
     $arcadeProfile = new ArcadeProfile($_SESSION['arcadeprofilestring']); // create new object
+    unset($profileQuery);
 }
 else
     $arcadeProfile = new ArcadeProfile($_SESSION['arcadeprofilestring']); // create new object
