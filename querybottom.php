@@ -66,6 +66,16 @@
                 $moduleList.append("<option value=\"" + $json[i].module + "\">" + $json[i].module + "</option>");
             }
         };
+
+        var seen = {};
+        $groupList.each(function() {
+            var txt = $(this).text();
+            if (seen[txt])
+                $(this).remove();
+            else
+                seen[txt] = true;
+        });
+
     });
 
 
