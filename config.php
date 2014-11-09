@@ -57,9 +57,17 @@ function classicQuery($query, $database, $group, $student, $module)
 
 include "ArcadeQuery.php";
 
-$profileQuery = new ArcadeQuery("profile"); // set up new profile query
-$profileQuery->sendQuery(); // execute profile query
-$_SESSION['arcadeprofilestring'] = $profileQuery->getResult(); // store profilestring in session
+if (!isset($_SESSION['arcadeprofilestring']))
+{
+    $profileQuery = new ArcadeQuery("profile"); // set up new profile query
+    $profileQuery->sendQuery(); // execute profile query
+    $arcadeProfileString = $profileQuery->getResult(); // save profile strnig
+    $_SESSION['arcadeprofilestring'] = $arcadeProfileString; // store profilestring in session
+    $arcadeProfile = new ArcadeProfile($_SESSION['arcadeprofilestring']); // create new object
+}
+else
+    $arcadeProfile = new ArcadeProfile($_SESSION['arcadeprofilestring']); // create new object
+
 
 echo $_SESSION['arcadeprofilestring'];
 ?>
