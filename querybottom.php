@@ -14,14 +14,14 @@
 
 <script>
     $( "#submit" ).click(function(){
-        $command = $("#CommandList option:selected").text();
-        $databases = $("#DatabaseList option:selected").text();
-        $groups = $("#GroupList option:selected").text();
-        $students = $("#StudentList option:selected").text();
-        $modules = $("#ModuleList option:selected").text();
+        var $command = $("#CommandList option:selected").text();
+        var $databases = $("#DatabaseList option:selected").text();
+        var $groups = $("#GroupList option:selected").text();
+        var $students = $("#StudentList option:selected").text();
+        var $modules = $("#ModuleList option:selected").text();
 
 
-        $submitbutton = $('#submit').button('loading');
+        var $submitbutton = $('#submit').button('loading');
 
         $('#resultspane').fadeOut('slow');
 
@@ -47,27 +47,18 @@
 
     $.getJSON ('getFilterLists.php', function (json)
     {
-        for (var i = 0; i < json.length; i++)
-        {
-            json[i].database = $.trim(json[i].database);
-            json[i].group = $.trim(json[i].group);
-            json[i].studentUsername = $.trim(json[i].studentUsername);
-            json[i].module = $.trim(json[i].module);
-            json[i].visible = true
-        }
-
+        for (var i = 0; i < json.length; i++) { json[i].visible = true; }
         $json = json;
     });
 
     $("#DatabaseList").click(function() {
-        $databases = $.trim($("#DatabaseList option:selected").text());
+       var  $databases = $("#DatabaseList option:selected").text();
 
         for (var i = 0; i < $json.length; i++)
         {
             if ($json[i].database != $databases)
             {
                 $json[i].visible = false;
-                console.log($json[i].database, $databases, $json[i].visible);
             }
             else
                 $json[i].visible = true;

@@ -28,7 +28,7 @@
                 <p>Databases</p>
                 <select multiple class="form-control" size=10 id="DatabaseList">
                 <?php foreach($arcadeProfile->filterList->getList("database") as $option) { ?>
-                    <option><?php echo $option . " " ?></option>
+                    <option value="<?php echo $option ?>"><?php echo $option ?></option>
                 <?php }?>
                 </select>
             </div>
@@ -36,7 +36,7 @@
                 <p>Groups</p>
                 <select multiple class="form-control" size=10 id="GroupList">
                     <?php foreach($arcadeProfile->filterList->getList("group") as $option) { ?>
-                        <option><?php echo $option . " " ?></option>
+                        <option value="<?php echo $option ?>"><?php echo $option ?></option>
                     <?php }?>
                 </select>
             </div>
@@ -44,7 +44,7 @@
                 <p>Students</p>
                 <select multiple class="form-control" size=10 id="StudentList">
                     <?php foreach($arcadeProfile->filterList->getList("studentUsername") as $option) { ?>
-                        <option><?php echo $option . " " ?></option>
+                        <option value="<?php echo $option ?>"><?php echo $option ?></option>
                     <?php }?>
                 </select>
             </div>
@@ -52,7 +52,7 @@
                 <p>Modules</p>
                 <select multiple class="form-control" size=10 id="ModuleList">
                     <?php foreach($arcadeProfile->filterList->getList("module") as $option) { ?>
-                        <option><?php echo $option . " " ?></option>
+                        <option value="<?php echo $option ?>"><?php echo $option ?></option>
                     <?php }?>
                 </select>
             </div>
