@@ -25,8 +25,8 @@ class ArcadeQuery {
 
         if ($inCommand <> "profile")
         {
-            $arcadeProfile = unserialize($_SESSION["arcadeprofile"]);
-            $this->filterList = $arcadeProfile->getFilterList();
+//            $arcadeProfile = unserialize($_SESSION["arcadeprofile"]);
+//            $this->filterList = $arcadeProfile->getFilterList();
         }
         else
             $this->sendQuery();
