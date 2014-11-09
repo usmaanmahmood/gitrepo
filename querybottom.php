@@ -59,27 +59,23 @@
         $groupList.empty();
         $moduleList.empty();
 
-        var $stringMdulesList = [];
+        var $stringModulesList = [];
         var $stringModulesAdded = [];
 
         for (var i = 0; i < $json.length; i++) {   // if nothing is selected, show all the modules. if the one that is selected = current filter, then that filter is visible.
             if (($selectedDatabases == null) || ($.inArray($json[i].database, $selectedDatabases) > -1)) {
                 $json[i].visible = true;
-                $stringMdulesList.push($json[i].module);
+                $stringModulesList.push($json[i].module);
             }
         };
 
-
-
-        for (var i = 0; i < $stringMdulesList.length; i++)
-        {
-            if ($.inArray($stringMdulesList[i], $stringModulesAdded) == -1) {
-                $moduleList.append("<option value=\"" + $uniqueModules[i] + "\">" + $uniqueModules[i] + "</option>");
-                $stringModulesAdded.push($stringMdulesList[i]);
+        $.each($stringModulesList, function(key, value) {
+            if ($.inArray(value, $stringModulesAdded) == -1) {
+                $moduleList.append("<option value=\"" + value + "\">" + value + "</option>");
+                $stringModulesAdded.push(value);
             }
+        };
 
-
-        }
 
     });
 
