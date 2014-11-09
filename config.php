@@ -63,7 +63,9 @@ if (!isset($_SESSION['arcadeprofile']))
     $arcadeProfile = new ArcadeProfile($profileQuery->getResult()); // create new object
     $_SESSION['arcadeprofile'] = $arcadeProfile; // save into session
 }
+else
+    $arcadeProfile = $_SESSION['arcadeprofile'];
 
 
-echo var_dump($_SESSION['arcadeprofile']);
+
 ?>
