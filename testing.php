@@ -202,7 +202,7 @@ Sem2Summary
 
 include "ArcadeQuery.php";
 
-class ProfileQuery {
+class ArcadeProfile {
     public $commandArray;
     public $filterList; // will contain all the filters
 
@@ -287,7 +287,12 @@ class ProfileQuery {
     }
 }
 
-$arcadeProfile = new ProfileQuery($string);
+//$arcadeProfile = new ProfileQuery($string);
+
+$profileQuery = new ArcadeQuery("profile");
+$arcadeProfileString = $profileQuery->sendQuery();
+$arcadeProfile = new ArcadeProfile($arcadeProfileString);
+
 
 ?>
 <div class="row">

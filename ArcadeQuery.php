@@ -78,8 +78,8 @@ class ArcadeQuery {
         $socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP); // create new socket
         socket_connect ($socket , "carousel", 4000); // connect to arcade on port 4000
 
-        $username = 'mahmoou1';//$_SESSION['username'];
-        $arcadepassword = 'LQKUGRIRDE';//$_SESSION['arcadepassword'];
+        $username = $_SESSION['username'];
+        $arcadepassword = $_SESSION['arcadepassword'];
 
         socket_write($socket, "LKJHGFDSA\n"); // hello token
         socket_write($socket, $username . "\n"); // arcade user
