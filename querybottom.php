@@ -95,8 +95,12 @@
             }
         }
 
+
+
         $.each($uniqueModules, function(key, value) {
-            $('#ModuleList').append("<option value =" + value + ">" + value + "</option>");
+            $('#mySelect').append($("<option></option>")
+            $('#mySelect').attr("value",key)
+            $('#mySelect').text(value));
         });
 
 
