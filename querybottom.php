@@ -45,7 +45,7 @@
 
     $("#DatabaseList").click(function() {
         $databases = $("#DatabaseList option:selected").text();
-
+        alert($databases);
         $.ajax ({
             url: 'selectDatabase.php',
             data: {"databases": $databases},
