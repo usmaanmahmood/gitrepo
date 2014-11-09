@@ -67,14 +67,14 @@
                 $json[i].visible = true;
                 $stringModulesList.push($json[i].module);
             }
-        };
+        }
 
         $.each($stringModulesList, function(key, value) {
             if ($.inArray(value, $stringModulesAdded) == -1) {
                 $moduleList.append("<option value=\"" + value + "\">" + value + "</option>");
                 $stringModulesAdded.push(value);
             }
-        };
+        })
 
 
     });
