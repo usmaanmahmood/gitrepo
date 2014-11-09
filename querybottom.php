@@ -1,4 +1,4 @@
-<table id="target_table_id">
+<table id="table">
     <tbody></tbody>
 </table>
       </div>
@@ -59,7 +59,17 @@
         });
     });
 
-    
+    $.getJSON('getFilterLists.php',
+        function (json) {
+            var tr;
+            for (var i = 0; i < json.length; i++) {
+                tr = $('<tr/>');
+                tr.append("<td>" + json[i].User_Name + "</td>");
+                tr.append("<td>" + json[i].score + "</td>");
+                tr.append("<td>" + json[i].team + "</td>");
+                $('#table').append(tr);
+            }
+        });
 
 
 </script>
