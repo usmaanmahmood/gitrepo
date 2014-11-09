@@ -57,6 +57,7 @@
         var $selectedUsernames = $("#StudentList").val();
         var $selectedModules = $("#ModuleList").val();
 
+        // set a filter row to invisible if there are no matches
         for (var i = 0; i < $json.length; i++)
         {
             $json[i].visible =  ($.inArray($json[i].database, $selectedDatabases) > -1) || ($selectedDatabases == null) ||
@@ -65,9 +66,7 @@
 
                                 ($.inArray($json[i].studentUsername, $selectedUsernames) > -1) || ($selectedUsernames == null) ||
 
-                                ($.inArray($json[i].module, $selectedModules) > -1) || ($selectedModules == null)
-                                ;
-
+                                ($.inArray($json[i].module, $selectedModules) > -1) || ($selectedModules == null);
         }
 
 //        $('#DatabaseList').empty();
@@ -80,24 +79,32 @@
         var $uniqueStudentUsernames = [];
         var $uniqueModules = [];
 
+        // add to the dropdowns if they are visible and havent already been added
         for (var i = 0; i < $json.length; i++)
         {
             if ($json[i].visible)
             {
-//                if ($.inArray($json[i].database, $uniqueDatabases) == -1) { $uniqueDatabases.push($json[i].database); }
-                if ($.inArray($json[i].group, $uniqueGroups) == -1) || ($selectedGroups == null) { $uniqueGroups.push($json[i].group); }
-                if ($.inArray($json[i].studentUsername, $uniqueStudentUsernames) == -1) || ($selectedUsernames == null) { $uniqueStudentUsernames.push($json[i].studentUsername); }
-                if ($.inArray($json[i].module, $uniqueModules) == -1) || ($selectedModules == null) { $uniqueModules.push($json[i].module); }
+//              if ($.inArray($json[i].database, $uniqueDatabases) == -1) { $uniqueDatabases.push($json[i].database); }
+
+                if (($.inArray($json[i].group, $uniqueGroups) == -1) || ($selectedGroups == null))
+                { $uniqueGroups.push($json[i].group); }
+
+                if (($.inArray($json[i].studentUsername, $uniqueStudentUsernames) == -1) || ($selectedUsernames == null))
+                { $uniqueStudentUsernames.push($json[i].studentUsername); }
+
+                if (($.inArray($json[i].module, $uniqueModules) == -1) || ($selectedModules == null))
+                { $uniqueModules.push($json[i].module); }
             }
         }
 
 
+        var seloption = "";
 
-        $.each($uniqueModules, function(key, value) {
-            $('#mySelect').append($("<option></option>")
-                    .attr("value",key)
-                    .text(value));
+        $.each($uniqueModules,function(index, value){
+            seloption += '<option value="'+value+'">'+value+'</option>';
         });
+
+        $('#ModuleList').append(seloption);
 
 
     });
