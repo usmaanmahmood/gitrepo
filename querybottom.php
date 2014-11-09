@@ -49,6 +49,10 @@
     {
         for (var i = 0; i < json.length; i++)
         {
+            json[i].database = $.trim(json[i].database);
+            json[i].group = $.trim(json[i].group);
+            json[i].studentUsername = $.trim(json[i].studentUsername);
+            json[i].module = $.trim(json[i].module);
             json[i].visible = true
         }
 
@@ -60,7 +64,7 @@
 
         for (var i = 0; i < $json.length; i++)
         {
-            if ($.trim($json[i].database) != $.trim($databases))
+            if ($json[i].database != $databases)
             {
                 $json[i].visible = false;
                 console.log($json[i].database, $databases, $json[i].visible);
