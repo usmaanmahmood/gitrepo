@@ -81,7 +81,7 @@
 
         var tbl_body = "";
         var odd_even = false;
-        $filterListJSON.each(data, function() {
+        $filterListJSON.each($filterListJSON, function() {
             var tbl_row = "";
             $filterListJSON.each(this, function(k , v) {
                 tbl_row += "<td>"+v+"</td>";
