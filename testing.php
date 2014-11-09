@@ -201,7 +201,6 @@ Sem2Summary
 11-12-1 X6 mahmoou1 Mahmood,Usmaan_Ali Tut2 ';
 
 include "ArcadeQuery.php";
-
 include "ArcadeProfile.php";
 
 //$arcadeProfile = new ProfileQuery($string);
