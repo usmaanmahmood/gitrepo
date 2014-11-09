@@ -113,7 +113,6 @@
         $databaseList.empty();
         $groupList.empty();
       $studentList.empty();
-      $moduleList.empty();
 
         var $stringDatabasesList = [];
         var $stringDatabasesAdded = [];
