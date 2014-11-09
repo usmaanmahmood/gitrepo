@@ -60,4 +60,6 @@ include "ArcadeQuery.php";
 $profileQuery = new ArcadeQuery("profile"); // set up new profile query
 $profileQuery->sendQuery(); // execute profile query
 $_SESSION['arcadeprofilestring'] = $profileQuery->getResult(); // store profilestring in session
+
+echo $_SESSION['arcadeprofilestring'];
 ?>
