@@ -5,7 +5,10 @@
  * Date: 06/11/14
  * Time: 17:00
  */
-session_start();
+if(session_id() == '') {
+    session_start();
+}
+
 include "FilterList.php";
 
 class ArcadeQuery {
