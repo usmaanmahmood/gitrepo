@@ -50,6 +50,14 @@ class ArcadeProfile {
         }
     }
 
+    public function selectDatabase($inDatabase) {
+        foreach($this->filterList as $filter)
+        {
+            if ($filter->getDatabase() <> $inDatabase)
+                $this->filterList->removeFilter($filter);
+        }
+    }
+
     //returns as html table
     public function __toString() {
         $out  = "";

@@ -43,6 +43,22 @@
         });
     });
 
+//    $("#DatabaseList").click(function() {
+//        $databases = $("#DatabaseList option:selected").text();
+//        $databases = rtrim($databases);
+//
+//
+//        $.ajax ({
+//            url: 'selectDatabase.php',
+//            data: {"databases": $databases},
+//            type: 'get',
+//            success: function(result)
+//            {
+//                $('#resultspane').html(result);
+//            }
+//        });
+//    }
+
 </script>
   </body>
 </html>
