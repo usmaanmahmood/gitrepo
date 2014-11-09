@@ -39,7 +39,7 @@ if($num_rows==1){
     $_SESSION["arcadepassword"] = $result->fetch_assoc()['ArcadePassword'];
     $result -> close();
     $mysqli -> close();
-    header("location:querylist.php");
+    header("location:testing.php");
 }
 else {
     echo "Wrong Username or Password";
