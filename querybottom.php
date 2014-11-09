@@ -45,8 +45,6 @@
 
     $("#DatabaseList").click(function() {
         $databases = $("#DatabaseList option:selected").text();
-        $databases = rtrim($databases);
-
 
         $.ajax ({
             url: 'selectDatabase.php',
