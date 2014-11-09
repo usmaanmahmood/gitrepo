@@ -47,23 +47,15 @@
 
     var $json;
 
-    $.getJSON('getFilterLists.php',
-        function (json) {
-            for (var i = 0; i < json.length; i++)
-            {
-                json[i].visible = true
-            }
+    $.getJSON ('getFilterLists.php', function (json)
+    {
+        for (var i = 0; i < json.length; i++)
+        {
+            json[i].visible = true
+        }
 
-            $json = json;
-//            var tr;
-//            for (var i = 0; i < json.length; i++) {
-//                tr = $('<tr/>');
-//                tr.append("<td>" + json[i].database + "</td>");
-//                tr.append("<td>" + json[i].group + "</td>");
-//                tr.append("<td>" + json[i].module + "</td>");
-//                $('#table').append(tr);
-//            }
-        });
+        $json = json;
+    });
 
     $("#DatabaseList").click(function() {
         $databases = $("#DatabaseList option:selected").text();
