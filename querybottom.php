@@ -57,7 +57,7 @@
                 $('#ModuleList').html(result);
             }
         });
-    }
+    });
 
 </script>
   </body>
