@@ -70,14 +70,18 @@
             }
         }
 
-        $moduleList.empty();
+        var usedNames = {};
+        $("select[id='ModuleList'] > option").each(function () {
+            if(usedNames[this.text]) {
+                $(this).remove();
+            } else {
+                usedNames[this.text] = this.value;
+            }
+        });
 
-
-
-
-
-
-
+        $.each($moduleList, function(key, value) {
+                $moduleList.append("<option value=\"" + value + "\">" + value + "</option>");
+        });
 
     });
 
