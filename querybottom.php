@@ -50,7 +50,7 @@
         $json = json;
     });
 
-    $("#DatabaseList").select(function() {
+    $("#DatabaseList").click(function() {
         var $databaseList = $("#DatabaseList");
         var $groupList = $("#GroupList");
         var $moduleList = $("#ModuleList");
@@ -59,11 +59,15 @@
         $groupList.empty();
         $moduleList.empty();
 
+
         for (var i = 0; i < $json.length; i++) {   // if nothing is selected, show all the modules. if the one that is selected = current filter, then that filter is visible.
             if (($selectedDatabases == null) || ($.inArray($json[i].database, $selectedDatabases) > -1)) {
                 $json[i].visible = true;
-                $groupList.append("<option value=\"" + $json[i].group + "\">" + $json[i].group + "</option>");
-                $moduleList.append("<option value=\"" + $json[i].module + "\">" + $json[i].module + "</option>");
+
+                if ($groupList.find('option[value='+$json[i].group +']').length = 0)
+                    $groupList.append("<option value=\"" + $json[i].group + "\">" + $json[i].group + "</option>");
+
+
             }
         };
 
