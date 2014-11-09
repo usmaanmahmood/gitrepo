@@ -60,7 +60,7 @@
     });
 
     $("#DatabaseList").click(function() {
-        $databases = $("#DatabaseList option:selected").text();
+        $databases = $.trim($("#DatabaseList option:selected").text());
 
         for (var i = 0; i < $json.length; i++)
         {
