@@ -8,27 +8,23 @@
 
 include "ArcadeQuery.php";
 
+
 $databases = rtrim($_GET["databases"]);
 
-if (!isset($_SESSION["currentprofilestring"])) {
-    $_SESSION["currentprofilestring"] = $_SESSION["arcadeprofilestring"];
-}
+// create the current arcade profile if it doesnt exist
+if (!isset($_SESSION['currentarcadeprofile']))
+    $_SESSION['currentarcadeprofile'] = $_SESSION['arcadeprofile'];
+
+$currentArcadeProfile = $_SESSION['currentarcadeprofile']; // put into variable to make life easier
+
+$currentArcadeProfile->selectDatabase($databases);
 
 
-$arcadeProfileString = $_SESSION["currentprofilestring"];
-$arcadeProfile = new ArcadeProfile($arcadeProfileString);
-
-$arcadeProfile->selectDatabase($databases);
-
-$arcadeProfileString = $arcadeProfile->getFilterList();
+$_SESSION['currentarcadeprofile'] = $currentArcadeProfile; // save it after changing it
 
 
-
-
-
-
-
-
-foreach($arcadeProfile->filterList->getList("module") as $option) { ?>
+foreach($currentArcadeProfile->filterList->getList("module") as $option) { ?>
     <option><?php echo $option . " " ?></option>
 <?php }
+
+?>
