@@ -72,9 +72,11 @@
 
 
 
-        $.each($moduleList, function(key, value) {
-                $moduleList.append("<option value=\"" + value + "\">" + value + "</option>");
-        });
+        for (var i = 0; i < $json.length; i++)
+        {
+            if ($json[i].visible)
+                $moduleList.append("<option value=\"" + $json[i].module + "\">" + $json[i].module + "</option>");
+        }
 
         var usedNames = {};
         $("select[id='ModuleList'] > option").each(function () {
