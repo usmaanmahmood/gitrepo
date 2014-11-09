@@ -45,49 +45,25 @@
 
     var $json;
 
-    $.getJSON ('getFilterLists.php', function (json)
-    {
-        for (var i = 0; i < json.length; i++) { json[i].visible = true; }
+    $.getJSON ('getFilterLists.php', function (json) {
+        for (var i = 0; i < json.length; i++) { json[i].visible = false; }
         $json = json;
     });
 
-    $("#DatabaseList").click(function() {
+      $("#DatabaseList").click(function() {
         var $databaseList = $("#DatabaseList");
         var $moduleList = $("#ModuleList");
-
         var $selectedDatabases = $databaseList.val();
 
-        for (var i = 0; i < $json.length; i++)
-        {
-            $json[i].visible = false;
-        }
-
-        for (var i = 0; i < $json.length; i++)
-        {
+        for (var i = 0; i < $json.length; i++) {   // if nothing is selected, show all the modules. if the one that is selected = current filter, then that filter is visible.
             if (($selectedDatabases == null) || ($.inArray($json[i].database, $selectedDatabases) > -1)) {
                 $json[i].visible = true;
-
-            }
-        }
-
-
-
-        for (var i = 0; i < $json.length; i++)
-        {
-            if ($json[i].visible)
                 $moduleList.append("<option value=\"" + $json[i].module + "\">" + $json[i].module + "</option>");
-        }
-
-        var usedNames = {};
-        $("select[id='ModuleList'] > option").each(function () {
-            if(usedNames[this.text]) {
-                $(this).remove();
-            } else {
-                usedNames[this.text] = this.value;
             }
-        });
+        };
 
     });
+
 
 
 
