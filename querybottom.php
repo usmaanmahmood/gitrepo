@@ -64,7 +64,7 @@
         {
             if ($json[i].database != $databases)
             {
-                json[i].visible = false;
+                $json[i].visible = false;
             }
         }
     });
