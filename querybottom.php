@@ -60,7 +60,7 @@
         $moduleList.empty();
 
 
-        var $stringGroupssList = [];
+        var $stringGroupsList = [];
         var $stringGroupsAdded = [];
 
         var $stringModulesList = [];
@@ -73,12 +73,12 @@
         for (var i = 0; i < $json.length; i++) {   // if nothing is selected, show all the modules. if the one that is selected = current filter, then that filter is visible.
             if (($selectedDatabases == null) || ($.inArray($json[i].database, $selectedDatabases) > -1)) {
                 $json[i].visible = true;
-                $stringGroupssList.push($json[i].module);
+                $stringGroupsList.push($json[i].group);
                 $stringModulesList.push($json[i].module);
             }
         }
 
-        $.each($stringGroupssList, function(key, value) {
+        $.each($stringGroupsList, function(key, value) {
             if ($.inArray(value, $stringGroupsAdded) == -1) {
                 $groupList.append("<option value=\"" + value + "\">" + value + "</option>");
                 $stringGroupsAdded.push(value);
