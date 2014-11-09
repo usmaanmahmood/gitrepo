@@ -77,7 +77,7 @@
         $filterlistout = object_to_array($arcadeProfile->getArrayOfFilters());
         ?>
 
-        $filterListJSON = <?php echo json_encode($filterlistout); ?> ;
+        var $filterListJSON = <?php echo json_encode($filterlistout); ?> ;
 
         var tbl_body = "";
         var odd_even = false;
@@ -92,8 +92,8 @@
 
         $("#target_table_id tbody").html(tbl_body);
 
-        var obj = jQuery.parseJSON($filterListJSON);
-    alert(obj.database);
+        var $filterlistarray = $.parseJSON($filterListJSON);
+        
 
 
 </script>
