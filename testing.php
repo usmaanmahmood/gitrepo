@@ -11,11 +11,6 @@
  */
 
 
-
-//$profileQuery = new ArcadeQuery("profile");
-//$arcadeProfileString = $profileQuery->sendQuery();
-//$arcadeProfile = new ArcadeProfile($arcadeProfileString);
-
 ?>
 
 <div class="row">
