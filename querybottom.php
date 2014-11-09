@@ -1,4 +1,6 @@
-
+<table id="target_table_id">
+    <tbody></tbody>
+</table>
       </div>
 
     </div><!-- /.container -->
@@ -76,6 +78,18 @@
         ?>
 
         $filterListJSON = <?php echo json_encode($filterlistout); ?> ;
+
+        var tbl_body = "";
+        var odd_even = false;
+        $filterListJSON.each(data, function() {
+            var tbl_row = "";
+            $filterListJSON.each(this, function(k , v) {
+                tbl_row += "<td>"+v+"</td>";
+            })
+            tbl_body += "<tr class=\""+( odd_even ? "odd" : "even")+"\">"+tbl_row+"</tr>";
+            odd_even = !odd_even;
+        })
+        $("#target_table_id tbody").html(tbl_body);
 
 
 </script>
