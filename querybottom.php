@@ -99,11 +99,9 @@
 
 
         var seloption = "";
-
         $.each($uniqueModules,function(index, value){
             seloption += '<option value="'+value+'">'+value+'</option>';
         });
-
         $('#ModuleList').append(seloption);
 
 
