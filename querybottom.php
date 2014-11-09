@@ -74,18 +74,10 @@
             $uniqueModules.push($moduleList.text());
         });
 
-        function unique(array) {
-            return $.grep(array, function(el, index) {
-                return index === $.inArray(el, array);
-            });
-        }
-
-        $uniqueModules = unique($uniqueModules);
-
 
         for (var i = 0; i < $uniqueModules.length; i++)
         {
-                $moduleList.append("<option value=\"" + $uniqueModules[i] + "\">" + $uniqueModules[i] + "</option>");
+                $moduleList.append("<option value=\"" + $uniqueModules[i].value + "\">" + $uniqueModules[i].value + "</option>");
         }
 
     });
