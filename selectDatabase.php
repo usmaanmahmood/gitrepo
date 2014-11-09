@@ -18,7 +18,6 @@ if (!isset($_SESSION['currentarcadeprofile']))
 $currentArcadeProfile = unserialize($_SESSION['currentarcadeprofile']); // put into variable to make life easier
 echo "." . $databases . ".";
 
-echo $currentArcadeProfile->getCommandList();
 $currentArcadeProfile->selectDatabase($databases);
 
 
