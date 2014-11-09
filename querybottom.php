@@ -52,15 +52,14 @@
     });
 
     $("#DatabaseList").click(function() {
-       var  $selectedDatabases = $("#DatabaseList").val();
+        var $selectedDatabases = $("#DatabaseList").val();
+        var $selectedGroups = $("#GroupList").val();
+        var $selectedUsernames = $("#StudentList").val();
+        var $selectedModules = $("#ModuleList").val();
 
         for (var i = 0; i < $json.length; i++)
         {
-            if ($.inArray($json[i].database, $selectedDatabases) == -1) {
-                $json[i].visible = false;
-            }
-            else
-                $json[i].visible = true;
+            $json[i].visible = ($.inArray($json[i].database, $selectedDatabases) > -1); // if brackets is true (found), then its set to ture
         }
 
         $('#ModuleList').empty();
