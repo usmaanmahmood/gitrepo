@@ -98,9 +98,9 @@
 
 
         $.each($uniqueModules, function(key, value) {
-            $('#mySelect').append($("<option></option>"));
-            $('#mySelect').attr("value",key);
-            $('#mySelect').text(value));
+            $('#mySelect').append($("<option></option>")
+                    .attr("value",key)
+                    .text(value));
         });
 
 
