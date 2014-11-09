@@ -128,7 +128,7 @@
       for (var i = 0; i < $json.length; i++) {   // if nothing is selected, show all the modules. if the one that is selected = current filter, then that filter is visible.
           if (($selectedModules == null) || ($.inArray($json[i].module, $selectedModules) > -1)) {
               $json[i].visible = true;
-              $stringDatabaseList.push($json[i].database);
+              $stringDatabasesList.push($json[i].database);
               $stringGroupsList.push($json[i].group);
               $stringStudentsList.push($json[i].studentUsername);
           }
