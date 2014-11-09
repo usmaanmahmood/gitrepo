@@ -74,7 +74,7 @@
                 $moduleList.append("<option value=\"" + value + "\">" + value + "</option>");
                 $stringModulesAdded.push(value);
             }
-        })
+        });
 
 
     });
