@@ -64,8 +64,8 @@
             if (($selectedDatabases == null) || ($.inArray($json[i].database, $selectedDatabases) > -1)) {
                 $json[i].visible = true;
 
-                if ($groupList.find('option[value='+$json[i].group +']').length = 0)
-                    $groupList.append("<option value=\"" + $json[i].group + "\">" + $json[i].group + "</option>");
+                if ($moduleList.find('option[value='+$json[i].module +']').length = 0)
+                    $moduleList.append("<option value=\"" + $json[i].module + "\">" + $json[i].module + "</option>");
 
 
             }
