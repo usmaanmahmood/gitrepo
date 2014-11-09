@@ -53,7 +53,7 @@ class ArcadeProfile {
     public function selectDatabase($inDatabase) {
         foreach($this->filterList as $filter)
         {
-            if (strcmp($filter->getDatabase() ,$inDatabase) <> 0)
+            if (strcmp($filter->database, $inDatabase) <> 0)
                 $this->filterList->removeFilter($filter);
         }
     }
@@ -62,7 +62,7 @@ class ArcadeProfile {
     public function __toString() {
         $out  = "";
         $out .= "<table>";
-        foreach($this->filterArray as $key => $element){
+        foreach($this->filterList as $key => $element){
             $out .= "<tr>";
             foreach($element as $subkey => $subelement){
                 $out .= "<td>$subelement</td>";
