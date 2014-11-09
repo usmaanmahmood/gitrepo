@@ -19,7 +19,7 @@ class ArcadeQuery {
     public  $queryOutput;
 
     // if profile object is passed, auto add the filterlist
-    public function __construct($inCommand, ArcadeProfile $inProfile) {
+    public function __construct($inCommand, ArcadeProfile $inProfile = NULL) {
         $this->command = $inCommand;
         $this->filterList = new FilterList();
 
