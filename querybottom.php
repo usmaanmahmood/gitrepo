@@ -1,6 +1,4 @@
-<table id="table">
-    <tbody></tbody>
-</table>
+
       </div>
 
     </div><!-- /.container -->
