@@ -45,31 +45,39 @@
         });
     });
 
-    $("#DatabaseList").click(function() {
-        $databases = $("#DatabaseList option:selected").text();
-
-        $.ajax ({
-            url: 'selectDatabase.php',
-            data: {"databases": $databases},
-            type: 'get',
-            success: function(result)
-            {
-                $('#ModuleList').html(result);
-            }
-        });
-    });
+    var $json;
 
     $.getJSON('getFilterLists.php',
         function (json) {
-            var tr;
-            for (var i = 0; i < json.length; i++) {
-                tr = $('<tr/>');
-                tr.append("<td>" + json[i].database + "</td>");
-                tr.append("<td>" + json[i].group + "</td>");
-                tr.append("<td>" + json[i].module + "</td>");
-                $('#table').append(tr);
+            for (var i = 0; i < json.length; i++)
+            {
+                json[i].visible = true
             }
+
+            $json = json;
+//            var tr;
+//            for (var i = 0; i < json.length; i++) {
+//                tr = $('<tr/>');
+//                tr.append("<td>" + json[i].database + "</td>");
+//                tr.append("<td>" + json[i].group + "</td>");
+//                tr.append("<td>" + json[i].module + "</td>");
+//                $('#table').append(tr);
+//            }
         });
+
+    $("#DatabaseList").click(function() {
+        $databases = $("#DatabaseList option:selected").text();
+
+        for (var i = 0; i < $json.length; i++)
+        {
+            if ($json[i].database <> $databases)
+            {
+                json[i].visible = false;
+            }
+        }
+    });
+
+
 
 
 </script>
