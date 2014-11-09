@@ -9,10 +9,10 @@
 include "ArcadeQuery.php";
 
 $command = $_GET["command"];
-$databases = rtrim($_GET["databases"]);
-$groups = rtrim($_GET["groups"]);
-$students = rtrim($_GET["students"]);
-$modules = rtrim($_GET["modules"]);
+$databases = rtrim(implode(" ", $_GET["databases"]));
+$groups = rtrim(implode(" ", $_GET["groups"]));
+$students = rtrim(implode(" ", $_GET["students"]));
+$modules = rtrim(implode(" ", $_GET["modules"]));
 
 $arcadeQuery = new ArcadeQuery($command);
 
