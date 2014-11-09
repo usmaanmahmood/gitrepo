@@ -57,8 +57,11 @@
             });
         });
 
-        $filterList = <?php echo json_encode($arcadeProfile->getFilterList()); ?> ;
-    $databaseList = <?php echo json_encode($arcadeProfile->getFilterList()->getList("database")); ?> ;
+        $filterListJSON = <?php echo json_encode($arcadeProfile->getFilterList()); ?> ;
+        $filterObject = parseJSON($filterListJSON);
+        alert ($filterObject.FilterList);
+
+    //$databaseList = <?php echo json_encode($arcadeProfile->getFilterList()->getList("database")); ?> ;
 
 
 </script>
