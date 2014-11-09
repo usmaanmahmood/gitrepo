@@ -6,8 +6,6 @@
  * Time: 17:29
  */
 
-include "config.php";
-
 include "ArcadeQuery.php";
 
 $command = $_GET["command"];
