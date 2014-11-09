@@ -65,5 +65,5 @@ if (!isset($_SESSION['arcadeprofile']))
 }
 
 
-echo $_SESSION['arcadeprofile'];
+echo var_dump($_SESSION['arcadeprofile']);
 ?>
