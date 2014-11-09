@@ -57,8 +57,9 @@
             });
         });
 
-        $jqueryProfile = <?php echo json_encode($arcadeProfile); ?> ;
-        alert ($jqueryProfile);
+        $filterList = <?php echo json_encode($arcadeProfile->getFilterList()); ?> ;
+        
+
 </script>
   </body>
 </html>

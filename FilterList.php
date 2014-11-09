@@ -40,14 +40,6 @@ class FilterList {
         }
     }
 
-    public function removeFilterByDB($inDatabase) {
-        foreach($this->filterList as $key => $filter)
-        {
-            if ($filter->getDatabase() <> $inDatabase)
-                unset($this->filterList[$key]);
-        }
-    }
-
     public function getList($inListName) {
         $array = array();
         foreach($this->filterList as $filter) {
