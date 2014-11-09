@@ -54,7 +54,7 @@ class ArcadeProfile {
         foreach($this->filterList as $filter)
         {
             echo var_dump($filter);
-            echo "\n";
+            echo "HELLOABCDEFHDSKJFHSDLKJFOJSD";
 //            if (strcmp($filter->database, $inDatabase) <> 0)
 //                $this->filterList->removeFilter($filter);
         }
