@@ -60,7 +60,7 @@
 
         for (var i = 0; i < $json.length; i++)
         {
-            if ($json[i].database != $databases)
+            if ($.trim($json[i].database) != $.trim($databases))
             {
                 $json[i].visible = false;
                 console.log($json[i].database, $databases, $json[i].visible);
