@@ -15,11 +15,10 @@
 <script>
     $( "#submit" ).click(function(){
         var $command = $("#CommandList option:selected").text();
-        var $databases = ($("#DatabaseList").val() == null) ? new Array() : $("#DatabaseList").val();
-        var $groups = ($("#GroupList").val() == null) ? new Array() : $("#GroupList").val();
-        var $students = ($("#StudentList").val() == null) new Array() : $("#StudentList").val();
-        var $modules = ($("#ModuleList").val() == null) ? new Array(): $("#ModuleList").val();
-
+        var $databases = $("#DatabaseList").val();
+        var $groups = $("#GroupList").val();
+        var $students = $("#StudentList").val();
+        var $modules = $("#ModuleList").val();
 
 
         var $submitbutton = $('#submit').button('loading');
