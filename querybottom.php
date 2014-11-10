@@ -26,6 +26,11 @@
             return;
         }
 
+        if ($databases == null || $databases == "")
+        {
+            $databases = $("#DatabaseList").text();
+        }
+
         var $submitbutton = $('#submit').button('loading');
 
         $('#resultspane').fadeOut('slow');
