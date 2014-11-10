@@ -31,7 +31,7 @@
             var $DatabaseList =  $("#DatabaseList");
             var $dbArray = [];
             var i;
-            for (i = 0; i < $DatabaseList.length; i++) {
+            for (i = 0; i < $DatabaseList.get(0).length; i++) {
                 $dbArray.push($DatabaseList.get(0).options[i].text);
             }
         }
