@@ -20,8 +20,11 @@
         var $students = $("#StudentList").val();
         var $modules = $("#ModuleList").val();
 
-        if ($command == null)
-        {alert("Please select a query command. (Replace alert with on page text warning.)")}
+        if ($command == null || $command == "")
+        {
+            alert("Please select a query command. (Replace alert with on page text warning.)");
+            return;
+        }
 
         var $submitbutton = $('#submit').button('loading');
 
