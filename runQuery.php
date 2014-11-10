@@ -18,9 +18,8 @@ $arcadeQuery = new ArcadeQuery($command);
 
 $arcadeQuery->addFilter(new Filter($databases, $groups, $students, "", $modules));
 
-//$arcadeQuery->sendQuery();
+$arcadeQuery->sendQuery();
 
-//echo $arcadeQuery->getResult();
+echo $arcadeQuery->getResult();
 
-echo $databases;
 ?>
