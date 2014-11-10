@@ -15,7 +15,7 @@ include 'config.php' ?>
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Prototype</title>
+    <title>ARCADE for the web</title>
 	<!-- Latest compiled and minified CSS -->
       <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
 
@@ -38,13 +38,13 @@ include 'config.php' ?>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Web ARCADE</a>
+          <a class="navbar-brand" href="#">ARCADE</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="querylist.php">Home</a></li>
+            <li><a href="querylist.php">Home</a></li>
             <li><a href="#about">About</a></li>
-              <li><a href="testing.php">Testing</a></li>
+              <li class="active"><a href="standard.php">Standard</a></li>
 
 <!--              <li><a href="login.php">Login</a></li>-->
 		<li><a href="logout.php">Logout</a></li>
