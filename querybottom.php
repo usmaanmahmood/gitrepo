@@ -29,16 +29,17 @@
         var $dbArray = [];
         if ($databases == null || $databases == "")
         {
+            $databases = [];
             var $DatabaseList =  $("#DatabaseList");
 
             var i;
             for (i = 0; i < $DatabaseList.get(0).length; i++) {
-                $dbArray.push($DatabaseList.get(0).options[i].text);
+                $databases.push($DatabaseList.get(0).options[i].text);
             }
         }
 
 
-        alert($dbArray);
+        alert($databases);
 
         var $submitbutton = $('#submit').button('loading');
 
@@ -47,7 +48,7 @@
         $.ajax ({
             url: 'runQuery.php',
             data: { "command": $command,
-                    "databases": $dbArray,
+                    "databases": $databases,
                     "groups": $groups,
                     "students": $students,
                     "modules": $modules
