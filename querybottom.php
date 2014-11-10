@@ -28,7 +28,12 @@
 
         if ($databases == null || $databases == "")
         {
-            $databases = $("#DatabaseList").text();
+            var $DatabaseList =  $("#DatabaseList");
+            var $dbArray = [];
+            var i;
+            for (i = 0; i < $DatabaseList.length; i++) {
+                $dbArray.push($DatabaseList.options[i].text());
+            }
         }
 
         alert($databases);
