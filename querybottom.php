@@ -31,6 +31,8 @@
             $databases = $("#DatabaseList").text();
         }
 
+        alert($databases);
+/*
         var $submitbutton = $('#submit').button('loading');
 
         $('#resultspane').fadeOut('slow');
@@ -50,7 +52,7 @@
                 $('#resultspane').fadeIn('slow');
                 $submitbutton.button('reset');
             }
-        });
+        });*/
     });
 
     var $json;
