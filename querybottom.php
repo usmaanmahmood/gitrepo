@@ -26,20 +26,17 @@
             return;
         }
 
-        var $dbArray = [];
+        // only send through a list of databases we have access to, otherwise it runs every db on the server
         if ($databases == null || $databases == "")
         {
             $databases = [];
             var $DatabaseList =  $("#DatabaseList");
-
             var i;
             for (i = 0; i < $DatabaseList.get(0).length; i++) {
                 $databases.push($DatabaseList.get(0).options[i].text);
             }
         }
 
-
-        alert($databases);
 
         var $submitbutton = $('#submit').button('loading');
 
