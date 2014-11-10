@@ -26,15 +26,17 @@
             return;
         }
 
+        var $dbArray = [];
         if ($databases == null || $databases == "")
         {
             var $DatabaseList =  $("#DatabaseList");
-            var $dbArray = [];
+
             var i;
             for (i = 0; i < $DatabaseList.get(0).length; i++) {
                 $dbArray.push($DatabaseList.get(0).options[i].text);
             }
         }
+
 
         alert($dbArray);
 
@@ -45,7 +47,7 @@
         $.ajax ({
             url: 'runQuery.php',
             data: { "command": $command,
-                    "databases": $databases,
+                    "databases": $dbArray,
                     "groups": $groups,
                     "students": $students,
                     "modules": $modules
