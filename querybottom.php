@@ -36,7 +36,7 @@
             }
         }
 
-        alert($databases);
+        alert($dbArray);
 /*
         var $submitbutton = $('#submit').button('loading');
 
