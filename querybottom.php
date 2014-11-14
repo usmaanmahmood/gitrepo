@@ -38,6 +38,7 @@
         }
 
         alert($databases);
+        alert($modules);
         return;
 
 
