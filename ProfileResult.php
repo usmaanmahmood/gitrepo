@@ -30,7 +30,12 @@ class ProfileResult extends Result
 
     public function getCommandList() { return $this->commandList; }
     public function getFilterList() { return $this->filterList; }
-    public function getFilterListJSON() { return json_encode($this->filterList); }
+    public function getJSONFilterArray() {
+        $returnArray = [];
+        foreach($this->filterList as $filter)
+            array_push($returnArray, json_encode($filter));
+        return $returnArray;
+    }
 
 
     public function getDatabaseList() { return $this->databaseList; }
