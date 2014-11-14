@@ -30,10 +30,11 @@ while ($socketoutput = socket_read($socket, "100000"))	{
 socket_shutdown($socket, 2); // 2 = shutdown reading and writing
 socket_close($socket);
 
-//echo $results;
+echo $results;
 
-include("ProfileParser");
+//include("ProfileParser.php");
 
-$profile = new ProfileParser().parse($results);
+//$profileParser = new ProfileParser();
+//$profile = $profileParser->parse($results);
 
-echo $profile.
+//echo var_dump($profile);

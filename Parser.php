@@ -8,7 +8,7 @@
 
 abstract class Parser
 {
-    abstract protected function parse(String $inString);
+    abstract protected function parse($inString);
 }
 
 ?>

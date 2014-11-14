@@ -7,12 +7,10 @@
  */
 
 include("Parser.php");
-include("Result.php");
 include("ProfileResult.php");
-include("Filter.php");
 
 class ProfileParser extends Parser {
-    public function parse(String $inString)
+    public function parse($inString)
     {
         $profileResult = new ProfileResult();
 
