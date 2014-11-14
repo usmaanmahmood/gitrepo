@@ -25,10 +25,10 @@ class Query {
     }
 
     //setters
-    public function addDatabases($inDatabases) { if ($inDatabases != null) $this->databaseList = array_merge($this->databaseList, $inDatabases); }
-    public function addGroups($inGroups) { if ($inGroups != null) $this->groupList = array_merge($this->databaseList, $inGroups); }
-    public function addStudents($inStudents) { if ($inStudents != null) $this->studentList = array_merge($this->databaseList, $inStudents); }
-    public function addModules($inModules) { if ($inModules != null) $this->moduleList = array_merge($this->databaseList, $inModules); }
+    public function addDatabases($inDatabases) { $this->databaseList = array_merge($this->databaseList, $inDatabases); }
+    public function addGroups($inGroups) { $this->groupList = array_merge($this->databaseList, $inGroups); }
+    public function addStudents($inStudents) { $this->studentList = array_merge($this->databaseList, $inStudents); }
+    public function addModules($inModules) { $this->moduleList = array_merge($this->databaseList, $inModules); }
 
     //getters
     public function getCommand() { return $this->command; }
