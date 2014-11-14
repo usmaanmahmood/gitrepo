@@ -6,7 +6,6 @@
  * Time: 14:34
  */
 
-include("Result.php");
 include("Filter.php");
 
 class ProfileResult extends Result
