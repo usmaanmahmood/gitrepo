@@ -37,6 +37,9 @@
             }
         }
 
+        alert($databases);
+        return;
+
 
         var $submitbutton = $('#submit').button('loading');
 

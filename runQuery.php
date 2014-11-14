@@ -21,7 +21,7 @@
 //$arcadeQuery->sendQuery();
 //
 //echo $arcadeQuery->getResult();
- include("config.php");
+include("config.php");
 
 $arcadeClient = new ARCADEClient();
 $query = new Query($_GET["command"], 1); // command, plainTextWanted
