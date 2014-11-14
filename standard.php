@@ -10,7 +10,7 @@
  * Time: 14:50
  */
 
-var_dump($arcadeProfile->getCommandList());
+var_dump($arcadeProfile->getModuleList());
 
 ?>
 <div class="row">
