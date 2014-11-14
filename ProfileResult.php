@@ -20,11 +20,11 @@ class ProfileResult extends Result
         $this->filterList = array();
     }
 
-    public function addCommand(String $inCommand) {
+    public function addCommand($inCommand) {
         array_push($this->commandList, $inCommand);
     }
 
-    public function addFilter(Filter $inFilter) {
+    public function addFilter($inFilter) {
         array_push($this->filterList, $inFilter);
     }
 

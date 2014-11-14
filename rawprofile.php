@@ -5,6 +5,8 @@
  * Date: 14/11/14
  * Time: 14:52
  */
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 $socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP); // create new socket
 socket_connect ($socket , "carousel", 4000); // connect to arcade on port 4000
@@ -22,7 +24,7 @@ $results = "";
 
 // accept data until remote host closes the connection
 while ($socketoutput = socket_read($socket, "100000"))	{
-    if ($socketoutput != '++WORKING\n')
+    if ($socketoutput != "++WORKING\n")
         $results .= $socketoutput;
 }
 
@@ -30,11 +32,11 @@ while ($socketoutput = socket_read($socket, "100000"))	{
 socket_shutdown($socket, 2); // 2 = shutdown reading and writing
 socket_close($socket);
 
-echo $results;
+//var_dump($results);
 
-//include("ProfileParser.php");
+include("ProfileParser.php");
 
-//$profileParser = new ProfileParser();
-//$profile = $profileParser->parse($results);
+$profileParser = new ProfileParser();
+$profile = $profileParser->parse($results);
 
-//echo var_dump($profile);
+echo var_dump($profile->getFilterList());
