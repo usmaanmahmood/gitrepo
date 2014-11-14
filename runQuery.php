@@ -27,10 +27,10 @@ $arcadeClient = new ARCADEClient();
 $query = new Query($_GET["command"], 1); // command, plainTextWanted
 
 // if empty, send empty array through instead of null
-$query->addDatabases($_GET["databases"] == null ? array() : implode(" ", $_GET["databases"]));
-$query->addGroups($_GET["groups"] == null? array() : implode(" ", $_GET["groups"]));
-$query->addStudents($_GET["students"] == null? array() : implode(" ", $_GET["students"]));
-$query->addModules($_GET["modules"] == null? array() : implode(" ", $_GET["modules"]));
+$query->addDatabases(implode(" ", $_GET["databases"]));
+$query->addGroups(implode(" ", $_GET["groups"]));
+$query->addStudents(implode(" ", $_GET["students"]));
+$query->addModules(implode(" ", $_GET["modules"]));
 
 $plainResult = $arcadeClient->execute($query);
 
