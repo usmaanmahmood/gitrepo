@@ -52,8 +52,10 @@ class ARCADEClient {
         socket_shutdown($socket, 2); // 2 = shutdown reading and writing
         socket_close($socket);
 
+        // if its a plain result, skip the parsing stage altogether
         if ($inQuery->getPlainResult() == 1)
             return $resultString;
+
 
         switch($inQuery->getCommand()) {
             case "profile": $this->parser = new ProfileParser();
