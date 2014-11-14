@@ -27,7 +27,7 @@ class ProfileResult extends Result
     public function addCommand($inCommand) { array_push($this->commandList, $inCommand); }
     public function addFilter($inFilter) { array_push($this->filterList, $inFilter); }
 
-    public function getCommand() { return $this->commandList; }
+    public function getCommandList() { return $this->commandList; }
     public function getFilterList() { return $this->filterList; }
     public function getDatabaseList() { return $this->databaseList; }
     public function getGroupList() { return $this->groupList; }
