@@ -47,7 +47,7 @@ class ProfileResult extends Result
         $this->studentUsernameList = array();
         $this->studentFullnameList = array();
         $this->moduleList = array();
-        $this->twoDimensionalArray = array(array());
+        $this->twoDimensionalArray = array();
 
         foreach($this->filterList as $filter)
         {
