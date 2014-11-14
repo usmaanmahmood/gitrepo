@@ -1,0 +1,58 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: mmapxum2
+ * Date: 14/11/14
+ * Time: 14:25
+ */
+
+include("Parser.php");
+include("Filter.php");
+
+class ProfileParser extends Parser {
+    private $commandArray;
+    private $filterList ; // will contain all the filters
+
+    public function parse(String $inString)
+    {
+        $profileResult = new ProfileResult();
+
+
+
+        $this->commandArray = array();
+
+        $tempCommandString = $inString;
+        // while there is a COMMAND remaining
+        // maybe use array shift here instead
+        while(($startCommandPos = strpos($tempCommandString, "++COMMAND")) > -1) {
+            $tempCommandString = substr($tempCommandString, $startCommandPos); // move to start of ++COMMAND line
+            $commandLine = preg_split('/\r\n|\r|\n/', $tempCommandString, 2); // split into ++COMMAND and rest
+            $commandName = preg_split('/\r\n|\r|\n/', $commandLine[1], 2);// split into Command Name and rest
+            array_push($this->commandArray, $commandName[0]); //push Command Name
+            $tempCommandString = $commandName[1]; // reset string
+        }
+
+        // create array of filters
+
+        $startposition = strrpos($inString, "++MODULESORTORDER"); // start of final ++MODULESTOORDER
+        $stringcleanedup = substr($inString, $startposition); // trim down to start (2 garbage lines still need removing)
+        $lines = preg_split('/\r\n|\r|\n/', $stringcleanedup, 2); // remove first line
+        $lines = preg_split('/\r\n|\r|\n/', $lines[1], 2); // remove second line so just have required list
+        $lines = $lines[1];
+        $rowbyrow = explode("\n", trim($lines)); // split $lines into array of strings, line by line, after trimming whitespace
+
+        // create
+        foreach($rowbyrow as $key => $row) {
+            $colsarray = explode(" ", trim($row)); // split row into array of strings, delimiter is space, after trimming whitespace
+            $rowbyrow[$key] = $colsarray;
+        }
+
+        $this->filterList = new FilterList();
+        // populate List
+        foreach($rowbyrow as $filter) {
+            $newFilter = new Filter($filter[0], $filter[1], $filter[2], $filter[3], $filter[4]);
+            $this->filterList->addFilter($newFilter);
+        }
+    }
+
+}

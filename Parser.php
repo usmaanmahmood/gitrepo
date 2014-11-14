@@ -1,0 +1,14 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: mmapxum2
+ * Date: 14/11/14
+ * Time: 13:56
+ */
+
+abstract class Parser
+{
+    abstract protected function parse(String $inString);
+}
+
+?>
