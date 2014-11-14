@@ -34,4 +34,6 @@ $query->addModules($_GET["modules"] == null? array() : $_GET["modules"]);
 
 $plainResult = $arcadeClient->execute($query);
 
+echo $plainResult;
+
 ?>
