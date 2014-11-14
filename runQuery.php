@@ -28,17 +28,13 @@ $query = new Query($_GET["command"], 1); // command, plainTextWanted
 
 // if empty, send empty array through instead of null
 
-if (!empty($_GET["databases"]))
-    $query->addDatabases(implode(" ", $_GET["databases"]));
+if (!empty($_GET["databases"])) $query->addDatabases(implode(" ", $_GET["databases"]));
 
-if (!empty($_GET["groups"]))
-$query->addGroups(implode(" ", $_GET["groups"]));
+if (!empty($_GET["groups"]))    $query->addGroups(implode(" ", $_GET["groups"]));
 
-if (!empty($_GET["students"]))
-$query->addStudents(implode(" ", $_GET["students"]));
+if (!empty($_GET["students"]))  $query->addStudents(implode(" ", $_GET["students"]));
 
-if (!empty($_GET["modules"]))
-$query->addModules(implode(" ", $_GET["modules"]));
+if (!empty($_GET["modules"]))   $query->addModules(implode(" ", $_GET["modules"]));
 
 $plainResult = $arcadeClient->execute($query);
 
