@@ -1,6 +1,6 @@
 {
-   "status" : "success",
    "origin" : "https://bitbucket.org/usmaanmahmood/bb101repo.git",
-   "timestamp" : "2014-11-14T18:34:14Z",
-   "path" : "bb101repo"
+   "path" : "bb101repo",
+   "status" : "success",
+   "timestamp" : "2014-11-14T18:37:28Z"
 }

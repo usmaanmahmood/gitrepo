@@ -37,11 +37,6 @@
             }
         }
 
-        alert($databases);
-        alert($modules);
-        return;
-
-
         var $submitbutton = $('#submit').button('loading');
 
         $('#resultspane').fadeOut('slow');
