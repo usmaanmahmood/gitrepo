@@ -20,7 +20,6 @@
         var $students = $("#StudentList").val();
         var $modules = $("#ModuleList").val();
 
-        alert($students);
 
         if ($command == null || $command == "")
         {
