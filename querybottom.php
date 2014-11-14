@@ -23,9 +23,9 @@
         // validation
         if ($command == null || $command == "")
         {
-            $('#resultspane').fadeOut('slow');
+            $('#resultspane').fadeOut('fast');
             $('#resultspane').html("Please select a command.");
-            $('#resultspane').fadeIn('slow');
+            $('#resultspane').fadeIn('fast');
             return;
         }
 
