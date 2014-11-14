@@ -7,8 +7,8 @@
  */
 
 
-include "ArcadeQuery.php";
+include "ARCADEClient.php";
 
-echo json_encode($arcadeProfile->getArrayOfFilters());
+echo json_encode($arcadeProfile->getFilterList());
 
 ?>
