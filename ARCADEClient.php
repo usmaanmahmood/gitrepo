@@ -19,7 +19,7 @@ class ARCADEClient {
     //performs cleanup of profile string from ArcadeQuery, and creates 2D array for command and filter data
     public function __construct() {
         $this->arcadeUsername = $_SESSION['username'];
-        $this->$arcadePassword = $_SESSION['arcadepassword'];
+        $this->arcadePassword = $_SESSION['arcadepassword'];
     }
 
     public function execute(Query $inQuery) {
