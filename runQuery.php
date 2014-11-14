@@ -13,7 +13,7 @@ $query = new Query($_GET["command"], 1); // command, plainTextWanted
 
 // if empty, send empty array through instead of null
 
-// if none selected then it is empty.
+// if none selected then it is empty. if it is, send the array through
 if (!empty($_GET["databases"])) $query->addDatabases($_GET["databases"]);
 
 if (!empty($_GET["groups"]))    $query->addGroups($_GET["groups"]);
