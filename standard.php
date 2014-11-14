@@ -2,7 +2,6 @@
 
 <?php
 
-echo var_dump($arcadeProfile);
 /**
  * Created by PhpStorm.
  * User: mmapxum2
