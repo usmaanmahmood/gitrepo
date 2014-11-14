@@ -32,10 +32,19 @@ class Query {
 
     //getters
     public function getCommand() { return $this->command; }
-    public function getDatabases() { return count($this->databaseList) == 0 ? array() : $this->databaseList; }
-    public function getGroups() { return count($this->groupList) == 0 ? array() : $this->groupList; }
-    public function getStudents() { return count($this->studentList) == 0 ? array() : $this->studentList; }
-    public function getModules() { return count($this->moduleList) == 0 ? array() : $this->moduleList; }
+
+    public function getDatabases() {
+        return count($this->databaseList) == 0 ? array() : $this->databaseList; }
+
+    public function getGroups() {
+        return count($this->groupList) == 0 ? array() : $this->groupList; }
+
+    public function getStudents() {
+        return count($this->studentList) == 0 ? array() : $this->studentList; }
+
+    public function getModules() {
+        return count($this->moduleList) == 0 ? array() : $this->moduleList; }
+
     public function getPlainResult() { return $this->plainResult; }
 
 

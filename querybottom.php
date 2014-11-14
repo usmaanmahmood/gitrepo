@@ -22,7 +22,8 @@
 
         if ($command == null || $command == "")
         {
-            alert("Please select a query command. (Replace alert with on page text warning.)");
+            $('#resultspane').html("Please select a command.");
+            $('#resultspane').fadeIn('slow');
             return;
         }
 
