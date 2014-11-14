@@ -18,6 +18,7 @@ class ProfileResult extends Result
     private $studentUsernameList;
     private $studentFullnameList;
     private $moduleList;
+    private $twoDimensionalArray;
 
     public function __construct()
     {
@@ -30,12 +31,7 @@ class ProfileResult extends Result
 
     public function getCommandList() { return $this->commandList; }
     public function getFilterList() { return $this->filterList; }
-    public function getJSONFilterArray() {
-        $returnArray = [];
-        foreach($this->filterList as $filter)
-            array_push($returnArray, json_encode($filter->getJSON()));
-        return $returnArray;
-    }
+    public function gettwoDimensionalArray() { return $this->twoDimensionalArray; }
 
 
     public function getDatabaseList() { return $this->databaseList; }
@@ -51,14 +47,24 @@ class ProfileResult extends Result
         $this->studentUsernameList = array();
         $this->studentFullnameList = array();
         $this->moduleList = array();
+        $this->twoDimensionalArray = array(array());
 
         foreach($this->filterList as $filter)
         {
-            array_push($this->databaseList, $filter->getDatabase());
-            array_push($this->groupList, $filter->getGroup());
-            array_push($this->studentUsernameList, $filter->getStudentUsername());
-            array_push($this->studentFullnameList, $filter->getStudentFullname());
-            array_push($this->moduleList, $filter->getModule());
+            $thisDatabase = $filter->getDatabase();
+            $thisGroup = $filter->getGroup();
+            $thisStudentUsername = $filter->getStudentUsername();
+            $thisStudentFullname = $filter->getStudentFullname();
+            $thisModule = $filter->getModule();
+
+            array_push($this->databaseList, $thisDatabase);
+            array_push($this->groupList, $thisGroup);
+            array_push($this->studentUsernameList, $thisStudentUsername);
+            array_push($this->studentFullnameList, $thisStudentFullname);
+            array_push($this->moduleList, $thisModule);
+
+            $current2ndLevelArray = array($thisDatabase, $thisGroup, $thisStudentUsername, $thisStudentFullname, $thisModule);
+            array_push($this->twoDimensionalArray, $current2ndLevelArray);
         }
     }
 
