@@ -12,6 +12,7 @@ class ProfileResult extends Result
 {
     private $commandList;
     private $filterList;
+
     private $databaseList;
     private $groupList;
     private $studentUsernameList;
@@ -29,6 +30,7 @@ class ProfileResult extends Result
 
     public function getCommandList() { return $this->commandList; }
     public function getFilterList() { return $this->filterList; }
+
     public function getDatabaseList() { return $this->databaseList; }
     public function getGroupList() { return $this->groupList; }
     public function getStudentUsernameList() { return $this->studentUsernameList; }
