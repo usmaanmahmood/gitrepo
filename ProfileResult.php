@@ -32,7 +32,7 @@ class ProfileResult extends Result
     public function getCommandList() { return $this->commandList; }
     public function getFilterList() { return $this->filterList; }
 
-    // for some reason the first array in the 2d array is empty
+    // TODO: for some reason the first array in the 2d array is empty
     public function getTwoDimensionalArray() { return $this->twoDimensionalArray; }
 
 

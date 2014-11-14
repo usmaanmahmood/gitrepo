@@ -66,8 +66,7 @@
     var $json;
 
     $.getJSON ('getFilterLists.php', function (json) {
-//        for (var i = 0; i < json.length; i++) { json[i].visible = false; }
-        $json = json;
+        $json = json.shift(); // HACK: IN ORDER TO REMOVE FIRST EMPTY ITEM FROM ARRAY BC BUG IN ProfileResult.php
     });
 
     $("#DatabaseList").click(function() {
