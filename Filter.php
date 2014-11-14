@@ -7,18 +7,19 @@
  */
 
 class Filter {
-    public  $database;
-    public  $group;
-    public  $studentUsername;
-    public  $studentFullname;
-    public  $module;
+    private  $database;
+    private  $group;
+    private  $studentUsername;
+    private  $studentFullname;
+    private  $module;
 
-    public function __construct($inDatabase, $inGroup, $inStudentUsername, $inStudentFullname, $inModule) {
-        if (empty($inDatabase)) $this->database = ""; else $this->database = $inDatabase;
-        if (empty($inGroup)) $this->group = ""; else $this->group = $inGroup;
-        if (empty($inStudentUsername)) $this->studentUsername = ""; else $this->studentUsername = $inStudentUsername;
-        if (empty($inStudentFullname)) $this->studentFullname = ""; else $this->studentFullname = $inStudentFullname;
-        if (empty($inModule)) $this->module = ""; else $this->module = $inModule;
+    public function __construct($inString) {
+        $filterArray = explode(" ", $inString);
+        $this->database = $filterArray[0];
+        $this->group = $filterArray[1];
+        $this->studentUsername = $filterArray[2];
+        $this->studentFullname = $filterArray[3];
+        $this->module = $filterArray[4];
     }
 
     //getters

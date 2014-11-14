@@ -11,8 +11,8 @@ include("Filter.php");
 
 class ProfileResult extends Result
 {
-    public $commandList;
-    public $filterList;
+    private $commandList;
+    private $filterList;
 
     public function __construct()
     {
@@ -26,5 +26,13 @@ class ProfileResult extends Result
 
     public function addFilter(Filter $inFilter) {
         array_push($this->filterList, $inFilter);
+    }
+
+    public function getCommand() {
+        return $this->commandList;
+    }
+
+    public function getFilterList() {
+        return $this->filterList;
     }
 }
