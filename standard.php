@@ -3,6 +3,8 @@
 <?php
 
 echo var_dump($arcadeProfile->getTwoDimensionalArray());
+echo var_dump($arcadeProfile->getDatabaseList());
+
 /**
  * Created by PhpStorm.
  * User: mmapxum2
