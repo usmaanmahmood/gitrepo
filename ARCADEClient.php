@@ -1,5 +1,7 @@
 <?php
-
+if(session_id() == '') {
+    session_start();
+}
 /**
  * Created by PhpStorm.
  * User: mmapxum2
@@ -54,11 +56,11 @@ class ARCADEClient {
             return $resultString;
 
         switch($inQuery->getCommand()) {
-            case "profile": $parser = new ProfileParser();
+            case "profile": $this->parser = new ProfileParser();
                             break;
         }
 
-        return $parser->parse($resultString);
+        return $this->parser->parse($resultString);
     }
 }
 
