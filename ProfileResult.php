@@ -65,7 +65,7 @@ class ProfileResult extends Result
             $this->twoDimensionalArray[] = array($thisDatabase, $thisGroup, $thisStudentUsername, $thisStudentFullname, $thisModule);
         }
 
-        // TODO: for some reason the first array in the 2d array is empty, so hack it out
+        // for some reason the first array in the 2d array is empty, so hack it out
         array_shift($this->twoDimensionalArray);
     }
 
