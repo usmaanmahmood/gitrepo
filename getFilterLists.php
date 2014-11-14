@@ -9,6 +9,8 @@
 
 include "config.php";
 
-echo json_encode($arcadeProfile->getTwoDimensionalArray());
+$array = $arcadeProfile->getTwoDimensionalArray();
+array_shift($array);
+echo json_encode($array);
 
 ?>
