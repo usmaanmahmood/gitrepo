@@ -27,7 +27,7 @@
             <div class="col-md-3">
                 <p>Databases</p>
                 <select multiple class="form-control" size=10 id="DatabaseList">
-                <?php foreach($arcadeProfile->getDatabaseList() as $option) { ?>
+                <?php foreach(array_unique($arcadeProfile->getDatabaseList()) as $option) { ?>
                     <option value="<?php echo $option ?>"><?php echo $option ?></option>
                 <?php }?>
                 </select>
