@@ -53,7 +53,7 @@ class ARCADEClient {
         // return result object
 //        var $resultObject = new Result();
 
-        if ($inQuery->getCommand() == "profile")
+//        if ($inQuery->getCommand() == "profile")
             $parser = new ProfileParser();
 
         return $parser->parse($resultString);
