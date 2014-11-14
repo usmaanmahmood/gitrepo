@@ -28,6 +28,7 @@ class Filter {
     public function getStudentUsername() { return $this->studentUsername; }
     public function getStudentFullname() { return $this->studentFullname; }
     public function getModule() { return $this->module; }
+    public function getJSON() { return json_encode($this); }
 }
 
 ?>

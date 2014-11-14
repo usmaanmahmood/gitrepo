@@ -33,7 +33,7 @@ class ProfileResult extends Result
     public function getJSONFilterArray() {
         $returnArray = [];
         foreach($this->filterList as $filter)
-            array_push($returnArray, json_encode($filter));
+            array_push($returnArray, json_encode($filter->getJSON()));
         return $returnArray;
     }
 
