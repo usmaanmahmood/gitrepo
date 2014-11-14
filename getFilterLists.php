@@ -9,6 +9,6 @@
 
 include "config.php";
 
-echo json_encode($arcadeProfile->getJSONFilterArray());
+echo $arcadeProfile->getJSONFilterArray();
 
 ?>
