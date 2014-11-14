@@ -44,8 +44,6 @@ class ProfileParser extends Parser {
         return $profileResult;
     }
 
-    public function
-
 public $sampleinString = "++COMMAND
 Welcome and help
 ++COMMAND

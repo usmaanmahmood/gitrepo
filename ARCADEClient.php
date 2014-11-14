@@ -57,7 +57,7 @@ class ARCADEClient {
             case "profile": $parser = new ProfileParser();
                             break;
         }
-        
+
         return $parser->parse($resultString);
     }
 }
