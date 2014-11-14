@@ -66,7 +66,7 @@
     var $json;
 
     $.getJSON ('getFilterLists.php', function (json) {
-        for (var i = 1; i < json.length; i++) { json[i].visible = false; }
+//        for (var i = 0; i < json.length; i++) { json[i].visible = false; }
         $json = json;
     });
 
