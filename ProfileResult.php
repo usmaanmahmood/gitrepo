@@ -64,7 +64,7 @@ class ProfileResult extends Result
             array_push($this->moduleList, $thisModule);
 
             $current2ndLevelArray = array($thisDatabase, $thisGroup, $thisStudentUsername, $thisStudentFullname, $thisModule);
-            array_push($this->twoDimensionalArray, array($thisDatabase, $thisGroup, $thisStudentUsername, $thisStudentFullname, $thisModule));
+            $this->twoDimensionalArray[] =  $current2ndLevelArray;
         }
     }
 
