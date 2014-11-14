@@ -26,7 +26,7 @@
 $arcadeClient = new ARCADEClient();
 $query = new Query($_GET["command"], 1); // command, plainTextWanted
 
-// if empty, ssend an empty string instead of null
+// if empty, send empty array through instead of null
 $query->addDatabases($_GET["databases"] == null ? array() : $_GET["databases"]);
 $query->addGroups($_GET["groups"] == null? array() : $_GET["groups"]);
 $query->addStudents($_GET["students"] == null? array() : $_GET["students"]);
