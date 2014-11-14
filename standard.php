@@ -10,9 +10,9 @@
  * Time: 14:50
  */
 
+var_dump($arcadeProfile->getCommandList());
 
 ?>
-
 <div class="row">
     <div class="col-md-4">
         <p>Command</p>
