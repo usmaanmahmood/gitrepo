@@ -31,7 +31,7 @@ class ProfileResult extends Result
 
     public function getCommandList() { return $this->commandList; }
     public function getFilterList() { return $this->filterList; }
-    public function gettwoDimensionalArray() { return $this->twoDimensionalArray; }
+    public function getTwoDimensionalArray() { return $this->twoDimensionalArray; }
 
 
     public function getDatabaseList() { return $this->databaseList; }
