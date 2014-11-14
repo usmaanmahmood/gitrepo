@@ -38,4 +38,4 @@ include("ProfileParser.php");
 $profileParser = new ProfileParser();
 $profile = $profileParser->parse($results);
 
-echo var_dump($profile->getDatabaseList());
+echo var_dump(array_unique($profile->getDatabaseList()));
