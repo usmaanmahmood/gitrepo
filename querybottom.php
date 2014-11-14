@@ -20,14 +20,17 @@
         var $students = $("#StudentList").val();
         var $modules = $("#ModuleList").val();
 
+        // validation
         if ($command == null || $command == "")
         {
+            $('#resultspane').fadeOut('slow');
             $('#resultspane').html("Please select a command.");
             $('#resultspane').fadeIn('slow');
             return;
         }
 
-        // only send through a list of databases we have access to, otherwise it runs every db on the server
+        // send through list of databases if none provided
+        // TODO: replace by having Query->getDatabases get list from the profile object
         if ($databases == null || $databases == "")
         {
             $databases = [];
