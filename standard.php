@@ -35,7 +35,7 @@
             <div class="col-md-3">
                 <p>Groups</p>
                 <select multiple class="form-control" size=10 id="GroupList">
-                    <?php foreach($arcadeProfile->getGroupList() as $option) { ?>
+                    <?php foreach(array_unique($arcadeProfile->getGroupList()) as $option) { ?>
                         <option value="<?php echo $option ?>"><?php echo $option ?></option>
                     <?php }?>
                 </select>
@@ -43,7 +43,7 @@
             <div class="col-md-3">
                 <p>Students</p>
                 <select multiple class="form-control" size=10 id="StudentList">
-                    <?php foreach($arcadeProfile->getStudentUsernameList() as $option) { ?>
+                    <?php foreach(array_unique($arcadeProfile->getStudentUsernameList()) as $option) { ?>
                         <option value="<?php echo $option ?>"><?php echo $option ?></option>
                     <?php }?>
                 </select>
@@ -51,7 +51,7 @@
             <div class="col-md-3">
                 <p>Modules</p>
                 <select multiple class="form-control" size=10 id="ModuleList">
-                    <?php foreach($arcadeProfile->getModuleList() as $option) { ?>
+                    <?php foreach(array_unique($arcadeProfile->getModuleList()) as $option) { ?>
                         <option value="<?php echo $option ?>"><?php echo $option ?></option>
                     <?php }?>
                 </select>
