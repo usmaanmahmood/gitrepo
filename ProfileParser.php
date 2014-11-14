@@ -40,6 +40,8 @@ class ProfileParser extends Parser {
         while ($currentLine = array_shift($linesArray))
             $profileResult->addFilter(new Filter($currentLine));
 
+        $profileResult->buildLists();
+
         return $profileResult;
     }
 
