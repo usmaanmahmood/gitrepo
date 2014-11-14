@@ -1,10 +1,4 @@
 <?php
-session_start();
-if(empty($_SESSION['username']) || empty($_SESSION['arcadepassword']))
-{
-header("location:login.php");
-}
-
 include 'config.php' ?>
 <!DOCTYPE html>
 <html lang="en">

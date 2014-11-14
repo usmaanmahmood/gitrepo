@@ -78,8 +78,8 @@ class ArcadeQuery {
     }
 }
 
-// ensure profile object is stored in session
-if (!isset($_SESSION['arcadeprofile']))
+// ensure profileresult entity is stored in session
+if (!isset($_SESSION['profileResult']))
 {
     $arcadeClient = new ARCADEClient();
     $query = new Query("profile");
@@ -89,15 +89,5 @@ if (!isset($_SESSION['arcadeprofile']))
 }
 else
     $profileResult = unserialize($_SESSION['profileResult']);
-
-//// ensure profile object is stored in session
-//if (!isset($_SESSION['arcadeprofile']))
-//{
-//    $profileQuery = new ArcadeQuery("profile"); // set up new profile query + auto send
-//    $arcadeProfile = new ArcadeProfile($profileQuery->getResult()); // create new object
-//    $_SESSION['arcadeprofile'] = serialize($arcadeProfile); // save into session
-//}
-//else
-//    $arcadeProfile = unserialize($_SESSION['arcadeprofile']);
 
 ?>

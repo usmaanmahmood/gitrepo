@@ -6,8 +6,7 @@
  * Time: 14:25
  */
 
-include("Parser.php");
-include("ProfileResult.php");
+include("Result.php");
 
 class ProfileParser extends Parser {
     public function parse($inString)

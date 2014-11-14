@@ -1,7 +1,7 @@
 <?php
 // Load the configuration file containing your database credentials
 //require_once('config.inc.php');
-
+// database stuff
 $database_host = 'dbhost.cs.man.ac.uk';
 $database_user = 'mmapxum2';
 $database_pass = 'manchester';
@@ -24,39 +24,25 @@ if($result = $mysqli -> query("SELECT * FROM User")) {
 
 // Always close your connection to the database cleanly!
 
+session_start();
+if(empty($_SESSION['username']) || empty($_SESSION['arcadepassword']))
+    header("location:login.php");
 
-function classicQuery($query, $database, $group, $student, $module)
+
+include("ARCADEClient.php");
+
+
+
+// ensure $arcadeProfile is initialised and loaded in the session
+if (!isset($_SESSION['profileResult']))
 {
-	$socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP); // create new socket
-	socket_connect ($socket , "carousel", 4000); // connect to arcade on port 4000
+    $arcadeClient = new ARCADEClient();
+    $query = new Query("profile");
 
-	$username = $_SESSION['username']; 
-	$arcadepassword = $_SESSION['arcadepassword']; 
-
-	socket_write($socket, "LKJHGFDSA\n"); // hello token
-	socket_write($socket, $username . "\n"); // arcade user
-	socket_write($socket, $arcadepassword . "\n"); // arcade pass
-	$fullquery = $query . "\n" . $database . "\n" . $group . "\n" . $student . "\n" . $module . "\n";
-	socket_write($socket, $fullquery); // this sends it off
-
-	$results = "";
-
-	// accept data until remote host closes the connection
-	while ($socketoutput = socket_read($socket, "100000"))	{
-		if ($socketoutput <> '++WORKING')
-            $results .= $socketoutput;
-	}
-
-	//$results.=socket_strerror(socket_last_error($socket)); // debugging
-	socket_shutdown($socket, 2); // 2 = shutdown reading and writing
-	socket_close($socket);
-
-	return $results;
+    $arcadeProfile = $arcadeClient->execute($query);
+    $_SESSION['profileResult'] = serialize($arcadeProfile); // save into session
 }
-
-
-include "ArcadeQuery.php";
-
-
+else
+    $arcadeProfile = unserialize($_SESSION['profileResult']);
 
 ?>

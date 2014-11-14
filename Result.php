@@ -10,3 +10,7 @@ abstract class Result
 {
 
 }
+
+include("ProfileResult.php");
+
+?>
