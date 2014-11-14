@@ -24,13 +24,13 @@
  include("config.php");
 
 $arcadeClient = new ARCADEClient();
-$query = new Query($_GET["command"], 1);
+$query = new Query($_GET["command"], 1); // command, plainTextWanted
 
 // if empty, ssend an empty string instead of null
-$query->addDatabases(($_GET["databases"] == null) ? "" : implode(" ", $_GET["databases"]));
-$query->addGroups(($_GET["groups"] == null) ? "" : implode(" ", $_GET["groups"]));
-$query->addStudents(($_GET["students"] == null) ? "" : implode(" ", $_GET["students"]));
-$query->addModules(($_GET["modules"] == null) ? "" : implode(" ", $_GET["modules"]));
+$query->addDatabases($_GET["databases"]);
+$query->addGroups($_GET["groups"]);
+$query->addStudents($_GET["students"]);
+$query->addModules($_GET["modules"]);
 
 $plainResult = $arcadeClient->execute($query);
 

@@ -20,6 +20,8 @@
         var $students = $("#StudentList").val();
         var $modules = $("#ModuleList").val();
 
+        alert($students);
+
         if ($command == null || $command == "")
         {
             alert("Please select a query command. (Replace alert with on page text warning.)");
