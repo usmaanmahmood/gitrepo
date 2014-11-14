@@ -12,14 +12,16 @@ class Query {
     private $groupList;
     private $studentList;
     private $moduleList;
+    private $plainResult;
 
     // if profile object is passed, auto add the filterlist
-    public function __construct($inCommand) {
+    public function __construct($inCommand, $inPlainResult) {
         $this->command = $inCommand;
         $this->databaseList = [];
         $this->groupList = [];
         $this->studentList = [];
         $this->moduleList = [];
+        $this->plainResult = $inPlainResult;
     }
 
     //setters
@@ -34,5 +36,7 @@ class Query {
     public function getGroups() { return $this->groupList; }
     public function getStudents() { return $this->studentList; }
     public function getModules() { return $this->moduleList; }
+    public function getPlainResult() { return $this->plainResult; }
+
 
 }

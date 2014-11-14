@@ -37,7 +37,7 @@ include("ARCADEClient.php");
 if (!isset($_SESSION['profileResult']))
 {
     $arcadeClient = new ARCADEClient();
-    $query = new Query("profile");
+    $query = new Query("profile", 0);
 
     $arcadeProfile = $arcadeClient->execute($query);
     $_SESSION['profileResult'] = serialize($arcadeProfile); // save into session

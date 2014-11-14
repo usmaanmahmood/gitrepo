@@ -15,6 +15,7 @@ class ARCADEClient {
     private $arcadeUsername;
     private $arcadePassword;
     private $arcadeHelloToken = "LKJHGFDSA";
+    private $parser;
 
     //performs cleanup of profile string from ArcadeQuery, and creates 2D array for command and filter data
     public function __construct() {
@@ -49,11 +50,14 @@ class ARCADEClient {
         socket_shutdown($socket, 2); // 2 = shutdown reading and writing
         socket_close($socket);
 
-        // send result to the correct parser
-        // return result object
-//        if ($inQuery->getCommand() == "profile")
-            $parser = new ProfileParser();
+        if ($inQuery->getPlainResult() == 1)
+            return $resultString;
 
+        switch($inQuery->getCommand()) {
+            case "profile": $parser = new ProfileParser();
+                            break;
+        }
+        
         return $parser->parse($resultString);
     }
 }

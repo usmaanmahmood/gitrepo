@@ -10,8 +10,6 @@
  * Time: 14:50
  */
 
-var_dump($arcadeProfile->getModuleList());
-
 ?>
 <div class="row">
     <div class="col-md-4">
