@@ -15,7 +15,7 @@ $query = new Query($_GET["command"], 1); // command, plainTextWanted
 echo var_dump($_GET["databases"]);
 echo var_dump($_GET["modules"]);
 
-echo (!empty($_GET["modules"]));
+echo (empty($_GET["modules"]) ? "yes" : "no");
 //
 //if (!empty($_GET["databases"])) $query->addDatabases(implode(" ", $_GET["databases"]));
 //
