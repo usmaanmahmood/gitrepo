@@ -9,6 +9,6 @@
 
 include "config.php";
 
-echo $arcadeProfile->getFilterList();
+echo $arcadeProfile->getFilterListJSON();
 
 ?>
