@@ -27,6 +27,6 @@ echo (!empty($_GET["modules"]));
 
 //$plainResult = $arcadeClient->execute($query);
 
-echo $plainResult;
+//echo $plainResult;
 
 ?>
