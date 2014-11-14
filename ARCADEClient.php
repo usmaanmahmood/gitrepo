@@ -30,7 +30,7 @@ class ARCADEClient {
         socket_write($socket, $this->arcadeUsername . "\n");
         socket_write($socket, $this->arcadePassword . "\n");
 
-        $queryString =    $inQuery.getCommand() . "\n"
+        $queryString =    $inQuery->getCommand() . "\n"
             . implode(' ', $inQuery->getDatabases()). "\n"
             . implode(' ', $inQuery->getGroups()) . "\n"
             . implode(' ', $inQuery->getStudents()) . "\n"
