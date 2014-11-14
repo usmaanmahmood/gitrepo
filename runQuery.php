@@ -22,8 +22,8 @@ if (!empty($_GET["students"]))  $query->addStudents($_GET["students"]);
 
 if (!empty($_GET["modules"]))   $query->addModules($_GET["modules"]);
 
-//$plainResult = $arcadeClient->execute($query);
+$plainResult = $arcadeClient->execute($query);
 
-//echo $plainResult;
+echo $plainResult;
 
 ?>
