@@ -29,8 +29,7 @@ $( document ).ready(function() {
             return;
         }
 
-        // send through list of databases if none provided
-        // TODO: replace by having Query->getDatabases get list from the profile object
+        // send through list of databases in the list if none provided
         if ($databases == null || $databases == "") {
             $databases = [];
             var $DatabaseList = $("#DatabaseList");
@@ -84,16 +83,6 @@ $( document ).ready(function() {
         });
     });
 
-    function getOnscreenModuleList() {
-        $modules = [];
-        var $moduleList = $("#ModuleList");
-        var i;
-        for (i = 0; i < $moduleList.get(0).length; i++) {
-            $modules.push($moduleList.get(0).options[i].text);
-        }
-        return $modules;
-    }
-
     $(".reset-filters").click(function () {
         $.each($json, function (key, value) {
             $json[key][5] = true;
@@ -108,6 +97,7 @@ $( document ).ready(function() {
     $("#GroupList").click(function () { hideShowFilters("groups"); });
     $("#StudentList").click(function () { hideShowFilters("students"); });
     $("#ModuleList").click(function () { hideShowFilters("modules"); });
+
 
     function hideShowFilters($selectedList) {
         var $databaseList = $("#DatabaseList");
@@ -160,13 +150,10 @@ $( document ).ready(function() {
                 if ($.inArray($json[key][4], $wantedModules) == -1) $wantedModules.push($json[key][4]);
             }
         });
-        console.log("-------------------------------------------");
-        console.log($wantedDatabases);
-        console.log($wantedGroups);
-        console.log($wantedStudents);
-        console.log($wantedModules);
-        // clean up the duplicates in the onscreen lists
 
+
+        // clear and repopulate the list boxes
+        
         if ($selectedList != "databases") {
             $databaseList.empty();
             // add everything from wanted list
