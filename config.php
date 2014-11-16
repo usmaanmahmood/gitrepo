@@ -26,7 +26,7 @@ if($result = $mysqli -> query("SELECT * FROM User")) {
 
 session_start();
 if(empty($_SESSION['username']) || empty($_SESSION['arcadepassword']))
-    header("location:login.php");
+    header("location:Login.php");
 
 
 include("ARCADEClient.php");

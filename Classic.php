@@ -1,4 +1,15 @@
 <?php include "template-head.php" ?>
+<title>ARCADE</title>
+<style>
+    body {
+        padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+</style>
+</head>
+
+<body>
+
+<?php include("template-nav.php"); ?>
 
 <!-- Page Content -->
 <div class="container">

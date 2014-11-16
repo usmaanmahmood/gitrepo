@@ -51,7 +51,7 @@ include 'config.php' ?>
                           <a href="#">Services</a>
                       </li>
                       <li>
-                          <a href="logout.php">Logout</a>
+                          <a href="Logout.php">Logout</a>
                       </li>
                   </ul>
               </div>
