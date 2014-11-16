@@ -68,9 +68,8 @@
 <body>
 
 <div class="container text-center">
-<h1>ARCADE</h1>
     <form class="form-signin" role="form" method="post" action="LoginCheck.php">
-        <h2 class="form-signin-heading">Please log in</h2>
+        <h1 class="form-signin-heading">ARCADE: Login</h1>
         <input type="text" class="form-control" placeholder="Central Username" name="username" id="username" required
                autofocus maxlength=8 value="mahmoou1">
         <input type="password" class="form-control" placeholder="Web Password" name="password" id="password" required
