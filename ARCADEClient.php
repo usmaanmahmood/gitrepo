@@ -1,5 +1,5 @@
 <?php
-if(session_id() == '') {
+if (session_id() == '') {
     session_start();
 }
 /**
@@ -13,28 +13,31 @@ include("Query.php");
 include("ParsingScripts/Parser.php");
 
 
-class ARCADEClient {
+class ARCADEClient
+{
     private $arcadeUsername;
     private $arcadePassword;
     private $arcadeHelloToken = "LKJHGFDSA";
     private $parser;
 
     //performs cleanup of profile string from ArcadeQuery, and creates 2D array for command and filter data
-    public function __construct() {
+    public function __construct()
+    {
         $this->arcadeUsername = $_SESSION['username'];
         $this->arcadePassword = $_SESSION['arcadepassword'];
     }
 
-    public function execute(Query $inQuery) {
+    public function execute(Query $inQuery)
+    {
         $socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP); // create new socket
-        socket_connect ($socket , "carousel", 4000); // connect to arcade on port 4000
+        socket_connect($socket, "carousel", 4000); // connect to arcade on port 4000
 
         socket_write($socket, $this->arcadeHelloToken . "\n");
         socket_write($socket, $this->arcadeUsername . "\n");
         socket_write($socket, $this->arcadePassword . "\n");
 
-        $queryString =    $inQuery->getCommand() . "\n"
-            . implode(' ', $inQuery->getDatabases()). "\n"
+        $queryString = $inQuery->getCommand() . "\n"
+            . implode(' ', $inQuery->getDatabases()) . "\n"
             . implode(' ', $inQuery->getGroups()) . "\n"
             . implode(' ', $inQuery->getStudents()) . "\n"
             . implode(' ', $inQuery->getModules()) . "\n";
@@ -44,7 +47,7 @@ class ARCADEClient {
         $resultString = "";
 
         // accept data until remote host closes the connection
-        while ($socketoutput = socket_read($socket, "100000"))	{
+        while ($socketoutput = socket_read($socket, "100000")) {
             if ($socketoutput != "++WORKING\n")
                 $resultString .= $socketoutput;
         }
@@ -57,9 +60,10 @@ class ARCADEClient {
             return $resultString;
 
 
-        switch($inQuery->getCommand()) {
-            case "profile": $this->parser = new ProfileParser();
-                            break;
+        switch ($inQuery->getCommand()) {
+            case "profile":
+                $this->parser = new ProfileParser();
+                break;
         }
 
         return $this->parser->parse($resultString);
