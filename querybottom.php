@@ -83,7 +83,8 @@ $( document ).ready(function() {
             $json[key][5] = false; // set visibility to false
         });
 
-//        console.dir($fullDatabaseList);
+
+        console.dir($fullDatabaseList);
 
     });
 
