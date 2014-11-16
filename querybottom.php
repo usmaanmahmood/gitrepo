@@ -24,7 +24,7 @@ $( document ).ready(function() {
         // validation
         if ($command == null || $command == "") {
             $('#resultspane').fadeOut('fast');
-            $('#resultspane').html("Please select a command.");
+            $('#resultspane').html(<div class="alert alert-warning" role="alert">Please select a command.</div>);
             $('#resultspane').fadeIn('fast');
             return;
         }
