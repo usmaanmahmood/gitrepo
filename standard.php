@@ -57,8 +57,7 @@
         <div class="col-md-12">
             <pre id="resultspane"></pre>
         </div>
-
-
+    </div>
 </div>
 <?php include "querybottom.php" ?>
 
