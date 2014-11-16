@@ -14,6 +14,9 @@
 
 <script>
 $( document ).ready(function() {
+    $('#resultspane').hide();
+
+
     $("#submit").click(function () {
         var $command = $("#CommandList option:selected").text();
         var $databases = $("#DatabaseList").val();
@@ -55,7 +58,7 @@ $( document ).ready(function() {
             },
             type: 'get',
             success: function (result) {
-                $('#resultspane').html(result);
+                $('#resultspane').html("<pre>" + result + "</pre>");
                 $('#resultspane').fadeIn('slow');
                 $submitbutton.button('reset');
             }
