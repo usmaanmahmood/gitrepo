@@ -77,11 +77,18 @@
                value="webpassword">
         <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit">Sign in</button>
         <?php
-        if (isset($_GET["error"])) {
+        if (isset($_GET["message"]) && $_GET["message"] == 1) {
             ?>
             <div class="alert alert-danger" role="alert"><b>Oh snap!</b> Change a few things up and try submitting
                 again.
             </div>
+        <?php
+        } else if (isset($_GET["message"]) && $_GET["message"] == 2) {
+        }
+        ?>
+        <div class="alert alert-success" role="alert"><b>Thanks for using ARCADE!</b> Please send any feedback /
+            suggestions to Usmaan Mahmood.
+        </div>
         <?php
         }
         ?>
