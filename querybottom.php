@@ -90,6 +90,7 @@
 
     // load each list with unique_array(databases) where show = true
     function reloadModuleList() {
+        /*
         var $moduleList = $("#ModuleList");
         var $databaseList = $("#DatabaseList");
         var $selectedDatabases = $databaseList.val();
@@ -116,6 +117,7 @@
         $.each($outputModulesList, function(key, value) {
             $moduleList.append("<option value=\"" + value + "\">" + value + "</option>");
         });
+        */
     }
 
     function hideShowFilters() {
@@ -124,6 +126,7 @@
         var $studentList = $("#StudentList");
         var $moduleList = $("#ModuleList");
 
+        console.log($databaseList.val() );
         // if nothing is selected, deem them all to be selected
         var $selectedDatabases = ($databaseList.val() == null ? $fullDatabaseList : $databaseList.val());
         var $selectedGroups = ($groupList.val() == null ? $fullGroupList : $groupList.val());
@@ -139,7 +142,6 @@
         console.log($selectedGroups);
         console.log($selectedStudents);
         console.log($selectedModules);
-        console.log("--------------------------------------------------------------");
 
         var $outputDatabasesList = [];
         var $outputGroupsList = [];
