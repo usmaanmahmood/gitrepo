@@ -76,9 +76,10 @@
         $.each( $json, function( key, value ) {
 
             $dbFound = ($.inArray($json[key][0]), $fullDatabaseList);
-            if ($dbFound == -1)
+            if ($dbFound < 0) // ie not found
                 $fullDatabaseList.push($json[key][0]);
 
+            console.dir($dbFound, $json[key][0], $fullDatabaseList);
 
             if (($.inArray($json[key][1]), $fullGroupList) == -1) $fullGroupList.push($json[key][1]);
             if (($.inArray($json[key][2]), $fullStudentUsernameList) == -1) $fullStudentUsernameList.push($json[key][2]);
