@@ -143,25 +143,16 @@
         var $studentList = $("#StudentList");
         var $moduleList = $("#ModuleList");
 
-        // dont empty it, if it is the list we clicked
-//        if ($selectedList != "databases") $databaseList.empty();
-//        if ($selectedList != "groups") $groupList.empty();
-//        if ($selectedList != "students") $studentList.empty();
-//        if ($selectedList != "modules") $moduleList.empty();
 
-        $wantedDatabases = [];
-        $wantedGroups = [];
-        $wantedStudents = [];
-        $wantedModules = [];
+        var $wantedDatabases = [];
+        var $wantedGroups = [];
+        var $wantedStudents = [];
+        var $wantedModules = [];
 
         // refill the lists
         $.each($json, function(key, value) {
             if ($json[key][5] == true)
             {
-//                if ($selectedList != "databases")  $databaseList.append("<option value=\"" + $json[key][0] + "\">" + $json[key][0] + "</option>");
-//                if ($selectedList != "groups") $groupList.append("<option value=\"" + $json[key][1] + "\">" + $json[key][1] + "</option>");
-//                if ($selectedList != "students") $studentList.append("<option value=\"" + $json[key][2] + "\">" + $json[key][2] + "</option>");
-//                if ($selectedList != "modules") $moduleList.append("<option value=\"" + $json[key][4] + "\">" + $json[key][4] + "</option>");
                 $wantedDatabases.push($json[key][0]);
                 $wantedGroups.push($json[key][1]);
                 $wantedStudents.push($json[key][2]);
@@ -173,30 +164,37 @@
 
         if ($selectedList != "databases")
             $("#DatabaseList option").each(function() {
-            $positionOfOptionInWantedArray = $.inArray(this.value, $wantedDatabases);
-            if($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
-        });
+                $positionOfOptionInWantedArray = $.inArray(this.value, $wantedDatabases);
+                if($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
+            });
 
         if ($selectedList != "groups")
             $("#GroupList option").each(function() {
-            $positionOfOptionInWantedArray = $.inArray(this.value, $wantedGroups);
-            if($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
-        });
+                $positionOfOptionInWantedArray = $.inArray(this.value, $wantedGroups);
+                if($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
+            });
 
         if ($selectedList != "students")
             $("#StudentList option").each(function() {
-            $positionOfOptionInWantedArray = $.inArray(this.value, $wantedStudents);
-            if($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
-        });
+                $positionOfOptionInWantedArray = $.inArray(this.value, $wantedStudents);
+                if($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
+            });
 
-        if ($selectedList != "modules")
-            $("#ModuleList option").each(function() {
-            $positionOfOptionInWantedArray = $.inArray(this.value, $wantedModules);
-            if($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
-        });
+        if ($selectedList != "modules") {
+            // go through each option, removed unwanted ones
+            $("#ModuleList option").each(function () {
+                $positionOfOptionInWantedArray = $.inArray(this.value, $wantedModules);
+                if ($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
+            });
 
-
-
+            // now if there is a wanted module that isn't in the optionslist, we need to add it.
+            $wantedModules.each(function (key, value) {
+                if ($.inArray(value,  $("#DatabaseList option")) == -1) // this current module is wanted but not in the optionlist, add it
+                    $$("#DatabaseList").append($("<option></option>")
+                        .attr("value",value)
+                        .text(value));
+            });
+        }
 
 
     }
