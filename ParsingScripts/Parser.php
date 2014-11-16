@@ -11,6 +11,6 @@ abstract class Parser
     abstract protected function parse($inString);
 }
 
-include ("ProfileParser.php");
+include("ProfileParser.php");
 
 ?>

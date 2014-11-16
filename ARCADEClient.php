@@ -10,7 +10,7 @@ if(session_id() == '') {
  */
 
 include("Query.php");
-include("Parser.php");
+include("ParsingScripts/Parser.php");
 
 
 class ARCADEClient {
