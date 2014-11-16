@@ -141,6 +141,8 @@ $( document ).ready(function() {
             {
                 $json[key][5] = true; // display this one
             }
+            else
+                $json[key][5] = false;
         });
 
         reloadLists($selectedList);
