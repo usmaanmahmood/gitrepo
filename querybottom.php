@@ -139,7 +139,7 @@ $( document ).ready(function() {
         var $wantedDatabases = [];
         var $wantedGroups = [];
         var $wantedStudents = [];
-        var $wantedStudents2D = [][];
+        var $wantedStudents2D = [];
         var $wantedModules = [];
 
         // refill the lists
