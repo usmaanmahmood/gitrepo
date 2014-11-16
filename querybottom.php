@@ -171,24 +171,26 @@
 
         // clean up the duplicates in the lists
 
-
-        $("#DatabaseList option").each(function() {
+        if ($selectedList != "databases")
+            $("#DatabaseList option").each(function() {
             $positionOfOptionInWantedArray = $.inArray(this.value, $wantedDatabases);
             if($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
         });
 
-        $("#GroupList option").each(function() {
+        if ($selectedList != "groups")
+            $("#GroupList option").each(function() {
             $positionOfOptionInWantedArray = $.inArray(this.value, $wantedGroups);
             if($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
         });
 
-        $("#StudentList option").each(function() {
+        if ($selectedList != "students")
+            $("#StudentList option").each(function() {
             $positionOfOptionInWantedArray = $.inArray(this.value, $wantedStudents);
             if($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
         });
 
-
-        $("#ModuleList option").each(function() {
+        if ($selectedList != "modules")
+            $("#ModuleList option").each(function() {
             $positionOfOptionInWantedArray = $.inArray(this.value, $wantedModules);
             if($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
         });
