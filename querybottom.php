@@ -104,21 +104,10 @@ $( document ).ready(function() {
         });
     });
 
-    $("#DatabaseList").click(function () {
-        hideShowFilters("databases");
-    });
-
-    $("#GroupList").click(function () {
-        hideShowFilters("groups");
-    });
-
-    $("#StudentList").click(function () {
-        hideShowFilters("students");
-    });
-
-    $("#ModuleList").click(function () {
-        hideShowFilters("modules");
-    });
+    $("#DatabaseList").click(function () { hideShowFilters("databases"); });
+    $("#GroupList").click(function () { hideShowFilters("groups"); });
+    $("#StudentList").click(function () { hideShowFilters("students"); });
+    $("#ModuleList").click(function () { hideShowFilters("modules"); });
 
     function hideShowFilters($selectedList) {
         var $databaseList = $("#DatabaseList");
