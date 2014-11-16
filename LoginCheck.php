@@ -38,7 +38,7 @@ if($num_rows==1){
     $_SESSION["arcadepassword"] = $result->fetch_assoc()['ArcadePassword'];
     $result -> close();
     $mysqli -> close();
-    header("location:Classic.php");
+    header("location:display/Classic.php");
 }
 else {
     $mysqli -> close();

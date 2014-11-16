@@ -16,7 +16,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="Classic.php">Classic ARCADE</a>
+                    <a href="display/Classic.php">Classic ARCADE</a>
                 </li>
                 <li>
                     <a href="#">Services</a>
