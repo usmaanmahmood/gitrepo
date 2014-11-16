@@ -175,17 +175,17 @@
                     $wantedModules.push($json[key][4]);
 
 
-                console.log($json[key][0], $wantedDatabases, $.inArray($json[key][0], $wantedDatabases));
-                console.log($json[key][1], $wantedGroups, $.inArray($json[key][1], $wantedGroups));
-                console.log($json[key][2], $wantedStudents, $.inArray($json[key][2], $wantedStudents));
-                console.log($json[key][4], $wantedModules, $.inArray($json[key][4], $wantedModules));
+//                console.log($json[key][0], $wantedDatabases, $.inArray($json[key][0], $wantedDatabases));
+//                console.log($json[key][1], $wantedGroups, $.inArray($json[key][1], $wantedGroups));
+//                console.log($json[key][2], $wantedStudents, $.inArray($json[key][2], $wantedStudents));
+//                console.log($json[key][4], $wantedModules, $.inArray($json[key][4], $wantedModules));
 
             }
         });
-        console.log($wantedDatabases);
-        console.log($wantedGroups);
-        console.log($wantedStudents);
-        console.log($wantedModules);
+//        console.log($wantedDatabases);
+//        console.log($wantedGroups);
+//        console.log($wantedStudents);
+//        console.log($wantedModules);
         // clean up the duplicates in the lists
 
         if ($selectedList != "databases")
