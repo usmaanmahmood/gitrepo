@@ -126,7 +126,6 @@
         var $studentList = $("#StudentList");
         var $moduleList = $("#ModuleList");
 
-        console.log($databaseList.val() );
         // if nothing is selected, deem them all to be selected
         var $selectedDatabases = ($databaseList.val() == null ? $fullDatabaseList : $databaseList.val());
         var $selectedGroups = ($groupList.val() == null ? $fullGroupList : $groupList.val());
@@ -137,7 +136,7 @@
         console.log($fullGroupList);
         console.log($fullStudentUsernameList);
         console.log($fullModuleList);
-        console.log("--------------------------------------------------------------");
+        console.log("-----------------------selected lists-------------------------");
         console.log($selectedDatabases);
         console.log($selectedGroups);
         console.log($selectedStudents);
