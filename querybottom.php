@@ -78,12 +78,13 @@
 
         $.each( $json, function( key, value ) {
 
+            console.log($json[key][0]);
             $dbFound = ($.inArray($json[key][0]), $fullDatabaseList);
             console.log($dbFound);
             if ($dbFound < 0) // ie not found
             {
                 $fullDatabaseList.push($json[key][0]);
-                console.log($dbFound, $json[key][0], $fullDatabaseList);
+//                console.log($dbFound, $json[key][0], $fullDatabaseList);
             }
 
             if (($.inArray($json[key][1]), $fullGroupList) == -1) $fullGroupList.push($json[key][1]);
