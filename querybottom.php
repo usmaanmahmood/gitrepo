@@ -72,13 +72,15 @@
 
     $.getJSON ('getFilterLists.php', function (json) {
         $json = json;
-        
+
         $.each( $json, function( key, value ) {
             $fullDatabaseList.push($json[key][0]);
             $fullGroupList.push($json[key][1]);
             $fullStudentUsernameList.push($json[key][2]);
             $fullStudentFullnameList.push($json[key][3]);
             $fullModuleList.push($json[key][4]);
+
+            $json[key][5] = false;
         });
     });
 
@@ -166,7 +168,81 @@
         $.each($outputModulesList, function(key, value) {
             $moduleList.append("<option value=\"" + value + "\">" + value + "</option>");
         });
+    }
 
+    function hideShowFilters() {
+        var $databaseList = $("#DatabaseList");
+        var $groupList = $("#GroupList");
+        var $studentList = $("#StudentList");
+        var $moduleList = $("#ModuleList");
+
+        // if nothing is selected, deem them all to be selected
+        var $selectedDatabases = ($databaseList.val() == null ? $fullDatabaseList : $databaseList.val());
+        var $selectedGroups = ($groupList.val() == null ? $fullGroupList : $groupList.val());
+        var $selectedStudents = ($studentList.val() == null ? $fullStudentUsernameList : $studentList.val());
+        var $selectedModules = ($moduleList.val() == null ? $fullModuleList : $moduleList.val());
+
+        var $outputDatabasesList = [];
+        var $outputGroupsList = [];
+        var $outputStudentsList = [];
+        var $outputModulesList = [];
+
+        // add them if satisfy needs
+        $.each($json, function( key, value ) {
+            if (    ($.inArray($json[key][0], $selectedDatabases) != -1) // if the current filter DB is in the selected DB list then ok
+                    && ($.inArray($json[key][1], $selectedGroups) != -1) // if the current filter group is in the selected DB list then ok
+                    && ($.inArray($json[key][2], $selectedStudents) != -1) // if the current filter studentusername is in the selected DB list then ok
+                    && ($.inArray($json[key][4], $selectedModules) != -1) // if the current filter module is in the selected DB list then ok)
+
+            {
+                $json[key][5] = true; // display this one
+                /*
+                $outputDatabasesList.push($json[key][0]); // add the module
+                $outputGroupsList.push($json[key][1]); // add the module
+                $outputStudentsList.push($json[key][2]); // add the module
+                $outputModulesList.push($json[key][4]); // add the module
+                */
+            }
+        });
+
+        reloadLists();
+    }
+
+    // reload the lists with data in the arrays
+    function reloadLists() {
+
+        var $databaseList = $("#DatabaseList");
+        var $groupList = $("#GroupList");
+        var $studentList = $("#StudentList");
+        var $moduleList = $("#ModuleList");
+
+        $databaseList.empty();
+        $groupList.empty();
+        $studentList.empty();
+        $moduleList.empty();
+
+
+        // refill the lists
+        $.each($databaseList, function(key, value) {
+            if ($databaseList[5] == true)
+                $databaseList.append("<option value=\"" + value + "\">" + value + "</option>");
+        });
+
+        $.each($groupList, function(key, value) {
+            if ($groupList[5] == true)
+                $groupList.append("<option value=\"" + value + "\">" + value + "</option>");
+        });
+
+        $.each($studentList, function(key, value) {
+            if ($studentList[5] == true)
+                $studentList.append("<option value=\"" + value + "\">" + value + "</option>");
+        });
+
+
+        $.each($moduleList, function(key, value) {
+            if ($moduleList[5] == true)
+                $moduleList.append("<option value=\"" + value + "\">" + value + "</option>");
+        });
 
     }
 
