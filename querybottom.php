@@ -23,8 +23,8 @@ $( document ).ready(function() {
 
         // validation
         if ($command == null || $command == "") {
-            $('#queryWarning').fadeIn('slow');
             $('#queryWarning').html("<div class=\"alert alert-danger\" role=\"alert\">Please select a command.</div>");
+            $('#queryWarning').fadeIn('slow');
             return;
         }
         else
