@@ -30,5 +30,3 @@
     <!-- /.container -->
 </nav>
 
-<!-- Page Content -->
-<div class="container">
