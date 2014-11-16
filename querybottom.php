@@ -84,13 +84,21 @@
         });
     });
 
-    $("#DatabaseList").click(hideShowFilters());
+    $("#DatabaseList").click(function() {
+        hideShowFilters();
+    });
 
-    $("#GroupList").click(hideShowFilters());
+    $("#GroupList").click(function() {
+        hideShowFilters();
+    });
 
-    $("#StudentList").click(hideShowFilters());
+    $("#StudentList").click(function() {
+        hideShowFilters();
+    });
 
-    $("#ModuleList").click(hideShowFilters());
+    $("#ModuleList").click(function() {
+        hideShowFilters();
+    });
 
     // load each list with unique_array(databases) where show = true
     function reloadModuleList() {
