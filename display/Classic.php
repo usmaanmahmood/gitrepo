@@ -30,8 +30,7 @@
                     </select>
 
                     <div class="col-md-12">
-                        <div class=\"alert alert-danger\ role=\"alert\" id="queryWarning">
-                        </div>
+                        <div class=\"alert alert-danger\ role=\"alert\" id="queryWarning"></div>
                     </div>
                 </div>
                 <div class="col-md-8">
