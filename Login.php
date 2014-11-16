@@ -68,7 +68,7 @@
 <body>
 
 <div class="container">
-
+<h1>ARCADE</h1>
     <form class="form-signin" role="form" method="post" action="LoginCheck.php">
         <h2 class="form-signin-heading">Please log in</h2>
         <input type="text" class="form-control" placeholder="Central Username" name="username" id="username" required
