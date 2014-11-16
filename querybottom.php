@@ -173,6 +173,7 @@ $( document ).ready(function() {
                     $json[key][5] = false;
             }
         });
+        console.log("-------------------------------------------");
         console.log($wantedDatabases);
         console.log($wantedGroups);
         console.log($wantedStudents);
