@@ -23,7 +23,7 @@
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="Registration-Details.php">Registration Details</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
+                        <li><a href="#">Separated link</a></li>
                     </ul>
                 </li>
                 <li>
