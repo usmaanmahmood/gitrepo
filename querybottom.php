@@ -143,10 +143,7 @@
 //        console.log($selectedStudents);
 //        console.log($selectedModules);
 
-        var $outputDatabasesList = [];
-        var $outputGroupsList = [];
-        var $outputStudentsList = [];
-        var $outputModulesList = [];
+
 
         // add them if satisfy needs
         console.dir($json);
@@ -164,16 +161,6 @@
                 $outputModulesList.push($json[key][4]); // add the module
                 */
             }
-            else
-            {
-
-
-            }
-            console.log("-------------------------------");
-            console.log($json[key][0], $selectedDatabases, $.inArray($json[key][0], $selectedDatabases));
-            console.log($json[key][1], $.inArray($json[key][1], $selectedGroups));
-            console.log($json[key][2], $.inArray($json[key][2], $selectedStudents));
-            console.log($json[key][4], $.inArray($json[key][4], $selectedModules));
         });
 
         reloadLists();
@@ -193,6 +180,7 @@
         $moduleList.empty();
 
 
+
         // refill the lists
         $.each($json, function(key, value) {
             if ($json[key][5] == true)
@@ -202,8 +190,32 @@
                 $studentList.append("<option value=\"" + $json[key][2] + "\">" + $json[key][2] + "</option>");
                 $moduleList.append("<option value=\"" + $json[key][4] + "\">" + $json[key][4] + "</option>");
             }
-
         });
+
+        // clean up the lists
+        var found = [];
+        $("#DatabaseList option").each(function() {
+            if($.inArray(this.value, found) != -1) $(this).remove();
+            found.push(this.value);
+        });
+        found = [];
+        $("#GroupList option").each(function() {
+            if($.inArray(this.value, found) != -1) $(this).remove();
+            found.push(this.value);
+        });
+        found = [];
+        $("#StudentList option").each(function() {
+            if($.inArray(this.value, found) != -1) $(this).remove();
+            found.push(this.value);
+        });
+        found = [];
+        $("#ModuleList option").each(function() {
+            if($.inArray(this.value, found) != -1) $(this).remove();
+            found.push(this.value);
+        });
+        found = [];
+
+
 
 
     }
