@@ -177,23 +177,6 @@ $( document ).ready(function() {
         console.log($wantedModules);
         // clean up the duplicates in the onscreen lists
 
-//        if ($selectedList != "databases")
-//            $("#DatabaseList option").each(function () {
-//                $positionOfOptionInWantedArray = $.inArray(this.value, $wantedDatabases);
-//                if ($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
-//            });
-//
-//        if ($selectedList != "groups")
-//            $("#GroupList option").each(function () {
-//                $positionOfOptionInWantedArray = $.inArray(this.value, $wantedGroups);
-//                if ($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
-//            });
-//
-//        if ($selectedList != "students")
-//            $("#StudentList option").each(function () {
-//                $positionOfOptionInWantedArray = $.inArray(this.value, $wantedStudents);
-//                if ($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
-//            });
 
         if ($selectedList != "modules") {
             // go through each option that is on the page, removed any that arent in the WANTED list
@@ -208,6 +191,7 @@ $( document ).ready(function() {
                     $.each($json, function (key, value) {
                         if ($currentOptionValue == $json[key][4])
                             $json[key][5] = false;
+                        console.log($json[key]);
                     });
                 }
             });
