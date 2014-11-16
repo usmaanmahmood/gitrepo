@@ -130,11 +130,16 @@
         var $selectedStudents = ($studentList.val() == null ? $fullStudentUsernameList : $studentList.val());
         var $selectedModules = ($moduleList.val() == null ? $fullModuleList : $moduleList.val());
 
+        console.log($fullDatabaseList);
+        console.log($fullGroupList);
+        console.log($fullStudentUsernameList);
+        console.log($fullModuleList);
+        console.log("--------------------------------------------------------------");
         console.log($selectedDatabases);
         console.log($selectedGroups);
         console.log($selectedStudents);
         console.log($selectedModules);
-
+        console.log("--------------------------------------------------------------");
 
         var $outputDatabasesList = [];
         var $outputGroupsList = [];
