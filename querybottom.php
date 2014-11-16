@@ -183,10 +183,9 @@ $( document ).ready(function() {
 
             // add everything from wanted list
             $.each($wantedModules, function (key, value) {
-                if ($.inArray(value, $onScreenModuleList) == -1)
-                    $("#ModuleList").append($("<option></option>")
-                        .attr("value", value)
-                        .text(value));
+                $("#ModuleList").append($("<option></option>")
+                                .attr("value", value)
+                                .text(value));
             });
         }
 
