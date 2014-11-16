@@ -5,7 +5,7 @@
  * Date: 16/11/14
  * Time: 18:00
  */
-include 'config.php' ?>
+include 'config.php'; ?>
 
     <!DOCTYPE html>
     <html lang="en">

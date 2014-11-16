@@ -1,5 +1,6 @@
 <?php include "template-head.php";
 session_destroy();
+session_start();
 
 ?>
 <title>Login | ARCADE</title>
