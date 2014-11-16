@@ -17,45 +17,54 @@ include 'config.php' ?>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
     <!-- Custom styles for this template -->
-
+      <style>
+          body {
+              padding-top: 70px;
+              /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+          }
+      </style>
   </head>
+
 
   <body>
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">ARCADE</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="#about">About</a></li>
-              <li class="active"><a href="standard.php">Standard ARCADE</a></li>
-              <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Advanced Interfaces<span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                      <li><a href="display/registration-details.php">Registration Details</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#">One more separated link</a></li>
+
+      <!-- Navigation -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <div class="container">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">Start Bootstrap</a>
+              </div>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                      <li>
+                          <a href="#">About</a>
+                      </li>
+                      <li>
+                          <a href="#">Services</a>
+                      </li>
+                      <li>
+                          <a href="#">Contact</a>
+                      </li>
                   </ul>
-              </li>
-              <li><a href="logout.php">Logout</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
+              </div>
+              <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.container -->
+      </nav>
 
-    <div class="container">
+      <!-- Page Content -->
+      <div class="container">
 
-      <div class="starter-template">
-        <h1>Classic Web ARCADE</h1>
-        <p class="lead">This is a replica of the functionality available through the classic JAVA GUI for ARCADE.*</p>
+          <div class="row">
+              <div class="col-lg-12 text-center">
+                  <h1>A Bootstrap Starter Template</h1>
+                  <p class="lead">Complete with pre-defined file paths that you won't have to change!</p>
