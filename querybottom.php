@@ -205,6 +205,7 @@ $( document ).ready(function() {
                                 .attr("value", value)
                                 .text(value));
             });
+            $moduleList.scrollTop(0);
         }
 
     }
