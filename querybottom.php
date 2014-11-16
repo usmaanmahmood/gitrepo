@@ -75,19 +75,10 @@ $( document ).ready(function() {
 
         $.each($json, function (key, value) {
 
-            console.log("jsonkey0 > ", $json[key][0]);
-            console.log("fulldblist > ", $fullDatabaseList);
-            $dbFound = (jQuery.inArray($json[key][0], $fullDatabaseList));
-            console.log("dbfound > ", $dbFound);
-            if ($dbFound < 0) // ie not found
-            {
-                $fullDatabaseList.push($json[key][0]);
-//                console.log($dbFound, $json[key][0], $fullDatabaseList);
-            }
-
-            if (($.inArray($json[key][1]), $fullGroupList) == -1) $fullGroupList.push($json[key][1]);
-            if (($.inArray($json[key][2]), $fullStudentUsernameList) == -1) $fullStudentUsernameList.push($json[key][2]);
-            if (($.inArray($json[key][4]), $fullModuleList) == -1) $fullModuleList.push($json[key][4]);
+            if ($.inArray($json[key][0], $fullDatabaseList) == -1) $fullDatabaseList.push($json[key][0]);
+            if ($.inArray($json[key][1], $fullGroupList) == -1) $fullGroupList.push($json[key][1]);
+            if ($.inArray($json[key][2], $fullStudentUsernameList) == -1) $fullStudentUsernameList.push($json[key][2]);
+            if ($.inArray($json[key][4], $fullModuleList) == -1) $fullModuleList.push($json[key][4]);
 
             $json[key][5] = false; // set visibility to false
         });
@@ -164,16 +155,16 @@ $( document ).ready(function() {
         // refill the lists
         $.each($json, function (key, value) {
             if ($json[key][5] == true) {
-                if (($.inArray($json[key][0]), $wantedDatabases) == -1)
+                if ($.inArray($json[key][0], $wantedDatabases) == -1)
                     $wantedDatabases.push($json[key][0]);
 
-                if (($.inArray($json[key][1]), $wantedGroups) == -1)
+                if ($.inArray($json[key][1], $wantedGroups) == -1)
                     $wantedGroups.push($json[key][1]);
 
-                if (($.inArray($json[key][2]), $wantedStudents) == -1)
+                if ($.inArray($json[key][2], $wantedStudents) == -1)
                     $wantedStudents.push($json[key][2]);
 
-                if (($.inArray($json[key][4]), $wantedModules) == -1)
+                if ($.inArray($json[key][4], $wantedModules) == -1)
                     $wantedModules.push($json[key][4]);
 
 
