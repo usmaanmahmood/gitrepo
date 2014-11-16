@@ -158,7 +158,7 @@
                 if ($selectedList != "databases")  $databaseList.append("<option value=\"" + $json[key][0] + "\">" + $json[key][0] + "</option>");
                 if ($selectedList != "groups") $groupList.append("<option value=\"" + $json[key][1] + "\">" + $json[key][1] + "</option>");
                 if ($selectedList != "students") $studentList.append("<option value=\"" + $json[key][2] + "\">" + $json[key][2] + "</option>");
-                if ($selectedList != "modules") $moduleList.append("<option value=\"" + $json[key][4] + "\">" + $json[key][4] + "</option>");
+//                if ($selectedList != "modules") $moduleList.append("<option value=\"" + $json[key][4] + "\">" + $json[key][4] + "</option>");
 
                 $wantedModules.push($json[key][4]);
             }
