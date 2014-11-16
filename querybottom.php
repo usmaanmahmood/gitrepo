@@ -67,10 +67,18 @@
 
     $.getJSON ('getFilterLists.php', function (json) {
         $json = json;
+        var $fullDatabaseList = [];
+        var $fullGroupList = [];
+        var $fullStudentUsernameList = [];
+        var $fullStudentFullnameList = [];
+        var $fullModuleList = [];
 
-        // add show col to each filter
         $.each( $json, function( key, value ) {
-            $json[key][5] = false;
+            $fullDatabaseList.push($json[key][0]);
+            $fullGroupList.push($json[key][1]);
+            $fullStudentUsernameList.push($json[key][2]);
+            $fullStudentFullnameList.push($json[key][3]);
+            $fullModuleList.push($json[key][4]);
         });
     });
 
@@ -135,25 +143,30 @@
         var $moduleList = $("#ModuleList");
         var $databaseList = $("#DatabaseList");
         var $selectedDatabases = $databaseList.val();
+        var $outputModulesList = [];
 
         // if at least one db has been selected
         if ($selectedDatabases)
         {
-            var $outputModulesList = [];
             $.each($json, function( key, value ) {
                 if ($.inArray($json[key][0], $selectedDatabases) != -1) // if the current db is part of the selected list
                 {
                     $outputModulesList.push($json[key][4]); // add the module
                 }
             });
-
-            $moduleList.empty(); // clear select list
-
-            // add them all
-            $.each($outputModulesList, function(key, value) {
-                    $moduleList.append("<option value=\"" + value + "\">" + value + "</option>");
-            });
         }
+        else
+        {
+            $outputModulesList = $fullModuleList;
+        }
+
+        $moduleList.empty(); // clear select list
+
+        // refill the module list
+        $.each($outputModulesList, function(key, value) {
+            $moduleList.append("<option value=\"" + value + "\">" + value + "</option>");
+        });
+
 
     }
 
