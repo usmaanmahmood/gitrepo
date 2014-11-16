@@ -73,6 +73,7 @@
     });
 
     $("#DatabaseList").click(function() {
+        /*
         var $databaseList = $("#DatabaseList");
         var $selectedDatabases = $databaseList.val();
 
@@ -123,7 +124,13 @@
                 $stringModulesAdded.push(value);
             }
         });
+        */
     });
+
+    // load each list with unique_array(databases) where show = true
+    function reloadFilterLists() {
+
+    }
 
 
 
