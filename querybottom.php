@@ -84,6 +84,13 @@
         });
     });
 
+    $(".reset-filters").click(function() {
+        $.each( $json, function( key, value ) {
+            $json[key][5] = true;
+        });
+        reloadLists();
+    });
+
     $("#DatabaseList").click(function() {
         hideShowFilters();
     });
@@ -155,13 +162,6 @@
             }
         });
 
-        reloadLists();
-    }
-
-    function resetFilters() {
-        $.each( $json, function( key, value ) {
-            $json[key][5] = true;
-        });
         reloadLists();
     }
 

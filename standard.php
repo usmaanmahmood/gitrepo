@@ -22,7 +22,7 @@
     <div class="col-md-8">
         <div class="row">
             <div class="col-md-3">
-                <p>Databases | &nbsp; <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button></p>
+                <p>Databases &nbsp; | &nbsp; <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button></p>
                 <select multiple class="form-control" size=10 id="DatabaseList">
                 <?php foreach(array_unique($arcadeProfile->getDatabaseList()) as $option) { ?>
                     <option value="<?php echo $option ?>"><?php echo $option ?></option>
@@ -30,7 +30,7 @@
                 </select>
             </div>
             <div class="col-md-3">
-                <p>Groups</p>
+                <p>Groups &nbsp; | &nbsp; <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button></p>
                 <select multiple class="form-control" size=10 id="GroupList">
                     <?php foreach(array_unique($arcadeProfile->getGroupList()) as $option) { ?>
                         <option value="<?php echo $option ?>"><?php echo $option ?></option>
@@ -38,7 +38,7 @@
                 </select>
             </div>
             <div class="col-md-3">
-                <p>Students</p>
+                <p>Students &nbsp; | &nbsp; <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button></p>
                 <select multiple class="form-control" size=10 id="StudentList">
                     <?php foreach(array_unique($arcadeProfile->getStudentUsernameList()) as $option) { ?>
                         <option value="<?php echo $option ?>"><?php echo $option ?></option>
@@ -46,7 +46,7 @@
                 </select>
             </div>
             <div class="col-md-3">
-                <p>Modules</p>
+                <p>Modules &nbsp; | &nbsp; <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button></p>
                 <select multiple class="form-control" size=10 id="ModuleList">
                     <?php foreach(array_unique($arcadeProfile->getModuleList()) as $option) { ?>
                         <option value="<?php echo $option ?>"><?php echo $option ?></option>
