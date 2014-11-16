@@ -192,8 +192,7 @@
             if (    ($.inArray($json[key][0], $selectedDatabases) != -1) // if the current filter DB is in the selected DB list then ok
                     && ($.inArray($json[key][1], $selectedGroups) != -1) // if the current filter group is in the selected DB list then ok
                     && ($.inArray($json[key][2], $selectedStudents) != -1) // if the current filter studentusername is in the selected DB list then ok
-                    && ($.inArray($json[key][4], $selectedModules) != -1) // if the current filter module is in the selected DB list then ok)
-
+                    && ($.inArray($json[key][4], $selectedModules) != -1)) // if the current filter module is in the selected DB list then ok)
             {
                 $json[key][5] = true; // display this one
                 /*
