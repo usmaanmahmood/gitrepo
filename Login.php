@@ -92,6 +92,7 @@
         }
         ?>
     </form>
+    <p>Not have an account yet? <a href="Register.php">Register easy &amp; quickly here!</a></p>
 
 </div>
 <!-- /container -->
