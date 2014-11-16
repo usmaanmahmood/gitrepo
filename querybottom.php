@@ -181,17 +181,18 @@
             found.push(this.value);
         });
         found = [];
+
         $("#ModuleList option").each(function() {
             $positionOfOptionInWantedArray = $.inArray(this.value, $wantedModules);
 
             if($positionOfOptionInWantedArray == -1) // this current option isnt in desired list, so delete it
                 $(this).remove();
-            else    // it is in the desired list, so add it if it isnt already there
+            else    // this current option is in the  desired list, so leave it ALONE OK.
             {
 //                if($.inArray($wantedModules[$positionOfOptionInWantedArray], $("#ModuleList option")) == -1) // if it isnt in there, we gotta add it
-                    $moduleList.append("<option value=\"" + $wantedModules[$positionOfOptionInWantedArray] + "\">" + $wantedModules[$positionOfOptionInWantedArray] + "</option>");
+//                    $moduleList.append("<option value=\"" + $wantedModules[$positionOfOptionInWantedArray] + "\">" + $wantedModules[$positionOfOptionInWantedArray] + "</option>");
 
-                console.log($wantedModules[$positionOfOptionInWantedArray], $("#ModuleList option"), $.inArray($wantedModules[$positionOfOptionInWantedArray], $("#ModuleList option")))
+//                console.log($wantedModules[$positionOfOptionInWantedArray], $("#ModuleList option"), $.inArray($wantedModules[$positionOfOptionInWantedArray], $("#ModuleList option")))
             }
 
         });
