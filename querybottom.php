@@ -153,16 +153,23 @@
         $.each($json, function(key, value) {
             if ($json[key][5] == true)
             {
-                if (($.inArray($json[key][0]), $wantedDatabases) == -1) $wantedDatabases.push($json[key][0]); // add it if it isnt in there already
-                if (($.inArray($json[key][1]), $wantedGroups) == -1) $wantedGroups.push($json[key][1]);
-                if (($.inArray($json[key][2]), $wantedStudents) == -1) $wantedStudents.push($json[key][2]);
-                if (($.inArray($json[key][4]), $wantedModules) == -1) $wantedModules.push($json[key][4]);
+                if (($.inArray($json[key][0]), $wantedDatabases) == -1)
+                    $wantedDatabases.push($json[key][0]);
+
+                if (($.inArray($json[key][1]), $wantedGroups) == -1)
+                    $wantedGroups.push($json[key][1]);
+
+                if (($.inArray($json[key][2]), $wantedStudents) == -1)
+                    $wantedStudents.push($json[key][2]);
+
+                if (($.inArray($json[key][4]), $wantedModules) == -1)
+                    $wantedModules.push($json[key][4]);
 
 
                 console.log($json[key][0], $wantedDatabases, $.inArray($json[key][0], $wantedDatabases));
-                console.log($json[key][1], $.inArray($json[key][1], $wantedGroups));
-                console.log($json[key][2], $.inArray($json[key][2], $wantedStudents));
-                console.log($json[key][4], $.inArray($json[key][4], $wantedModules));
+                console.log($json[key][1], $wantedGroups, $.inArray($json[key][1], $wantedGroups));
+                console.log($json[key][2], $wantedStudents, $.inArray($json[key][2], $wantedStudents));
+                console.log($json[key][4], $wantedModules, $.inArray($json[key][4], $wantedModules));
 
             }
         });
