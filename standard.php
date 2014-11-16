@@ -1,7 +1,7 @@
 <?php include "querytop.php" ?>
 
 <?php
-
+var_dump($arcadeProfile->get2DStudentList());
 /**
  * Created by PhpStorm.
  * User: mmapxum2
@@ -43,6 +43,8 @@
                     <?php foreach(array_unique($arcadeProfile->get2DStudentList()) as $option) { ?>
                         <option value="<?php echo $option[0] ?>"><?php echo $option[1] ?></option>
                     <?php }?>
+
+
                 </select>
             </div>
             <div class="col-md-3">
