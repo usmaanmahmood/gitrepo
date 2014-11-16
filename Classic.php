@@ -303,6 +303,5 @@ $(document).ready(function () {
 
 </script>
 
-
-<?php include "template-footer.php" ?>
-
+</body>
+</html>

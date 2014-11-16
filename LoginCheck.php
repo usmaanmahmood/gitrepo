@@ -16,7 +16,7 @@ if($mysqli -> connect_error) {
 }
 
 // username and password sent from form 
-$username=$_POST['username']; 
+$username=$_POST['username'];
 $password=$_POST['password'];
 
 // To protect MySQL injection
@@ -30,7 +30,6 @@ $result=$mysqli->query($sql);
 
 $num_rows = $result->num_rows;
 
-
 // If result matched $username and $password, table row must be 1 row
 if($num_rows==1){
     session_start();
@@ -42,7 +41,7 @@ if($num_rows==1){
     header("location:Classic.php");
 }
 else {
-    echo "Wrong Username or Password";
     $mysqli -> close();
+    header("location:Login.php?error=1");
 }
 ?>
