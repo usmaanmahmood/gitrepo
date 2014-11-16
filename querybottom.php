@@ -74,11 +74,11 @@
         $json = json;
 
         $.each( $json, function( key, value ) {
-            $fullDatabaseList.push($json[key][0]);
-            $fullGroupList.push($json[key][1]);
-            $fullStudentUsernameList.push($json[key][2]);
-            $fullStudentFullnameList.push($json[key][3]);
-            $fullModuleList.push($json[key][4]);
+            if (($.inArray($json[key][0]), $fullDatabaseList) == -1) $fullDatabaseList.push($json[key][0]);
+            if (($.inArray($json[key][1]), $fullGroupList) == -1) $fullGroupList.push($json[key][1]);
+            if (($.inArray($json[key][2]), $fullStudentUsernameList) == -1) $fullStudentUsernameList.push($json[key][2]);
+//            if (($.inArray($json[key][3]), $fullStudentFullnameList) == -1) $fullStudentFullnameList.push($json[key][3]);
+            if (($.inArray($json[key][4]), $fullModuleList) == -1) $fullModuleList.push($json[key][4]);
 
             $json[key][5] = false; // set visibility to false
         });
