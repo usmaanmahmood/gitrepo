@@ -67,7 +67,7 @@
 
 <body>
 
-<div class="container">
+<div class="container text-centre">
 
     <form class="form-signin" role="form" method="post" action="LoginCheck.php">
         <h2 class="form-signin-heading">Please log in</h2>
