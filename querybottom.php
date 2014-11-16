@@ -75,6 +75,7 @@
     });
 
     $("#DatabaseList").click(function() {
+        reloadModuleList();
         /*
         var $databaseList = $("#DatabaseList");
         var $selectedDatabases = $databaseList.val();
