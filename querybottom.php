@@ -89,6 +89,9 @@
             $json[key][5] = true;
         });
         reloadLists();
+        $.each( $json, function( key, value ) {
+            $json[key][5] = false;
+        });
     });
 
     $("#DatabaseList").click(function() {
