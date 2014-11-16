@@ -65,7 +65,7 @@
 
 
 
-    
+
     var $json;
     var $fullDatabaseList = [];
     var $fullGroupList = [];
@@ -79,6 +79,7 @@
         $.each( $json, function( key, value ) {
 
             $dbFound = ($.inArray($json[key][0]), $fullDatabaseList);
+            console.log($dbFound);
             if ($dbFound < 0) // ie not found
             {
                 $fullDatabaseList.push($json[key][0]);
