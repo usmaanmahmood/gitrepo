@@ -188,7 +188,7 @@
             });
 
             // now if there is a wanted module that isn't in the optionslist, we need to add it.
-            $wantedModules.each(function (key, value) {
+            $.each($wantedModules, function (key, value) {
                 if ($.inArray(value,  $("#DatabaseList option")) == -1) // this current module is wanted but not in the optionlist, add it
                     $$("#DatabaseList").append($("<option></option>")
                         .attr("value",value)
