@@ -153,7 +153,7 @@ $( document ).ready(function() {
 
 
         // clear and repopulate the list boxes
-        
+
         if ($selectedList != "databases") {
             $databaseList.empty();
             // add everything from wanted list
