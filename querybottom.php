@@ -82,6 +82,8 @@
 
             $json[key][5] = false; // set visibility to false
         });
+
+        console.dir($fullDatabaseList);
     });
 
     $(".reset-filters").click(function() {
