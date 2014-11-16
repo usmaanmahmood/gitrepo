@@ -9,7 +9,7 @@ include 'config.php' ?>
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>ARCADE: web app</title>
+    <title>ARCADE:the web app</title>
 	<!-- Latest compiled and minified CSS -->
       <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
 
