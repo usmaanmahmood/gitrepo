@@ -64,15 +64,15 @@
     });
 
     var $json;
+    var $fullDatabaseList = [];
+    var $fullGroupList = [];
+    var $fullStudentUsernameList = [];
+    var $fullStudentFullnameList = [];
+    var $fullModuleList = [];
 
     $.getJSON ('getFilterLists.php', function (json) {
         $json = json;
-        var $fullDatabaseList = [];
-        var $fullGroupList = [];
-        var $fullStudentUsernameList = [];
-        var $fullStudentFullnameList = [];
-        var $fullModuleList = [];
-
+        
         $.each( $json, function( key, value ) {
             $fullDatabaseList.push($json[key][0]);
             $fullGroupList.push($json[key][1]);
