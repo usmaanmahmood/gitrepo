@@ -84,6 +84,16 @@ $( document ).ready(function() {
         });
     });
 
+    function getOnscreenModuleList() {
+        $modules = [];
+        var $moduleList = $("#ModuleList");
+        var i;
+        for (i = 0; i < $moduleList.get(0).length; i++) {
+            $modules.push($moduleList.get(0).options[i].text);
+        }
+        return $modules;
+    }
+
     $(".reset-filters").click(function () {
         $.each($json, function (key, value) {
             $json[key][5] = true;
@@ -120,7 +130,7 @@ $( document ).ready(function() {
         var $selectedDatabases = ($databaseList.val() == null ? $fullDatabaseList : $databaseList.val());
         var $selectedGroups = ($groupList.val() == null ? $fullGroupList : $groupList.val());
         var $selectedStudents = ($studentList.val() == null ? $fullStudentUsernameList : $studentList.val());
-        var $selectedModules = ($moduleList.val() == null ? $fullModuleList : $moduleList.val());
+        var $selectedModules = ($moduleList.val() == null ? getOnscreenModuleList() : $moduleList.val());
 
         // add them if satisfy needs
         $.each($json, function (key, value) {
@@ -188,7 +198,6 @@ $( document ).ready(function() {
         if ($selectedList != "modules") {
             // go through each option that is on the page, removed any that arent in the WANTED list
             $("#ModuleList option").each(function () {
-                console.log(this.value, $wantedModules);
                 $positionOfOptionInWantedArray = $.inArray(this.value, $wantedModules);
                 if ($positionOfOptionInWantedArray == -1)
                 {
