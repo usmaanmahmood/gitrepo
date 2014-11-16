@@ -42,8 +42,6 @@
                     <?php foreach(array_unique($arcadeProfile->getStudentUsernameList()) as $option) { ?>
                         <option value="<?php echo $option ?>"><?php echo $option ?></option>
                     <?php }?>
-
-
                 </select>
             </div>
             <div class="col-md-3">
