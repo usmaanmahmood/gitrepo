@@ -22,7 +22,7 @@
     <div class="col-md-8">
         <div class="row">
             <div class="col-md-3">
-                <p>Databases | <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button></p>
+                <p>Databases | &nbsp; <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button></p>
                 <select multiple class="form-control" size=10 id="DatabaseList">
                 <?php foreach(array_unique($arcadeProfile->getDatabaseList()) as $option) { ?>
                     <option value="<?php echo $option ?>"><?php echo $option ?></option>
