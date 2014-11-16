@@ -147,7 +147,7 @@
         if ($selectedList != "databases") $databaseList.empty();
         if ($selectedList != "groups") $groupList.empty();
         if ($selectedList != "students") $studentList.empty();
-        if ($selectedList != "modules") $moduleList.empty();
+        //if ($selectedList != "modules") $moduleList.empty();
 
         var $desiredModules = [];
 
