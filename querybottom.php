@@ -68,7 +68,7 @@
     $.getJSON ('getFilterLists.php', function (json) {
         $json = json;
         $.each( $json, function( key, value ) {
-            $json[key].show = false;
+            $json[5] = false;
         });
     });
 
