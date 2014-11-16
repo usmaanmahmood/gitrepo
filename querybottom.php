@@ -197,10 +197,10 @@
         $.each($json, function(key, value) {
             if ($json[key][5] == true)
             {
-                $databaseList.append("<option value=\"" + value + "\">" + value + "</option>");
-                $groupList.append("<option value=\"" + value + "\">" + value + "</option>");
-                $studentList.append("<option value=\"" + value + "\">" + value + "</option>");
-                $moduleList.append("<option value=\"" + value + "\">" + value + "</option>");
+                $databaseList.append("<option value=\"" + $json[key][0] + "\">" + $json[key][0] + "</option>");
+                $groupList.append("<option value=\"" + $json[key][1] + "\">" + $json[key][1] + "</option>");
+                $studentList.append("<option value=\"" + $json[key][2] + "\">" + $json[key][2] + "</option>");
+                $moduleList.append("<option value=\"" + $json[key][4] + "\">" + $json[key][4] + "</option>");
             }
 
         });
