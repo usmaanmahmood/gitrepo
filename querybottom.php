@@ -158,10 +158,11 @@
                 if (($.inArray($json[key][2]), $wantedStudents) == -1) $wantedStudents.push($json[key][2]);
                 if (($.inArray($json[key][4]), $wantedModules) == -1) $wantedModules.push($json[key][4]);
 
-                console.log($.inArray($json[key][0], $wantedDatabases));
-                console.log($.inArray($json[key][1], $wantedGroups));
-                console.log($.inArray($json[key][2], $wantedStudents));
-                console.log($.inArray($json[key][4], $wantedModules));
+
+                console.log($json[key][0], $.inArray($json[key][0], $wantedDatabases));
+                console.log($json[key][1], $.inArray($json[key][1], $wantedGroups));
+                console.log($json[key][2], $.inArray($json[key][2], $wantedStudents));
+                console.log($json[key][4], $.inArray($json[key][4], $wantedModules));
 
             }
         });
