@@ -30,66 +30,66 @@
                     </select>
 
                     <div class="col-md-12">
-                        <div class=\"alert alert-danger\
-                        " role=\"alert\" id="queryWarning">
+                        <div class=\"alert alert-danger\ role=\"alert\" id="queryWarning">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="col-md-3">
+                        <p>Databases &nbsp; | &nbsp;
+                            <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button>
+                        </p>
+                        <select multiple class="form-control" size=10 id="DatabaseList">
+                            <?php foreach (array_unique($arcadeProfile->getDatabaseList()) as $option) { ?>
+                                <option value="<?php echo $option ?>"><?php echo $option ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <p>Groups &nbsp; | &nbsp;
+                            <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button>
+                        </p>
+                        <select multiple class="form-control" size=10 id="GroupList">
+                            <?php foreach (array_unique($arcadeProfile->getGroupList()) as $option) { ?>
+                                <option value="<?php echo $option ?>"><?php echo $option ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <p>Students &nbsp; | &nbsp;
+                            <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button>
+                        </p>
+                        <select multiple class="form-control" size=10 id="StudentList">
+                            <?php foreach (array_unique($arcadeProfile->getStudentUsernameList()) as $option) { ?>
+                                <option value="<?php echo $option ?>"><?php echo $option ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <p>Modules &nbsp; | &nbsp;
+                            <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button>
+                        </p>
+                        <select multiple class="form-control" size=10 id="ModuleList">
+                            <?php foreach (array_unique($arcadeProfile->getModuleList()) as $option) { ?>
+                                <option value="<?php echo $option ?>"><?php echo $option ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..."
+                                id="submit">Execute Query
+                        </button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-8">
-                <div class="col-md-3">
-                    <p>Databases &nbsp; | &nbsp;
-                        <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button>
-                    </p>
-                    <select multiple class="form-control" size=10 id="DatabaseList">
-                        <?php foreach (array_unique($arcadeProfile->getDatabaseList()) as $option) { ?>
-                            <option value="<?php echo $option ?>"><?php echo $option ?></option>
-                        <?php } ?>
-                    </select>
-                </div>
-                <div class="col-md-3">
-                    <p>Groups &nbsp; | &nbsp;
-                        <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button>
-                    </p>
-                    <select multiple class="form-control" size=10 id="GroupList">
-                        <?php foreach (array_unique($arcadeProfile->getGroupList()) as $option) { ?>
-                            <option value="<?php echo $option ?>"><?php echo $option ?></option>
-                        <?php } ?>
-                    </select>
-                </div>
-                <div class="col-md-3">
-                    <p>Students &nbsp; | &nbsp;
-                        <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button>
-                    </p>
-                    <select multiple class="form-control" size=10 id="StudentList">
-                        <?php foreach (array_unique($arcadeProfile->getStudentUsernameList()) as $option) { ?>
-                            <option value="<?php echo $option ?>"><?php echo $option ?></option>
-                        <?php } ?>
-                    </select>
-                </div>
-                <div class="col-md-3">
-                    <p>Modules &nbsp; | &nbsp;
-                        <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button>
-                    </p>
-                    <select multiple class="form-control" size=10 id="ModuleList">
-                        <?php foreach (array_unique($arcadeProfile->getModuleList()) as $option) { ?>
-                            <option value="<?php echo $option ?>"><?php echo $option ?></option>
-                        <?php } ?>
-                    </select>
-                </div>
-                <div class="col-md-12">
-                    <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..."
-                            id="submit">Execute Query
-                    </button>
-                </div>
+            <div class="col-md-12">
+                <pre id="resultspane"></pre>
             </div>
         </div>
-        <div class="col-md-12">
-            <pre id="resultspane"></pre>
-        </div>
     </div>
-</div>
 
-</div><!-- /.container -->
+</div>
+<!-- /.container -->
 
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
