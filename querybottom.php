@@ -195,7 +195,7 @@
 
         // refill the lists
         $.each($json, function(key, value) {
-            if (json[key][5] == true)
+            if ($json[key][5] == true)
             {
                 $databaseList.append("<option value=\"" + value + "\">" + value + "</option>");
                 $groupList.append("<option value=\"" + value + "\">" + value + "</option>");
