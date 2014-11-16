@@ -142,7 +142,7 @@ $( document ).ready(function() {
                 $json[key][5] = true; // display this one
             }
             else
-                $json[key][5] = false;
+                $json[key][5] = false; // if they dont, make em false
         });
 
         reloadLists($selectedList);
@@ -178,11 +178,38 @@ $( document ).ready(function() {
         console.log($wantedModules);
         // clean up the duplicates in the onscreen lists
 
+        if ($selectedList != "databases") {
+            $databaseList.empty();
+            // add everything from wanted list
+            $.each($wantedDatabases, function (key, value) {
+                $databaseList.append($("<option></option>")
+                    .attr("value", value)
+                    .text(value));
+            });
+        }
+
+        if ($selectedList != "groups") {
+            $groupList.empty();
+            // add everything from wanted list
+            $.each($wantedGroups, function (key, value) {
+                $groupList.append($("<option></option>")
+                    .attr("value", value)
+                    .text(value));
+            });
+        }
+
+        if ($selectedList != "students") {
+            $studentList.empty();
+            // add everything from wanted list
+            $.each($wantedStudents, function (key, value) {
+                $studentList.append($("<option></option>")
+                    .attr("value", value)
+                    .text(value));
+            });
+        }
 
         if ($selectedList != "modules") {
-            // clear the list
             $moduleList.empty();
-
             // add everything from wanted list
             $.each($wantedModules, function (key, value) {
                 $("#ModuleList").append($("<option></option>")
@@ -190,7 +217,6 @@ $( document ).ready(function() {
                                 .text(value));
             });
         }
-
 
     }
 
