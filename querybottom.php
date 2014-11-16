@@ -130,10 +130,10 @@
         var $selectedStudents = ($studentList.val() == null ? $fullStudentUsernameList : $studentList.val());
         var $selectedModules = ($moduleList.val() == null ? $fullModuleList : $moduleList.val());
 
-        alert($selectedDatabases);
-        alert($selectedGroups);
-        alert($selectedStudents);
-        alert($selectedModules);
+        console.log($selectedDatabases);
+        console.log($selectedGroups);
+        console.log($selectedStudents);
+        console.log($selectedModules);
 
 
         var $outputDatabasesList = [];
@@ -155,6 +155,13 @@
                 $outputStudentsList.push($json[key][2]); // add the module
                 $outputModulesList.push($json[key][4]); // add the module
                 */
+            }
+            else
+            {
+                console.log($.inArray($json[key][0], $selectedDatabases));
+                console.log($.inArray($json[key][1], $selectedGroups));
+                console.log($.inArray($json[key][2], $selectedStudents));
+                console.log($.inArray($json[key][4], $selectedModules));
             }
         });
 
