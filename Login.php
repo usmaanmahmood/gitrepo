@@ -5,7 +5,8 @@
  * Date: 16/11/14
  * Time: 18:00
  */
-//include 'config.php'; ?>
+//include 'config.php';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,13 +37,12 @@
             padding: 15px;
             margin: 0 auto;
         }
+
         .form-signin .form-signin-heading,
         .form-signin .checkbox {
             margin-bottom: 10px;
         }
-        .form-signin .checkbox {
-            font-weight: normal;
-        }
+
         .form-signin .form-control {
             position: relative;
             height: auto;
@@ -52,14 +52,11 @@
             padding: 10px;
             font-size: 16px;
         }
+
         .form-signin .form-control:focus {
             z-index: 2;
         }
-        .form-signin input[type="email"] {
-            margin-bottom: -1px;
-            border-bottom-right-radius: 0;
-            border-bottom-left-radius: 0;
-        }
+
         .form-signin input[type="password"] {
             margin-bottom: -1px;
             border-top-left-radius: 0;
@@ -70,24 +67,28 @@
 
 <body>
 
-    <div class="container">
+<div class="container">
 
-      <form class="form-signin" role="form" method="post" action="LoginCheck.php">
+    <form class="form-signin" role="form" method="post" action="LoginCheck.php">
         <h2 class="form-signin-heading">Please log in</h2>
-        <input type="text" class="form-control" placeholder="Central Username" name="username" id="username" required autofocus maxlength=8 value="mahmoou1">
-        <input type="password" class="form-control" placeholder="Web Password" name="password" id="password" required value="webpassword">
+        <input type="text" class="form-control" placeholder="Central Username" name="username" id="username" required
+               autofocus maxlength=8 value="mahmoou1">
+        <input type="password" class="form-control" placeholder="Web Password" name="password" id="password" required
+               value="webpassword">
         <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit">Sign in</button>
-<?php
-    if (isset($_GET["error"]))
-    {
+        <?php
+        if (isset($_GET["error"])) {
+            ?>
+            <div class="alert alert-danger" role="alert"><b>Oh snap!</b> Change a few things up and try submitting
+                again.
+            </div>
+        <?php
+        }
         ?>
-        <div class="alert alert-danger" role="alert"><b>Oh snap!</b> Change a few things up and try submitting again.</div>
-    <?php
-    }
-?>
-      </form>
+    </form>
 
-    </div> <!-- /container -->
+</div>
+<!-- /container -->
 
 </body>
 </html>
