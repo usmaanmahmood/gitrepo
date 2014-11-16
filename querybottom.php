@@ -26,12 +26,14 @@ $( document ).ready(function() {
 
         // validation
         if ($command == null || $command == "") {
-            $('#queryWarning').html("<div class=\"alert alert-danger\" role=\"alert\">Please select a command.</div>");
+
             if ($('#queryWarning').html() != "")
             {
                 $('#queryWarning').fadeOut('slow');
                 $('#queryWarning').fadeIn('slow');
             }
+            else
+                $('#queryWarning').html("<div class=\"alert alert-danger\" role=\"alert\">Please select a command.</div>");
             return;
         }
         else
