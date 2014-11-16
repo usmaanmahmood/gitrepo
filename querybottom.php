@@ -23,11 +23,12 @@ $( document ).ready(function() {
 
         // validation
         if ($command == null || $command == "") {
-            $('#resultspane').fadeOut('fast');
-            $('#resultspane').html("<div class=\"alert alert-danger\" role=\"alert\">Please select a command.</div>");
-            $('#resultspane').fadeIn('fast');
+            $('#queryWarning').html("<div class=\"alert alert-danger\" role=\"alert\">Please select a command.</div>");
+            $('#queryWarning').fadeIn('fast');
             return;
         }
+        else
+            $('#queryWarning').fadeOut('fast');
 
         // send through list of databases in the list if none provided
         if ($databases == null || $databases == "") {
