@@ -42,6 +42,6 @@ if($num_rows==1){
 }
 else {
     $mysqli -> close();
-    header("location:Login.php?error=1");
+    header("location:Login.php?message=1");
 }
 ?>
