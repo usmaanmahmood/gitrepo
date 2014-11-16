@@ -84,7 +84,7 @@
             </div>
         <?php
         } else if (isset($_GET["message"]) && $_GET["message"] == 2) {
-        }
+        
         ?>
         <div class="alert alert-success" role="alert"><b>Thanks for using ARCADE!</b> Please send any feedback /
             suggestions to Usmaan Mahmood.
