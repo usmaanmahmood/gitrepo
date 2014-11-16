@@ -74,7 +74,7 @@ $( document ).ready(function() {
         $json = json;
 
         $.each($json, function (key, value) {
-
+            // unique lists
             if ($.inArray($json[key][0], $fullDatabaseList) == -1) $fullDatabaseList.push($json[key][0]);
             if ($.inArray($json[key][1], $fullGroupList) == -1) $fullGroupList.push($json[key][1]);
             if ($.inArray($json[key][2], $fullStudentUsernameList) == -1) $fullStudentUsernameList.push($json[key][2]);
@@ -154,15 +154,23 @@ $( document ).ready(function() {
             if ($json[key][5] == true) {
                 if ($.inArray($json[key][0], $wantedDatabases) == -1)
                     $wantedDatabases.push($json[key][0]);
+                else
+                    $json[key][5] = false;
 
                 if ($.inArray($json[key][1], $wantedGroups) == -1)
                     $wantedGroups.push($json[key][1]);
+                else
+                    $json[key][5] = false;
 
                 if ($.inArray($json[key][2], $wantedStudents) == -1)
                     $wantedStudents.push($json[key][2]);
+                else
+                    $json[key][5] = false;
 
                 if ($.inArray($json[key][4], $wantedModules) == -1)
                     $wantedModules.push($json[key][4]);
+                else
+                    $json[key][5] = false;
             }
         });
         console.log($wantedDatabases);
@@ -194,6 +202,7 @@ $( document ).ready(function() {
             $("#ModuleList option").each(function () {
                 $positionOfOptionInWantedArray = $.inArray(this.value, $wantedModules);
                 if ($positionOfOptionInWantedArray == -1) $(this).remove();
+
             });
 
             var $onScreenModuleList = [];
