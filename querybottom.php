@@ -130,7 +130,7 @@ $( document ).ready(function() {
         var $selectedDatabases = ($databaseList.val() == null ? $fullDatabaseList : $databaseList.val());
         var $selectedGroups = ($groupList.val() == null ? $fullGroupList : $groupList.val());
         var $selectedStudents = ($studentList.val() == null ? $fullStudentUsernameList : $studentList.val());
-        var $selectedModules = ($moduleList.val() == null ? getOnscreenModuleList() : $moduleList.val());
+        var $selectedModules = ($moduleList.val() == null ? $fullModuleList: $moduleList.val());
 
         // add them if satisfy needs
         $.each($json, function (key, value) {
@@ -167,7 +167,6 @@ $( document ).ready(function() {
                 if ($.inArray($json[key][1], $wantedGroups) == -1) $wantedGroups.push($json[key][1]);
                 if ($.inArray($json[key][2], $wantedStudents) == -1) $wantedStudents.push($json[key][2]);
                 if ($.inArray($json[key][4], $wantedModules) == -1) $wantedModules.push($json[key][4]);
-
             }
         });
         console.log("-------------------------------------------");
@@ -179,33 +178,10 @@ $( document ).ready(function() {
 
 
         if ($selectedList != "modules") {
-            // go through each option that is on the page, removed any that arent in the WANTED list
-            $("#ModuleList option").each(function () {
-                $positionOfOptionInWantedArray = $.inArray(this.value, $wantedModules);
-                if ($positionOfOptionInWantedArray == -1)
-                {
-                    $(this).remove();
-                    $currentOptionValue = this.text;
+            // clear the list
+            $moduleList.empty();
 
-                    // now find this modules filter-row in the json and set it to false, cz we dont wana show it anymores
-                    $.each($json, function (key, value) {
-                        if ($currentOptionValue == $json[key][4])
-                            $json[key][5] = false;
-                        console.log($json[key]);
-                    });
-                }
-            });
-
-            var $onScreenModuleList = [];
-
-            // go through the WANTED list, add any that arent in in the select list already
-
-            // first build list of whats on the screen
-            $("#ModuleList option").each(function () {
-                $onScreenModuleList.push($(this).val());
-            });
-
-            // now any wanted modules that arent on there, add em in
+            // add everything from wanted list
             $.each($wantedModules, function (key, value) {
                 if ($.inArray(value, $onScreenModuleList) == -1)
                     $("#ModuleList").append($("<option></option>")
