@@ -23,8 +23,9 @@ $( document ).ready(function() {
 
         // validation
         if ($command == null || $command == "") {
-            $('#queryWarning').html("<div class=\"alert alert-danger\" role=\"alert\">Please select a command.</div>");
             $('#queryWarning').fadeIn('fast');
+            $('#queryWarning').html("<div class=\"alert alert-danger\" role=\"alert\">Please select a command.</div>");
+
             return;
         }
         else
