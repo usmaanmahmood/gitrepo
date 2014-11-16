@@ -188,6 +188,7 @@ $( document ).ready(function() {
         if ($selectedList != "modules") {
             // go through each option that is on the page, removed any that arent in the WANTED list
             $("#ModuleList option").each(function () {
+                console.log(this.value, $wantedModules);
                 $positionOfOptionInWantedArray = $.inArray(this.value, $wantedModules);
                 if ($positionOfOptionInWantedArray == -1)
                 {
