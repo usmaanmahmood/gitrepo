@@ -2,7 +2,7 @@
 
 <?php
 
-//echo var_dump($arcadeProfile);
+echo var_dump($arcadeProfile->getTwoDimensionalArray());
 /**
  * Created by PhpStorm.
  * User: mmapxum2
