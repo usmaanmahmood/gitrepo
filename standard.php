@@ -60,7 +60,7 @@
     </div>
 </div>
 <div class="col-md-12">
-    <pre id="resultspane"><h1>Results Pane</h1></pre>
+    <pre id="resultspane"></pre>
 </div>
 
 <?php include "querybottom.php" ?>
