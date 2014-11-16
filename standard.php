@@ -17,7 +17,7 @@
                 <option><?php echo $command ?></option>
             <?php }?>
         </select>
-        <div class="col-md-4">
+        <div class="col-md-12">
             <div class=\"alert alert-danger\" role=\"alert\" id="queryWarning"></div>
     </div>
     </div>
