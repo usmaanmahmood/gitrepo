@@ -152,25 +152,12 @@ $( document ).ready(function() {
         // refill the lists
         $.each($json, function (key, value) {
             if ($json[key][5] == true) {
-                if ($.inArray($json[key][0], $wantedDatabases) == -1)
-                    $wantedDatabases.push($json[key][0]);
-                else
-                    $json[key][5] = false;
+                // add every desired display item to their lists
+                if ($.inArray($json[key][0], $wantedDatabases) == -1) $wantedDatabases.push($json[key][0]);
+                if ($.inArray($json[key][1], $wantedGroups) == -1) $wantedGroups.push($json[key][1]);
+                if ($.inArray($json[key][2], $wantedStudents) == -1) $wantedStudents.push($json[key][2]);
+                if ($.inArray($json[key][4], $wantedModules) == -1) $wantedModules.push($json[key][4]);
 
-                if ($.inArray($json[key][1], $wantedGroups) == -1)
-                    $wantedGroups.push($json[key][1]);
-                else
-                    $json[key][5] = false;
-
-                if ($.inArray($json[key][2], $wantedStudents) == -1)
-                    $wantedStudents.push($json[key][2]);
-                else
-                    $json[key][5] = false;
-
-                if ($.inArray($json[key][4], $wantedModules) == -1)
-                    $wantedModules.push($json[key][4]);
-                else
-                    $json[key][5] = false;
             }
         });
         console.log("-------------------------------------------");
@@ -178,7 +165,7 @@ $( document ).ready(function() {
         console.log($wantedGroups);
         console.log($wantedStudents);
         console.log($wantedModules);
-        // clean up the duplicates in the lists
+        // clean up the duplicates in the onscreen lists
 
         if ($selectedList != "databases")
             $("#DatabaseList option").each(function () {
@@ -202,12 +189,19 @@ $( document ).ready(function() {
             // go through each option that is on the page, removed any that arent in the WANTED list
             $("#ModuleList option").each(function () {
                 $positionOfOptionInWantedArray = $.inArray(this.value, $wantedModules);
-                if ($positionOfOptionInWantedArray == -1) $(this).remove();
+                if ($positionOfOptionInWantedArray == -1)
+                {
+                    $(this).remove();
 
+                    // now find this modules filter-row in the json and set it to false, cz we dont wana show it anymores
+                    $.each($json, function (key, value) {
+                        if ($(this).text == $json[key][4])
+                            $json[key][5] = false;
+                    });
+                }
             });
 
             var $onScreenModuleList = [];
-
 
             // go through the WANTED list, add any that arent in in the select list already
 
