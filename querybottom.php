@@ -154,16 +154,16 @@
             if ($json[key][5] == true)
             {
                 if (($.inArray($json[key][0]), $wantedDatabases) == -1)
-                    $wantedDatabases[] = ($json[key][0]);
+                    $wantedDatabases.add($json[key][0]);
 
                 if (($.inArray($json[key][1]), $wantedGroups) == -1)
-                    $wantedGroups.push($json[key][1]);
+                    $wantedGroups.add($json[key][1]);
 
                 if (($.inArray($json[key][2]), $wantedStudents) == -1)
-                    $wantedStudents.push($json[key][2]);
+                    $wantedStudents.add($json[key][2]);
 
                 if (($.inArray($json[key][4]), $wantedModules) == -1)
-                    $wantedModules.push($json[key][4]);
+                    $wantedModules.add($json[key][4]);
 
 
                 console.log($json[key][0], $wantedDatabases, $.inArray($json[key][0], $wantedDatabases));
