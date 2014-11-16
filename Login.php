@@ -82,12 +82,11 @@
             <div class="alert alert-danger" role="alert"><b>Oh snap!</b> Change a few things up and try submitting
                 again.
             </div>
-        <?php
+        <?phpThanks for using ARCADE! Please send any feedback / suggestions to Usmaan Mahmood.
         } else if (isset($_GET["message"]) && $_GET["message"] == 2) {
-        
         ?>
         <div class="alert alert-success" role="alert"><b>Thanks for using ARCADE!</b> Please send any feedback /
-            suggestions to Usmaan Mahmood.
+            suggestions to usmaanmahmood@hotmail.com.
         </div>
         <?php
         }
