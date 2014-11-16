@@ -28,7 +28,7 @@
                 <?php }?>
                 </select>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <p>Groups &nbsp; | &nbsp; <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button></p>
                 <select multiple class="form-control" size=10 id="GroupList">
                     <?php foreach(array_unique($arcadeProfile->getGroupList()) as $option) { ?>
@@ -36,9 +36,9 @@
                     <?php }?>
                 </select>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <p>Students &nbsp; | &nbsp; <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button></p>
-                <select multiple class="form-control" size=25 id="StudentList">
+                <select multiple class="form-control" size=10 id="StudentList">
                     <?php foreach(array_unique($arcadeProfile->get2DStudentList()) as $option) { ?>
                         <option value="<?php echo $option[0] ?>"><?php echo $option[1] ?></option>
                     <?php }?>
