@@ -188,7 +188,7 @@
                 $(this).remove();
             else    // it is in the desired list, so add it if it isnt already there
             {
-                if($.inArray($wantedModules[$positionOfOptionInWantedArray], $("#ModuleList option")) == -1) // if it isnt in there, we gotta add it
+//                if($.inArray($wantedModules[$positionOfOptionInWantedArray], $("#ModuleList option")) == -1) // if it isnt in there, we gotta add it
                     $moduleList.append("<option value=\"" + $wantedModules[$positionOfOptionInWantedArray] + "\">" + $wantedModules[$positionOfOptionInWantedArray] + "</option>");
 
                 console.log($wantedModules[$positionOfOptionInWantedArray], $("#ModuleList option"), $.inArray($wantedModules[$positionOfOptionInWantedArray], $("#ModuleList option")))
