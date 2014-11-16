@@ -77,7 +77,7 @@ $( document ).ready(function() {
 
             console.log("jsonkey0 > ", $json[key][0]);
             console.log("fulldblist > ", $fullDatabaseList);
-            $dbFound = ($.inArray($json[key][0]), $fullDatabaseList);
+            $dbFound = (jQuery.inArray($json[key][0]), $fullDatabaseList);
             console.log("dbfound > ", $dbFound);
             if ($dbFound < 0) // ie not found
             {
