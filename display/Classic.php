@@ -135,7 +135,7 @@ $(document).ready(function () {
         $('#resultspane').fadeOut('slow');
 
         $.ajax({
-            url: 'runQuery.php',
+            url: '../runQuery.php',
             data: {
                 "command": $command,
                 "databases": $databases,
@@ -159,7 +159,7 @@ $(document).ready(function () {
     var $fullStudentUsernameList = [];
     var $fullModuleList = [];
 
-    $.getJSON('getFilterLists.php', function (json) {
+    $.getJSON('../getFilterLists.php', function (json) {
         $json = json;
 
         $.each($json, function (key, value) {
