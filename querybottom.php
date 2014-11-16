@@ -148,6 +148,7 @@
         var $outputModulesList = [];
 
         // add them if satisfy needs
+        console.dir($json);
         $.each($json, function( key, value ) {
             if (    ($.inArray($json[key][0], $selectedDatabases) != -1) // if the current filter DB is in the selected DB list then ok
                     && ($.inArray($json[key][1], $selectedGroups) != -1) // if the current filter group is in the selected DB list then ok
