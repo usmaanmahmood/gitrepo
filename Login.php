@@ -67,7 +67,7 @@
 
 <body>
 
-<div class="container">
+<div class="container text-center">
 <h1>ARCADE</h1>
     <form class="form-signin" role="form" method="post" action="LoginCheck.php">
         <h2 class="form-signin-heading">Please log in</h2>
@@ -92,7 +92,7 @@
         }
         ?>
     </form>
-    <p class="text-center">Not have an account yet? <a href="Register.php">Register easy &amp; quickly here!</a></p>
+    <p>Not have an account yet? <a href="Register.php">Register easy &amp; quickly here!</a></p>
 
 </div>
 <!-- /container -->
