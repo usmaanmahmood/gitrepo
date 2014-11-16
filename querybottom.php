@@ -88,6 +88,18 @@
         hideShowFilters();
     });
 
+    $("#GroupList").click(function() {
+        hideShowFilters();
+    });
+
+    $("#StudentList").click(function() {
+        hideShowFilters();
+    });
+
+    $("#ModuleList").click(function() {
+        hideShowFilters();
+    });
+
     // load each list with unique_array(databases) where show = true
     function reloadModuleList() {
         /*
@@ -132,21 +144,7 @@
         var $selectedStudents = ($studentList.val() == null ? $fullStudentUsernameList : $studentList.val());
         var $selectedModules = ($moduleList.val() == null ? $fullModuleList : $moduleList.val());
 
-
-//        console.log($fullDatabaseList);
-//        console.log($fullGroupList);
-//        console.log($fullStudentUsernameList);
-//        console.log($fullModuleList);
-//        console.log("-----------------------selected lists-------------------------");
-//        console.log($selectedDatabases);
-//        console.log($selectedGroups);
-//        console.log($selectedStudents);
-//        console.log($selectedModules);
-
-
-
         // add them if satisfy needs
-        console.dir($json);
         $.each($json, function( key, value ) {
             if (    ($.inArray($json[key][0], $selectedDatabases) != -1) // if the current filter DB is in the selected DB list then ok
                     && ($.inArray($json[key][1], $selectedGroups) != -1) // if the current filter group is in the selected DB list then ok
@@ -154,21 +152,21 @@
                     && ($.inArray($json[key][4], $selectedModules) != -1)) // if the current filter module is in the selected DB list then ok)
             {
                 $json[key][5] = true; // display this one
-                /*
-                $outputDatabasesList.push($json[key][0]); // add the module
-                $outputGroupsList.push($json[key][1]); // add the module
-                $outputStudentsList.push($json[key][2]); // add the module
-                $outputModulesList.push($json[key][4]); // add the module
-                */
             }
         });
 
         reloadLists();
     }
 
+    function resetFilters() {
+        $.each( $json, function( key, value ) {
+            $json[key][5] = true;
+        });
+        reloadLists();
+    }
+
     // reload the lists with data in the arrays
     function reloadLists() {
-
         var $databaseList = $("#DatabaseList");
         var $groupList = $("#GroupList");
         var $studentList = $("#StudentList");
@@ -178,8 +176,6 @@
         $groupList.empty();
         $studentList.empty();
         $moduleList.empty();
-
-
 
         // refill the lists
         $.each($json, function(key, value) {
@@ -192,7 +188,7 @@
             }
         });
 
-        // clean up the lists
+        // clean up the duplicates in the lists
         var found = [];
         $("#DatabaseList option").each(function() {
             if($.inArray(this.value, found) != -1) $(this).remove();
