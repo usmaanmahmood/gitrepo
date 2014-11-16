@@ -9,7 +9,7 @@ include 'config.php' ?>
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>ARCADE for the web</title>
+    <title>ARCADE: web app</title>
 	<!-- Latest compiled and minified CSS -->
       <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
 
@@ -17,6 +17,7 @@ include 'config.php' ?>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
     <!-- Custom styles for this template -->
+
   </head>
 
   <body>
@@ -44,8 +45,6 @@ include 'config.php' ?>
                       <li><a href="#">Another action</a></li>
                       <li><a href="#">Something else here</a></li>
                       <li class="divider"></li>
-                      <li><a href="#">Separated link</a></li>
-                      <li class="divider"></li>
                       <li><a href="#">One more separated link</a></li>
                   </ul>
               </li>
@@ -59,5 +58,4 @@ include 'config.php' ?>
 
       <div class="starter-template">
         <h1>Classic Web ARCADE</h1>
-        <p class="lead">Select your input parameters.</p>
-	<p>This is a replica of the functionality available through the classic JAVA GUI for ARCADE.*</p>
+        <p class="lead">This is a replica of the functionality available through the classic JAVA GUI for ARCADE.*</p>
