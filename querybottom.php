@@ -191,7 +191,7 @@
                 if($.inArray($wantedModules[$positionOfOptionInWantedArray], $("#ModuleList option")) == -1) // if it isnt in there, we gotta add it
                     $moduleList.append("<option value=\"" + $wantedModules[$positionOfOptionInWantedArray] + "\">" + $wantedModules[$positionOfOptionInWantedArray] + "</option>");
 
-                console.log($wantedModules[$positionOfOptionInWantedArray], $("#ModuleList option"), $.inArray($wantedModules[$positionOfOptionInWantedArray], $("#ModuleList option"))
+                console.log($wantedModules[$positionOfOptionInWantedArray], $("#ModuleList option"), $.inArray($wantedModules[$positionOfOptionInWantedArray], $("#ModuleList option")))
             }
 
         });
