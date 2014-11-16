@@ -157,9 +157,14 @@
                 if (($.inArray($json[key][1]), $wantedGroups) == -1) $wantedGroups.push($json[key][1]);
                 if (($.inArray($json[key][2]), $wantedStudents) == -1) $wantedStudents.push($json[key][2]);
                 if (($.inArray($json[key][4]), $wantedModules) == -1) $wantedModules.push($json[key][4]);
+
+
             }
         });
-
+        console.log($wantedDatabases);
+        console.log($wantedGroups);
+        console.log($wantedStudents);
+        console.log($wantedModules);
         // clean up the duplicates in the lists
 
         if ($selectedList != "databases")
