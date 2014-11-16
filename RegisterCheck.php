@@ -32,15 +32,14 @@ $sql="INSERT INTO User VALUES ('$centralusername','$webpassword','$arcadepasswor
 if($mysqli->query($sql) === true)
 {       
 session_start();
-// Register $myusername, $mypassword and redirect to file "customer_area.php"
 $_SESSION["username"] = $centralusername;
 $_SESSION["arcadepassword"] = $arcadepassword;
 $mysqli -> close();
-header("location:querylist.php");
+header("location:Classic.php");
 }
 else
 {
 $mysqli -> close();
-header("location:registrationfailed.php");
+header("location:Register.php?message=1");
 }
 ?>

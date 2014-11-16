@@ -32,7 +32,7 @@
 
     <div class="container">
 
-      <form class="form-signin" role="form" method="post" action="checkregister.php">
+      <form class="form-signin" role="form" method="post" action="RegisterCheck.php">
         <h2 class="form-signin-heading">Registration Failed. Please try again.</h2>
         <input type="text" class="form-control" placeholder="Central Username" name="centralusername" required autofocus maxlength=8>
         <input type="password" class="form-control" placeholder="Web Password" name="webpassword" required>
