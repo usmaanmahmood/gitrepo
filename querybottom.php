@@ -183,7 +183,7 @@
         });
         found = $desiredModules;
         $("#ModuleList option").each(function() {
-            if($.inArray(this.value, found) != -1) $(this).remove();
+            if($.inArray(this.value, found) == -1) $(this).remove();
             found.push(this.value);
         });
         found = [];
