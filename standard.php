@@ -58,10 +58,10 @@
                 <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..." id="submit">Execute Query</button>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class=\"alert alert-danger\" role=\"alert\" id="queryWarning"></div>
-        </div>
     </div>
+    <div class="col-md-4">
+        <div class=\"alert alert-danger\" role=\"alert\" id="queryWarning"></div>
+</div>
 </div>
 <div class="col-md-12">
     <pre id="resultspane"><h1>Results Pane</h1></pre>
