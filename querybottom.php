@@ -237,7 +237,7 @@ $( document ).ready(function() {
     }
 
 
- // document ready
+} // document ready
 
 </script>
   </body>
