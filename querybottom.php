@@ -132,15 +132,16 @@
         var $selectedStudents = ($studentList.val() == null ? $fullStudentUsernameList : $studentList.val());
         var $selectedModules = ($moduleList.val() == null ? $fullModuleList : $moduleList.val());
 
-        console.log($fullDatabaseList);
-        console.log($fullGroupList);
-        console.log($fullStudentUsernameList);
-        console.log($fullModuleList);
-        console.log("-----------------------selected lists-------------------------");
-        console.log($selectedDatabases);
-        console.log($selectedGroups);
-        console.log($selectedStudents);
-        console.log($selectedModules);
+
+//        console.log($fullDatabaseList);
+//        console.log($fullGroupList);
+//        console.log($fullStudentUsernameList);
+//        console.log($fullModuleList);
+//        console.log("-----------------------selected lists-------------------------");
+//        console.log($selectedDatabases);
+//        console.log($selectedGroups);
+//        console.log($selectedStudents);
+//        console.log($selectedModules);
 
         var $outputDatabasesList = [];
         var $outputGroupsList = [];
@@ -193,26 +194,17 @@
 
 
         // refill the lists
-        $.each($databaseList, function(key, value) {
-            if ($databaseList[5] == true)
+        $.each($json, function(key, value) {
+            if (json[key][5] == true)
+            {
                 $databaseList.append("<option value=\"" + value + "\">" + value + "</option>");
-        });
-
-        $.each($groupList, function(key, value) {
-            if ($groupList[5] == true)
                 $groupList.append("<option value=\"" + value + "\">" + value + "</option>");
-        });
-
-        $.each($studentList, function(key, value) {
-            if ($studentList[5] == true)
                 $studentList.append("<option value=\"" + value + "\">" + value + "</option>");
-        });
-
-
-        $.each($moduleList, function(key, value) {
-            if ($moduleList[5] == true)
                 $moduleList.append("<option value=\"" + value + "\">" + value + "</option>");
+            }
+
         });
+
 
     }
 
