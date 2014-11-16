@@ -131,7 +131,7 @@ $( document ).ready(function() {
         var $selectedGroups = ($groupList.val() == null ? $fullGroupList : $groupList.val());
         var $selectedStudents = ($studentList.val() == null ? $fullStudentUsernameList : $studentList.val());
         var $selectedModules = ($moduleList.val() == null ? getOnscreenModuleList() : $moduleList.val());
-        console.log($selectedModules);
+
         // add them if satisfy needs
         $.each($json, function (key, value) {
             if (($.inArray($json[key][0], $selectedDatabases) != -1) // if the current filter DB is in the selected DB list then ok
@@ -177,23 +177,23 @@ $( document ).ready(function() {
         console.log($wantedModules);
         // clean up the duplicates in the onscreen lists
 
-        if ($selectedList != "databases")
-            $("#DatabaseList option").each(function () {
-                $positionOfOptionInWantedArray = $.inArray(this.value, $wantedDatabases);
-                if ($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
-            });
-
-        if ($selectedList != "groups")
-            $("#GroupList option").each(function () {
-                $positionOfOptionInWantedArray = $.inArray(this.value, $wantedGroups);
-                if ($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
-            });
-
-        if ($selectedList != "students")
-            $("#StudentList option").each(function () {
-                $positionOfOptionInWantedArray = $.inArray(this.value, $wantedStudents);
-                if ($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
-            });
+//        if ($selectedList != "databases")
+//            $("#DatabaseList option").each(function () {
+//                $positionOfOptionInWantedArray = $.inArray(this.value, $wantedDatabases);
+//                if ($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
+//            });
+//
+//        if ($selectedList != "groups")
+//            $("#GroupList option").each(function () {
+//                $positionOfOptionInWantedArray = $.inArray(this.value, $wantedGroups);
+//                if ($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
+//            });
+//
+//        if ($selectedList != "students")
+//            $("#StudentList option").each(function () {
+//                $positionOfOptionInWantedArray = $.inArray(this.value, $wantedStudents);
+//                if ($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
+//            });
 
         if ($selectedList != "modules") {
             // go through each option that is on the page, removed any that arent in the WANTED list
