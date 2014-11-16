@@ -131,7 +131,7 @@ $( document ).ready(function() {
         var $selectedGroups = ($groupList.val() == null ? $fullGroupList : $groupList.val());
         var $selectedStudents = ($studentList.val() == null ? $fullStudentUsernameList : $studentList.val());
         var $selectedModules = ($moduleList.val() == null ? getOnscreenModuleList() : $moduleList.val());
-
+        console.log($selectedModules);
         // add them if satisfy needs
         $.each($json, function (key, value) {
             if (($.inArray($json[key][0], $selectedDatabases) != -1) // if the current filter DB is in the selected DB list then ok
