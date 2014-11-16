@@ -136,7 +136,7 @@ $( document ).ready(function() {
 
         var $wantedDatabases = [];
         var $wantedGroups = [];
-        var $wantedStudents = [][];
+        var $wantedStudents = [];
         var $wantedModules = [];
 
         // refill the lists
