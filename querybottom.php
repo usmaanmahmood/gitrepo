@@ -166,7 +166,7 @@
             else
             {
                 console.log("-------------------------------");
-                console.log($json[key][0], $.inArray($json[key][0], $selectedDatabases));
+                console.log($json[key][0], $selectedDatabases, $.inArray($json[key][0], $selectedDatabases));
                 console.log($json[key][1], $.inArray($json[key][1], $selectedGroups));
                 console.log($json[key][2], $.inArray($json[key][2], $selectedStudents));
                 console.log($json[key][4], $.inArray($json[key][4], $selectedModules));
