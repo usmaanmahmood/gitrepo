@@ -82,10 +82,6 @@ $( document ).ready(function() {
 
             $json[key][5] = false; // set visibility to false
         });
-
-
-        console.dir($fullDatabaseList);
-
     });
 
     $(".reset-filters").click(function () {
@@ -167,19 +163,12 @@ $( document ).ready(function() {
 
                 if ($.inArray($json[key][4], $wantedModules) == -1)
                     $wantedModules.push($json[key][4]);
-
-
-//                console.log($json[key][0], $wantedDatabases, $.inArray($json[key][0], $wantedDatabases));
-//                console.log($json[key][1], $wantedGroups, $.inArray($json[key][1], $wantedGroups));
-//                console.log($json[key][2], $wantedStudents, $.inArray($json[key][2], $wantedStudents));
-//                console.log($json[key][4], $wantedModules, $.inArray($json[key][4], $wantedModules));
-
             }
         });
-//        console.log($wantedDatabases);
-//        console.log($wantedGroups);
-//        console.log($wantedStudents);
-//        console.log($wantedModules);
+        console.log($wantedDatabases);
+        console.log($wantedGroups);
+        console.log($wantedStudents);
+        console.log($wantedModules);
         // clean up the duplicates in the lists
 
         if ($selectedList != "databases")
