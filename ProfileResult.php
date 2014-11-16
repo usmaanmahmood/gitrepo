@@ -42,9 +42,10 @@ class ProfileResult extends Result
     public function getStudentFullnameList() { return $this->studentFullnameList; }
     public function getModuleList() { return $this->moduleList; }
     public function get2DStudentList() {
-        $output = $this->studentUsernameList;
+        $output = array(array());
         foreach( $output as $key => $row) {
-            $row[$key] = $this->studentFullnameList[$key];
+            $output[$key][0] = $this->studentUsernameList[$key];
+            $output[$key][1] = $this->studentFullnameList[$key];
         }
         return $output;
     }
