@@ -16,9 +16,7 @@ include 'config.php' ?>
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
-
     <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">
   </head>
 
   <body>
