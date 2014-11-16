@@ -1,7 +1,6 @@
 <?php include "querytop.php" ?>
 
 <?php
-var_dump($arcadeProfile->get2DStudentList());
 /**
  * Created by PhpStorm.
  * User: mmapxum2
@@ -39,7 +38,7 @@ var_dump($arcadeProfile->get2DStudentList());
             </div>
             <div class="col-md-3">
                 <p>Students &nbsp; | &nbsp; <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button></p>
-                <select multiple class="form-control" size=10 id="StudentList">
+                <select multiple class="form-control" size=25 id="StudentList">
                     <?php foreach(array_unique($arcadeProfile->get2DStudentList()) as $option) { ?>
                         <option value="<?php echo $option[0] ?>"><?php echo $option[1] ?></option>
                     <?php }?>
