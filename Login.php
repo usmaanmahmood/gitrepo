@@ -92,7 +92,7 @@
         }
         ?>
     </form>
-    <p class="text-centre">Not have an account yet? <a href="Register.php">Register easy &amp; quickly here!</a></p>
+    <p class="text-center">Not have an account yet? <a href="Register.php">Register easy &amp; quickly here!</a></p>
 
 </div>
 <!-- /container -->
