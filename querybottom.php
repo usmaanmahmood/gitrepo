@@ -85,7 +85,7 @@
     });
 
     $("#DatabaseList").click(function() {
-        reloadModuleList();
+        hideShowFilters();
         /*
         var $databaseList = $("#DatabaseList");
         var $selectedDatabases = $databaseList.val();
