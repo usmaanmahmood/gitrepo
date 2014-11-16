@@ -147,7 +147,9 @@
         if ($selectedList != "databases") $databaseList.empty();
         if ($selectedList != "groups") $groupList.empty();
         if ($selectedList != "students") $studentList.empty();
-        if ($selectedList != "modules") $moduleList.empty();
+//        if ($selectedList != "modules") $moduleList.empty();
+
+        $wantedModules = [];
 
         // refill the lists
         $.each($json, function(key, value) {
@@ -157,6 +159,8 @@
                 if ($selectedList != "groups") $groupList.append("<option value=\"" + $json[key][1] + "\">" + $json[key][1] + "</option>");
                 if ($selectedList != "students") $studentList.append("<option value=\"" + $json[key][2] + "\">" + $json[key][2] + "</option>");
                 if ($selectedList != "modules") $moduleList.append("<option value=\"" + $json[key][4] + "\">" + $json[key][4] + "</option>");
+
+                $wantedModules.push($json[key][4]);
             }
         });
 
@@ -178,8 +182,13 @@
         });
         found = [];
         $("#ModuleList option").each(function() {
-            if($.inArray(this.value, found) != -1) $(this).remove();
-            found.push(this.value);
+            $positionOfOptionInWantedArray = $.inArray(this.value, $wantedModules);
+
+            if($positionOfOptionInWantedArray == -1) // this current option isnt in desired list, so delete it
+                $(this).remove();
+            else    // it is in the desired list, so add it if it isnt already there
+                if($.inArray($wantedModules[$positionOfOptionInWantedArray], $("#ModuleList option")) == -1) // if it isnt in there, we gotta add it
+                    $(this).append("<option value=\"" + $wantedModules[$positionOfOptionInWantedArray] + "\">" + $wantedModules[$positionOfOptionInWantedArray] + "</option>");
         });
         found = [];
 
