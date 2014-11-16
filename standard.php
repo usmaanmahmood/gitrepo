@@ -55,7 +55,7 @@
             </select>
         </div>
         <div class="col-md-12">
-            <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..." id="submit">Execute Query</button>
+            <button type="button" class="btn btn-default btn-lg " data-loading-text="Executing..." id="submit">Execute Query</button>
         </div>
     </div>
 </div>
