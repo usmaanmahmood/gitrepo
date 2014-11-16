@@ -154,7 +154,7 @@
             if ($json[key][5] == true)
             {
                 if (($.inArray($json[key][0]), $wantedDatabases) == -1)
-                    $wantedDatabases.push($json[key][0]);
+                    $wantedDatabases[] = ($json[key][0]);
 
                 if (($.inArray($json[key][1]), $wantedGroups) == -1)
                     $wantedGroups.push($json[key][1]);
