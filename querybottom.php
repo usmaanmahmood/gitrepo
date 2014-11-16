@@ -13,7 +13,8 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
 <script>
-    $( "#submit" ).click(function(){
+$( document ).ready(function() {
+    $("#submit").click(function () {
         var $command = $("#CommandList option:selected").text();
         var $databases = $("#DatabaseList").val();
         var $groups = $("#GroupList").val();
@@ -21,8 +22,7 @@
         var $modules = $("#ModuleList").val();
 
         // validation
-        if ($command == null || $command == "")
-        {
+        if ($command == null || $command == "") {
             $('#resultspane').fadeOut('fast');
             $('#resultspane').html("Please select a command.");
             $('#resultspane').fadeIn('fast');
@@ -31,10 +31,9 @@
 
         // send through list of databases if none provided
         // TODO: replace by having Query->getDatabases get list from the profile object
-        if ($databases == null || $databases == "")
-        {
+        if ($databases == null || $databases == "") {
             $databases = [];
-            var $DatabaseList =  $("#DatabaseList");
+            var $DatabaseList = $("#DatabaseList");
             var i;
             for (i = 0; i < $DatabaseList.get(0).length; i++) {
                 $databases.push($DatabaseList.get(0).options[i].text);
@@ -45,25 +44,23 @@
 
         $('#resultspane').fadeOut('slow');
 
-        $.ajax ({
+        $.ajax({
             url: 'runQuery.php',
-            data: { "command": $command,
-                    "databases": $databases,
-                    "groups": $groups,
-                    "students": $students,
-                    "modules": $modules
+            data: {
+                "command": $command,
+                "databases": $databases,
+                "groups": $groups,
+                "students": $students,
+                "modules": $modules
             },
             type: 'get',
-            success: function(result)
-            {
+            success: function (result) {
                 $('#resultspane').html(result);
                 $('#resultspane').fadeIn('slow');
                 $submitbutton.button('reset');
             }
         });
     });
-
-
 
 
     var $json;
@@ -73,10 +70,10 @@
     var $fullStudentFullnameList = [];
     var $fullModuleList = [];
 
-    $.getJSON ('getFilterLists.php', function (json) {
+    $.getJSON('getFilterLists.php', function (json) {
         $json = json;
 
-        $.each( $json, function( key, value ) {
+        $.each($json, function (key, value) {
 
             console.log($json[key][0]);
             $dbFound = ($.inArray($json[key][0]), $fullDatabaseList);
@@ -98,29 +95,29 @@
 
     });
 
-    $(".reset-filters").click(function() {
-        $.each( $json, function( key, value ) {
+    $(".reset-filters").click(function () {
+        $.each($json, function (key, value) {
             $json[key][5] = true;
         });
         reloadLists();
-        $.each( $json, function( key, value ) {
+        $.each($json, function (key, value) {
             $json[key][5] = false;
         });
     });
 
-    $("#DatabaseList").click(function() {
+    $("#DatabaseList").click(function () {
         hideShowFilters("databases");
     });
 
-    $("#GroupList").click(function() {
+    $("#GroupList").click(function () {
         hideShowFilters("groups");
     });
 
-    $("#StudentList").click(function() {
+    $("#StudentList").click(function () {
         hideShowFilters("students");
     });
 
-    $("#ModuleList").click(function() {
+    $("#ModuleList").click(function () {
         hideShowFilters("modules");
     });
 
@@ -137,11 +134,11 @@
         var $selectedModules = ($moduleList.val() == null ? $fullModuleList : $moduleList.val());
 
         // add them if satisfy needs
-        $.each($json, function( key, value ) {
-            if (    ($.inArray($json[key][0], $selectedDatabases) != -1) // if the current filter DB is in the selected DB list then ok
-                    && ($.inArray($json[key][1], $selectedGroups) != -1) // if the current filter group is in the selected DB list then ok
-                    && ($.inArray($json[key][2], $selectedStudents) != -1) // if the current filter studentusername is in the selected DB list then ok
-                    && ($.inArray($json[key][4], $selectedModules) != -1)) // if the current filter module is in the selected DB list then ok)
+        $.each($json, function (key, value) {
+            if (($.inArray($json[key][0], $selectedDatabases) != -1) // if the current filter DB is in the selected DB list then ok
+                && ($.inArray($json[key][1], $selectedGroups) != -1) // if the current filter group is in the selected DB list then ok
+                && ($.inArray($json[key][2], $selectedStudents) != -1) // if the current filter studentusername is in the selected DB list then ok
+                && ($.inArray($json[key][4], $selectedModules) != -1)) // if the current filter module is in the selected DB list then ok)
             {
                 $json[key][5] = true; // display this one
             }
@@ -164,9 +161,8 @@
         var $wantedModules = [];
 
         // refill the lists
-        $.each($json, function(key, value) {
-            if ($json[key][5] == true)
-            {
+        $.each($json, function (key, value) {
+            if ($json[key][5] == true) {
                 if (($.inArray($json[key][0]), $wantedDatabases) == -1)
                     $wantedDatabases.push($json[key][0]);
 
@@ -194,21 +190,21 @@
         // clean up the duplicates in the lists
 
         if ($selectedList != "databases")
-            $("#DatabaseList option").each(function() {
+            $("#DatabaseList option").each(function () {
                 $positionOfOptionInWantedArray = $.inArray(this.value, $wantedDatabases);
-                if($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
+                if ($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
             });
 
         if ($selectedList != "groups")
-            $("#GroupList option").each(function() {
+            $("#GroupList option").each(function () {
                 $positionOfOptionInWantedArray = $.inArray(this.value, $wantedGroups);
-                if($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
+                if ($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
             });
 
         if ($selectedList != "students")
-            $("#StudentList option").each(function() {
+            $("#StudentList option").each(function () {
                 $positionOfOptionInWantedArray = $.inArray(this.value, $wantedStudents);
-                if($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
+                if ($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
             });
 
         if ($selectedList != "modules") {
@@ -224,16 +220,15 @@
             // go through the WANTED list, add any that arent in in the select list already
 
             // first build list of whats on the screen
-            $("#ModuleList option").each(function()
-            {
+            $("#ModuleList option").each(function () {
                 $onScreenModuleList.push($(this).val());
             });
 
             // now any wanted modules that arent on there, add em in
             $.each($wantedModules, function (key, value) {
-                if ($.inArray(value,  $onScreenModuleList) == -1)
+                if ($.inArray(value, $onScreenModuleList) == -1)
                     $("#ModuleList").append($("<option></option>")
-                        .attr("value",value)
+                        .attr("value", value)
                         .text(value));
             });
         }
@@ -242,7 +237,7 @@
     }
 
 
-
+} // document ready
 
 </script>
   </body>
