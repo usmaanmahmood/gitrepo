@@ -77,6 +77,7 @@ $( document ).ready(function() {
             if ($.inArray($json[key][0], $fullDatabaseList) == -1) $fullDatabaseList.push($json[key][0]);
             if ($.inArray($json[key][1], $fullGroupList) == -1) $fullGroupList.push($json[key][1]);
             if ($.inArray($json[key][2], $fullStudentUsernameList) == -1) $fullStudentUsernameList.push($json[key][2]);
+            if ($.inArray($json[key][3], $fullStudentFullnameList) == -1) $fullStudentFullnameList.push($json[key][3]);
             if ($.inArray($json[key][4], $fullModuleList) == -1) $fullModuleList.push($json[key][4]);
 
             $json[key][5] = false; // set visibility to false
@@ -131,13 +132,14 @@ $( document ).ready(function() {
     function reloadLists($selectedList) {
         var $databaseList = $("#DatabaseList");
         var $groupList = $("#GroupList");
-        var $studentList = $("#StudentList");
+        var $studentList = $("#StudentList") ;
         var $moduleList = $("#ModuleList");
 
 
         var $wantedDatabases = [];
         var $wantedGroups = [];
         var $wantedStudents = [];
+        var $wantedStudents2D = [][];
         var $wantedModules = [];
 
         // refill the lists
@@ -146,7 +148,11 @@ $( document ).ready(function() {
                 // add every desired display item to their lists
                 if ($.inArray($json[key][0], $wantedDatabases) == -1) $wantedDatabases.push($json[key][0]);
                 if ($.inArray($json[key][1], $wantedGroups) == -1) $wantedGroups.push($json[key][1]);
-                if ($.inArray($json[key][2], $wantedStudents) == -1) $wantedStudents.push($json[key][2]);
+                if ($.inArray($json[key][2], $wantedStudents) == -1)
+                {
+                    $wantedStudents.push($json[key][2]);
+                    $wantedStudents2D.push(array($json[key][2], $json[key][3]));
+                }
                 if ($.inArray($json[key][4], $wantedModules) == -1) $wantedModules.push($json[key][4]);
             }
         });
@@ -179,10 +185,10 @@ $( document ).ready(function() {
         if ($selectedList != "students") {
             $studentList.empty();
             // add everything from wanted list
-            $.each($wantedStudents, function (key, value) {
+            $.each($wantedStudents2D, function (key, value) {
                 $studentList.append($("<option></option>")
-                    .attr("value", value)
-                    .text(value));
+                    .attr("value", $wantedStudents2D[key][0])
+                    .text($wantedStudents2D[key][1]));
             });
             $studentList.scrollTop(0);
         }
