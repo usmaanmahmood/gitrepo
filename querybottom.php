@@ -193,10 +193,11 @@ $( document ).ready(function() {
                 if ($positionOfOptionInWantedArray == -1)
                 {
                     $(this).remove();
+                    $currentOptionValue = this.text;
 
                     // now find this modules filter-row in the json and set it to false, cz we dont wana show it anymores
                     $.each($json, function (key, value) {
-                        if (this.value == $json[key][4])
+                        if ($currentOptionValue == $json[key][4])
                             $json[key][5] = false;
                     });
                 }
