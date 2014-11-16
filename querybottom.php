@@ -32,7 +32,7 @@ $( document ).ready(function() {
             return;
         }
         else
-            $('#queryWarning').fadeOut('fast');
+            $('#queryWarning').hide();
 
         // send through list of databases in the list if none provided
         if ($databases == null || $databases == "") {
