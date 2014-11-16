@@ -147,9 +147,7 @@
         if ($selectedList != "databases") $databaseList.empty();
         if ($selectedList != "groups") $groupList.empty();
         if ($selectedList != "students") $studentList.empty();
-        //if ($selectedList != "modules") $moduleList.empty();
-
-        var $desiredModules = [];
+        if ($selectedList != "modules") $moduleList.empty();
 
         // refill the lists
         $.each($json, function(key, value) {
@@ -159,9 +157,6 @@
                 if ($selectedList != "groups") $groupList.append("<option value=\"" + $json[key][1] + "\">" + $json[key][1] + "</option>");
                 if ($selectedList != "students") $studentList.append("<option value=\"" + $json[key][2] + "\">" + $json[key][2] + "</option>");
                 if ($selectedList != "modules") $moduleList.append("<option value=\"" + $json[key][4] + "\">" + $json[key][4] + "</option>");
-
-                if ($selectedList != "modules") $desiredModules.push($json[key][4]);
-
             }
         });
 
@@ -181,10 +176,10 @@
             if($.inArray(this.value, found) != -1) $(this).remove();
             found.push(this.value);
         });
-        found = $desiredModules;
+        found = [];
         $("#ModuleList option").each(function() {
-            if($.inArray(this.value, found) == -1) $(this).remove();
-//            found.push(this.value);
+            if($.inArray(this.value, found) != -1) $(this).remove();
+            found.push(this.value);
         });
         found = [];
 
