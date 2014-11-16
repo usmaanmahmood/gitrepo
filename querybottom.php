@@ -110,38 +110,6 @@
         hideShowFilters("modules");
     });
 
-    // load each list with unique_array(databases) where show = true
-    function reloadModuleList() {
-        /*
-        var $moduleList = $("#ModuleList");
-        var $databaseList = $("#DatabaseList");
-        var $selectedDatabases = $databaseList.val();
-        var $outputModulesList = [];
-
-        // if at least one db has been selected
-        if ($selectedDatabases)
-        {
-            $.each($json, function( key, value ) {
-                if ($.inArray($json[key][0], $selectedDatabases) != -1) // if the current db is part of the selected list
-                {
-                    $outputModulesList.push($json[key][4]); // add the module
-                }
-            });
-        }
-        else
-        {
-            $outputModulesList = $fullModuleList;
-        }
-
-        $moduleList.empty(); // clear select list
-
-        // refill the module list
-        $.each($outputModulesList, function(key, value) {
-            $moduleList.append("<option value=\"" + value + "\">" + value + "</option>");
-        });
-        */
-    }
-
     function hideShowFilters($selectedList) {
         var $databaseList = $("#DatabaseList");
         var $groupList = $("#GroupList");
@@ -181,6 +149,8 @@
         if ($selectedList != "students") $studentList.empty();
         if ($selectedList != "modules") $moduleList.empty();
 
+        var $desiredModules = [];
+
         // refill the lists
         $.each($json, function(key, value) {
             if ($json[key][5] == true)
@@ -189,6 +159,9 @@
                 if ($selectedList != "groups") $groupList.append("<option value=\"" + $json[key][1] + "\">" + $json[key][1] + "</option>");
                 if ($selectedList != "students") $studentList.append("<option value=\"" + $json[key][2] + "\">" + $json[key][2] + "</option>");
                 if ($selectedList != "modules") $moduleList.append("<option value=\"" + $json[key][4] + "\">" + $json[key][4] + "</option>");
+
+                if ($selectedList != "modules") $desiredModules.push($json[key][4]);
+
             }
         });
 
@@ -208,7 +181,7 @@
             if($.inArray(this.value, found) != -1) $(this).remove();
             found.push(this.value);
         });
-        found = [];
+        found = $desiredModules;
         $("#ModuleList option").each(function() {
             if($.inArray(this.value, found) != -1) $(this).remove();
             found.push(this.value);
