@@ -80,7 +80,7 @@
             $fullStudentFullnameList.push($json[key][3]);
             $fullModuleList.push($json[key][4]);
 
-            $json[key][5] = false;
+            $json[key][5] = false; // set visibility to false
         });
     });
 
@@ -153,10 +153,10 @@
         $.each($json, function(key, value) {
             if ($json[key][5] == true)
             {
-                $wantedDatabases.push($json[key][0]);
-                $wantedGroups.push($json[key][1]);
-                $wantedStudents.push($json[key][2]);
-                $wantedModules.push($json[key][4]);
+                if ($.inArray($json[key][0]),  $wantedDatabases) == -1) $wantedDatabases.push($json[key][0]); // add it if it isnt in there already
+                if ($.inArray($json[key][1]),  $wantedGroups) == -1) $wantedGroups.push($json[key][1]);
+                if ($.inArray($json[key][2]),  $wantedStudents) == -1) $wantedStudents.push($json[key][2]);
+                if ($.inArray($json[key][4]),  $wantedModules) == -1) $wantedModules.push($json[key][4]);
             }
         });
 
@@ -181,15 +181,26 @@
             });
 
         if ($selectedList != "modules") {
-            // go through each option, removed unwanted ones
+            // go through each option that is on the page, removed any that arent in the WANTED list
             $("#ModuleList option").each(function () {
                 $positionOfOptionInWantedArray = $.inArray(this.value, $wantedModules);
-                if ($positionOfOptionInWantedArray == -1) $(this).remove(); // this current option isnt in desired list, so delete it
+                if ($positionOfOptionInWantedArray == -1) $(this).remove();
             });
 
-            // now if there is a wanted module that isn't in the optionslist, we need to add it.
+            var $onScreenModuleList = [];
+
+
+            // go through the WANTED list, add any that arent in in the select list already
+
+            // first build list of whats on the screen
+            $("#ModuleList option").each(function()
+            {
+                $onScreenModuleList.push($(this).val());
+            });
+
+            // now any wanted modules that arent on there, add em in
             $.each($wantedModules, function (key, value) {
-                if ($.inArray(value,  $("#DatabaseList option")) == -1) // this current module is wanted but not in the optionlist, add it
+                if ($.inArray(value,  $onScreenModuleList) == -1)
                     $("#ModuleList").append($("<option></option>")
                         .attr("value",value)
                         .text(value));
