@@ -95,19 +95,19 @@
     });
 
     $("#DatabaseList").click(function() {
-        hideShowFilters();
+        hideShowFilters("databases");
     });
 
     $("#GroupList").click(function() {
-        hideShowFilters();
+        hideShowFilters("groups");
     });
 
     $("#StudentList").click(function() {
-        hideShowFilters();
+        hideShowFilters("students");
     });
 
     $("#ModuleList").click(function() {
-        hideShowFilters();
+        hideShowFilters("modules");
     });
 
     // load each list with unique_array(databases) where show = true
@@ -142,7 +142,7 @@
         */
     }
 
-    function hideShowFilters() {
+    function hideShowFilters($selectedList) {
         var $databaseList = $("#DatabaseList");
         var $groupList = $("#GroupList");
         var $studentList = $("#StudentList");
@@ -165,29 +165,30 @@
             }
         });
 
-        reloadLists();
+        reloadLists($selectedList);
     }
 
     // reload the lists with data in the arrays
-    function reloadLists() {
+    function reloadLists($selectedList) {
         var $databaseList = $("#DatabaseList");
         var $groupList = $("#GroupList");
         var $studentList = $("#StudentList");
         var $moduleList = $("#ModuleList");
 
-        $databaseList.empty();
-        $groupList.empty();
-        $studentList.empty();
-        $moduleList.empty();
+        // dont empty it, if it is the list we clicked
+        if ($selectedList != "databases") $databaseList.empty();
+        if ($selectedList != "groups") $groupList.empty();
+        if ($selectedList != "students") $studentList.empty();
+        if ($selectedList != "modules") $moduleList.empty();
 
         // refill the lists
         $.each($json, function(key, value) {
             if ($json[key][5] == true)
             {
-                $databaseList.append("<option value=\"" + $json[key][0] + "\">" + $json[key][0] + "</option>");
-                $groupList.append("<option value=\"" + $json[key][1] + "\">" + $json[key][1] + "</option>");
-                $studentList.append("<option value=\"" + $json[key][2] + "\">" + $json[key][2] + "</option>");
-                $moduleList.append("<option value=\"" + $json[key][4] + "\">" + $json[key][4] + "</option>");
+                if ($selectedList != "databases")  $databaseList.append("<option value=\"" + $json[key][0] + "\">" + $json[key][0] + "</option>");
+                if ($selectedList != "groups") $groupList.append("<option value=\"" + $json[key][1] + "\">" + $json[key][1] + "</option>");
+                if ($selectedList != "students") $studentList.append("<option value=\"" + $json[key][2] + "\">" + $json[key][2] + "</option>");
+                if ($selectedList != "modules") $moduleList.append("<option value=\"" + $json[key][4] + "\">" + $json[key][4] + "</option>");
             }
         });
 
