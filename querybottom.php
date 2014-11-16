@@ -175,6 +175,7 @@ $( document ).ready(function() {
                     .attr("value", value)
                     .text(value));
             });
+            $databaseList.scrollTop(0);
         }
 
         if ($selectedList != "groups") {
@@ -185,6 +186,7 @@ $( document ).ready(function() {
                     .attr("value", value)
                     .text(value));
             });
+            $groupList.scrollTop(0);
         }
 
         if ($selectedList != "students") {
@@ -195,6 +197,7 @@ $( document ).ready(function() {
                     .attr("value", value)
                     .text(value));
             });
+            $studentList.scrollTop(0);
         }
 
         if ($selectedList != "modules") {
