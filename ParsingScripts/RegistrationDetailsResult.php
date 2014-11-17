@@ -23,8 +23,13 @@ class RegistrationDetailsResult extends Result
 
     public function addDatabase(RegistrationDetailsDatabase $inDatabase)
     {
-        $this->databaseList . push($inDatabase);
+        array_push($this->databaseList, $inDatabase);
     }
+
+//    public function getDatabaseCount()
+//    {
+//        return count($this->databaseList);
+//    }
 
     public $sampleinString = "===============================================================================
 Database 12-13-2X
@@ -59,6 +64,7 @@ Modules:	 21111 22712 23111 23420 25111 25212 26120 27112 28112 28411
 
 class RegistrationDetailsDatabase
 {
+    private $databaseName;
     private $studentList; // array of RegistrationDetailsStudent
 
     public function __construct()
@@ -73,8 +79,23 @@ class RegistrationDetailsDatabase
 
     public function addStudent(RegistrationDetailsStudent $studentList)
     {
-        $this->studentList . push($studentList);
+        array_push($this->studentList, $studentList);
     }
+
+    public function getDatabaseName()
+    {
+        return $this->databaseName;
+    }
+
+    public function setDatabaseName($databaseName)
+    {
+        $this->databaseName = $databaseName;
+    }
+
+//    public function getStudentCount()
+//    {
+//        return count($this->studentList);
+//    }
 
 } // RegistrationDetailsDatabase
 
@@ -86,7 +107,7 @@ class RegistrationDetailsStudent
     private $degree;
     private $year;
     private $owner;
-    private $labGroup;
+    private $labGroup; // array of String lab groups
     private $tutorialGroup;
     private $tutor;
     private $preferredName;
@@ -97,7 +118,6 @@ class RegistrationDetailsStudent
 
     public function __construct()
     {
-        $this->modules = array();
     }
 
     public function getDbFirstNames()
@@ -148,6 +168,9 @@ class RegistrationDetailsStudent
     public function setLabGroup($labGroup)
     {
         $this->labGroup = $labGroup;
+//        $this->labGroup = explode(",", $labGroup);
+//        foreach($this->labGroup as $key => $item)
+//            $this->labGroup[$key] = explode("=", $item);
     }
 
     public function getModules()

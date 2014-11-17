@@ -59,13 +59,16 @@ class ARCADEClient
         if ($inQuery->getPlainResult() == 1)
             return $resultString;
 
-
+        // make parser
         switch ($inQuery->getCommand()) {
             case "profile":
                 $this->parser = new ProfileParser();
                 break;
+            case "registration-details":
+                $this->parser = new RegistrationDetailsParser();
+                break;
         }
-
+        // let the parsing begin!
         return $this->parser->parse($resultString);
     }
 }

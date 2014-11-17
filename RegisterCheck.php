@@ -35,7 +35,7 @@ session_start();
 $_SESSION["username"] = $centralusername;
 $_SESSION["arcadepassword"] = $arcadepassword;
 $mysqli -> close();
-header("location:Classic.php");
+header("location:display/Classic.php");
 }
 else
 {
