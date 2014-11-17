@@ -54,7 +54,7 @@ $databaseList = $result->getDatabaseList();
                                 <td><?php echo $student->getStudentID(); ?></td>
                             </tr>
                             <tr>
-                                <td>Reg. status</td>
+                                <td>Reg. Status</td>
                                 <td><?php echo $student->getRegStatus(); ?></td>
                             </tr>
 
