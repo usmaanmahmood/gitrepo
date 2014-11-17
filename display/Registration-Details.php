@@ -17,7 +17,7 @@ $query = new Query("registration-details", 0); // command, plainTextWanted
 $query->addDatabases($arcadeProfile->getDatabaseList());
 $result = $arcadeClient->execute($query);
 
-$result = json_encode($result);
+//$result = json_encode($result);
 
 /*
     for each database
