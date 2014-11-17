@@ -144,7 +144,7 @@ $(document).ready(function () {
             },
             type: 'get',
             success: function (result) {
-                $('#resultspane').html("<pre>" + result + "</pre>");
+                $('#resultspane').html(result);
                 $('#resultspane').fadeIn('slow');
                 $submitbutton.button('reset');
             }
