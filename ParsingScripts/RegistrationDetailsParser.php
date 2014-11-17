@@ -176,9 +176,9 @@ End of query results";
 }
 
 // all below this line is temp for testing purposes only
-include("Result.php");
-
-
-$parser = new RegistrationDetailsParser();
-$result = $parser->parse($parser->sampleinString);
-var_dump($result);
+//include("Result.php");
+//
+//
+//$parser = new RegistrationDetailsParser();
+//$result = $parser->parse($parser->sampleinString);
+//var_dump($result);
