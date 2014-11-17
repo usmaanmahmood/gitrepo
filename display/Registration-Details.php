@@ -41,7 +41,7 @@ $databaseList = $result->getDatabaseList();
                 <?php
                 foreach ($databaseList as $database) {
                     ?>
-                    <h3>Database: <?php $database->getDatabaseName(); ?></h3>
+                    <h3>Database: <?php $database->getDatabaseName(); ?><pre><?php var_dump($database) ?></pre></h3>
                 <?php
                 }
                 ?>
@@ -50,7 +50,7 @@ $databaseList = $result->getDatabaseList();
 
         </div>
     </div>
-<pre><?php var_dump($result) ?></pre>
+
 </div>
 <!-- /.container -->
 
