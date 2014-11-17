@@ -17,7 +17,7 @@ $arcadepassword = "LQKUGRIRDE";
 socket_write($socket, "LKJHGFDSA\n"); // hello token
 socket_write($socket, $username . "\n"); // arcade user
 socket_write($socket, $arcadepassword . "\n"); // arcade pass
-$fullquery = "registration-details:" . "\n" . "12-13-2X 12-13-2 11-12-1X 11-12-1" . "\n" . "" . "\n" . "" . "\n" . "" . "\n";
+$fullquery = "registration-details:" . "\n" . "12-13-2X 12-13-2 11-12-1X 11-12-1" . "\n" . "" . "\n" . "mahmoou1" . "\n" . "" . "\n";
 socket_write($socket, $fullquery); // this sends it off
 
 $results = "";
@@ -32,7 +32,7 @@ while ($socketoutput = socket_read($socket, "100000")) {
 socket_shutdown($socket, 2); // 2 = shutdown reading and writing
 socket_close($socket);
 
-echo $results
+echo $results;
 //include("ProfileParser.php");
 //
 //$profileParser = new ProfileParser();
