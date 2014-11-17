@@ -50,7 +50,7 @@ $databaseList = $result->getDatabaseList();
 
         </div>
     </div>
-<?php var_dump($result) ?>
+<pre><?php var_dump($result) ?></pre>
 </div>
 <!-- /.container -->
 
