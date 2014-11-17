@@ -55,7 +55,7 @@ class ProfileResult extends Result
 
     public function getDatabaseList()
     {
-        return $this->databaseList;
+        return array_unique($this->databaseList);
     }
 
     public function getGroupList()
