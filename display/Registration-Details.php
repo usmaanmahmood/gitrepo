@@ -41,7 +41,7 @@ $databaseList = $result->getDatabaseList();
                 <?php
                 foreach ($databaseList as $database) {
                     ?>
-                    <h3>Database: <?php echo $database->getDatabaseName(); ?></h3>
+                    <h3>Database: <?php var_dump($database); ?></h3>
                 <?php
                 }
                 ?>
