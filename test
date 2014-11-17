@@ -1,14 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: mmapxum2
- * Date: 17/11/14
- * Time: 11:07
- */
-class RegistrationDetailsParser // extends Parser
-{
-
-    public $sampleinString = "===============================================================================
+===============================================================================
 Database 12-13-2X
 
 One matching student
@@ -90,18 +80,4 @@ Modules:	 10120 11120 11212 12111 14112 15111 16121 16212 18112
 
 
 ===============================================================================
-End of query results";
-
-    public function parse($inString)
-    {
-        $linesArray = preg_split("===============================================================================\n", $inString);
-
-        return var_dump($linesArray);
-    }
-
-}
-
-
-$parser = new RegistrationDetailsParser();
-$result = $parser->parse($parser->sampleinString);
-echo $result;
+End of query results

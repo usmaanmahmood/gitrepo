@@ -8,7 +8,8 @@
 
 include("Result.php");
 
-class ProfileParser extends Parser {
+class ProfileParser extends Parser
+{
     public function parse($inString)
     {
         $profileResult = new ProfileResult();
@@ -17,22 +18,19 @@ class ProfileParser extends Parser {
         array_pop($linesArray); // remove the empty line at the end
 
         // add commands
-        while($linesArray[0] != "++MODULESORTORDER")
-            if ($linesArray[0] == "++COMMAND")
-            {
+        while ($linesArray[0] != "++MODULESORTORDER")
+            if ($linesArray[0] == "++COMMAND") {
                 array_shift($linesArray); // remove ++COMMAND line
                 $profileResult->addCommand(array_shift($linesArray));
             }
 
         // remove ++modulesortoorder lines and their results
         $doneModuleSortOrder = false;
-        while(!$doneModuleSortOrder)
-            if ($linesArray[0] == "++MODULESORTORDER")
-            {
+        while (!$doneModuleSortOrder)
+            if ($linesArray[0] == "++MODULESORTORDER") {
                 array_shift($linesArray); // remove ++MODULESORTORDER line
                 array_shift($linesArray); // remove next line because it's garbage too
-            }
-            else
+            } else
                 $doneModuleSortOrder = true;
 
         // add rest of lines as they are Filters
@@ -44,7 +42,7 @@ class ProfileParser extends Parser {
         return $profileResult;
     }
 
-public $sampleinString = "++COMMAND
+    public $sampleinString = "++COMMAND
 Welcome and help
 ++COMMAND
 If the data is wrong

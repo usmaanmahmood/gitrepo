@@ -13,4 +13,6 @@ abstract class Result
 
 include("ProfileResult.php");
 
+include("RegistrationDetailsResult.php");
+
 ?>

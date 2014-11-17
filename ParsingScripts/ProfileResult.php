@@ -26,24 +26,62 @@ class ProfileResult extends Result
         $this->filterList = array();
     }
 
-    public function addCommand($inCommand) { array_push($this->commandList, $inCommand); }
-    public function addFilter($inFilter) { array_push($this->filterList, $inFilter); }
+    public function addCommand($inCommand)
+    {
+        array_push($this->commandList, $inCommand);
+    }
 
-    public function getCommandList() { return $this->commandList; }
-    public function getFilterList() { return $this->filterList; }
+    public function addFilter($inFilter)
+    {
+        array_push($this->filterList, $inFilter);
+    }
+
+    public function getCommandList()
+    {
+        return $this->commandList;
+    }
+
+    public function getFilterList()
+    {
+        return $this->filterList;
+    }
 
     // TODO: for some reason the first array in the 2d array is empty
-    public function getTwoDimensionalArray() { return $this->twoDimensionalArray; }
+    public function getTwoDimensionalArray()
+    {
+        return $this->twoDimensionalArray;
+    }
 
 
-    public function getDatabaseList() { return $this->databaseList; }
-    public function getGroupList() { return $this->groupList; }
-    public function getStudentUsernameList() { return $this->studentUsernameList; }
-    public function getStudentFullnameList() { return $this->studentFullnameList; }
-    public function getModuleList() { return $this->moduleList; }
-    public function get2DStudentList() {
+    public function getDatabaseList()
+    {
+        return $this->databaseList;
+    }
+
+    public function getGroupList()
+    {
+        return $this->groupList;
+    }
+
+    public function getStudentUsernameList()
+    {
+        return $this->studentUsernameList;
+    }
+
+    public function getStudentFullnameList()
+    {
+        return $this->studentFullnameList;
+    }
+
+    public function getModuleList()
+    {
+        return $this->moduleList;
+    }
+
+    public function get2DStudentList()
+    {
         $output = array(array());
-        foreach( $output as $key => $row) {
+        foreach ($output as $key => $row) {
             $output[$key][0] = $this->studentUsernameList[$key];
             $output[$key][1] = $this->studentFullnameList[$key];
         }
@@ -51,16 +89,15 @@ class ProfileResult extends Result
     }
 
 
-
-    public function buildLists() {
+    public function buildLists()
+    {
         $this->databaseList = array();
         $this->groupList = array();
         $this->studentUsernameList = array();
         $this->studentFullnameList = array();
         $this->moduleList = array();
 
-        foreach($this->filterList as $filter)
-        {
+        foreach ($this->filterList as $filter) {
             $thisDatabase = $filter->getDatabase();
             $thisGroup = $filter->getGroup();
             $thisStudentUsername = $filter->getStudentUsername();
