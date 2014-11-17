@@ -111,7 +111,7 @@ End of query results";
 
         // add the name of this database
         preg_match_all("/Database (\S+)/", $inDatabaseString, $databaseName);
-        $result->setDatabaseName($databaseName[1]); // [0] is the whole match, [1] is the first matched..etc
+        $result->setDatabaseName((string)$databaseName[1]); // [0] is the whole match, [1] is the first matched..etc
 
         // split into students
         $studentStringArray = preg_split("/\nStudent /", $inDatabaseString, null, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE); // left with id:.....end
