@@ -31,7 +31,7 @@ class RegistrationDetailsResult extends Result
 //        return count($this->databaseList);
 //    }
 
-    public $sampleinString = "===============================================================================
+    private $sampleinString = "===============================================================================
 Database 12-13-2X
 
 One matching student
