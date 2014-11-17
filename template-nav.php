@@ -22,31 +22,31 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Advanced Displays<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="Registration-Details.php">Registration Details</a></li>
-                        <li>registration-details: with lab groups</li>
-                        <li class="divider"></li>
-                        <li>display-picture</li>
-                        <li class="divider"></li>
-                        <li>time-table: remaining</li>
-                        <li>time-table: full</li>
-                        <li>time-table: with extensions</li>
-                        <li class="divider"></li>
-                        <li>attendance-summary</li>
-                        <li class="divider"></li>
-                        <li>marks-table: all</li>
-                        <li>marks-table: fails only</li>
-                        <li>marks-table: ignore empty columns</li>
-                        <li class="divider"></li>
-                        <li>expected</li>
-                        <li class="divider"></li>
-                        <li>excuses</li>
-                        <li class="divider"></li>
-                        <li>irregularities</li>
-                        <li class="divider"></li>
-                        <li>failure-predictions</li>
-                        <li class="divider"></li>
-                        <li>full-story: with notes</li>
-                        <li>full-story: without notes</li>
-                        <li>full-story: chronological</li>
+                        <li><a href="#">registration-details: with lab groups</a></li>
+                        <li class="divider"></a></li>
+                        <li><a href="#">display-picture</a></li>
+                        <li class="divider"></a></li>
+                        <li><a href="#">time-table: remaining</a></li>
+                        <li><a href="#">time-table: full</a></li>
+                        <li><a href="#">time-table: with extensions</a></li>
+                        <li class="divider"></a></li>
+                        <li><a href="#">attendance-summary</a></li>
+                        <li class="divider"></a></li>
+                        <li><a href="#">marks-table: all</a></li>
+                        <li><a href="#">marks-table: fails only</a></li>
+                        <li><a href="#">marks-table: ignore empty columns</a></li>
+                        <li class="divider"></a></li>
+                        <li><a href="#">expected</a></li>
+                        <li class="divider"></a></li>
+                        <li><a href="#">excuses</a></li>
+                        <li class="divider"></a></li>
+                        <li><a href="#">irregularities</a></li>
+                        <li class="divider"></a></li>
+                        <li><a href="#">failure-predictions</a></li>
+                        <li class="divider"></a></li>
+                        <li><a href="#">full-story: with notes</a></li>
+                        <li><a href="#">full-story: without notes</a></li>
+                        <li><a href="#">full-story: chronological</a></li>
                     </ul>
                 </li>
                 <li>
