@@ -1,5 +1,5 @@
 <?php include "../template-head.php" ?>
-<title>ARCADE</title>
+<title>Registration Details | ARCADE</title>
 <style>
     body {
         padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
@@ -17,7 +17,7 @@ $query = new Query("registration-details", 0); // command, plainTextWanted
 $query->addDatabases($arcadeProfile->getDatabaseList());
 $result = $arcadeClient->execute($query);
 
-$result = json_encode($result);
+//$result = json_encode($result);
 
 /*
     for each database
