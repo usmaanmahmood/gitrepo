@@ -110,8 +110,7 @@ End of query results";
         $result = new RegistrationDetailsDatabase();
 
         // add the name of this database
-        preg_match_all("/Database (\S+)/", $inDatabaseString, $databaseName);
-        settype($databaseName[1], "string");
+        preg_match("/Database (\S+)/", $inDatabaseString, $databaseName);
         $result->setDatabaseName($databaseName[1]); // [0] is the whole match, [1] is the first matched..etc
 
         // split into students
