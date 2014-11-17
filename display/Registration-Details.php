@@ -13,8 +13,10 @@
 
 $arcadeClient = new ARCADEClient();
 $query = new Query("registration-details", 0); // command, plainTextWanted
-$query->addDatabases(implode(" ", $arcadeProfile->getDatabaseList()));
-$result = $arcadeClient->execute($query);
+
+$result = implode(" ", $arcadeProfile->getDatabaseList());
+//$query->addDatabases(implode(" ", $arcadeProfile->getDatabaseList()));
+//$result = $arcadeClient->execute($query);
 
 //$result = json_encode($result);
 
