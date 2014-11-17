@@ -39,10 +39,28 @@ $databaseList = $result->getDatabaseList();
 
             <div class="table-responsive">
                 <?php
-                foreach ($databaseList as $key => $database) {
+                foreach ($databaseList as $database) {
                     ?>
-                    <h3>Database: <?php echo $database->getDatabaseName(); ?><pre><?php var_dump($database->getDatabaseName()) ?></pre></h3>
-                <?php
+                    <h3>Database: <?php echo $database->getDatabaseName(); ?></h3>
+                    <?php foreach ($database->getStudentList() as $student) {
+                        ?>
+                        <table class="table table-striped">
+                            <tr>
+                                <th>Attribute</th>
+                                <th>Value</th>
+                            </tr>
+                            <tr>
+                                <td>Student ID</td>
+                                <td><?php echo $student->getStudentID(); ?></td>
+                            </tr>
+                            <tr>
+                                <td>Reg. status</td>
+                                <td><?php echo $student->getRegStatus(); ?></td>
+                            </tr>
+
+                        </table>
+                    <?php
+                    }
                 }
                 ?>
             </div>
