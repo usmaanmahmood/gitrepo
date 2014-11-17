@@ -17,7 +17,7 @@ $query = new Query("registration-details", 0); // command, plainTextWanted
 $query->addDatabases($arcadeProfile->getDatabaseList());
 $result = $arcadeClient->execute($query);
 
-$result = json_encode($result);
+$databaseList = $result->getDatabaseList();
 
 /*
     for each database
@@ -38,9 +38,18 @@ $result = json_encode($result);
 
 
             <div class="table-responsive">
-                <table class="table">
-                    <?php echo $result; ?>
-                </table>
+                <?php
+                foreach($databaseList as $database) {
+                    ?>
+                    <h3>Database: <?php echo $database->getDatabaseName(); ?></h3>
+                        <?php
+                        $studentList = $database->getStudentList();
+
+                        ?>
+
+                <?php
+                }
+                ?>
             </div>
 
 
@@ -54,12 +63,10 @@ $result = json_encode($result);
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script>
-$(document).ready(function () {
+    $(document).ready(function () {
 
 
-
-
-}) // document ready
+    }) // document ready
 
 </script>
 
