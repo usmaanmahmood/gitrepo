@@ -14,11 +14,10 @@
 $arcadeClient = new ARCADEClient();
 $query = new Query("registration-details", 0); // command, plainTextWanted
 
-$result = $arcadeProfile->getDatabaseList();
-//$query->addDatabases(implode(" ", $arcadeProfile->getDatabaseList()));
-//$result = $arcadeClient->execute($query);
+$query->addDatabases($arcadeProfile->getDatabaseList());
+$result = $arcadeClient->execute($query);
 
-//$result = json_encode($result);
+$result = json_encode($result);
 
 /*
     for each database
