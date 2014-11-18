@@ -116,7 +116,7 @@
                                                 <td>
                                                     <?php
                                                     foreach($student->getModules() as $module)
-                                                        echo "<a href='http://studentnet.cs.manchester.ac.uk/ugt/'.$module.'COMP21111/syllabus/">.$module."</a><br />";
+                                                        echo "<a href='http://studentnet.cs.manchester.ac.uk/ugt/COMP'.$module.'/syllabus/">.$module."</a><br />";
                                                     ?>
 
                                                 </td>
