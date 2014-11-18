@@ -60,7 +60,7 @@
                                         ?>
                                         <table class="table table-striped table-hover">
                                             <tr>
-                                                <td>Student ID</td>
+                                                <th>Student ID</th>
                                                 <td><?= $student->getStudentID(); ?></td>
                                             </tr>
                                             <tr>
