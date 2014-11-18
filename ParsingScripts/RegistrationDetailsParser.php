@@ -159,7 +159,7 @@ End of query results";
         $result->setTutor($matches[1]);
 
         preg_match("/Preferred Name:\s+(.*)/", $inStudentString, $matches);
-        $result->setPreferredName($matches[1]);
+        $result->setPreferredName(str_replace("_", " ", $matches[1]);
 
         preg_match("/DB Surname:\s+(.*)/", $inStudentString, $matches);
         $result->setDbSurname($matches[1]);
