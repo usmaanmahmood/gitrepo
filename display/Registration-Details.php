@@ -41,7 +41,7 @@ $databaseList = $result->getDatabaseList();
                 <?php
                 foreach ($databaseList as $database) {
                     ?>
-                    <h3>Database: <?= $database->getDatabaseName()." - ".$database->getDatabaseParsedName(); ?></h3>
+                    <h3>Database: <?= $database->getDatabaseParsedName()." (".$database->getDatabaseName().")"; ?></h3>
                     <?php foreach ($database->getStudentList() as $student) {
                         ?>
                         <table class="table table-striped  table-hover">
