@@ -82,114 +82,115 @@ $databaseList = $result->getDatabaseList();
                 </div>
             </div>
 
-
-            <div class="table-responsive">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 <?php
                 foreach ($databaseList as $database) {
-                ?>
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
-                               aria-controls="collapseOne">
-                                <?= $database->getDatabaseParsedName() . " (" . $database->getDatabaseName() . ")"; ?>
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
-                         aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            <?php foreach ($database->getStudentList() as $student) {
-                                ?>
+                    ?>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                                   aria-expanded="true"
+                                   aria-controls="collapseOne">
+                                    <?= $database->getDatabaseParsedName() . " (" . $database->getDatabaseName() . ")"; ?>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                             aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <?php foreach ($database->getStudentList() as $student) {
+                                    ?>
 
-                                <table class="table table-striped  table-hover">
-                                    <tr>
-                                        <th>Attribute</th>
-                                        <th>Value</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Student ID</td>
-                                        <td><?= $student->getStudentID(); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Reg. Status</td>
-                                        <td><?= $student->getRegStatus(); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Reg number</td>
-                                        <td><?= $student->getRegNumber(); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Degree</td>
-                                        <td><?= $student->getDegree(); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Year</td>
-                                        <td><?= $student->getYear(); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Owner</td>
-                                        <td><?= $student->getOwner(); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lab Group</td>
-                                        <td><?= $student->getRegStatus(); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tutorial Group</td>
-                                        <td><?= $student->getTutorialGroup(); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tutor</td>
-                                        <td><?= $student->getTutor(); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Preferred Name</td>
-                                        <td><?= $student->getPreferredName(); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>DB Surname</td>
-                                        <td><?= $student->getDbSurname(); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>DB First names</td>
-                                        <td><?= $student->getDbFirstNames(); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Email name:</td>
-                                        <td><?= $student->getEmailName(); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Modules</td>
-                                        <td><?= implode(", ", $student->getModules()); ?></td>
-                                    </tr>
+                                    <table class="table table-striped  table-hover">
+                                        <tr>
+                                            <th>Attribute</th>
+                                            <th>Value</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Student ID</td>
+                                            <td><?= $student->getStudentID(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Reg. Status</td>
+                                            <td><?= $student->getRegStatus(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Reg number</td>
+                                            <td><?= $student->getRegNumber(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Degree</td>
+                                            <td><?= $student->getDegree(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Year</td>
+                                            <td><?= $student->getYear(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Owner</td>
+                                            <td><?= $student->getOwner(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lab Group</td>
+                                            <td><?= $student->getRegStatus(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tutorial Group</td>
+                                            <td><?= $student->getTutorialGroup(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tutor</td>
+                                            <td><?= $student->getTutor(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Preferred Name</td>
+                                            <td><?= $student->getPreferredName(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>DB Surname</td>
+                                            <td><?= $student->getDbSurname(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>DB First names</td>
+                                            <td><?= $student->getDbFirstNames(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Email name:</td>
+                                            <td><?= $student->getEmailName(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Modules</td>
+                                            <td><?= implode(", ", $student->getModules()); ?></td>
+                                        </tr>
 
-                                </table>
-                            <?php
-                            }
-                            echo "</div></div></div>";
-                            }
-                            ?>
+                                    </table>
+                                <?php
+                                } ?>
+                            </div>
                         </div>
                     </div>
-
-
-                </div>
+                <?php } ?>
             </div>
-
         </div>
-        <!-- /.container -->
 
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-        <script>
-            $(document).ready(function () {
+    </div>
+</div>
+
+</div>
+<!-- /.container -->
 
 
-            }) // document ready
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
 
-        </script>
+
+    }) // document ready
+
+</script>
 
 </body>
 </html>
