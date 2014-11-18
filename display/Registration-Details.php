@@ -55,14 +55,10 @@
                             </div> <!-- panel-heading -->
                             <div id="collapse<?= $currentNumber ?>" class="panel-collapse collapse<?=$currentNumber == "One" ? " in" : ""?>" role="tabpanel"
                                  aria-labelledby="heading<?= $currentNumber ?>">
-                                <div class="panel-body">
+<!--                                <div class="panel-body">-->
                                     <?php foreach ($database->getStudentList() as $student) {
                                         ?>
                                         <table class="table table-striped table-hover">
-                                            <tr>
-                                                <th>Attribute</th>
-                                                <th>Value</th>
-                                            </tr>
                                             <tr>
                                                 <td>Student ID</td>
                                                 <td><?= $student->getStudentID(); ?></td>
@@ -122,7 +118,7 @@
                                         </table>
                                     <?php
                                     } // foreach $student ?>
-                                </div>
+<!--                                </div>-->
                             </div>
                         </div> <!-- panel panel-default -->
                     <?php } // foreach $database ?>
