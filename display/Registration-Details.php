@@ -14,7 +14,7 @@
 $arcadeClient = new ARCADEClient();
 $query = new Query("registration-details", 0); // command, plainTextWanted
 
-$query->addDatabases($arcadeProfile->getDatabaseList());
+$query->addDatabases($arcadeProfile->getDatabaseList()[0]);
 $result = $arcadeClient->execute($query);
 
 $databaseList = $result->getDatabaseList();
