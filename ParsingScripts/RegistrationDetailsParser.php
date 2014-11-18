@@ -165,7 +165,7 @@ End of query results";
         $result->setDbSurname($matches[1]);
 
         preg_match("/DB First names:\s+(.*)/", $inStudentString, $matches);
-        $result->setDbFirstNames($matches[1]);
+        $result->setDbFirstNames(str_replace("_", " ", $matches[1]));
 
         preg_match("/Email name:\s+(.*)/", $inStudentString, $matches);
         $result->setEmailName($matches[1]);
