@@ -45,7 +45,7 @@ $databaseList = $result->getDatabaseList();
 
                     ?>
                     <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="heading<?=$key?>">
+                        <div class="panel-heading" role="tab" id="heading<?=$currentNumber?>">
                             <h4 class="panel-title">
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?=$currentNumber?>"
                                    aria-expanded="true"
