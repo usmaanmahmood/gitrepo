@@ -103,14 +103,7 @@ $databaseList = $result->getDatabaseList();
                             </tr>
                             <tr>
                                 <td>Modules</td>
-                                <td>
-                                    <table class="table table-striped">
-                                        <?php $moduleList = $student->getModules();
-                                        foreach ($moduleList as $module) {
-                                            echo "<tr><td>" . $module . "</td></tr>";
-                                        }
-                                        ?></table>
-                                </td>
+                                <td><?php echo implode(", ", $student->getModules()); ?></td>
                             </tr>
 
                         </table>
