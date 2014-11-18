@@ -25,7 +25,7 @@ class Query {
     }
 
     //setters
-    public function addDatabase($inDatabase) { $this->databaseList = array_push($this->databaseList, $inDatabase); }
+    public function addDatabase($inDatabase) { array_push($this->databaseList, $inDatabase); }
 
 
     public function addDatabases($inDatabases) { $this->databaseList = array_merge($this->databaseList, $inDatabases); }
