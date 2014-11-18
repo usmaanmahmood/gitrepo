@@ -39,19 +39,23 @@ $databaseList = $result->getDatabaseList();
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 <?php
                 foreach ($databaseList as $key=> $database) {
+
+                    $numberToWord = new Numbers_Words();
+                    $currentNumber = ucfirst($numberToWords->toWords($key+1));
+
                     ?>
                     <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="heading<?=$key?>">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?=$key?>"
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?=$currentNumber?>"
                                    aria-expanded="true"
-                                   aria-controls="collapse<?=$key?>">
+                                   aria-controls="collapse<?=$currentNumber?>">
                                     <?= $database->getDatabaseParsedName() . " (" . $database->getDatabaseName() . ")"; ?>
                                 </a>
                             </h4>
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
-                             aria-labelledby="heading<?=$key?>">
+                             aria-labelledby="heading<?=$currentNumber?>">
                             <div class="panel-body">
                                 <?php foreach ($database->getStudentList() as $student) {
                                     ?>
