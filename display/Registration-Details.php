@@ -105,9 +105,6 @@ $databaseList = $result->getDatabaseList();
                                 <td>Modules</td>
                                 <td>
                                     <table class="table table-striped">
-                                        <tr>
-                                            <th>Module Code</th>
-                                        </tr>
                                         <?php $moduleList = $student->getModules();
                                         foreach ($moduleList as $module) {
                                             echo "<tr><td>" . $module . "</td></tr>";
