@@ -108,6 +108,12 @@ $databaseList = $result->getDatabaseList();
                                         <?php $moduleList = $student->getModules();
                                         foreach ($moduleList as $module) {
                                             echo "<tr><td>" . $module . "</td></tr>";
+
+                                            $data = file_get_contents('http://studentnet.cs.manchester.ac.uk/ugt/COMP'.$module.'/syllabus/');
+                                            $regex = '/COMP\d+\s+(.*)\s+syllabus/';
+                                            preg_match($regex,$data,$match);
+                                            var_dump($match);
+                                            echo $match[1];
                                         }
                                         ?></table>
                                 </td>
