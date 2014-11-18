@@ -44,7 +44,7 @@ $databaseList = $result->getDatabaseList();
                     <h3>Database: <?php echo $database->getDatabaseName(); ?></h3>
                     <?php foreach ($database->getStudentList() as $student) {
                         ?>
-                        <table class="table table-striped">
+                        <table class="table table-striped  table-hover">
                             <tr>
                                 <th>Attribute</th>
                                 <th>Value</th>
@@ -58,7 +58,7 @@ $databaseList = $result->getDatabaseList();
                                 <td><?php echo $student->getRegStatus(); ?></td>
                             </tr>
                             <tr>
-                                <td>Reg number/td>
+                                <td>Reg number</td>
                                 <td><?php echo $student->getRegNumber(); ?></td>
                             </tr>
                             <tr>
@@ -103,7 +103,17 @@ $databaseList = $result->getDatabaseList();
                             </tr>
                             <tr>
                                 <td>Modules</td>
-                                <td><?php echo $student->getModules(); ?></td>
+                                <td>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>Module Code</th>
+                                        </tr>
+                                        <?php $moduleList = $student->getModules();
+                                        foreach ($moduleList as $module) {
+                                            echo "<tr><td>" . $module . "</td></tr>";
+                                        }
+                                        ?></table>
+                                </td>
                             </tr>
 
                         </table>
