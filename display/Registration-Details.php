@@ -41,7 +41,7 @@ $databaseList = $result->getDatabaseList();
                 <?php
                 foreach ($databaseList as $database) {
                     ?>
-                    <h3>Database: <?php echo $database->getDatabaseName(); ?></h3>
+                    <h3>Database: <?= $database->getDatabaseName(); ?></h3>
                     <?php foreach ($database->getStudentList() as $student) {
                         ?>
                         <table class="table table-striped  table-hover">
@@ -51,59 +51,59 @@ $databaseList = $result->getDatabaseList();
                             </tr>
                             <tr>
                                 <td>Student ID</td>
-                                <td><?php echo $student->getStudentID(); ?></td>
+                                <td><?= $student->getStudentID(); ?></td>
                             </tr>
                             <tr>
                                 <td>Reg. Status</td>
-                                <td><?php echo $student->getRegStatus(); ?></td>
+                                <td><?= $student->getRegStatus(); ?></td>
                             </tr>
                             <tr>
                                 <td>Reg number</td>
-                                <td><?php echo $student->getRegNumber(); ?></td>
+                                <td><?= $student->getRegNumber(); ?></td>
                             </tr>
                             <tr>
                                 <td>Degree</td>
-                                <td><?php echo $student->getDegree(); ?></td>
+                                <td><?= $student->getDegree(); ?></td>
                             </tr>
                             <tr>
                                 <td>Year</td>
-                                <td><?php echo $student->getYear(); ?></td>
+                                <td><?= $student->getYear(); ?></td>
                             </tr>
                             <tr>
                                 <td>Owner</td>
-                                <td><?php echo $student->getOwner(); ?></td>
+                                <td><?= $student->getOwner(); ?></td>
                             </tr>
                             <tr>
                                 <td>Lab Group</td>
-                                <td><?php echo $student->getRegStatus(); ?></td>
+                                <td><?= $student->getRegStatus(); ?></td>
                             </tr>
                             <tr>
                                 <td>Tutorial Group</td>
-                                <td><?php echo $student->getTutorialGroup(); ?></td>
+                                <td><?= $student->getTutorialGroup(); ?></td>
                             </tr>
                             <tr>
                                 <td>Tutor</td>
-                                <td><?php echo $student->getTutor(); ?></td>
+                                <td><?= $student->getTutor(); ?></td>
                             </tr>
                             <tr>
                                 <td>Preferred Name</td>
-                                <td><?php echo $student->getPreferredName(); ?></td>
+                                <td><?= $student->getPreferredName(); ?></td>
                             </tr>
                             <tr>
                                 <td>DB Surname</td>
-                                <td><?php echo $student->getDbSurname(); ?></td>
+                                <td><?= $student->getDbSurname(); ?></td>
                             </tr>
                             <tr>
                                 <td>DB First names</td>
-                                <td><?php echo $student->getDbFirstNames(); ?></td>
+                                <td><?= $student->getDbFirstNames(); ?></td>
                             </tr>
                             <tr>
                                 <td>Email name:</td>
-                                <td><?php echo $student->getEmailName(); ?></td>
+                                <td><?= $student->getEmailName(); ?></td>
                             </tr>
                             <tr>
                                 <td>Modules</td>
-                                <td><?php echo implode(", ", $student->getModules()); ?></td>
+                                <td><?= implode(", ", $student->getModules()); ?></td>
                             </tr>
 
                         </table>
