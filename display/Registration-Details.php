@@ -55,7 +55,7 @@ $databaseList = $result->getDatabaseList();
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                        <div id="collapse<?=$currentNumber?>" class="panel-collapse collapse in" role="tabpanel"
                              aria-labelledby="heading<?=$currentNumber?>">
                             <div class="panel-body">
                                 <?php foreach ($database->getStudentList() as $student) {
@@ -153,7 +153,8 @@ $databaseList = $result->getDatabaseList();
 
 </body>
 </html>
-<?php function convertNumber($number)
+<?php
+function convertNumber($number)
 {
 list($integer, $fraction) = explode(".", (string) $number);
 
