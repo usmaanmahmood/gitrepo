@@ -45,12 +45,12 @@
                         ?>
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="heading<?= $currentNumber ?>">
-                                <h4 class="panel-title"><strong>
+                                <h4 class="panel-title">
                                     <a data-toggle="collapse" data-parent="#accordion"
                                        href="#collapse<?= $currentNumber ?>"
                                        aria-expanded="true"
-                                       aria-controls="collapse<?= $currentNumber ?>">
-                                        <?= $database->getDatabaseParsedName() . " (" . $database->getDatabaseName() . ")"; ?></a></strong>
+                                       aria-controls="collapse<?= $currentNumber ?>"><strong>
+                                        <?= $database->getDatabaseParsedName() . " (" . $database->getDatabaseName() . ")"; ?></strong></a>
                                 </h4>
                             </div> <!-- panel-heading -->
                             <div id="collapse<?= $currentNumber ?>" class="panel-collapse collapse<?=$currentNumber == "One" ? " in" : ""?>" role="tabpanel"
