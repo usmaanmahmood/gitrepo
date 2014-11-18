@@ -50,8 +50,7 @@
                                        href="#collapse<?= $currentNumber ?>"
                                        aria-expanded="true"
                                        aria-controls="collapse<?= $currentNumber ?>">
-                                        <?= $database->getDatabaseParsedName() . " (" . $database->getDatabaseName() . ")"; ?>
-                                    </a>
+                                        <?= $database->getDatabaseParsedName() . " (" . $database->getDatabaseName() . ")"; ?></a>
                                 </h4>
                             </div> <!-- panel-heading -->
                             <div id="collapse<?= $currentNumber ?>" class="panel-collapse collapse in" role="tabpanel"
@@ -59,7 +58,7 @@
                                 <div class="panel-body">
                                     <?php foreach ($database->getStudentList() as $student) {
                                         ?>
-                                        <table class="table table-striped  table-hover">
+                                        <table class="table table-striped table-hover">
                                             <tr>
                                                 <th>Attribute</th>
                                                 <th>Value</th>
@@ -122,11 +121,11 @@
                                             </tr>
                                         </table>
                                     <?php
-                                    } ?>
+                                    } // foreach $student ?>
                                 </div>
                             </div>
                         </div> <!-- panel panel-default -->
-                    <?php } ?>
+                    <?php } // foreach $database ?>
                 </div> <!-- panel-group -->
             </div>
         </div>
