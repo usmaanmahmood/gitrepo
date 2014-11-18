@@ -114,7 +114,7 @@ End of query results";
         $result->setDatabaseName($databaseName[1]); // [0] is the whole match, [1] is the first matched..etc
         // set the parsed name
         preg_match("/(\d+)-(\d+)-(\d)(.*)/", $databaseName[1], $matches);
-        $result->setDatabaseParsedName("Academic Year: 20".$matches[1]."/20".$matches[2]." - Semester: ".$matches[3]. (array_key_exists(4, $matches) ? ("(Exams)") : ""));
+        $result->setDatabaseParsedName("Academic Year: 20".$matches[1]."/20".$matches[2]." - Semester ".$matches[3]." - ".(array_key_exists(4, $matches) ? ("Overall") : "Coursework Only"));
 
         // split into students
         $studentStringArray = preg_split("/\nStudent /", $inDatabaseString, null, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE); // left with id:.....end
