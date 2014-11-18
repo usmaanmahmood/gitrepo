@@ -65,20 +65,20 @@ $databaseList = $result->getDatabaseList();
 
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 <?php
-                foreach ($databaseList as $database) {
+                foreach ($databaseList as $key=> $database) {
                     ?>
                     <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingOne">
+                        <div class="panel-heading" role="tab" id="heading<?=$key?>">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?=$key?>"
                                    aria-expanded="true"
-                                   aria-controls="collapseOne">
+                                   aria-controls="collapse<?=$key?>">
                                     <?= $database->getDatabaseParsedName() . " (" . $database->getDatabaseName() . ")"; ?>
                                 </a>
                             </h4>
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
-                             aria-labelledby="headingOne">
+                             aria-labelledby="heading<?=$key?>">
                             <div class="panel-body">
                                 <?php foreach ($database->getStudentList() as $student) {
                                     ?>
