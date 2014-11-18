@@ -22,7 +22,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Advanced Displays<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="Registration-Details.php">Registration Details</a></li>
-                        <li><a href="#">registration-details: with lab groups</a></li>
+<!--                        <li><a href="#">registration-details: with lab groups</a></li>-->
                         <li class="divider"></li>
                         <li><a href="#">display-picture</a></li>
                         <li class="divider"></li>
