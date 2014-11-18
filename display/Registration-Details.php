@@ -57,6 +57,54 @@ $databaseList = $result->getDatabaseList();
                                 <td>Reg. Status</td>
                                 <td><?php echo $student->getRegStatus(); ?></td>
                             </tr>
+                            <tr>
+                                <td>Reg number/td>
+                                <td><?php echo $student->getRegNumber(); ?></td>
+                            </tr>
+                            <tr>
+                                <td>Degree</td>
+                                <td><?php echo $student->getDegree(); ?></td>
+                            </tr>
+                            <tr>
+                                <td>Year</td>
+                                <td><?php echo $student->getYear(); ?></td>
+                            </tr>
+                            <tr>
+                                <td>Owner</td>
+                                <td><?php echo $student->getOwner(); ?></td>
+                            </tr>
+                            <tr>
+                                <td>Lab Group</td>
+                                <td><?php echo $student->getRegStatus(); ?></td>
+                            </tr>
+                            <tr>
+                                <td>Tutorial Group</td>
+                                <td><?php echo $student->getTutorialGroup(); ?></td>
+                            </tr>
+                            <tr>
+                                <td>Tutor</td>
+                                <td><?php echo $student->getTutor(); ?></td>
+                            </tr>
+                            <tr>
+                                <td>Preferred Name</td>
+                                <td><?php echo $student->getPreferredName(); ?></td>
+                            </tr>
+                            <tr>
+                                <td>DB Surname</td>
+                                <td><?php echo $student->getDbSurname(); ?></td>
+                            </tr>
+                            <tr>
+                                <td>DB First names</td>
+                                <td><?php echo $student->getDbFirstNames(); ?></td>
+                            </tr>
+                            <tr>
+                                <td>Email name:</td>
+                                <td><?php echo $student->getEmailName(); ?></td>
+                            </tr>
+                            <tr>
+                                <td>Modules</td>
+                                <td><?php echo $student->getModules(); ?></td>
+                            </tr>
 
                         </table>
                     <?php
