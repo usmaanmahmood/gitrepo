@@ -64,55 +64,55 @@
                                                 <td><?= $student->getStudentID(); ?></td>
                                             </tr>
                                             <tr>
-                                                <td>Reg. Status</td>
+                                                <th>Reg. Status</th>
                                                 <td><?= $student->getRegStatus(); ?></td>
                                             </tr>
                                             <tr>
-                                                <td>Reg number</td>
+                                                <th>Reg number</th>
                                                 <td><?= $student->getRegNumber(); ?></td>
                                             </tr>
                                             <tr>
-                                                <td>Degree</td>
+                                                <th>Degree</th>
                                                 <td><?= $student->getDegree(); ?></td>
                                             </tr>
                                             <tr>
-                                                <td>Year</td>
+                                                <th>Year</th>
                                                 <td><?= $student->getYear(); ?></td>
                                             </tr>
                                             <tr>
-                                                <td>Owner</td>
+                                                <th>Owner</th>
                                                 <td><?= $student->getOwner(); ?></td>
                                             </tr>
                                             <tr>
-                                                <td>Lab Group</td>
+                                                <th>Lab Group</th>
                                                 <td><?= $student->getRegStatus(); ?></td>
                                             </tr>
                                             <tr>
-                                                <td>Tutorial Group</td>
+                                                <th>Tutorial Group</th>
                                                 <td><?= $student->getTutorialGroup(); ?></td>
                                             </tr>
                                             <tr>
-                                                <td>Tutor</td>
+                                                <th>Tutor</th>
                                                 <td><?= $student->getTutor(); ?></td>
                                             </tr>
                                             <tr>
-                                                <td>Preferred Name</td>
+                                                <th>Preferred Name</th>
                                                 <td><?= $student->getPreferredName(); ?></td>
                                             </tr>
                                             <tr>
-                                                <td>DB Surname</td>
+                                                <th>DB Surname</th>
                                                 <td><?= $student->getDbSurname(); ?></td>
                                             </tr>
                                             <tr>
-                                                <td>DB First names</td>
+                                                <th>DB First names</th>
                                                 <td><?= $student->getDbFirstNames(); ?></td>
                                             </tr>
                                             <tr>
-                                                <td>Email name:</td>
+                                                <th>Email name:</th>
                                                 <td><?= $student->getEmailName(); ?></td>
                                             </tr>
                                             <tr>
-                                                <td>Modules</td>
+                                                <th>Modules</th>
                                                 <td><?= implode(", ", $student->getModules()); ?></td>
                                             </tr>
                                         </table>
