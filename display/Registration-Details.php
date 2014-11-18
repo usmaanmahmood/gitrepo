@@ -53,7 +53,7 @@
                                         <?= $database->getDatabaseParsedName() . " (" . $database->getDatabaseName() . ")"; ?></a>
                                 </h4>
                             </div> <!-- panel-heading -->
-                            <div id="collapse<?= $currentNumber ?>" class="panel-collapse collapse in" role="tabpanel"
+                            <div id="collapse<?= $currentNumber ?>" class="panel-collapse collapse<?=$currentNumber == "One" ? " in" : ""?>" role="tabpanel"
                                  aria-labelledby="heading<?= $currentNumber ?>">
                                 <div class="panel-body">
                                     <?php foreach ($database->getStudentList() as $student) {
