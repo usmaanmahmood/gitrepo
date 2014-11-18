@@ -60,51 +60,51 @@
                                         ?>
                                         <table class="table table-striped table-hover">
                                             <tr>
-                                                <th>Student ID</th>
+                                                <th>Student ID:</th>
                                                 <td><?= $student->getStudentID(); ?></td>
                                             </tr>
                                             <tr>
-                                                <th>Reg. Status</th>
+                                                <th>Reg. Status:</th>
                                                 <td><?= $student->getRegStatus(); ?></td>
                                             </tr>
                                             <tr>
-                                                <th>Reg number</th>
+                                                <th>Reg number:</th>
                                                 <td><?= $student->getRegNumber(); ?></td>
                                             </tr>
                                             <tr>
-                                                <th>Degree</th>
+                                                <th>Degree:</th>
                                                 <td><?= $student->getDegree(); ?></td>
                                             </tr>
                                             <tr>
-                                                <th>Year</th>
+                                                <th>Year:</th>
                                                 <td><?= $student->getYear(); ?></td>
                                             </tr>
                                             <tr>
-                                                <th>Owner</th>
+                                                <th>Owner:</th>
                                                 <td><?= $student->getOwner(); ?></td>
                                             </tr>
                                             <tr>
-                                                <th>Lab Group</th>
+                                                <th>Lab Group:</th>
                                                 <td><?= $student->getRegStatus(); ?></td>
                                             </tr>
                                             <tr>
-                                                <th>Tutorial Group</th>
+                                                <th>Tutorial Group:</th>
                                                 <td><?= $student->getTutorialGroup(); ?></td>
                                             </tr>
                                             <tr>
-                                                <th>Tutor</th>
+                                                <th>Tutor:</th>
                                                 <td><?= $student->getTutor(); ?></td>
                                             </tr>
                                             <tr>
-                                                <th>Preferred Name</th>
+                                                <th>Preferred Name:</th>
                                                 <td><?= $student->getPreferredName(); ?></td>
                                             </tr>
                                             <tr>
-                                                <th>DB Surname</th>
+                                                <th>DB Surname:</th>
                                                 <td><?= $student->getDbSurname(); ?></td>
                                             </tr>
                                             <tr>
-                                                <th>DB First names</th>
+                                                <th>DB First names:</th>
                                                 <td><?= $student->getDbFirstNames(); ?></td>
                                             </tr>
                                             <tr>
@@ -112,7 +112,7 @@
                                                 <td><?= $student->getEmailName(); ?></td>
                                             </tr>
                                             <tr>
-                                                <th>Modules</th>
+                                                <th>Modules:</th>
                                                 <td><?= implode(", ", $student->getModules()); ?></td>
                                             </tr>
                                         </table>
