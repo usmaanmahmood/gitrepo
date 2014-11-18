@@ -65,6 +65,7 @@ Modules:	 21111 22712 23111 23420 25111 25212 26120 27112 28112 28411
 class RegistrationDetailsDatabase
 {
     private $databaseName;
+    private $databaseParsedName;
     private $studentList; // array of RegistrationDetailsStudent
 
     public function __construct()
@@ -90,6 +91,16 @@ class RegistrationDetailsDatabase
     public function setDatabaseName($databaseName)
     {
         $this->databaseName = $databaseName;
+    }
+
+    public function setDatabaseParsedName($databaseParsedName)
+    {
+        $this->databaseParsedName = $databaseParsedName;
+    }
+
+    public function getDatabaseParsedName()
+    {
+        return $this->databaseParsedName;
     }
 
 //    public function getStudentCount()
