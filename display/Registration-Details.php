@@ -41,8 +41,8 @@ $databaseList = $result->getDatabaseList();
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 <?php
                 foreach ($databaseList as $key=> $database) {
-
-                    $currentNumber = ucfirst(convertNumber(($key+1)));
+                    $key1 = $key + 1;
+                    $currentNumber = ucfirst(convertNumber(($key1)));
 
                     ?>
                     <div class="panel panel-default">
