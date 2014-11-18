@@ -113,7 +113,13 @@
                                             </tr>
                                             <tr>
                                                 <th>Modules:</th>
-                                                <td><?= implode(", ", $student->getModules()); ?></td>
+                                                <td>
+                                                    <?php
+                                                    foreach($student->getModules() as $module)
+                                                        echo "<a href='http://studentnet.cs.manchester.ac.uk/ugt/'.$module.'COMP21111/syllabus/">.$module."</a><br />";
+                                                    ?>
+
+                                                </td>
                                             </tr>
                                         </table>
                                     <?php
