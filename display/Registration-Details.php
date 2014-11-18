@@ -36,100 +36,160 @@ $databaseList = $result->getDatabaseList();
         <div class="col-lg-12">
             <h1>Registration Details</h1>
 
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+                               aria-controls="collapseOne">
+                                Collapsible Group Item #1
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                         aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                            squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                            nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                            single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                            beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+                            lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
+                            probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
+                               aria-expanded="false" aria-controls="collapseTwo">
+                                Collapsible Group Item #2
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                            squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                            nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                            single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                            beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+                            lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
+                            probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <div class="table-responsive">
                 <?php
                 foreach ($databaseList as $database) {
-                    ?>
-                    <h3><?= $database->getDatabaseParsedName()." (".$database->getDatabaseName().")"; ?></h3>
-                    <?php foreach ($database->getStudentList() as $student) {
-                        ?>
-                        <table class="table table-striped  table-hover">
-                            <tr>
-                                <th>Attribute</th>
-                                <th>Value</th>
-                            </tr>
-                            <tr>
-                                <td>Student ID</td>
-                                <td><?= $student->getStudentID(); ?></td>
-                            </tr>
-                            <tr>
-                                <td>Reg. Status</td>
-                                <td><?= $student->getRegStatus(); ?></td>
-                            </tr>
-                            <tr>
-                                <td>Reg number</td>
-                                <td><?= $student->getRegNumber(); ?></td>
-                            </tr>
-                            <tr>
-                                <td>Degree</td>
-                                <td><?= $student->getDegree(); ?></td>
-                            </tr>
-                            <tr>
-                                <td>Year</td>
-                                <td><?= $student->getYear(); ?></td>
-                            </tr>
-                            <tr>
-                                <td>Owner</td>
-                                <td><?= $student->getOwner(); ?></td>
-                            </tr>
-                            <tr>
-                                <td>Lab Group</td>
-                                <td><?= $student->getRegStatus(); ?></td>
-                            </tr>
-                            <tr>
-                                <td>Tutorial Group</td>
-                                <td><?= $student->getTutorialGroup(); ?></td>
-                            </tr>
-                            <tr>
-                                <td>Tutor</td>
-                                <td><?= $student->getTutor(); ?></td>
-                            </tr>
-                            <tr>
-                                <td>Preferred Name</td>
-                                <td><?= $student->getPreferredName(); ?></td>
-                            </tr>
-                            <tr>
-                                <td>DB Surname</td>
-                                <td><?= $student->getDbSurname(); ?></td>
-                            </tr>
-                            <tr>
-                                <td>DB First names</td>
-                                <td><?= $student->getDbFirstNames(); ?></td>
-                            </tr>
-                            <tr>
-                                <td>Email name:</td>
-                                <td><?= $student->getEmailName(); ?></td>
-                            </tr>
-                            <tr>
-                                <td>Modules</td>
-                                <td><?= implode(", ", $student->getModules()); ?></td>
-                            </tr>
-
-                        </table>
-                    <?php
-                    }
-                }
                 ?>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+                               aria-controls="collapseOne">
+                                <?= $database->getDatabaseParsedName() . " (" . $database->getDatabaseName() . ")"; ?>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                         aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <?php foreach ($database->getStudentList() as $student) {
+                                ?>
+
+                                <table class="table table-striped  table-hover">
+                                    <tr>
+                                        <th>Attribute</th>
+                                        <th>Value</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Student ID</td>
+                                        <td><?= $student->getStudentID(); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Reg. Status</td>
+                                        <td><?= $student->getRegStatus(); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Reg number</td>
+                                        <td><?= $student->getRegNumber(); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Degree</td>
+                                        <td><?= $student->getDegree(); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Year</td>
+                                        <td><?= $student->getYear(); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Owner</td>
+                                        <td><?= $student->getOwner(); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lab Group</td>
+                                        <td><?= $student->getRegStatus(); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tutorial Group</td>
+                                        <td><?= $student->getTutorialGroup(); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tutor</td>
+                                        <td><?= $student->getTutor(); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Preferred Name</td>
+                                        <td><?= $student->getPreferredName(); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>DB Surname</td>
+                                        <td><?= $student->getDbSurname(); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>DB First names</td>
+                                        <td><?= $student->getDbFirstNames(); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email name:</td>
+                                        <td><?= $student->getEmailName(); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Modules</td>
+                                        <td><?= implode(", ", $student->getModules()); ?></td>
+                                    </tr>
+
+                                </table>
+                            <?php
+                            }
+                            echo "</div></div></div>";
+                            }
+                            ?>
+                        </div>
+                    </div>
+
+
+                </div>
             </div>
 
-
         </div>
-    </div>
-
-</div>
-<!-- /.container -->
+        <!-- /.container -->
 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function () {
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function () {
 
 
-    }) // document ready
+            }) // document ready
 
-</script>
+        </script>
 
 </body>
 </html>
