@@ -36,7 +36,6 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1>Registration Details</h1>
-
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                     <?php
                     foreach ($databaseList as $key => $database) {
@@ -54,13 +53,12 @@
                                         <?= $database->getDatabaseParsedName() . " (" . $database->getDatabaseName() . ")"; ?>
                                     </a>
                                 </h4>
-                            </div>
+                            </div> <!-- panel-heading -->
                             <div id="collapse<?= $currentNumber ?>" class="panel-collapse collapse in" role="tabpanel"
                                  aria-labelledby="heading<?= $currentNumber ?>">
                                 <div class="panel-body">
                                     <?php foreach ($database->getStudentList() as $student) {
                                         ?>
-
                                         <table class="table table-striped  table-hover">
                                             <tr>
                                                 <th>Attribute</th>
@@ -122,21 +120,16 @@
                                                 <td>Modules</td>
                                                 <td><?= implode(", ", $student->getModules()); ?></td>
                                             </tr>
-
                                         </table>
                                     <?php
                                     } ?>
                                 </div>
                             </div>
-                        </div>
+                        </div> <!-- panel panel-default -->
                     <?php } ?>
-                </div>
+                </div> <!-- panel-group -->
             </div>
-
-
         </div>
-    </div>
-
     </div>
     <!-- /.container -->
 
