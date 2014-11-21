@@ -19,7 +19,7 @@
                     <a href="Classic.php">Classic ARCADE</a>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Cool Displays<span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More Displays<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="Registration-Details.php">Registration Details (+Display Picture)</a></li>
 <!--                        <li><a href="#">registration-details: with lab groups</a></li>-->
