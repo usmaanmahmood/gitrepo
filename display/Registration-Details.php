@@ -36,6 +36,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1>Registration Details</h1>
+
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                     <?php
                     foreach ($databaseList as $key => $database) {
@@ -50,85 +51,90 @@
                                        href="#collapse<?= $currentNumber ?>"
                                        aria-expanded="true"
                                        aria-controls="collapse<?= $currentNumber ?>"><strong>
-                                        <?= $database->getDatabaseParsedName() . " (" . $database->getDatabaseName() . ")"; ?></strong></a>
+                                            <?= $database->getDatabaseParsedName() . " (" . $database->getDatabaseName() . ")"; ?></strong></a>
                                 </h4>
-                            </div> <!-- panel-heading -->
-                            <div id="collapse<?= $currentNumber ?>" class="panel-collapse collapse<?=$currentNumber == "One" ? " in" : ""?>" role="tabpanel"
+                            </div>
+                            <!-- panel-heading -->
+                            <div id="collapse<?= $currentNumber ?>"
+                                 class="panel-collapse collapse<?= $currentNumber == "One" ? " in" : "" ?>"
+                                 role="tabpanel"
                                  aria-labelledby="heading<?= $currentNumber ?>">
-<!--                                <div class="panel-body">-->
-                                    <?php foreach ($database->getStudentList() as $student) {
-                                        ?>
-                                        <table class="table table-striped table-hover">
-                                            <tr>
-                                                <th>Student ID:</th>
-                                                <td><?= $student->getStudentID(); ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Reg. Status:</th>
-                                                <td><?= $student->getRegStatus(); ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Reg number:</th>
-                                                <td><?= $student->getRegNumber(); ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Degree:</th>
-                                                <td><?= $student->getDegree(); ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Year:</th>
-                                                <td><?= $student->getYear(); ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Owner:</th>
-                                                <td><?= $student->getOwner(); ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Lab Group:</th>
-                                                <td><?= $student->getRegStatus(); ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Tutorial Group:</th>
-                                                <td><?= $student->getTutorialGroup(); ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Tutor:</th>
-                                                <td><?= $student->getTutor(); ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Preferred Name:</th>
-                                                <td><?= $student->getPreferredName(); ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>DB Surname:</th>
-                                                <td><?= $student->getDbSurname(); ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>DB First names:</th>
-                                                <td><?= $student->getDbFirstNames(); ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Email name:</th>
-                                                <td><?= $student->getEmailName(); ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Modules:</th>
-                                                <td>
-                                                    <?php
-                                                    foreach($student->getModules() as $module)
-                                                        echo "<a href=\"http://studentnet.cs.manchester.ac.uk/ugt/COMP".$module."/syllabus/\">".$module."</a> ";
-                                                    ?>
+                                <!--                                <div class="panel-body">-->
+                                <?php foreach ($database->getStudentList() as $student) {
+                                    ?>
+                                    <table class="table table-striped table-hover">
+                                        <tr>
+                                            <th>Student ID:</th>
+                                            <td><?= $student->getStudentID(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Reg. Status:</th>
+                                            <td><?= $student->getRegStatus(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Reg number:</th>
+                                            <td><?= $student->getRegNumber(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Degree:</th>
+                                            <td><?= $student->getDegree(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Year:</th>
+                                            <td><?= $student->getYear(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Owner:</th>
+                                            <td><?= $student->getOwner(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Lab Group:</th>
+                                            <td><?= $student->getRegStatus(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Tutorial Group:</th>
+                                            <td><?= $student->getTutorialGroup(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Tutor:</th>
+                                            <td><?= $student->getTutor(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Preferred Name:</th>
+                                            <td><?= $student->getPreferredName(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>DB Surname:</th>
+                                            <td><?= $student->getDbSurname(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>DB First names:</th>
+                                            <td><?= $student->getDbFirstNames(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Email name:</th>
+                                            <td><?= $student->getEmailName(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Modules:</th>
+                                            <td>
+                                                <?php
+                                                foreach ($student->getModules() as $module)
+                                                    echo "<a href=\"http://studentnet.cs.manchester.ac.uk/ugt/COMP" . $module . "/syllabus/\">" . $module . "</a> ";
+                                                ?>
 
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    <?php
-                                    } // foreach $student ?>
-<!--                                </div>-->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                <?php
+                                } // foreach $student
+                                ?>
+                                <!--                                </div>-->
                             </div>
                         </div> <!-- panel panel-default -->
                     <?php } // foreach $database ?>
-                </div> <!-- panel-group -->
+                </div>
+                <!-- panel-group -->
             </div>
         </div>
     </div>
@@ -148,48 +154,49 @@
     </body>
     </html>
 <?php
-function convert_number_to_words($number) {
+function convert_number_to_words($number)
+{
 
-    $hyphen      = '-';
+    $hyphen = '-';
     $conjunction = ' and ';
-    $separator   = ', ';
-    $negative    = 'negative ';
-    $decimal     = ' point ';
-    $dictionary  = array(
-        0                   => 'zero',
-        1                   => 'one',
-        2                   => 'two',
-        3                   => 'three',
-        4                   => 'four',
-        5                   => 'five',
-        6                   => 'six',
-        7                   => 'seven',
-        8                   => 'eight',
-        9                   => 'nine',
-        10                  => 'ten',
-        11                  => 'eleven',
-        12                  => 'twelve',
-        13                  => 'thirteen',
-        14                  => 'fourteen',
-        15                  => 'fifteen',
-        16                  => 'sixteen',
-        17                  => 'seventeen',
-        18                  => 'eighteen',
-        19                  => 'nineteen',
-        20                  => 'twenty',
-        30                  => 'thirty',
-        40                  => 'fourty',
-        50                  => 'fifty',
-        60                  => 'sixty',
-        70                  => 'seventy',
-        80                  => 'eighty',
-        90                  => 'ninety',
-        100                 => 'hundred',
-        1000                => 'thousand',
-        1000000             => 'million',
-        1000000000          => 'billion',
-        1000000000000       => 'trillion',
-        1000000000000000    => 'quadrillion',
+    $separator = ', ';
+    $negative = 'negative ';
+    $decimal = ' point ';
+    $dictionary = array(
+        0 => 'zero',
+        1 => 'one',
+        2 => 'two',
+        3 => 'three',
+        4 => 'four',
+        5 => 'five',
+        6 => 'six',
+        7 => 'seven',
+        8 => 'eight',
+        9 => 'nine',
+        10 => 'ten',
+        11 => 'eleven',
+        12 => 'twelve',
+        13 => 'thirteen',
+        14 => 'fourteen',
+        15 => 'fifteen',
+        16 => 'sixteen',
+        17 => 'seventeen',
+        18 => 'eighteen',
+        19 => 'nineteen',
+        20 => 'twenty',
+        30 => 'thirty',
+        40 => 'fourty',
+        50 => 'fifty',
+        60 => 'sixty',
+        70 => 'seventy',
+        80 => 'eighty',
+        90 => 'ninety',
+        100 => 'hundred',
+        1000 => 'thousand',
+        1000000 => 'million',
+        1000000000 => 'billion',
+        1000000000000 => 'trillion',
+        1000000000000000 => 'quadrillion',
         1000000000000000000 => 'quintillion'
     );
 
@@ -197,7 +204,7 @@ function convert_number_to_words($number) {
         return false;
     }
 
-    if (($number >= 0 && (int) $number < 0) || (int) $number < 0 - PHP_INT_MAX) {
+    if (($number >= 0 && (int)$number < 0) || (int)$number < 0 - PHP_INT_MAX) {
         // overflow
         trigger_error(
             'convert_number_to_words only accepts numbers between -' . PHP_INT_MAX . ' and ' . PHP_INT_MAX,
@@ -221,15 +228,15 @@ function convert_number_to_words($number) {
             $string = $dictionary[$number];
             break;
         case $number < 100:
-            $tens   = ((int) ($number / 10)) * 10;
-            $units  = $number % 10;
+            $tens = ((int)($number / 10)) * 10;
+            $units = $number % 10;
             $string = $dictionary[$tens];
             if ($units) {
                 $string .= $hyphen . $dictionary[$units];
             }
             break;
         case $number < 1000:
-            $hundreds  = $number / 100;
+            $hundreds = $number / 100;
             $remainder = $number % 100;
             $string = $dictionary[$hundreds] . ' ' . $dictionary[100];
             if ($remainder) {
@@ -238,7 +245,7 @@ function convert_number_to_words($number) {
             break;
         default:
             $baseUnit = pow(1000, floor(log($number, 1000)));
-            $numBaseUnits = (int) ($number / $baseUnit);
+            $numBaseUnits = (int)($number / $baseUnit);
             $remainder = $number % $baseUnit;
             $string = convert_number_to_words($numBaseUnits) . ' ' . $dictionary[$baseUnit];
             if ($remainder) {
@@ -251,7 +258,7 @@ function convert_number_to_words($number) {
     if (null !== $fraction && is_numeric($fraction)) {
         $string .= $decimal;
         $words = array();
-        foreach (str_split((string) $fraction) as $number) {
+        foreach (str_split((string)$fraction) as $number) {
             $words[] = $dictionary[$number];
         }
         $string .= implode(' ', $words);

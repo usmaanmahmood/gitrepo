@@ -36,6 +36,9 @@ class ARCADEClient
         socket_write($socket, $this->arcadeUsername . "\n");
         socket_write($socket, $this->arcadePassword . "\n");
 
+        if (implode(' ', $inQuery->getDatabases()) ' ' || implode(' ', $inQuery->getDatabases()) '')
+            return 'ARCADE client error: No Databases sent through';
+
         $queryString = $inQuery->getCommand() . "\n"
             . implode(' ', $inQuery->getDatabases()) . "\n"
             . implode(' ', $inQuery->getGroups()) . "\n"
