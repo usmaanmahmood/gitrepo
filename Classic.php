@@ -158,7 +158,7 @@ $(document).ready(function () {
     var $fullStudentUsernameList = [];
     var $fullModuleList = [];
 
-    $.getJSON('../getFilterLists.php', function (json) {
+    $.getJSON('getFilterLists.php', function (json) {
         $json = json;
 
         $.each($json, function (key, value) {
