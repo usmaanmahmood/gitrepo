@@ -134,7 +134,7 @@ $(document).ready(function () {
         $('#resultspane').fadeOut('slow');
 
         $.ajax({
-            url: '../runQuery.php',
+            url: 'runQuery.php',
             data: {
                 "command": $command,
                 "databases": $databases,
