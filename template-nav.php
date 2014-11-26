@@ -50,7 +50,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="../Logout.php">Logout</a>
+                    <a href="Logout.php">Logout</a>
                 </li>
             </ul>
         </div>
