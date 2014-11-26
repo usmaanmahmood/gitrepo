@@ -1,4 +1,4 @@
-<?php include "../template-head.php" ?>
+<?php include "template-head.php" ?>
     <title>Registration Details | ARCADE</title>
     <style>
         body {
@@ -9,7 +9,7 @@
 
     <body>
 
-    <?php include("../template-nav.php");
+    <?php include("template-nav.php");
 
     $arcadeClient = new ARCADEClient();
     $query = new Query("registration-details", 0); // command, plainTextWanted
