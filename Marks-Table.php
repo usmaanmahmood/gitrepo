@@ -40,9 +40,9 @@
                     foreach ($database->getTableList() as $table)
                     {
                         echo "<h2>Table: " . $table->getName() . "</h2>";
-
+                        $twoDimensionalArray = array($table->getWeightings(), $table->getDenominators(), $table->getEmailNames(), $table->getMarks());
                         $mergedTable = array_merge($table->getWeightings(), $table->getDenominators(), $table->getEmailNames(), $table->getMarks());
-                        var_dump($mergedTable);
+                        var_dump($twoDimensionalArray);
 
 
 //                        var_dump($table);
