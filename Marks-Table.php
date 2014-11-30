@@ -19,10 +19,14 @@
     $query->addModules($moduleList);
     $result = $arcadeClient->execute($query);
 
-    // The second parameter of json_decode forces parsing into an associative array
-    $result = json_decode(json_encode($result), true);
-//    $databaseList = $result->getDatabaseList();
+    
+    function objectToArray ($object) {
+        if(!is_object($object) && !is_array($object))
+            return $object;
 
+        return array_map('objectToArray', (array) $object);
+    }
+    $result = objectToArray($result);
     ?>
 
     <!-- Page Content -->
@@ -47,7 +51,7 @@
                         <tbody>
                     </table>
                 <?php endif; ?>
-                <pre><?=var_dump($result) ?></pre>
+<!--                <pre>--><?//=var_dump($result) ?><!--</pre>-->
             </div>
         </div>
     </div>
