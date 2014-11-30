@@ -12,7 +12,7 @@ abstract class Result
 }
 
 include("ProfileResult.php");
-
 include("RegistrationDetailsResult.php");
+include("MarksTableResult.php");
 
 ?>

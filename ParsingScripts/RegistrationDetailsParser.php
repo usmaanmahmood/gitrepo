@@ -9,7 +9,7 @@
 class RegistrationDetailsParser // extends Parser
 {
 
-    public $sampleinString = "===============================================================================
+    public $sampleString = "===============================================================================
 Database 12-13-2X
 
 Two matching students
@@ -183,5 +183,5 @@ End of query results";
 //
 //
 //$parser = new RegistrationDetailsParser();
-//$result = $parser->parse($parser->sampleinString);
+//$result = $parser->parse($parser->sampleString);
 //var_dump($result);
