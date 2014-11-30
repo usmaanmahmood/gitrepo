@@ -43,7 +43,7 @@
                         var_dump($table);
                     }
                 }?>
-                <pre><?=var_dump($result) ?></pre>
+<!--                <pre>--><?//=var_dump($result) ?><!--</pre>-->
             </div>
         </div>
     </div>
