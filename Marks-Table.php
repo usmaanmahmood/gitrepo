@@ -34,7 +34,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1>Marks Table</h1>
-                <?foreach ($result->getDatabaseList() as $database)
+                <?php foreach ($result->getDatabaseList() as $database)
                 {
                     echo "Database: " . $database->getParsedName();
                 }?>
