@@ -43,7 +43,7 @@
                         $twoDimensionalArray = array($table->getWeightings(), $table->getDenominators(), $table->getEmailNames(), $table->getMarks());
 
                         $out  = "";
-                        $out .= "<table>";
+                        $out .= "<table class=\"table table-striped table-hover\">";
                         foreach($twoDimensionalArray as $key => $element){
                             $out .= "<tr>";
                             foreach($element as $subkey => $subelement){
@@ -54,7 +54,6 @@
                         $out .= "</table>";
 
                         echo $out;
-//                        var_dump($table);
                     }
                 }?>
 <!--                <pre>--><?//=var_dump($result) ?><!--</pre>-->
