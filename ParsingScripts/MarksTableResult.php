@@ -65,7 +65,7 @@ class MarksTableDatabase
 
     public function __construct()
     {
-        $this->studentList = array();
+        $this->tableList = array();
     }
 
     public function getTableList()

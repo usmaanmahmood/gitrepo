@@ -71,51 +71,67 @@ End of query results";
         array_pop($databaseStringArray); // remove the "End of query results" line
 
         $result = new MarksTableResult();
-
-        // Table(s) ID(s)
-        preg_match_all("/(?<=Table )[\w]+(?=[:])/", $inString, $matches);
-        foreach($matches[0] as $test){
-            echo $test . "\n";
-        }
+        // create a database object for each
+        // add the database name to the object
+        // parse the database into tables
+        // for each table
+        //      create new table object
+        //      parse it
+        //      add the name
+        //      add the data in
+        //      add it to the database object
 
         foreach($databaseStringArray as $key => $database)
-            $databaseStringArray[$key] = $this->parseDatabase($database);
+            $result->addDatabase($this->parseDatabase($database));
 
-        return $databaseStringArray;
+        return $result;
 
     }
 
     private function parseDatabase($inString)
     {
+        $database = new MarksTableDatabase();
+
+        // get the database name
+        preg_match("/(?:Database\s+(\S+))/", $inString, $matches);
+        $rawDbName = $matches[1];
+        $database->setDatabaseName($rawDbName);
+        preg_match("/(\d+)-(\d+)-(\d)(.*)/", $rawDbName, $rawDbNameMatches);
+        $database->setDatabaseParsedName("Year: 20".$rawDbNameMatches[1]."/20".$rawDbNameMatches[2]." - Semester ".$rawDbNameMatches[3]." - ".($rawDbNameMatches[4] == "X" ? ("Overall") : "Coursework Only"));
+
         // http://regex101.com/r/oE6jJ1/34#pcre
+        // split up the tables
         preg_match_all("/Table\s+([^:]+)[\s\S]*?Weighting\s+\|([\s\S]*?)\n-+\s+Denominator\s+\|([\s\S]*?)\n-+\s+Email Name\s+\|([\s\S]*?)\n=+[\s\S]+?\|([ \S]+)\n/", $inString, $matches);
         array_shift($matches); // remove the first match which is the entire table
 
+        // parse further into perfect form
         foreach($matches as $key => $table)
-            $matches[$key] = $this->parseTable($table);
+            foreach($table as $key2 => $row)
+                $matches[$key][$key2] = array_map('trim', explode('|', $row));
 
-        return $matches;
-    }
+        $numberOfTables = count($matches[0]);
 
-    private function parseTable($inTable)
-    {
-        foreach($inTable as $key => $row)
+        // parse the tables
+        for ($i = 0; $i < $numberOfTables; $i++)
         {
-            $inTable[$key] = array_map('trim', explode('|', $row));
+            $table = new MarksTableTable();
+            $table->setName($matches[0][$i]);
+            $table->setWeightings($matches[1][$i]);
+            $table->setDenominators($matches[2][$i]);
+            $table->setEmailNames($matches[3][$i]);
+            $table->setMarks($matches[4][$i]);
+            $database->addTable($table);
         }
 
-        return $inTable;
-
-
-    }
-
+        return $database;
+    } // parseDatabase
 
 }
 
 
 // all below this line is temp for testing purposes only
-include("Result.php");
-
-$parser = new MarksTableParser();
-$result = $parser->parse($parser->sampleString);
-//var_dump($result);
+//include("Result.php");
+//
+//$parser = new MarksTableParser();
+//$result = $parser->parse($parser->sampleString);
+//var_dump($result->getDatabaseList());
