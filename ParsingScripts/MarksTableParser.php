@@ -6,9 +6,7 @@
  * Date: 26/11/14
  * Time: 12:55
  */
-class MarksTableParser // extends Parser
-{
-    private $sampleString = "For explanation of columns, see `full-story: with notes'.
+$sampleString = "For explanation of columns, see `full-story: with notes'.
 
 ===============================================================================
 Database 12-13-2
@@ -64,6 +62,8 @@ mahmoou1 Mahmood,Usm|9    |8    |20   |82.3    |82.3
 ===============================================================================
 End of query results";
 
+class MarksTableParser // extends Parser
+{
     public function parse($inString)
     {
         $databaseStringArray = preg_split("/\n===============================================================================\n/", $inString,  null, PREG_SPLIT_NO_EMPTY);
@@ -127,6 +127,7 @@ End of query results";
     } // parseDatabase
 
 }
+
 
 
 // all below this line is temp for testing purposes only
