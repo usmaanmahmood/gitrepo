@@ -115,7 +115,7 @@ class MarksTableParser // extends Parser
         for ($i = 0; $i < $numberOfTables; $i++)
         {
             $table = new MarksTableTable();
-            $table->setName($matches[0][$i]);
+            $table->setName($matches[0][$i][0]);
             $table->setWeightings($matches[1][$i]);
             $table->setDenominators($matches[2][$i]);
             $table->setEmailNames($matches[3][$i]);
