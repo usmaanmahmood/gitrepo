@@ -40,7 +40,12 @@
                     foreach ($database->getTableList() as $table)
                     {
                         echo "<h2>Table: " . $table->getName() . "</h2>";
-                        var_dump($table);
+
+                        $mergedTable = array_merge_recursive($table->getScalingFactor(), $table->getWeightings(), $table->getDenominators(), $table->getEmailNames(), $table->getMarks());
+                        var_dump($mergedTable);
+
+
+//                        var_dump($table);
                     }
                 }?>
 <!--                <pre>--><?//=var_dump($result) ?><!--</pre>-->
