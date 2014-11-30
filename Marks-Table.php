@@ -37,7 +37,7 @@
                 <?php foreach ($result->getDatabaseList() as $database)
                 {
                     echo "<h1>Database: " . $database->getDatabaseParsedName() . "</h1>";
-                    foreach ($database->getTableList as $table)
+                    foreach ($database->getTableList() as $table)
                     {
                         echo "<h2>Table: " . $table->getTableName() . "</h2>";
                         var_dump($table);
