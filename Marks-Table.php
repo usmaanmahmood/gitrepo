@@ -19,7 +19,7 @@
     $query->addModules($moduleList);
     $result = $arcadeClient->execute($query);
 
-    
+
     function objectToArray ($object) {
         if(!is_object($object) && !is_array($object))
             return $object;
@@ -35,23 +35,8 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1>Marks Table</h1>
-                <?php if (count($result) > 0): ?>
-                    <table>
-                        <thead>
-                        <tr>
-                            <th><?php echo implode('</th><th>', array_keys(current($result))); ?></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php foreach ($result as $row): array_map('htmlentities', $row); ?>
-                            <tr>
-                                <td><?php echo implode('</td><td>', $row); ?></td>
-                            </tr>
-                        <?php endforeach; ?>
-                        <tbody>
-                    </table>
-                <?php endif; ?>
-<!--                <pre>--><?//=var_dump($result) ?><!--</pre>-->
+
+                <pre><?=var_dump($result) ?></pre>
             </div>
         </div>
     </div>
