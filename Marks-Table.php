@@ -28,7 +28,7 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <h1>Registration Details</h1>
+                <h1>Marks Table</h1>
                 <pre><?=var_dump($result) ?></pre>
             </div>
         </div>
