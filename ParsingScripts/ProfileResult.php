@@ -46,7 +46,6 @@ class ProfileResult extends Result
         return $this->filterList;
     }
 
-    // TODO: for some reason the first array in the 2d array is empty
     public function getTwoDimensionalArray()
     {
         return $this->twoDimensionalArray;
