@@ -15,7 +15,8 @@
     $query = new Query("marks-table: all", 0); // command, plainTextWanted
 
     $query->addDatabases($arcadeProfile->getDatabaseList());
-    $query->addModules("162L");
+    $moduleList = array("162L");
+    $query->addModules($moduleList);
     $result = $arcadeClient->execute($query);
 
 //    $databaseList = $result->getDatabaseList();
