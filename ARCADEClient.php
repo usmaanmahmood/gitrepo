@@ -78,6 +78,9 @@ class ARCADEClient
             case "marks-table: all":
                 $this->parser = new MarksTableParser();
                 break;
+            case "":
+//                $this->parser = new PlainParser();
+                break;
         }
         // let the parsing begin!
         return $this->parser->parse($resultString);
