@@ -75,6 +75,9 @@ class ARCADEClient
             case "registration-details":
                 $this->parser = new RegistrationDetailsParser();
                 break;
+            case "marks-table: all":
+                $this->parser = new MarksTableParser();
+                break;
         }
         // let the parsing begin!
         return $this->parser->parse($resultString);
