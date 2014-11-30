@@ -8,7 +8,7 @@
 
 class MarksTableResult //extends Parser
 {
-    public $sampleString = "For explanation of columns, see `full-story: with notes'.
+    private $sampleString = "For explanation of columns, see `full-story: with notes'.
 
 ===============================================================================
 Database 12-13-2
