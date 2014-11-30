@@ -44,7 +44,18 @@
                         $mergedTable = array_merge($table->getWeightings(), $table->getDenominators(), $table->getEmailNames(), $table->getMarks());
                         var_dump($twoDimensionalArray);
 
+                        $out  = "";
+                        $out .= "<table>";
+                        foreach($twoDimensionalArray as $key => $element){
+                            $out .= "<tr>";
+                            foreach($element as $subkey => $subelement){
+                                $out .= "<td>$subelement</td>";
+                            }
+                            $out .= "</tr>";
+                        }
+                        $out .= "</table>";
 
+                        echo $out;
 //                        var_dump($table);
                     }
                 }?>
