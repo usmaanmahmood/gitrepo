@@ -19,6 +19,8 @@
     $query->addModules($moduleList);
     $result = $arcadeClient->execute($query);
 
+    $result = json_encode($result);
+
 //    $databaseList = $result->getDatabaseList();
 
     ?>
