@@ -19,8 +19,8 @@
     $query->addModules($moduleList);
     $result = $arcadeClient->execute($query);
 
-    $result = json_encode($result);
-
+    // The second parameter of json_decode forces parsing into an associative array
+    $result = json_decode(json_encode($result), true);
 //    $databaseList = $result->getDatabaseList();
 
     ?>
