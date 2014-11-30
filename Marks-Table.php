@@ -36,7 +36,7 @@
                 <h1>Marks Table</h1>
                 <?php foreach ($result->getDatabaseList() as $database)
                 {
-                    echo "Database: " . $database->getParsedName();
+                    echo "Database: " . $database->getDatabaseParsedName();
                 }?>
                 <pre><?=var_dump($result) ?></pre>
             </div>
