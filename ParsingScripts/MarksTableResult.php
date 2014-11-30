@@ -5,10 +5,7 @@
  * Date: 26/11/14
  * Time: 12:06
  */
-
-class MarksTableResult //extends Parser
-{
-    private $sampleString = "For explanation of columns, see `full-story: with notes'.
+$sampleString = "For explanation of columns, see `full-story: with notes'.
 
 ===============================================================================
 Database 12-13-2
@@ -38,6 +35,11 @@ mahmoou1 Mahmood,Usm|13   |11c  |14   |14   |65c     |65
 
 ===============================================================================
 End of query results";
+
+
+class MarksTableResult //extends Parser
+{
+
 
     private $databaseList; // array of MarksTableDatabase
 
