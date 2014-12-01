@@ -47,28 +47,28 @@
                                 <td>Weightings</td>
                                 <?php foreach ($table->getWeightings() as $weighting)
                                 {
-                                    echo "<td>" . $weighting . "</td>"
+                                    echo "<td>" . $weighting . "</td>";
                                             }?>
                             </tr>
                             <tr>
                                 <td>Denominators</td>
                                 <?php foreach ($table->getDenominators() as $weighting)
                                 {
-                                    echo "<td>" . $weighting . "</td>"
+                                    echo "<td>" . $weighting . "</td>";
                                             }?>
                             </tr>
                             <tr>
                                 <td>Names</td>
                                 <?php foreach ($table->getEmailNames() as $weighting)
                                 {
-                                    echo "<td>" . $weighting . "</td>"
+                                    echo "<td>" . $weighting . "</td>";
                                             }?>
                             </tr>
                             <tr>
                                 <td>Marks</td>
                                 <?php foreach ($table->getMarks() as $weighting)
                                 {
-                                    echo "<td>" . $weighting . "</td>"
+                                    echo "<td>" . $weighting . "</td>";
                                             }?>
                             </tr>
                         </table>
