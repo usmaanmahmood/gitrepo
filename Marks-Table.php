@@ -40,23 +40,57 @@
                     foreach ($database->getTableList() as $table)
                     {
                         echo "<h2>Table: " . $table->getName() . "</h2>";
-                        $twoDimensionalArray = array($table->getWeightings(), $table->getDenominators(), $table->getEmailNames(), $table->getMarks());
 
-                        $out  = "";
-                        $out .= "<table class=\"table table-striped table-hover\">";
-                        foreach($twoDimensionalArray as $key => $element){
-                            $out .= "<tr>";
-                            foreach($element as $subkey => $subelement){
-                                $out .= "<td>$subelement</td>";
-                            }
-                            $out .= "</tr>";
-                        }
-                        $out .= "</table>";
+                        ?>
+                        <table class="table table-striped table-hover">
+                            <tr>
+                                <td>Weightings</td>
+                                <?foreach ($table->getWeightings() as $weighting)
+                                {
+                                    echo "<td>" . $weighting . "</td>"
+                                }?>
+                            </tr>
+                            <tr>
+                                <td>Denominators</td>
+                                <?foreach ($table->getDenominators() as $weighting)
+                                {
+                                    echo "<td>" . $weighting . "</td>"
+                                            }?>
+                            </tr>
+                            <tr>
+                                <td>Names</td>
+                                <?foreach ($table->getEmailNames() as $weighting)
+                                {
+                                    echo "<td>" . $weighting . "</td>"
+                                            }?>
+                            </tr>
+                            <tr>
+                                <td>Marks</td>
+                                <?foreach ($table->getMarks() as $weighting)
+                                {
+                                    echo "<td>" . $weighting . "</td>"
+                                            }?>
+                            </tr>
+                        </table>
 
-                        echo $out;
-                    }
+
+                        <?php
+//                        $twoDimensionalArray = array($table->getWeightings(), $table->getDenominators(), $table->getEmailNames(), $table->getMarks());
+//
+//                        $out  = "";
+//                        $out .= "<table class=\"table table-striped table-hover\">";
+//                        foreach($twoDimensionalArray as $key => $element){
+//                            $out .= "<tr>";
+//                            foreach($element as $subkey => $subelement){
+//                                $out .= "<td>$subelement</td>";
+//                            }
+//                            $out .= "</tr>";
+//                        }
+//                        $out .= "</table>";
+//
+//                        echo $out;
+//                    }
                 }?>
-<!--                <pre>--><?//=var_dump($result) ?><!--</pre>-->
             </div>
         </div>
     </div>
