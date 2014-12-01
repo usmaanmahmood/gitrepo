@@ -44,28 +44,28 @@
                         ?>
                         <table class="table table-striped table-hover table-bordered table-condensed">
                             <tr>
-                                <td>Weightings</td>
+                                <td><strong>Weightings</strong></td>
                                 <?php foreach ($table->getWeightings() as $weighting)
                                 {
                                     echo "<td>" . $weighting . "</td>";
                                             }?>
                             </tr>
                             <tr>
-                                <td>Denominators</td>
+                                <td><strong>Denominators</strong></td>
                                 <?php foreach ($table->getDenominators() as $weighting)
                                 {
                                     echo "<td>" . $weighting . "</td>";
                                             }?>
                             </tr>
                             <tr>
-                                <td>Names</td>
+                                <td><strong>Names</strong></td>
                                 <?php foreach ($table->getEmailNames() as $weighting)
                                 {
                                     echo "<td>" . $weighting . "</td>";
                                             }?>
                             </tr>
                             <tr>
-                                <td>Marks</td>
+                                <td><strong>Marks</strong></td>
                                 <?php foreach ($table->getMarks() as $weighting)
                                 {
                                     echo "<td>" . $weighting . "</td>";
