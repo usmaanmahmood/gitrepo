@@ -42,7 +42,7 @@
                         echo "<h2>Table: " . $table->getName() . "</h2>";
 
                         ?>
-                        <table class="table table-striped table-hover">
+                        <table class="table table-striped table-hover table-bordered table-condensed">
                             <tr>
                                 <td>Weightings</td>
                                 <?php foreach ($table->getWeightings() as $weighting)
