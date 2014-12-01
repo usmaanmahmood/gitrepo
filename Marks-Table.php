@@ -45,28 +45,28 @@
                         <table class="table table-striped table-hover">
                             <tr>
                                 <td>Weightings</td>
-                                <?foreach ($table->getWeightings() as $weighting)
+                                <?php foreach ($table->getWeightings() as $weighting)
                                 {
                                     echo "<td>" . $weighting . "</td>"
-                                }?>
+                                            }?>
                             </tr>
                             <tr>
                                 <td>Denominators</td>
-                                <?foreach ($table->getDenominators() as $weighting)
+                                <?php foreach ($table->getDenominators() as $weighting)
                                 {
                                     echo "<td>" . $weighting . "</td>"
                                             }?>
                             </tr>
                             <tr>
                                 <td>Names</td>
-                                <?foreach ($table->getEmailNames() as $weighting)
+                                <?php foreach ($table->getEmailNames() as $weighting)
                                 {
                                     echo "<td>" . $weighting . "</td>"
                                             }?>
                             </tr>
                             <tr>
                                 <td>Marks</td>
-                                <?foreach ($table->getMarks() as $weighting)
+                                <?php foreach ($table->getMarks() as $weighting)
                                 {
                                     echo "<td>" . $weighting . "</td>"
                                             }?>
@@ -75,22 +75,8 @@
 
 
                         <?php
-//                        $twoDimensionalArray = array($table->getWeightings(), $table->getDenominators(), $table->getEmailNames(), $table->getMarks());
-//
-//                        $out  = "";
-//                        $out .= "<table class=\"table table-striped table-hover\">";
-//                        foreach($twoDimensionalArray as $key => $element){
-//                            $out .= "<tr>";
-//                            foreach($element as $subkey => $subelement){
-//                                $out .= "<td>$subelement</td>";
-//                            }
-//                            $out .= "</tr>";
-//                        }
-//                        $out .= "</table>";
-//
-//                        echo $out;
-//                    }
-//                }?>
+                    }
+                }?>
             </div>
         </div>
     </div>
