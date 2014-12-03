@@ -84,6 +84,7 @@ class MarksTableParser // extends Parser
         foreach($databaseStringArray as $key => $database)
             $result->addDatabase($this->parseDatabase($database));
 
+
         return $result;
 
     }
@@ -120,6 +121,7 @@ class MarksTableParser // extends Parser
             $table->setDenominators($matches[2][$i]);
             $table->setEmailNames($matches[3][$i]);
             $table->setMarks($matches[4][$i]);
+            $table->buildMarksTable();
             $database->addTable($table);
         }
 
