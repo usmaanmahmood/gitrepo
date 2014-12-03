@@ -1,12 +1,13 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: mmapxum2
  * Date: 14/11/14
  * Time: 12:10
  */
-
-class Query {
+class Query
+{
     private $command;
     private $databaseList;
     private $groupList;
@@ -15,7 +16,8 @@ class Query {
     private $plainResult;
 
     // if profile object is passed, auto add the filterlist
-    public function __construct($inCommand, $inPlainResult) {
+    public function __construct($inCommand, $inPlainResult)
+    {
         $this->command = $inCommand;
         $this->databaseList = [];
         $this->groupList = [];
@@ -25,30 +27,66 @@ class Query {
     }
 
     //setters
-    public function addDatabase($inDatabase) { array_push($this->databaseList, $inDatabase); }
+    public function addDatabase($inDatabase)
+    {
+        array_push($this->databaseList, $inDatabase);
+    }
 
+    // they all need arrays to be passed in or fail
+    public function addDatabases($inList)
+    {
+        if (empty($inList)) $inList = [];
+        $this->databaseList = array_merge($this->databaseList, $inList);
+    }
 
-    public function addDatabases($inDatabases) { $this->databaseList = array_merge($this->databaseList, $inDatabases); }
-    public function addGroups($inGroups) { $this->groupList = array_merge($this->databaseList, $inGroups); }
-    public function addStudents($inStudents) { $this->studentList = array_merge($this->databaseList, $inStudents); }
-    public function addModules($inModules) { $this->moduleList = array_merge($this->databaseList, $inModules); }
+    public function addGroups($inList)
+    {
+        if (empty($inList)) $inList = [];
+        $this->groupList = array_merge($this->groupList, $inList);
+    }
+
+    public function addStudents($inList)
+    {
+        if (empty($inList)) $inList = [];
+        $this->studentList = array_merge($this->studentList, $inList);
+    }
+
+    public function addModules($inList)
+    {
+        if (empty($inList)) $inList = [];
+        $this->moduleList = array_merge($this->moduleList, $inList);
+    }
 
     //getters
-    public function getCommand() { return $this->command; }
+    public function getCommand()
+    {
+        return $this->command;
+    }
 
-    public function getDatabases() {
-        return count($this->databaseList) == 0 ? array() : $this->databaseList; }
+    public function getDatabases()
+    {
+        return count($this->databaseList) == 0 ? array() : $this->databaseList;
+    }
 
-    public function getGroups() {
-        return count($this->groupList) == 0 ? array() : $this->groupList; }
+    public function getGroups()
+    {
+        return count($this->groupList) == 0 ? array() : $this->groupList;
+    }
 
-    public function getStudents() {
-        return count($this->studentList) == 0 ? array() : $this->studentList; }
+    public function getStudents()
+    {
+        return count($this->studentList) == 0 ? array() : $this->studentList;
+    }
 
-    public function getModules() {
-        return count($this->moduleList) == 0 ? array() : $this->moduleList; }
+    public function getModules()
+    {
+        return count($this->moduleList) == 0 ? array() : $this->moduleList;
+    }
 
-    public function getPlainResult() { return $this->plainResult; }
+    public function getPlainResult()
+    {
+        return $this->plainResult;
+    }
 
 
 }

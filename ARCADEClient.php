@@ -43,6 +43,8 @@ class ARCADEClient
             return 'ARCADE client error: No Databases sent through';
         }
 
+        if ($inQuery->getGroups() == )
+
 
         $queryString = $inQuery->getCommand() . "\n"
             . implode(' ', $inQuery->getDatabases()) . "\n"
