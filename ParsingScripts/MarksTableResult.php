@@ -131,7 +131,7 @@ class MarksTableTable {
 
             // add percentage of Mark
             if ($cleanMark != "" && $cleanDen != "") {
-                $percMark = number_format((float)(((float)$cleanMark / (float)$cleanDen) * 100), 1, '.', '') . "%";
+                $percMark = number_format((float)(((float)$cleanMark / (float)$cleanDen) * 100), 1, '.', '');
                 $this->marksTable[$i][4] = $percMark;
             }
             else
@@ -141,14 +141,14 @@ class MarksTableTable {
             // arraylength-2 always stores total
             $cleanWeighting = preg_replace("/[^0-9.]+/", "", $this->weightings[$i]);
             if ($cleanWeighting != "") {
-                $percWeight = number_format((float)(((float)$this->weightings[$i] / (float)$this->weightings[$arrayLength - 2]) * 100), 1, '.', '') . "%";
+                $percWeight = number_format((float)(((float)$this->weightings[$i] / (float)$this->weightings[$arrayLength - 2]) * 100), 1, '.', '');
                 $this->marksTable[$i][5] = $percWeight;
             }
             else
                 $this->marksTable[$i][5] = "";
 
             if ($this->marksTable[$i][4] != "" && $this->marksTable[$i][5] != "") {
-                $percScore = number_format((float)(((float)$percWeight) * ((float)$percMark / 100)), 1, '.', '') . "%";
+                $percScore = number_format((float)(((float)$percWeight) * ((float)$percMark / 100)), 1, '.', '');
                 $this->marksTable[$i][6] = $percScore;
             }
             else
