@@ -20,7 +20,7 @@ if (!empty($_GET["modules"])) $query->addModules($_GET["modules"]);
 $result = $arcadeClient->execute($query);
 
 ?>
-<h1>Marks Table</h1>"
+<h1>Marks Table</h1>
 <?php foreach ($result->getDatabaseList() as $database) {
     echo "<h1>Database: " . $database->getDatabaseParsedName() . "</h1>";
     foreach ($database->getTableList() as $table) {
