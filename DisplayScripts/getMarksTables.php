@@ -44,19 +44,18 @@ $result = $arcadeClient->execute($query);
                     }?>
                 </tr>
                 <tr>
+                    <th width="100px">Denominators</th>
+                    <?php foreach ($table->getDenominators() as $weighting) {
+                        echo "<td>" . $weighting . "</td>";
+                    }?>
+                </tr>
+                <tr>
                     <th width="100px">Percentage</th>
                     <?php
                     foreach ($table->getPercentages() as $percentage) {
                         echo "<td>" . $percentage . "</td>";
                     }?>
                 </tr>
-                <tr>
-                    <th width="100px">Denominators</th>
-                    <?php foreach ($table->getDenominators() as $weighting) {
-                        echo "<td>" . $weighting . "</td>";
-                    }?>
-                </tr>
-
                 <tr>
                     <th width="100px">Weightings</th>
                     <?php foreach ($table->getWeightings() as $weighting) {
