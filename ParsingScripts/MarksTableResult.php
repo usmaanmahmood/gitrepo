@@ -138,6 +138,10 @@ class MarksTableTable {
         }
     }
 
+    public function getPercentages() {
+        return $this->marksTables[4];
+    }
+
     public function getDenominators()
     {
         return $this->denominators;
