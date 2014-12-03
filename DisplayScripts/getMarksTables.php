@@ -25,7 +25,7 @@ $result = $arcadeClient->execute($query);
     <h1>Marks Table</h1>
 <?php foreach ($result->getDatabaseList() as $database) {
     if (!empty($database->getTableList())) {
-        echo "<h1>Database: " . $database->getDatabaseParsedName() . "</h1>";
+        echo "<h2>Database: " . $database->getDatabaseParsedName() . "</h2>";
         foreach ($database->getTableList() as $table) {
             echo "<h3>Table: " . $table->getName() . "</h3>";
 
@@ -34,7 +34,7 @@ $result = $arcadeClient->execute($query);
                 <tr>
                     <th width="100px">Names</th>
                     <?php foreach ($table->getEmailNames() as $weighting) {
-                        echo "<td>" . $weighting . "</td>";
+                        echo "<th>" . $weighting . "</th>";
                     }?>
                 </tr>
                 <tr>
