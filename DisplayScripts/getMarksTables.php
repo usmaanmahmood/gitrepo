@@ -32,8 +32,14 @@ $result = $arcadeClient->execute($query);
             ?>
             <table class="table table-striped table-hover table-bordered table-condensed">
                 <tr>
-                    <th width="100px">Weightings</th>
-                    <?php foreach ($table->getWeightings() as $weighting) {
+                    <th width="100px">Names</th>
+                    <?php foreach ($table->getEmailNames() as $weighting) {
+                        echo "<td>" . $weighting . "</td>";
+                    }?>
+                </tr>
+                <tr>
+                    <th width="100px">Marks</th>
+                    <?php foreach ($table->getMarks() as $weighting) {
                         echo "<td>" . $weighting . "</td>";
                     }?>
                 </tr>
@@ -44,14 +50,8 @@ $result = $arcadeClient->execute($query);
                     }?>
                 </tr>
                 <tr>
-                    <th width="100px">Names</th>
-                    <?php foreach ($table->getEmailNames() as $weighting) {
-                        echo "<td>" . $weighting . "</td>";
-                    }?>
-                </tr>
-                <tr>
-                    <th width="100px">Marks</th>
-                    <?php foreach ($table->getMarks() as $weighting) {
+                    <th width="100px">Weightings</th>
+                    <?php foreach ($table->getWeightings() as $weighting) {
                         echo "<td>" . $weighting . "</td>";
                     }?>
                 </tr>
