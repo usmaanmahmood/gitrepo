@@ -51,7 +51,7 @@
                 </button>
             </div>
             <div id="result">
-
+lol
             </div><!-- result -->
         </div>
     </div>
