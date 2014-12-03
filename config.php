@@ -13,7 +13,7 @@ if (!isset($_SESSION['profileResult'])) {
 
     $arcadeProfile = $arcadeClient->execute($query);
     $_SESSION['profileResult'] = serialize($arcadeProfile); // save into session
+} else
     $arcadeProfile = unserialize($_SESSION['profileResult']);
-}
 
 ?>
