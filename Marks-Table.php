@@ -47,7 +47,7 @@
                         foreach ($moduleList as $option) { ?>
                             <option value="<?php echo $option ?>"><?php echo $option ?></option>
                         <?php } ?>
-                    </select>
+                    </select><br />
                 </div>
                 <div class="col-md-12">
                     <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..."
