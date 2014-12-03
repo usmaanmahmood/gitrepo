@@ -38,7 +38,7 @@ class ARCADEClient
 
         $databaseList = $inQuery->getDatabases();
         // getListType for the four types always returns at bare minimum an empty array
-        if ($inQuery->getCommand() != 'profile' && (implode(' ', $inQuery->getDatabases()) == ' ' || implode(' ', $inQuery->getDatabases()) == ''))
+        if ($inQuery->getCommand() != 'profile' && (implode(' ', $databaseList) == ' ' || implode(' ', $databaseList) == ''))
         {
             $databaseList = $arcadeProfile->getDatabaseList();
         }
