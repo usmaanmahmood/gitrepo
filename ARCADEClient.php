@@ -36,17 +36,21 @@ class ARCADEClient
         socket_write($socket, $this->arcadeUsername . "\n");
         socket_write($socket, $this->arcadePassword . "\n");
 
+        $databaseList = $inQuery->getDatabases();
         // getListType for the four types always returns at bare minimum an empty array
         // we just need to make it fail if the database is empty
         if ($inQuery->getCommand() != 'profile' && (implode(' ', $inQuery->getDatabases()) == ' ' || implode(' ', $inQuery->getDatabases()) == ''))
         {
-            socket_shutdown($socket, 2); // 2 = shutdown reading and writing
-            socket_close($socket);
-            return 'ARCADE client error: No Databases sent through';
+            $databaseList = $arcadeProfile->getDatabaseList();
+//            socket_shutdown($socket, 2); // 2 = shutdown reading and writing
+//            socket_close($socket);
+//            return 'ARCADE client error: No Databases sent through';
         }
 
+
+
         $queryString = $inQuery->getCommand() . "\n"
-            . implode(' ', $inQuery->getDatabases()) . "\n"
+            . implode(' ', $databaseList) . "\n"
             . implode(' ', $inQuery->getGroups()) . "\n"
             . implode(' ', $inQuery->getStudents()) . "\n"
             . implode(' ', $inQuery->getModules()) . "\n";
