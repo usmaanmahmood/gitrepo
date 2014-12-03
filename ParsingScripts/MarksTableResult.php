@@ -148,7 +148,7 @@ class MarksTableTable {
                 $this->marksTable[$i][5] = "";
 
             if ($this->marksTable[$i][4] != "" && $this->marksTable[$i][5] != "") {
-                $percScore = number_format((float)(((float)$percMark / (float)$percWeight) * 100), 1, '.', '') . "%";
+                $percScore = number_format((float)(((float)$percWeight) * ((float)$percMark / 100)), 1, '.', '') . "%";
                 $this->marksTable[$i][6] = $percScore;
             }
             else
