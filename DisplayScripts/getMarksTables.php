@@ -50,7 +50,7 @@ $result = $arcadeClient->execute($query);
                     }?>
                 </tr>
                 <tr>
-                    <th width="100px">&percnt; of Exercise</th>
+                    <th width="100px">&percnt; Scored of Exercise</th>
                     <?php
                     foreach ($table->getPercMark() as $percentage) {
                         echo "<td>" . $percentage . "</td>";
@@ -63,7 +63,7 @@ $result = $arcadeClient->execute($query);
                     }?>
                 </tr>
                 <tr>
-                    <th width="100px">&percnt; Value of Module</th>
+                    <th width="100px">&percnt; Total of Module</th>
                     <?php foreach ($table->getPercWeight() as $percentage) {
                         echo "<td>" . $percentage . "</td>";
                     }?>
