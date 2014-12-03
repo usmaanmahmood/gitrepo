@@ -72,7 +72,7 @@
             $resultsDiv.fadeOut('slow');
 
             $.ajax({
-                url: 'getMarksTables.php',
+                url: 'ParsingScripts/getMarksTables.php',
                 data: {
                     "modules": $modules
                 },
