@@ -143,6 +143,11 @@ class MarksTableTable {
             else
                 $this->marksTable[$i][5] = "";
 
+            if ($this->marksTable[$i][4] != "" && $this->marksTable[$i][5] != "")
+                $this->marksTable[$i][6] = number_format((float)(((float)$this->marksTable[$i][4] / (float)$this->marksTable[$i][5]) * 100), 1, '.', '') . "%";
+            else
+                $this->marksTable[$i][6] = "";
+
             $i++;
         }
     }
@@ -161,6 +166,15 @@ class MarksTableTable {
         foreach($this->marksTable as $marksObject)
         {
             array_push($array, $marksObject[5]);
+        }
+        return $array;
+    }
+
+    public function getScoreOfModule() {
+        $array = [];
+        foreach($this->marksTable as $marksObject)
+        {
+            array_push($array, $marksObject[6]);
         }
         return $array;
     }

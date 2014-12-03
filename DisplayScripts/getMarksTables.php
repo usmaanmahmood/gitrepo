@@ -63,8 +63,14 @@ $result = $arcadeClient->execute($query);
                     }?>
                 </tr>
                 <tr>
-                    <th width="100px">&percnt; of Module</th>
+                    <th width="100px">&percnt; Value of Module</th>
                     <?php foreach ($table->getPercWeight() as $percentage) {
+                        echo "<td>" . $percentage . "</td>";
+                    }?>
+                </tr>
+                <tr>
+                    <th width="100px">&percnt; Scored of Module</th>
+                    <?php foreach ($table->getPercScore() as $percentage) {
                         echo "<td>" . $percentage . "</td>";
                     }?>
                 </tr>
