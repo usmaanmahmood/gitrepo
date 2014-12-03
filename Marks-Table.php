@@ -41,7 +41,10 @@
                         <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button>
                     </p>
                     <select multiple class="form-control" size=10 id="ModuleList">
-                        <?php foreach (array_unique($arcadeProfile->getModuleList()) as $option) { ?>
+                        <?php $moduleList = array_unique($arcadeProfile->getModuleList());
+                            asort($moduleList);
+
+                        foreach ($moduleList as $option) { ?>
                             <option value="<?php echo $option ?>"><?php echo $option ?></option>
                         <?php } ?>
                     </select>
