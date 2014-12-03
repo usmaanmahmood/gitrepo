@@ -40,10 +40,12 @@ class ARCADEClient
         // getListType for the four types always returns at bare minimum an empty array
         if ($inQuery->getCommand() != 'profile' && (implode(' ', $databaseList) == ' ' || implode(' ', $databaseList) == ''))
         {
-            if (!isset($_SESSION['profileResult'])) {
+            if (isset($_SESSION['profileResult'])) {
                 $arcadeProfile = unserialize($_SESSION['profileResult']);
                 $databaseList = $arcadeProfile->getDatabaseList();
             }
+            else
+                return "Error: No databases passed through, and profile isn't set!";
         }
 
         $queryString = $inQuery->getCommand() . "\n"
