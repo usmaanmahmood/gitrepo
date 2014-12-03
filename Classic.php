@@ -140,7 +140,8 @@ $(document).ready(function () {
                 "databases": $databases,
                 "groups": $groups,
                 "students": $students,
-                "modules": $modules
+                "modules": $modules,
+                "plainResult": true
             },
             type: 'get',
             success: function (result) {
