@@ -11,13 +11,13 @@ $database_name = 'mmapxum2';
 $mysqli = new mysqli($database_host, $database_user, $database_pass, $database_name);
 
 // Check for errors before doing anything else
-if($mysqli -> connect_error) {
-    die('Connect Error ('.$mysqli -> connect_errno.') '.$mysqli -> connect_error);
+if($mysqli->connect_error) {
+    die('Connect Error ('.$mysqli -> connect_errno.') '.$mysqli->connect_error);
 }
 
 // username and password sent from form 
-$username=$_POST['username'];
-$password=$_POST['password'];
+$username = $_POST['username'];
+$password = $_POST['password'];
 
 // To protect MySQL injection
 $username = stripslashes($username);
@@ -31,17 +31,17 @@ $result=$mysqli->query($sql);
 $num_rows = $result->num_rows;
 
 // If result matched $username and $password, table row must be 1 row
-if($num_rows==1){
+if($num_rows == 1){
     session_start();
     // Register $myusername, $mypassword and redirect to file "customer_area.php"
     $_SESSION["username"] = $username;
     $_SESSION["arcadepassword"] = $result->fetch_assoc()['ArcadePassword'];
-    $result -> close();
-    $mysqli -> close();
+    $result->close();
+    $mysqli->close();
     header("location:Classic.php");
 }
 else {
-    $mysqli -> close();
+    $mysqli->close();
     header("location:Login.php?message=1");
 }
 ?>
