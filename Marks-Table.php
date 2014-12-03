@@ -77,7 +77,7 @@
                 },
                 type: 'get',
                 success: function (result) {
-                    $('#results').html(result);
+                    $resultsDiv.html(result);
                     alert(result);
 //                    $resultsDiv.fadeIn('slow');
                     $submitbutton.button('reset');
