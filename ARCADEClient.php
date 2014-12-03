@@ -36,7 +36,7 @@ class ARCADEClient
         socket_write($socket, $this->arcadeUsername . "\n");
         socket_write($socket, $this->arcadePassword . "\n");
 
-        $databaseList = [];
+        $databaseList = $inQuery->getDatabases();
         // getListType for the four types always returns at bare minimum an empty array
         if ($inQuery->getCommand() != 'profile' && (implode(' ', $inQuery->getDatabases()) == ' ' || implode(' ', $inQuery->getDatabases()) == ''))
         {
