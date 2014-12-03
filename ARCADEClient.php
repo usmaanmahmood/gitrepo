@@ -40,7 +40,10 @@ class ARCADEClient
         // getListType for the four types always returns at bare minimum an empty array
         if ($inQuery->getCommand() != 'profile' && (implode(' ', $databaseList) == ' ' || implode(' ', $databaseList) == ''))
         {
-            $databaseList = $arcadeProfile->getDatabaseList();
+            if (!isset($_SESSION['profileResult'])) {
+                $arcadeProfile = unserialize($_SESSION['profileResult']);
+                $databaseList = $arcadeProfile->getDatabaseList();
+            }
         }
 
         $queryString = $inQuery->getCommand() . "\n"
