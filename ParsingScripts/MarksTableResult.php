@@ -159,7 +159,7 @@ class MarksTableTable {
         }
         $totalPercScore = 0;
         foreach($this->marksTable[6] as $percScored)
-            $totalPercScore += $percScored;
+            $totalPercScore += $percScored != "" ? 0 : $percScored;
 
         $this->marksTable[6][$arrayLength-2] = $totalPercScore;
     }
