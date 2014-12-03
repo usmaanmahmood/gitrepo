@@ -68,7 +68,7 @@ lol
 
             var $submitbutton = $('#submit').button('loading');
 
-            var $resultsDiv = $('#results');
+            var $resultsDiv = $('#result');
             $resultsDiv.fadeOut('slow');
 
             $.ajax({
