@@ -56,5 +56,3 @@ $result = $arcadeClient->execute($query);
     <?php
     }
 }?>
-
-<!--echo $result;-->
