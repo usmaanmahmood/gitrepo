@@ -156,6 +156,8 @@ class MarksTableTable {
 
             $i++;
         }
+
+        $this->marksTable[6][$arrayLength-2] = array_sum(marksTable[6]);
     }
 
     public function getPercMark() {
