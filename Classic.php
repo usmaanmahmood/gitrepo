@@ -141,7 +141,7 @@ $(document).ready(function () {
                 "groups": $groups,
                 "students": $students,
                 "modules": $modules,
-                "plainResult": true
+                "plainResult": 1
             },
             type: 'get',
             success: function (result) {
