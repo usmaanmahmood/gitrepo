@@ -126,8 +126,8 @@ class MarksTableTable {
         while ($i < $arrayLength)
         {
             $this->marksTable[$i] = array($this->weightings[$i], $this->denominators[$i], $this->emailNames[$i], $this->marks[$i]);
-            $cleanMark = preg_replace("/[^0-9]+/", "", $this->marks[$i]);
-            $cleanDen = preg_replace("/[^0-9]+/", "", $this->denominators[$i]);
+            $cleanMark = (float)preg_replace("/[^0-9]+/", "", $this->marks[$i]);
+            $cleanDen = (float)preg_replace("/[^0-9]+/", "", $this->denominators[$i]);
 
             // add percentage
             if ($cleanMark != "" && $cleanDen != "")
