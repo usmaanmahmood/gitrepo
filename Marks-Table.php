@@ -37,8 +37,8 @@
         <div class="col-lg-12">
             <div class="col-md-3">
                 <div class="col-md-12">
-                    <h2>Modules &nbsp; | &nbsp;
-                        <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button>
+                    <h2>Modules
+                        <button type="button" class="btn btn-default btn-xs reset-filters btn-block">Reset</button>
                     </h2>
                     <select multiple class="form-control" size=10 id="ModuleList">
                         <?php $moduleList = array_unique($arcadeProfile->getModuleList());
