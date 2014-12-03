@@ -37,9 +37,9 @@
         <div class="col-lg-12">
             <div class="col-md-3">
                 <div class="col-md-12">
-                    <h2 class="text-center">Modules<Br />
+                    <span class="text-center">Modules
                         <button type="button" class="btn btn-default btn-xs reset-filters btn-block">Reset</button>
-                    </h2>
+                    </span>
                     <select multiple class="form-control" size=20 id="ModuleList">
                         <?php $moduleList = array_unique($arcadeProfile->getModuleList());
                             asort($moduleList);
@@ -47,7 +47,7 @@
                         foreach ($moduleList as $option) { ?>
                             <option value="<?php echo $option ?>"><?php echo $option ?></option>
                         <?php } ?>
-                    </select><br />
+                    </select>
                 </div>
                 <div class="col-md-12">
                     <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..."
