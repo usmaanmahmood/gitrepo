@@ -132,7 +132,7 @@ class MarksTableTable {
             if ($cleanMark != "" & $cleanDen != "")
                 $this->marksTable[$i][4] = number_format((float)($cleanMark / $cleanDen) * 100, 1, '.', '') . "%";
             else
-                $this->marksTable[$i][4] = "N/A";
+                $this->marksTable[$i][4] = "";
 
             $i++;
         }
