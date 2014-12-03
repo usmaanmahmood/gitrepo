@@ -156,8 +156,11 @@ class MarksTableTable {
 
             $i++;
         }
+        $totalPercScore = 0;
+        foreach($this->marksTable[6] as $percScored)
+            $totalPercScore += $percScored;
 
-        $this->marksTable[6][$arrayLength-2] = array_sum($this->marksTable[6]);
+        $this->marksTable[6][$arrayLength-2] = $totalPercScore;
     }
 
     public function getPercMark() {
