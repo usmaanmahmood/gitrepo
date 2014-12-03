@@ -51,7 +51,6 @@
                 </button>
             </div>
             <div id="result">
-lol
             </div><!-- result -->
         </div>
     </div>
@@ -69,7 +68,7 @@ lol
             var $submitbutton = $('#submit').button('loading');
 
             var $resultsDiv = $('#result');
-            $resultsDiv.fadeOut('slow');
+//            $resultsDiv.fadeOut('slow');
 
             $.ajax({
                 url: 'DisplayScripts/getMarksTables.php',
@@ -80,7 +79,7 @@ lol
                 success: function (result) {
                     $('#results').html(result);
                     alert(result);
-                    $resultsDiv.fadeIn('slow');
+//                    $resultsDiv.fadeIn('slow');
                     $submitbutton.button('reset');
                 }
             });
