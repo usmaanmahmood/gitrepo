@@ -127,10 +127,10 @@ class MarksTableTable {
         {
             $this->marksTable[$i] = array($this->weightings[$i], $this->denominators[$i], $this->emailNames[$i], $this->marks[$i]);
             $cleanMark = preg_replace("/[^0-9]./", "", $this->marks[$i]);
-            $cleanDen = preg_replace("/[^0-9]./", "", $this->denominators[$i]) ;
+            $cleanDen = preg_replace("/[^0-9]./", "", $this->denominators[$i]);
 
             // add percentage
-            if ($cleanMark != "" & $cleanDen != "")
+            if ($cleanMark != "" || $cleanDen != "")
                 $this->marksTable[$i][4] = number_format((float)(($cleanMark / $cleanDen) * 100), 1, '.', '') . "%";
             else
                 $this->marksTable[$i][4] = "";
