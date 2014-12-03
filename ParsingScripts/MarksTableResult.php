@@ -128,14 +128,18 @@ class MarksTableTable {
             $this->marksTable[$i] = array($this->weightings[$i], $this->denominators[$i], $this->emailNames[$i], $this->marks[$i]);
             $cleanMark = preg_replace("/[^0-9.]+/", "", $this->marks[$i]);
             $cleanDen = preg_replace("/[^0-9.]+/", "", $this->denominators[$i]);
-
             // add percentage
             if ($cleanMark != "" && $cleanDen != "")
                 $this->marksTable[$i][4] = number_format((float)(((float)$cleanMark / (float)$cleanDen) * 100), 1, '.', '') . "%";
             else
                 $this->marksTable[$i][4] = "";
 
-            // add exercise value of entire
+            // add exercise value percentage of entire result
+            // arraylength-2 always stores total
+
+            $cleanWeighting = preg_replace("/[^0-9.]+/", "", $this->weightings[$i]);
+            if ($cleanWeighting != "")
+                $this->marksTable[$i][5] = number_format((float)(((float)$this->weightings[$i] / (float)$this->weightings[$arrayLength-2]) * 100), 1, '.', '') . "%";
 
             $i++;
         }
