@@ -79,4 +79,3 @@ $result = $arcadeClient->execute($query);
         }
     }
 }?>
-<?php var_dump($result);?>
