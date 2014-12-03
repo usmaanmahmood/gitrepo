@@ -46,8 +46,8 @@ $result = $arcadeClient->execute($query);
                 <tr>
                     <th width="100px">Percentage</th>
                     <?php
-                    foreach ($table->getDenominators() as $weighting) {
-                        echo "<td>" . $weighting . "</td>";
+                    foreach ($table->getPercentages() as $percentage) {
+                        echo "<td>" . $percentage . "</td>";
                     }?>
                 </tr>
                 <tr>
