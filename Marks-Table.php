@@ -35,7 +35,7 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <div class="col-md-3">
+            <div class="col-md-3" style="height:300px;">
                 <div class="col-md-12">
                     <h2 class="text-center">Modules
                         <button type="button" class="btn btn-default btn-xs reset-filters btn-block">Reset</button>
