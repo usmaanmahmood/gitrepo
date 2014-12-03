@@ -9,7 +9,7 @@
 include("config.php");
 
 $arcadeClient = new ARCADEClient();
-$query = new Query($_GET["command"], 1); // command, plainTextWanted
+$query = new Query($_GET["command"], $_GET["plainResult"]); // command, plainTextWanted
 
 // if none selected then it is empty. if it is, send the array through
 if (!empty($_GET["databases"])) $query->addDatabases($_GET["databases"]);

@@ -1,5 +1,5 @@
 <?php include "template-head.php" ?>
-<title>ARCADE</title>
+<title>Classic | ARCADE</title>
 <style>
     body {
         padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */

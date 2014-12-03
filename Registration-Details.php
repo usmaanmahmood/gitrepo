@@ -19,13 +19,7 @@
 
     $databaseList = $result->getDatabaseList();
 
-    /*
-        for each database
-            display db name
-            display number of matching students
-            for each student
-                display details
-        */
+    // TODO: Only autoload the latest and have a load more... button that loads the rest
 
 
     ?>
