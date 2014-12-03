@@ -35,7 +35,7 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <p>Modules &nbsp; | &nbsp;
                     <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button>
                 </p>
@@ -45,12 +45,12 @@
                     <?php } ?>
                 </select>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..."
                         id="submit">Execute Query
                 </button>
             </div>
-            <div id="result">
+            <div id="result" class="col-md-6">
             </div><!-- result -->
         </div>
     </div>
