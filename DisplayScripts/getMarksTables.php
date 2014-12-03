@@ -50,9 +50,9 @@ $result = $arcadeClient->execute($query);
                     }?>
                 </tr>
                 <tr>
-                    <th width="100px">Percentage</th>
+                    <th width="100px">&percnt; of Exercise</th>
                     <?php
-                    foreach ($table->getPercentages() as $percentage) {
+                    foreach ($table->getPercMark() as $percentage) {
                         echo "<td>" . $percentage . "</td>";
                     }?>
                 </tr>
@@ -60,6 +60,12 @@ $result = $arcadeClient->execute($query);
                     <th width="100px">Weightings</th>
                     <?php foreach ($table->getWeightings() as $weighting) {
                         echo "<td>" . $weighting . "</td>";
+                    }?>
+                </tr>
+                <tr>
+                    <th width="100px">&percnt; of Module</th>
+                    <?php foreach ($table->getPercWeight() as $percentage) {
+                        echo "<td>" . $percentage . "</td>";
                     }?>
                 </tr>
             </table>

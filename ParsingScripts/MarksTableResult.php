@@ -145,11 +145,20 @@ class MarksTableTable {
         }
     }
 
-    public function getPercentages() {
+    public function getPercMark() {
         $array = [];
         foreach($this->marksTable as $marksObject)
         {
             array_push($array, $marksObject[4]);
+        }
+        return $array;
+    }
+
+    public function getPercWeight() {
+        $array = [];
+        foreach($this->marksTable as $marksObject)
+        {
+            array_push($array, $marksObject[5]);
         }
         return $array;
     }
