@@ -127,7 +127,7 @@ class MarksTableTable {
         {
             $this->marksTable[$i] = array($this->weightings[$i], $this->denominators[$i], $this->emailNames[$i], $this->marks[$i]);
             $cleanMark = preg_replace("/[^0-9]/", "", $this->marks[$i]);
-            $cleanDen = preg_replace("/[^0-9]/", "", $this->denominators[$i]);
+            $cleanDen = preg_replace("/[^0-9]/", "", $this->denominators[$i]) ;
 
             if ($cleanMark != "" & $cleanDen != "")
                 $this->marksTable[$i][4] = $cleanMark / $cleanDen;
@@ -139,7 +139,12 @@ class MarksTableTable {
     }
 
     public function getPercentages() {
-        return $this->marksTables[4];
+        $array = [];
+        foreach($this->marksTable as $marksObject)
+        {
+            array_push($array, $marksObject[4]);
+        }
+        return $array;
     }
 
     public function getDenominators()
