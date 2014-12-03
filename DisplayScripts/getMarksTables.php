@@ -32,44 +32,44 @@ $result = $arcadeClient->execute($query);
             ?>
             <table class="table table-striped table-hover table-bordered table-condensed">
                 <tr>
-                    <th width="100px">Names</th>
+                    <th width="150px">Names</th>
                     <?php foreach ($table->getEmailNames() as $weighting) {
                         echo "<th>" . $weighting . "</th>";
                     }?>
                 </tr>
                 <tr>
-                    <th width="100px">Marks</th>
+                    <th width="150px">Marks</th>
                     <?php foreach ($table->getMarks() as $weighting) {
                         echo "<td>" . $weighting . "</td>";
                     }?>
                 </tr>
                 <tr>
-                    <th width="100px">Denominators</th>
+                    <th width="150px">Denominators</th>
                     <?php foreach ($table->getDenominators() as $weighting) {
                         echo "<td>" . $weighting . "</td>";
                     }?>
                 </tr>
                 <tr>
-                    <th width="100px">&percnt; Scored of Exercise</th>
+                    <th width="150px">&percnt; Scored of Exercise</th>
                     <?php
                     foreach ($table->getPercMark() as $percentage) {
                         echo "<td>" . $percentage . "</td>";
                     }?>
                 </tr>
                 <tr>
-                    <th width="100px">Weightings</th>
+                    <th width="150px">Weightings</th>
                     <?php foreach ($table->getWeightings() as $weighting) {
                         echo "<td>" . $weighting . "</td>";
                     }?>
                 </tr>
                 <tr>
-                    <th width="100px">&percnt; Total of Module</th>
+                    <th width="150px">&percnt; Total of Module</th>
                     <?php foreach ($table->getPercWeight() as $percentage) {
                         echo "<td>" . $percentage . "</td>";
                     }?>
                 </tr>
                 <tr>
-                    <th width="100px">&percnt; Scored of Module</th>
+                    <th width="150px">&percnt; Scored of Module</th>
                     <?php foreach ($table->getPercScore() as $percentage) {
                         echo "<td>" . $percentage . "</td>";
                     }?>
