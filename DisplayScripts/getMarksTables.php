@@ -27,7 +27,7 @@ $result = $arcadeClient->execute($query);
     if (!empty($database->getTableList())) {
         echo "<h1>Database: " . $database->getDatabaseParsedName() . "</h1>";
         foreach ($database->getTableList() as $table) {
-            echo "<h2>Table: " . $table->getName() . "</h2>";
+            echo "<h3>Table: " . $table->getName() . "</h3>";
 
             ?>
             <table class="table table-striped table-hover table-bordered table-condensed">
