@@ -67,8 +67,8 @@
 
             var $submitbutton = $('#submit').button('loading');
 
-            var $resultsDiv = $('#result');
-//            $resultsDiv.fadeOut('slow');
+            var $resultDiv = $('#result');
+            $resultDiv.fadeOut('slow');
 
             $.ajax({
                 url: 'DisplayScripts/getMarksTables.php',
@@ -77,9 +77,9 @@
                 },
                 type: 'get',
                 success: function (result) {
-                    $resultsDiv.html(result);
+                    $resultDiv.html(result);
                     alert(result);
-//                    $resultsDiv.fadeIn('slow');
+                    $resultDiv.fadeIn('slow');
                     $submitbutton.button('reset');
                 }
             });
