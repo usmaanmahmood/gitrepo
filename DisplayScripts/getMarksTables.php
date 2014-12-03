@@ -70,7 +70,7 @@ $result = $arcadeClient->execute($query);
                 </tr>
                 <tr>
                     <th width="100px">&percnt; Scored of Module</th>
-                    <?php foreach ($table->getScoreOfModule() as $percentage) {
+                    <?php foreach ($table->getPercScore() as $percentage) {
                         echo "<td>" . $percentage . "</td>";
                     }?>
                 </tr>

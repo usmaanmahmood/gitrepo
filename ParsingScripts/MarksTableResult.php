@@ -170,7 +170,7 @@ class MarksTableTable {
         return $array;
     }
 
-    public function getScoreOfModule() {
+    public function getPercScore() {
         $array = [];
         foreach($this->marksTable as $marksObject)
         {
