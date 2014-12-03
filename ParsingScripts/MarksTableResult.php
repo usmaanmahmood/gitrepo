@@ -130,7 +130,7 @@ class MarksTableTable {
             $cleanDen = preg_replace("/[^0-9]/", "", $this->denominators[$i]) ;
 
             if ($cleanMark != "" & $cleanDen != "")
-                $this->marksTable[$i][4] = $cleanMark / $cleanDen;
+                $this->marksTable[$i][4] = number_format((float)($cleanMark / $cleanDen) * 100, 2, '.', ''); 
             else
                 $this->marksTable[$i][4] = "N/A";
 
