@@ -11,21 +11,21 @@
 
 <?php include("template-nav.php");
 
-$arcadeClient = new ARCADEClient();
-$query = new Query("marks-table: all", 0); // command, plainTextWanted
-
-$query->addDatabases(array("11-12-1", "11-12-1X"));
-$query->addModules(array("162L"));
-$result = $arcadeClient->execute($query);
-
-
-function objectToArray($object)
-{
-    if (!is_object($object) && !is_array($object))
-        return $object;
-
-    return array_map('objectToArray', (array)$object);
-}
+//$arcadeClient = new ARCADEClient();
+//$query = new Query("marks-table: all", 0); // command, plainTextWanted
+//
+//$query->addDatabases(array("11-12-1", "11-12-1X"));
+//$query->addModules(array("162L"));
+//$result = $arcadeClient->execute($query);
+//
+//
+//function objectToArray($object)
+//{
+//    if (!is_object($object) && !is_array($object))
+//        return $object;
+//
+//    return array_map('objectToArray', (array)$object);
+//}
 
 //    $result = objectToArray($result);
 ?>
@@ -35,7 +35,7 @@ function objectToArray($object)
 
     <div class="row">
         <div class="col-lg-12">
-            <div class="col-md-3">
+            <div class="col-md-6">
                 <p>Modules &nbsp; | &nbsp;
                     <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button>
                 </p>
@@ -44,6 +44,11 @@ function objectToArray($object)
                         <option value="<?php echo $option ?>"><?php echo $option ?></option>
                     <?php } ?>
                 </select>
+            </div>
+            <div class="col-md-6">
+                <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..."
+                        id="submit">Execute Query
+                </button>
             </div>
             <div id="result">
 
@@ -59,53 +64,22 @@ function objectToArray($object)
 <script>
     $(document).ready(function () {
         $("#submit").click(function () {
-//                var $command = $("#CommandList option:selected").text();
-//                var $databases = $("#DatabaseList").val();
-//                var $groups = $("#GroupList").val();
-//                var $students = $("#StudentList").val();
             var $modules = $("#ModuleList").val();
-
-            // validation
-//                if ($command == null || $command == "") {
-//
-//                    if ($('#queryWarning').html() != "") {
-//                        $('#queryWarning').fadeOut('slow');
-//                        $('#queryWarning').fadeIn('slow');
-//                    }
-//                    else
-//                        $('#queryWarning').html("<div class=\"alert alert-danger\" role=\"alert\">Please select a command.</div>");
-//                    return;
-//                }
-//                else
-//                    $('#queryWarning').hide();
-
-            // send through list of databases in the list if none provided
-            if ($databases == null || $databases == "") {
-                $databases = [];
-                var $DatabaseList = $("#DatabaseList");
-                var i;
-                for (i = 0; i < $DatabaseList.get(0).length; i++) {
-                    $databases.push($DatabaseList.get(0).options[i].text);
-                }
-            }
 
             var $submitbutton = $('#submit').button('loading');
 
-            $('#resultspane').fadeOut('slow');
+            var $resultsDiv = $('#results');
+            $resultsDiv.fadeOut('slow');
 
             $.ajax({
-                url: 'runQuery.php',
+                url: 'getMarksTables.php',
                 data: {
-                    "command": $command,
-                    "databases": $databases,
-                    "groups": $groups,
-                    "students": $students,
                     "modules": $modules
                 },
                 type: 'get',
                 success: function (result) {
-                    $('#resultspane').html(result);
-                    $('#resultspane').fadeIn('slow');
+                    $resultsDiv.html(result);
+                    $resultsDiv.fadeIn('slow');
                     $submitbutton.button('reset');
                 }
             });
