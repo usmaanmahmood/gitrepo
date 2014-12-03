@@ -22,39 +22,41 @@ $result = $arcadeClient->execute($query);
 ?>
 
 
-<h1>Marks Table</h1>
+    <h1>Marks Table</h1>
 <?php foreach ($result->getDatabaseList() as $database) {
-    echo "<h1>Database: " . $database->getDatabaseParsedName() . "</h1>";
-    foreach ($database->getTableList() as $table) {
-        echo "<h2>Table: " . $table->getName() . "</h2>";
+    if (!empty($database->getTableList())) {
+        echo "<h1>Database: " . $database->getDatabaseParsedName() . "</h1>";
+        foreach ($database->getTableList() as $table) {
+            echo "<h2>Table: " . $table->getName() . "</h2>";
 
-        ?>
-        <table class="table table-striped table-hover table-bordered table-condensed">
-            <tr>
-                <td><strong>Weightings</strong></td>
-                <?php foreach ($table->getWeightings() as $weighting) {
-                    echo "<td>" . $weighting . "</td>";
-                }?>
-            </tr>
-            <tr>
-                <td><strong>Denominators</strong></td>
-                <?php foreach ($table->getDenominators() as $weighting) {
-                    echo "<td>" . $weighting . "</td>";
-                }?>
-            </tr>
-            <tr>
-                <td><strong>Names</strong></td>
-                <?php foreach ($table->getEmailNames() as $weighting) {
-                    echo "<td>" . $weighting . "</td>";
-                }?>
-            </tr>
-            <tr>
-                <td><strong>Marks</strong></td>
-                <?php foreach ($table->getMarks() as $weighting) {
-                    echo "<td>" . $weighting . "</td>";
-                }?>
-            </tr>
-        </table>
-    <?php
+            ?>
+            <table class="table table-striped table-hover table-bordered table-condensed">
+                <tr>
+                    <td><strong>Weightings</strong></td>
+                    <?php foreach ($table->getWeightings() as $weighting) {
+                        echo "<td>" . $weighting . "</td>";
+                    }?>
+                </tr>
+                <tr>
+                    <td><strong>Denominators</strong></td>
+                    <?php foreach ($table->getDenominators() as $weighting) {
+                        echo "<td>" . $weighting . "</td>";
+                    }?>
+                </tr>
+                <tr>
+                    <td><strong>Names</strong></td>
+                    <?php foreach ($table->getEmailNames() as $weighting) {
+                        echo "<td>" . $weighting . "</td>";
+                    }?>
+                </tr>
+                <tr>
+                    <td><strong>Marks</strong></td>
+                    <?php foreach ($table->getMarks() as $weighting) {
+                        echo "<td>" . $weighting . "</td>";
+                    }?>
+                </tr>
+            </table>
+        <?php
+        }
     }
 }?>
