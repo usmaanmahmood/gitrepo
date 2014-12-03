@@ -32,25 +32,25 @@ $result = $arcadeClient->execute($query);
             ?>
             <table class="table table-striped table-hover table-bordered table-condensed">
                 <tr>
-                    <td><strong>Weightings</strong></td>
+                    <th width="100px">Weightings</th>
                     <?php foreach ($table->getWeightings() as $weighting) {
                         echo "<td>" . $weighting . "</td>";
                     }?>
                 </tr>
                 <tr>
-                    <td><strong>Denominators</strong></td>
+                    <th width="100px">Denominators</th>
                     <?php foreach ($table->getDenominators() as $weighting) {
                         echo "<td>" . $weighting . "</td>";
                     }?>
                 </tr>
                 <tr>
-                    <td><strong>Names</strong></td>
+                    <th width="100px">Names</th>
                     <?php foreach ($table->getEmailNames() as $weighting) {
                         echo "<td>" . $weighting . "</td>";
                     }?>
                 </tr>
                 <tr>
-                    <td><strong>Marks</strong></td>
+                    <th width="100px">Marks</th>
                     <?php foreach ($table->getMarks() as $weighting) {
                         echo "<td>" . $weighting . "</td>";
                     }?>
