@@ -144,7 +144,7 @@ class MarksTableTable {
                 $this->marksTable[$i][5] = "";
 
             if ($this->marksTable[$i][4] != "" && $this->marksTable[$i][5] != "")
-                $this->marksTable[$i][6] = number_format((float)(((float)$this->marksTable[$i][4] / (float)$this->marksTable[$i][5]) * 100), 1, '.', '') . "%";
+                $this->marksTable[$i][6] = number_format((float)(((float)preg_replace("/[^0-9.]+/", "", $this->marksTable[$i][4]) / (float)preg_replace("/[^0-9.]+/", "", $this->marksTable[$i][5])) * 100), 1, '.', '') . "%";
             else
                 $this->marksTable[$i][6] = "";
 
