@@ -122,7 +122,7 @@ class MarksTableTable {
     {
         $this->marksTable = [];
         $arrayLength = count($this->marks);
-        var $i = 0;
+        $i = 0;
         while ($i < $arrayLength)
         {
             $this->marksTable[$i] = array($this->weightings, $this->denominators, $this->emailNames, $this->marks);
