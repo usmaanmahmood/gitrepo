@@ -37,7 +37,7 @@
         <div class="col-lg-12">
             <div class="col-md-3">
                 <div class="col-md-12">
-                    <span class="text-center" style="font-size:24px;">Modules
+                    <span class="text-center" style="font-size:30px;">Modules
                         <button type="button" class="btn btn-default btn-xs reset-filters btn-block">Reset</button>
                     </span>
                     <select multiple class="form-control" size=20 id="ModuleList">
