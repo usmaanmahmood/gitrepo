@@ -81,6 +81,7 @@ class ARCADEClient
                 return "ARCADE client error: No Query sent through";
                 break;
         }
+
         // let the parsing begin!
         return $this->parser->parse($resultString);
     }
