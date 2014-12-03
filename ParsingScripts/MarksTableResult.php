@@ -111,9 +111,23 @@ class MarksTableTable {
     private $denominators; // array
     private $emailNames; // array
     private $marks; // array
+    private $marksTable; // 2d array
 
     public function __construct()
     {
+        $this->marks = [];
+    }
+
+    public function buildMarksTable()
+    {
+        $this->marksTable = [];
+        $arrayLength = count($this->marks);
+        var $i = 0;
+        while ($i < $arrayLength)
+        {
+            $this->marksTable[$i] = array($this->weightings, $this->denominators, $this->emailNames, $this->marks);
+            $i++;
+        }
     }
 
     public function getDenominators()
