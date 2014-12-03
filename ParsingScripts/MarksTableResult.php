@@ -140,6 +140,8 @@ class MarksTableTable {
             $cleanWeighting = preg_replace("/[^0-9.]+/", "", $this->weightings[$i]);
             if ($cleanWeighting != "")
                 $this->marksTable[$i][5] = number_format((float)(((float)$this->weightings[$i] / (float)$this->weightings[$arrayLength-2]) * 100), 1, '.', '') . "%";
+            else
+                $this->marksTable[$i][5] = "";
 
             $i++;
         }
