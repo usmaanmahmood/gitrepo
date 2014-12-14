@@ -89,19 +89,6 @@
                     $submitbutton.button('reset');
                 });
 
-//            $.ajax({
-//                url: 'DisplayScripts/getMarksTables.php',
-//                data: {
-//                    "modules": $modules
-//                },
-//                type: 'get',
-//                success: function (result) {
-//                    $resultDiv.html(result);
-//                    $resultDiv.fadeIn('slow');
-//                    $submitbutton.button('reset');
-//
-//                }
-//            });
         });
 
     }) // document ready
