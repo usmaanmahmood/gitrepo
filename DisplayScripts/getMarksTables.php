@@ -44,26 +44,16 @@ $result = $arcadeClient->execute($query);
                     $denominators = $table->getDenominators();
 
                     foreach ($weightings as $key => $weighting) {
-                        echo "<td>" . $weighting . "/" . $denominators[$key] . "</td>";
+                        $markString = "<td>" . $weighting;
+                        if (is_numeric($denominators[$key]))
+                            $markString = $markString . "/" . $denominators[$key];
+                        $markString = $markString . "</td>";
+                        echo $markString;
                     }
 
 
                     ?>
-
                 </tr>
-
-<!--                <tr>-->
-<!--                    <th width="150px">Marks</th>-->
-<!--                    --><?php //foreach ($table->getMarks() as $weighting) {
-//                        echo "<td>" . $weighting . "</td>";
-//                    }?>
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <th width="150px">Denominators</th>-->
-<!--                    --><?php //foreach ($table->getDenominators() as $weighting) {
-//                        echo "<td>" . $weighting . "</td>";
-//                    }?>
-<!--                </tr>-->
                 <tr>
                     <th width="150px">&percnt; Scored of Exercise</th>
                     <?php
