@@ -86,6 +86,7 @@
                 .fail(function (xhr, status, error) {
                     var err = eval("(" + xhr.responseText + ")");
                     $resultDiv.html(err.Message);
+                    alert(err,Message);
                     $resultDiv.fadeIn('slow');
                     $submitbutton.button('reset');
                 });
