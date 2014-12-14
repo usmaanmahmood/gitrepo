@@ -86,7 +86,8 @@
                 success: function (result) {
                     $resultDiv.html(result);
                     $resultDiv.fadeIn('slow');
-                    $submitbutton.button('reset');$('[data-toggle="tooltip"]').tooltip();
+                    $submitbutton.button('reset');
+                    $('[data-toggle="tooltip"]').tooltip();
 
                 }
             });
