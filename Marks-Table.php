@@ -58,7 +58,6 @@
 
             <div id="result" class="col-md-9">
             </div><!-- result -->
-            <div id="chart_div" style="width:400; height:300"></div>
         </div>
     </div>
 </div>
@@ -95,52 +94,6 @@
 
     }) // document ready
 
-</script>
-
-<!--Load the AJAX API-->
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript">
-
-    // Load the Visualization API and the piechart package.
-    google.load('visualization', '1.0', {'packages':['corechart']});
-
-    // Set a callback to run when the Google Visualization API is loaded.
-    google.setOnLoadCallback(drawChart);
-
-    // Callback that creates and populates a data table,
-    // instantiates the pie chart, passes in the data and
-    // draws it.
-    function drawChart() {
-
-        // Create the data table.
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Deadline');
-        data.addColumn('number', 'Percentage');
-        data.addRows([
-            ['1.1D', 75],
-            ['1.2D', 60],
-            ['2D', 100],
-            ['3D', 95],
-            ['4D', 80]
-        ]);
-
-        // Set chart options
-        var options = {
-            width: 1000,
-            height: 563,
-            hAxis: {
-                title: 'Percentage'
-
-            },
-            vAxis: {
-                title: 'Deadline',
-                minValue: 0
-            }};
-
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-    }
 </script>
 
 </body>
