@@ -46,7 +46,7 @@ $result = $arcadeClient->execute($query);
                     foreach ($weightings as $key => $weighting) {
                         $markString = "<td>" . $weighting;
                         if (is_numeric($denominators[$key]))
-                            $markString = $markString . "/" . $denominators[$key];
+                            $markString = $markString . "/" . $denominators[$key]; // ignores last two cols
                         $markString = $markString . "</td>";
                         echo $markString;
                     }
