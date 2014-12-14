@@ -55,16 +55,7 @@ $result = $arcadeClient->execute($query);
                         $markString = $markString . "</td>";
                         echo $markString;
                     }
-
-
                     ?>
-                </tr>
-                <tr>
-                    <th width="150px">&percnt; Scored of Exercise</th>
-                    <?php
-                    foreach ($table->getPercMark() as $percentage) {
-                        echo "<td>" . $percentage . "</td>";
-                    }?>
                 </tr>
                 <tr>
                     <th width="150px">Weightings</th>
