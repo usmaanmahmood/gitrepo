@@ -83,8 +83,9 @@
                     $resultDiv.fadeIn('slow');
                     $submitbutton.button('reset');
                 })
-                .fail(function (data) {
-                    $resultDiv.html(data);
+                .fail(function (xhr, status, error) {
+                    var err = eval("(" + xhr.responseText + ")");
+                    $resultDiv.html(err.Message);
                     $resultDiv.fadeIn('slow');
                     $submitbutton.button('reset');
                 });
