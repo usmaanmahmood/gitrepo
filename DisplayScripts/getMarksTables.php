@@ -43,7 +43,7 @@ $result = $arcadeClient->execute($query);
                     $weightings = $table->getMarks();
                     $denominators = $table->getDenominators();
 
-                    foreach ($weightings as $key -> $weighting) {
+                    foreach ($weightings as $key => $weighting) {
                         echo "<td>" . $weighting . "" . "</td>";
                     }
 
