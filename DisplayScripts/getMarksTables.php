@@ -96,9 +96,8 @@ $result = $arcadeClient->execute($query);
 
                 foreach ($weightings as $key => $weighting) {
                     echo "<tr>";
-
-
-                    echo "<td>" . $names[$key] . "</td>";
+                    ////////////////////////////////////
+                    echo "<th>" . $names[$key] . "</th>";
                     ////////////////////////////////////
                     $markString = "<td>" . $weighting;
                     if (is_numeric($denominators[$key]))
