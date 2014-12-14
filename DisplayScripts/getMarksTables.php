@@ -37,20 +37,20 @@ $result = $arcadeClient->execute($query);
                         echo "<th>" . $weighting . "</th>";
                     }?>
                 </tr>
-            <tr>
-                <th width="150px">Marks</th>
-                <?php
-                $weightings = $table->getMarks();
-                $denominators = $table->getDenominators();
+                <tr>
+                    <th width="150px">Marks</th>
+                    <?php
+                    $weightings = $table->getMarks();
+                    $denominators = $table->getDenominators();
 
-                foreach ($weightings as $weighting) {
-                    echo "<td>" . $weighting . "" . "</td>";
-                }
+                    foreach ($weightings as $weighting) {
+                        echo "<td>" . $weighting . "" . "</td>";
+                    }
 
 
-                ?>
+                    ?>
 
-            </tr>
+                </tr>
 
 <!--                <tr>-->
 <!--                    <th width="150px">Marks</th>-->
