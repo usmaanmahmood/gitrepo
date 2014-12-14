@@ -77,19 +77,31 @@
             var $resultDiv = $('#result');
             $resultDiv.fadeOut('slow');
 
-            $.ajax({
-                url: 'DisplayScripts/getMarksTables.php',
-                data: {
-                    "modules": $modules
-                },
-                type: 'get',
-                success: function (result) {
+            $.get("DisplayScripts/getMarksTables.php", { "modules": $modules } )
+                .done(function (result) {
                     $resultDiv.html(result);
                     $resultDiv.fadeIn('slow');
                     $submitbutton.button('reset');
+                })
+                .fail(function () {
+                    $resultDiv.html("error");
+                    $resultDiv.fadeIn('slow');
+                    $submitbutton.button('reset');
+                });
 
-                }
-            });
+//            $.ajax({
+//                url: 'DisplayScripts/getMarksTables.php',
+//                data: {
+//                    "modules": $modules
+//                },
+//                type: 'get',
+//                success: function (result) {
+//                    $resultDiv.html(result);
+//                    $resultDiv.fadeIn('slow');
+//                    $submitbutton.button('reset');
+//
+//                }
+//            });
         });
 
     }) // document ready
