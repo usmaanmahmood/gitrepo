@@ -86,6 +86,9 @@
                 .error(function (xhr, status, error) {
 //                    var err = eval(xhr);
                     console.log(xhr);
+                    console.log(status);
+                    console.log(error);
+
 //                    $resultDiv.html(err.Message);
 //                    alert(err,Message);
                     $resultDiv.fadeIn('slow');
