@@ -116,13 +116,12 @@
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Deadline');
         data.addColumn('number', 'Percentage');
-
         data.addRows([
-            ['1.1D', 3],
-            ['1.2D', 1],
-            ['2D', 1],
-            ['3D', 1],
-            ['4D', 2]
+            ['1.1D', 75],
+            ['1.2D', 60],
+            ['2D', 100],
+            ['3D', 95],
+            ['4D', 80]
         ]);
 
         // Set chart options
