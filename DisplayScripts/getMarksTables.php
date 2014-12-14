@@ -37,18 +37,35 @@ $result = $arcadeClient->execute($query);
                         echo "<th>" . $weighting . "</th>";
                     }?>
                 </tr>
-                <tr>
-                    <th width="150px">Marks</th>
-                    <?php foreach ($table->getMarks() as $weighting) {
-                        echo "<td>" . $weighting . "</td>";
+            <tr>
+                <th width="150px">Marks</th>
+                <td><?php
+                    $weightings = $table->getMarks();
+                    $denominators = $table->getDenominators();
+
+                    foreach ($weightings as $key -> $weighting) {
+                        echo "<td>" . $weighting . "/" . $denominators[$key] . "</td>";
+                    }
+
+
+                    ?>
+
+
+                </td>
+            </tr>
+
+<!--                <tr>-->
+<!--                    <th width="150px">Marks</th>-->
+<!--                    --><?php //foreach ($table->getMarks() as $weighting) {
+//                        echo "<td>" . $weighting . "</td>";
                     }?>
-                </tr>
-                <tr>
-                    <th width="150px">Denominators</th>
-                    <?php foreach ($table->getDenominators() as $weighting) {
-                        echo "<td>" . $weighting . "</td>";
-                    }?>
-                </tr>
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <th width="150px">Denominators</th>-->
+<!--                    --><?php //foreach ($table->getDenominators() as $weighting) {
+//                        echo "<td>" . $weighting . "</td>";
+//                    }?>
+<!--                </tr>-->
                 <tr>
                     <th width="150px">&percnt; Scored of Exercise</th>
                     <?php
