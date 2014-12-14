@@ -83,12 +83,17 @@
                     "modules": $modules
                 },
                 type: 'get',
-                success: function (result) {
+                done: function (result) {
                     $resultDiv.html(result);
                     $resultDiv.fadeIn('slow');
                     $submitbutton.button('reset');
-                    $('[data-toggle="tooltip"]').tooltip();
 
+                },
+                fail: function ()
+                {
+                    $resultDiv.html(result);
+                    $resultDiv.fadeIn('slow');
+                    $submitbutton.button('reset');
                 }
             });
         });
