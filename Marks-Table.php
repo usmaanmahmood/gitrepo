@@ -129,7 +129,8 @@
             width: 1000,
             height: 563,
             hAxis: {
-                title: 'Percentage'
+                title: 'Percentage',
+                minValue: 0
             },
             vAxis: {
                 title: 'Deadline'
