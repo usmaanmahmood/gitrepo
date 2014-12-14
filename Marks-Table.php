@@ -129,11 +129,12 @@
             width: 1000,
             height: 563,
             hAxis: {
-                title: 'Percentage',
-                minValue: 0
+                title: 'Percentage'
+
             },
             vAxis: {
-                title: 'Deadline'
+                title: 'Deadline',
+                minValue: 0
             }};
 
         // Instantiate and draw our chart, passing in some options.
