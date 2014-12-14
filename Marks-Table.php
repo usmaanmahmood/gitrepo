@@ -125,12 +125,18 @@
         ]);
 
         // Set chart options
-        var options = {'title':'How Much Pizza I Ate Last Night',
-            'width':400,
-            'height':300};
+        var options = {
+            width: 1000,
+            height: 563,
+            hAxis: {
+                title: 'Time'
+            },
+            vAxis: {
+                title: 'Popularity'
+            }};
 
         // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.Table(document.getElementById('chart_div'));
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
         chart.draw(data, options);
     }
 </script>
