@@ -64,7 +64,7 @@ $result = $arcadeClient->execute($query);
                     }?>
                 </tr>
                 <tr>
-                    <th width="150px"><span data-toggle="tooltip" data-placement="left" title="" data-original-title="This deadlines total percentage of the coursework of this module.">Deadline &percnt; of Module</span></th>
+                    <th width="150px"><a data-toggle="tooltip" data-placement="left" title="" data-original-title="This deadlines total percentage of the coursework of this module.">Deadline &percnt; of Module</a></th>
                     <?php foreach ($table->getPercWeight() as $percentage) {
                         echo "<td>" . $percentage . "</td>";
                     }?>
