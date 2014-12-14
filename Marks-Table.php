@@ -84,12 +84,7 @@
                     $submitbutton.button('reset');
                 })
                 .error(function (xhr, status, error) {
-//                    var err = eval(xhr);
-                    console.log(xhr);
-                    console.log(status);
-                    console.log(error);
-
-                    $resultDiv.html("jQuery error: " + xhr.status + xhr.statusText);
+                    $resultDiv.html("<h1>error: " + xhr.status + " " xhr.statusText + "</h1><p>Please try again. If the problem is recurring, email the admin</p>");
                     $resultDiv.fadeIn('slow');
                     $submitbutton.button('reset');
                 });
