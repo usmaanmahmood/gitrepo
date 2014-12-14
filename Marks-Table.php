@@ -83,7 +83,7 @@
                     "modules": $modules
                 },
                 type: 'get',
-                done: function (result) {
+                success: function (result) {
                     $resultDiv.html(result);
                     $resultDiv.fadeIn('slow');
                     $submitbutton.button('reset');
