@@ -58,7 +58,7 @@ $result = $arcadeClient->execute($query);
 <!--                    <th width="150px">Marks</th>-->
 <!--                    --><?php //foreach ($table->getMarks() as $weighting) {
 //                        echo "<td>" . $weighting . "</td>";
-                    }?>
+//                    }?>
 <!--                </tr>-->
 <!--                <tr>-->
 <!--                    <th width="150px">Denominators</th>-->
