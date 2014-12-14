@@ -67,7 +67,7 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script>
     $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip();
+
 
         $("#submit").click(function () {
             var $modules = $("#ModuleList").val();
@@ -86,7 +86,8 @@
                 success: function (result) {
                     $resultDiv.html(result);
                     $resultDiv.fadeIn('slow');
-                    $submitbutton.button('reset');
+                    $submitbutton.button('reset');$('[data-toggle="tooltip"]').tooltip();
+
                 }
             });
         });
