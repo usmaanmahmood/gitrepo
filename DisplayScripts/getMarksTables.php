@@ -76,50 +76,50 @@ $result = $arcadeClient->execute($query);
                     }?>
                 </tr>
             </table>
-<!--new table-->
-            <table class="table table-striped table-hover table-bordered table-condensed">
-                <tr>
-                    <th>Name</th>
-                    <th>Mark</th>
-                    <th>Weightings</th>
-                    <th>Deadline &percnt; of Coursework</th>
-                    <th>Your &percnt; of Coursework</th>
-                </tr>
-                <?php
-                $names = $table->getEmailNames();
-                $weightings = $table->getMarks();
-                $denominators = $table->getDenominators();
-                $percentageMarks = $table->getPercMark();
-                $percentageWeights = $table->getPercWeight();
-                $percentageScores = $table->getPercScore();
-
-
-                foreach ($weightings as $key => $weighting) {
-                    echo "<tr>";
-                    ////////////////////////////////////
-                    echo "<th>" . $names[$key] . "</th>";
-                    ////////////////////////////////////
-                    $markString = "<td>" . $weighting;
-                    if (is_numeric($denominators[$key]))
-                        $markString = $markString . "/" . $denominators[$key]; // ignores last two cols
-
-                    if (!empty($percentages[$key]))
-                        $markString = $markString . " | " . $percentages[$key];
-
-                    $markString = $markString . "</td>";
-                    echo $markString;
-                    ////////////////////////////////////
-                    echo "<td>" . $percentageMarks[$key] . "</td>";
-                    ////////////////////////////////////
-                    echo "<td>" . $percentageWeights[$key] . "</td>";
-                    ////////////////////////////////////
-                    echo "<td>" . $percentageScores[$key] . "</td>";
-                    ////////////////////////////////////
-                    echo "</tr>";
-                }
-                ?>
-
-            </table>
+<!-----------------------------------------------new table----------------------------------------------->
+<!--            <table class="table table-striped table-hover table-bordered table-condensed">-->
+<!--                <tr>-->
+<!--                    <th>Name</th>-->
+<!--                    <th>Mark</th>-->
+<!--                    <th>Weightings</th>-->
+<!--                    <th>Deadline &percnt; of Coursework</th>-->
+<!--                    <th>Your &percnt; of Coursework</th>-->
+<!--                </tr>-->
+<!--                --><?php
+//                $names = $table->getEmailNames();
+//                $weightings = $table->getMarks();
+//                $denominators = $table->getDenominators();
+//                $percentageMarks = $table->getPercMark();
+//                $percentageWeights = $table->getPercWeight();
+//                $percentageScores = $table->getPercScore();
+//
+//
+//                foreach ($weightings as $key => $weighting) {
+//                    echo "<tr>";
+                    //////////////////////////////////
+//                    echo "<th>" . $names[$key] . "</th>";
+                    //////////////////////////////////
+//                    $markString = "<td>" . $weighting;
+//                    if (is_numeric($denominators[$key]))
+//                        $markString = $markString . "/" . $denominators[$key]; // ignores last two cols
+//
+//                    if (!empty($percentages[$key]))
+//                        $markString = $markString . " | " . $percentages[$key];
+//
+//                    $markString = $markString . "</td>";
+//                    echo $markString;
+                    //////////////////////////////////
+//                    echo "<td>" . $percentageMarks[$key] . "</td>";
+                    //////////////////////////////////
+//                    echo "<td>" . $percentageWeights[$key] . "</td>";
+                    //////////////////////////////////
+//                    echo "<td>" . $percentageScores[$key] . "</td>";
+                    //////////////////////////////////
+//                    echo "</tr>";
+//                }
+//                ?>
+<!---->
+<!--            </table>-->
         <?php
         }
     }
