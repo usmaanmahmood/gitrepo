@@ -64,7 +64,7 @@ $result = $arcadeClient->execute($query);
                     }?>
                 </tr>
                 <tr>
-                    <th width="150px">&percnt; Total of Module</th>
+                    <th width="150px">Deadline &percnt; of Module</th>
                     <?php foreach ($table->getPercWeight() as $percentage) {
                         echo "<td>" . $percentage . "</td>";
                     }?>
