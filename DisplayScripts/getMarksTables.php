@@ -44,7 +44,7 @@ $result = $arcadeClient->execute($query);
                     $denominators = $table->getDenominators();
 
                     foreach ($weightings as $key -> $weighting) {
-                        echo "<td>" . $weighting . "/" . $denominators[$key] . "</td>";
+                        echo "<td>" . $weighting . "" . $denominators[$key-1] . "</td>";
                     }
 
 
