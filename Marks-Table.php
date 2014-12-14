@@ -117,11 +117,11 @@
         data.addColumn('number', 'percentage');
         data.addColumn('string', 'Deadline');
         data.addRows([
-            ['Mushrooms', 3],
-            ['Onions', 1],
-            ['Olives', 1],
-            ['Zucchini', 1],
-            ['Pepperoni', 2]
+            ['1.1D', 3],
+            ['1.2D', 1],
+            ['2D', 1],
+            ['3D', 1],
+            ['4D', 2]
         ]);
 
         // Set chart options
