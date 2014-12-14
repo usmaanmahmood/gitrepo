@@ -64,13 +64,13 @@ $result = $arcadeClient->execute($query);
                     }?>
                 </tr>
                 <tr>
-                    <th width="150px" data-toggle="tooltip" data-placement="left" title="" data-original-title="This deadlines total percentage of the coursework of this module.">Deadline &percnt; of Module</th>
+                    <th width="150px"><span data-toggle="tooltip" data-placement="left" title="" data-original-title="This deadlines total percentage of the coursework of this module.">Deadline &percnt; of Module</span></th>
                     <?php foreach ($table->getPercWeight() as $percentage) {
                         echo "<td>" . $percentage . "</td>";
                     }?>
                 </tr>
                 <tr>
-                    <th width="150px"data-toggle="tooltip" data-placement="left" title="" data-original-title="Your score as a percentage of the coursework of this module.">&percnt; Scored of Module</th>
+                    <th width="150px"><span data-toggle="tooltip" data-placement="left" title="" data-original-title="Your score as a percentage of the coursework of this module.">&percnt; Scored of Module</span></th>
                     <?php foreach ($table->getPercScore() as $percentage) {
                         echo "<td>" . $percentage . "</td>";
                     }?>
