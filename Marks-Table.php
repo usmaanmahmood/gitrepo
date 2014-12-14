@@ -83,8 +83,8 @@
                     $resultDiv.fadeIn('slow');
                     $submitbutton.button('reset');
                 })
-                .fail(function (xhr, status, error) {
-                    var err = eval("(" + xhr.responseText + ")");
+                .error(function (xhr, status, error) {
+                    var err = eval(xhr.responseText);
                     $resultDiv.html(err.Message);
                     alert(err,Message);
                     $resultDiv.fadeIn('slow');
