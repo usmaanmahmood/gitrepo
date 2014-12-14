@@ -91,7 +91,7 @@
                 },
                 fail: function ()
                 {
-                    $resultDiv.html(result);
+                    $resultDiv.html("error");
                     $resultDiv.fadeIn('slow');
                     $submitbutton.button('reset');
                 }
