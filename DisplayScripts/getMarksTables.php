@@ -49,6 +49,7 @@ $result = $arcadeClient->execute($query);
                         if (is_numeric($denominators[$key]))
                             $markString = $markString . "/" . $denominators[$key]; // ignores last two cols
 
+                        if (is_numeric($percentages[$key]))
                         $markString = $markString . " | " . $percentages[$key];
 
                         $markString = $markString . "</td>";
