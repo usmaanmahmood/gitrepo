@@ -32,7 +32,7 @@ $result = $arcadeClient->execute($query);
             ?>
             <table class="table table-striped table-hover table-bordered table-condensed">
                 <tr>
-                    <th width="150px">Names</th>
+                    <th width="150px"></th>
                     <?php foreach ($table->getEmailNames() as $weighting) {
                         echo "<th>" . $weighting . "</th>";
                     }?>
