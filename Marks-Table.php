@@ -55,9 +55,10 @@
                     </button>
                 </div>
             </div>
-            <div id="chart_div" style="width:400; height:300"></div>
+
             <div id="result" class="col-md-9">
             </div><!-- result -->
+            <div id="chart_div" style="width:400; height:300"></div>
         </div>
     </div>
 </div>
