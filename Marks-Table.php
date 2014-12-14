@@ -114,7 +114,7 @@
 
         // Create the data table.
         var data = new google.visualization.DataTable();
-        data.addColumn('number', 'percentage');
+        data.addColumn('number', 'Percentage');
         data.addColumn('string', 'Deadline');
         data.addRows([
             ['1.1D', 3],
