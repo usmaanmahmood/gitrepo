@@ -89,8 +89,7 @@
                     console.log(status);
                     console.log(error);
 
-//                    $resultDiv.html(err.Message);
-//                    alert(err,Message);
+                    $resultDiv.html("jQuery error: " + xhr.status + xhr.statusText);
                     $resultDiv.fadeIn('slow');
                     $submitbutton.button('reset');
                 });
