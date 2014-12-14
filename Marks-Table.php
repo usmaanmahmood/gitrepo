@@ -114,8 +114,9 @@
 
         // Create the data table.
         var data = new google.visualization.DataTable();
-        data.addColumn('number', 'Percentage');
         data.addColumn('string', 'Deadline');
+        data.addColumn('number', 'Percentage');
+
         data.addRows([
             ['1.1D', 3],
             ['1.2D', 1],
@@ -129,10 +130,10 @@
             width: 1000,
             height: 563,
             hAxis: {
-                title: 'Time'
+                title: 'Percentage'
             },
             vAxis: {
-                title: 'Popularity'
+                title: 'Deadline'
             }};
 
         // Instantiate and draw our chart, passing in some options.
