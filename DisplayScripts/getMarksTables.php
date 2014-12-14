@@ -42,11 +42,15 @@ $result = $arcadeClient->execute($query);
                     <?php
                     $weightings = $table->getMarks();
                     $denominators = $table->getDenominators();
+                    $percentages = $table->getPercMark();
 
                     foreach ($weightings as $key => $weighting) {
                         $markString = "<td>" . $weighting;
                         if (is_numeric($denominators[$key]))
                             $markString = $markString . "/" . $denominators[$key]; // ignores last two cols
+
+                        $markString = $markString . " | " . $percentages[$key];
+
                         $markString = $markString . "</td>";
                         echo $markString;
                     }
