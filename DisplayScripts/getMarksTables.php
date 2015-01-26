@@ -43,6 +43,7 @@ $result = $arcadeClient->execute($query);
                     $weightings = $table->getMarks();
                     $denominators = $table->getDenominators();
                     $percentages = $table->getPercMark();
+                    $percWeight = $table->getPercWeight();
 
                     foreach ($weightings as $key => $weighting) {
                         $markString = "<td>" . $weighting;
@@ -60,7 +61,6 @@ $result = $arcadeClient->execute($query);
                 <tr>
                     <th width="150px">Weightings</th>
                     <?php foreach ($table->getWeightings() as $key => $weighting) {
-                        $percWeight = $table->getPercWeight();
                         echo "<td>" . $weighting . " | " . $percWeight[$key] . "</td>";
                     }?>
                 </tr>
