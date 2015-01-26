@@ -150,7 +150,7 @@ class MarksTableTable {
             // add percentage scored of total mark
             if ($this->marksTable[$i][4] != "" && $this->marksTable[$i][5] != "") {
                 $percScore = number_format((float)(((float)$percWeight) * ((float)$percMark / 100)), 1, '.', '');
-                $this->marksTable[$i][6] = $percScore . "%";
+                $this->marksTable[$i][6] = $percScore . "% / " . $this->marksTable[$i][5];
             }
             else
                 $this->marksTable[$i][6] = "";
