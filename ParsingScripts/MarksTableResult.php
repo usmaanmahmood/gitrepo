@@ -142,7 +142,7 @@ class MarksTableTable {
             $cleanWeighting = preg_replace("/[^0-9.]+/", "", $this->weightings[$i]);
             if ($cleanWeighting != "") {
                 $percWeight = number_format((float)(((float)$this->weightings[$i] / (float)$this->weightings[$arrayLength - 2]) * 100), 1, '.', '');
-                $this->marksTable[$i][5] = $percWeight . "%";
+                $this->marksTable[$i][5] = $this->marksTable[$i][4] . " | " . $percWeight . "%" ;
             }
             else
                 $this->marksTable[$i][5] = "";
