@@ -98,7 +98,7 @@ class MarksTableParser // extends Parser
         $rawDbName = $matches[1];
         $database->setDatabaseName($rawDbName);
         preg_match("/(\d+)-(\d+)-(\d)(.*)/", $rawDbName, $rawDbNameMatches);
-        $database->setDatabaseParsedName("Year: 20".$rawDbNameMatches[1]."/20".$rawDbNameMatches[2]." - Semester ".$rawDbNameMatches[3]." - ".($rawDbNameMatches[4] == "X" ? ("Overall") : "Coursework Only"));
+        $database->setDatabaseParsedName("20".$rawDbNameMatches[1]."/20".$rawDbNameMatches[2]." - Semester ".$rawDbNameMatches[3]." - ".($rawDbNameMatches[4] == "X" ? ("Overall") : "Coursework Only"));
 
         // http://regex101.com/r/oE6jJ1/34#pcre
         // split up the tables
