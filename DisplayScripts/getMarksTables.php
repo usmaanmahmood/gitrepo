@@ -25,7 +25,7 @@ $result = $arcadeClient->execute($query);
     <h1>Marks Table</h1>
 <?php foreach ($result->getDatabaseList() as $database) {
     if (!empty($database->getTableList())) {
-        echo "<h2>Database: " . $database->getDatabaseParsedName() . "</h2>";
+        echo "<h3>Database: " . $database->getDatabaseParsedName() . "</h3>";
         foreach ($database->getTableList() as $table) {
             echo "<h3>Table: " . $table->getName() . "</h3>";
 
@@ -71,7 +71,7 @@ $result = $arcadeClient->execute($query);
 //                    }?>
 <!--                </tr>-->
                 <tr>
-                    <th width="150px">Your &percnt; of Coursework</th>
+                    <th width="150px">&percnt; of Coursework</th>
                     <?php foreach ($table->getPercScore() as $percentage) {
                         echo "<td>" . $percentage . "</td>";
                     }?>
