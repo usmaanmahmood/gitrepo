@@ -82,6 +82,9 @@ class ARCADEClient
             case "marks-table: all":
                 $this->parser = new MarksTableParser();
                 break;
+            case "irregularities":
+                $this->parser = new IrregularitiesParser();
+                break;
             case "":
                 return "ARCADE client error: No Query sent through";
                 break;

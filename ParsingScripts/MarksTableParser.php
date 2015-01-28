@@ -102,6 +102,8 @@ class MarksTableParser // extends Parser
 
         // http://regex101.com/r/oE6jJ1/34#pcre
         // split up the tables
+        // change this this to fix to add scaling factor
+        // Table\s([^:]+):\n\S*\s([\s\S]*?)\n[\s\S]*?
         preg_match_all("/Table\s+([^:]+)[\s\S]*?Weighting\s+\|([\s\S]*?)\n-+\s+Denominator\s+\|([\s\S]*?)\n-+\s+Email Name\s+\|([\s\S]*?)\n=+[\s\S]+?\|([ \S]+)\n/", $inString, $matches);
         array_shift($matches); // remove the first match which is the entire table
 
