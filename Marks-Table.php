@@ -55,10 +55,19 @@
                     </button>
                 </div>
             </div>
-
             <div id="result" class="col-md-9">
             </div><!-- result -->
         </div>
+    </div>
+
+
+    <div class="row">
+        <?php $databaseList = $arcadeProfile->getDatabaseList();
+            foreach ($databaseList as $database)
+        {
+
+        ?>
+        <div class="checkbox"><label><input type="checkbox"><?=$database?></label></div>
     </div>
 </div>
 <!-- /.container -->
