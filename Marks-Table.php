@@ -114,8 +114,8 @@
             // $this will contain a reference to the checkbox
             if ($this.is(':checked')) {
                 alert("checked");// the checkbox was checked
-                var $thisDB = $this[0].id;
-                var $matchedModules = $("." + $thisDB);
+                var $thisDB = "." + $this[0].id;
+                var $matchedModules = $($thisDB);
                 console.log($matchedModules);
 //                $matchedModules.show();
 
