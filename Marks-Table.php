@@ -121,9 +121,11 @@
         $("#DatabaseList").change(function() {
 //            alert( "Handler for .change() called." );
             var optionSelected = $("option:selected", this);
+            console.log(this.value);
             var valueSelected = this.value;
             alert(valueSelected);
-//  $("option[data-db="")
+
+            $("option[data-db="")
         });
 
 //
