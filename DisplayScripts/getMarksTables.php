@@ -28,7 +28,7 @@ $result = $arcadeClient->execute($query);
         echo "<h3>Database: " . $database->getDatabaseParsedName() . "</h3>";
         foreach ($database->getTableList() as $table) {
             echo "<h3>Table: " . $table->getName() . "</h3>";
-
+            echo "<p>" . $table->getScalingFactor() . "</p>";
             ?>
             <table class="table table-striped table-hover table-bordered table-condensed">
                 <tr>
