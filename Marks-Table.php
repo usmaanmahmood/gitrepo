@@ -61,16 +61,16 @@
                         if ($matched) {
                             switch ($matches[2]) {
                                 case "L":
-                                    $matches[2] = " Laboratory";
+                                    $matches[2] = " Labs";
                                     break;
                                 case "C":
                                     $matches[2] = " Coursework";
                                     break;
                                 case "E":
-                                    $matches[2] = " Examples-Class";
+                                    $matches[2] = " Examples-Classes";
                                     break;
                                 case "W":
-                                    $matches[2] = " Workshop";
+                                    $matches[2] = " Workshops";
                                     break;
                                 }
                         };
