@@ -27,7 +27,7 @@
 <!--                <li class="divider"></li>-->
 <!--                <li><a href="#">attendance-summary</a></li>-->
 <!--                <li class="divider"></li>-->
-                <li><a href="Marks-Table.php">marks-table: all</a></li>
+                <li><a href="Marks-Table.php">Marks Table</a></li>
 <!--                <li><a href="#">marks-table: fails only</a></li>-->
 <!--                <li><a href="#">marks-table: ignore empty columns</a></li>-->
 <!--                <li class="divider"></li>-->
