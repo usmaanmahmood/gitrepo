@@ -75,6 +75,7 @@
                         </select>
                     </div>
                     <div class="col-md-12">
+                        <br />
                         <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..."
                                 id="submit">Execute Query
                         </button>
