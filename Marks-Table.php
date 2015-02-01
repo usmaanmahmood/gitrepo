@@ -36,7 +36,7 @@
     <div class="row">
         <div class="col-md-3">
 
-                <button type="button" class="btn btn-default btn-block dat-reset-filters">Databases Reset</button>
+                <button type="button" class="btn btn-default btn-block dat-reset-filters">Reset Databases</button>
 
             <select class="form-control" size=8 id="DatabaseList">
                 <?php foreach (array_unique($arcadeProfile->getDatabaseList()) as $option) { ?>
@@ -47,7 +47,7 @@
                 <?php } ?>
             </select>
             <br />
-                <button type="button" class="btn btn-default btn-block mod-reset-filters">Modules Reset</button>
+                <button type="button" class="btn btn-default btn-block mod-reset-filters">Reset Modules</button>
 
 
             <select multiple class="form-control" size=10 id="ModuleList">
