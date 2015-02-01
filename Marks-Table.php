@@ -50,16 +50,18 @@
                 <button type="button" class="btn btn-default btn-block mod-reset-filters">Reset Modules</button>
 
 
-            <select multiple class="form-control" size=10 id="ModuleList">
+            <select multiple class="form-control" size=15 id="ModuleList">
                 <?php $twoDArray = $arcadeProfile->getTwoDimensionalArray();
                 foreach ($twoDArray as $filter) {
                     ?>
                     <option value="<?php echo $filter[4] ?>" data-db="<?= $filter[0] ?>">
                         <?php
-                        //                        preg_match("/(\d+)-(\d+)-(\d)(.*)/", $filter[4], $matches);
+                        preg_match("/(\d{5})(\S)/", $option, $matches);
 
+                        if ($matches[2] == 'L')
+                            $matches[2] = "Labs");
 
-                        echo $filter[4];
+                        echo $matches[1] . $matches[2];
 
                         ?></option>
                 <?php } ?>
