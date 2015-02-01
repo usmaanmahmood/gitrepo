@@ -104,7 +104,7 @@ class MarksTableParser // extends Parser
         // split up the tables
         // change this this to fix to add scaling factor
         // Table\s([^:]+):\n\S*\s([\s\S]*?)\n[\s\S]*?
-        preg_match_all("/Table\s+([^:]+)[\s\S]*?Weighting\s+\|([\s\S]*?)\n-+\s+Denominator\s+\|([\s\S]*?)\n-+\s+Email Name\s+\|([\s\S]*?)\n=+[\s\S]+?\|([ \S]+)\n/", $inString, $matches);
+        preg_match_all("/Table\s([^:]+):\n\S*\s([\s\S]*?)\n[\s\S]*?Weighting\s+\|([\s\S]*?)\n-+\s+Denominator\s+\|([\s\S]*?)\n-+\s+Email Name\s+\|([\s\S]*?)\n=+[\s\S]+?\|([ \S]+)\n/", $inString, $matches);
         array_shift($matches); // remove the first match which is the entire table
 
         // parse further into perfect form
@@ -119,10 +119,11 @@ class MarksTableParser // extends Parser
         {
             $table = new MarksTableTable();
             $table->setName($matches[0][$i][0]);
-            $table->setWeightings($matches[1][$i]);
-            $table->setDenominators($matches[2][$i]);
-            $table->setEmailNames($matches[3][$i]);
-            $table->setMarks($matches[4][$i]);
+            $table->setScalingFactor($matches[1][$i]);
+            $table->setWeightings($matches[2][$i]);
+            $table->setDenominators($matches[3][$i]);
+            $table->setEmailNames($matches[4][$i]);
+            $table->setMarks($matches[5][$i]);
             $table->buildMarksTable();
             $database->addTable($table);
         }
