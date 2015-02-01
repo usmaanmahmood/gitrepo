@@ -16,7 +16,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="Classic.php">Classic ARCADE</a></li>
-                <li><a href="Registration-Details.php">Registration Details (+Display Picture)</a></li>
+                <li><a href="Registration-Details.php">Registration Details</a></li>
 <!--                        <li><a href="#">registration-details: with lab groups</a></li>-->
 <!--                        <li class="divider"></li>-->
 <!--                        <li><a href="#">display-picture</a></li>-->
