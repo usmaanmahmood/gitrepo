@@ -109,7 +109,7 @@
 <script>
     $(document).ready(function () {
 
-        $(":checkbox").click(function() {
+        $("input:checkbox").click(function() {
             var $this = $(this);
             // $this will contain a reference to the checkbox
             if ($this.is(':checked')) {
