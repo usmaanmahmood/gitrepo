@@ -144,7 +144,7 @@
 
         $(".reset-filters").click(function() {
             alert("lol");
-            $("#DatabaseList option:selected").val("selected");
+            $("#DatabaseList option:selected").removeAttr("selected").selectmenu("refresh");
         });
 
 
