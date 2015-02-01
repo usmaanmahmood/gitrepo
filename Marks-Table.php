@@ -59,7 +59,7 @@
                         preg_match("/(\d{5})(\S)/", $option, $matches);
 
                         if ($matches[2] == 'L')
-                            $matches[2] = "Labs");
+                            $matches[2] = " Labs";
 
                         echo $matches[1] . $matches[2];
 
