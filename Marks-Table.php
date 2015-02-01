@@ -112,6 +112,7 @@
         $(".checkbox").change(function() {
             if(this.checked) {
                 //Do stuff
+                alert("hi");
             }
         });
 
