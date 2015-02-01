@@ -144,7 +144,7 @@
 
         $("reset-filters").click(function() {
             $("#DatabaseList").removeAttr("selected");
-        }
+        };
 
 
 
