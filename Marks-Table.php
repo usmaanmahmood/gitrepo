@@ -68,6 +68,7 @@
 
         ?>
         <div class="checkbox"><label><input type="checkbox"><?=$database?></label></div>
+        <?php } ?>
     </div>
 </div>
 <!-- /.container -->
