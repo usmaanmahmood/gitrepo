@@ -65,7 +65,7 @@
 
     <div class="row">
         <div class="col-md-3">
-            <p>Databases &nbsp; | &nbsp;
+            <p>Databases 
                 <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button>
             </p>
             <select multiple class="form-control" size=10 id="DatabaseList">
