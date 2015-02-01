@@ -70,7 +70,7 @@
         <div class="checkbox"><label><input type="checkbox" id="<?=$database?>">
                 <?php
                 preg_match("/(\d+)-(\d+)-(\d)(.*)/", $database, $matches);
-                $databaseParsedName = ("20".$matches[1]."/20".$matches[2]." - Year ".$matches[3]." - ".($matches[4] == "X" ? ("Overall") : "Coursework Only"));
+                $databaseParsedName = ("Year ".$matches[3]." - ".($matches[4] == "X" ? ("Overall") : "Coursework Only"));
                 echo $databaseParsedName;
                 ?>
             </label></div>
