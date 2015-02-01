@@ -33,80 +33,75 @@
 <!-- Page Content -->
 <div class="container">
 
-<!--    <div class="row">-->
-<!--        <div class="col-lg-12">-->
-<!--            <div class="col-md-3">-->
-<!--                <div class="col-md-12">-->
-<!--                    <span class="text-center" style="font-size:30px;">Modules-->
-<!--                        <button type="button" class="btn btn-default btn-xs reset-filters btn-block">Reset</button>-->
-<!--                    </span>-->
-<!--                    <select multiple class="form-control" size=20 id="ModuleList">-->
-<!--                        --><?php //$moduleList = array_unique($arcadeProfile->getModuleList());
-//                        asort($moduleList);
-//
-//                        foreach ($moduleList as $option) {
-//                            ?>
-<!--                            <option value="--><?php //echo $option ?><!--">--><?php //echo $option ?><!--</option>-->
-<!--                        --><?php //} ?>
-<!--                    </select>-->
-<!--                </div>-->
-<!--                <div class="col-md-12">-->
-<!--                    <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..."-->
-<!--                            id="submit">Execute Query-->
-<!--                    </button>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div id="result" class="col-md-9">-->
-<!--            </div>-->
-<!--             result -->
-<!--        </div>-->
-<!--    </div>-->
+    <!--    <div class="row">-->
+    <!--        <div class="col-lg-12">-->
+    <!--            <div class="col-md-3">-->
+    <!--                <div class="col-md-12">-->
+    <!--                    <span class="text-center" style="font-size:30px;">Modules-->
+    <!--                        <button type="button" class="btn btn-default btn-xs reset-filters btn-block">Reset</button>-->
+    <!--                    </span>-->
+    <!--                    <select multiple class="form-control" size=20 id="ModuleList">-->
+    <!--                        --><?php //$moduleList = array_unique($arcadeProfile->getModuleList());
+    //                        asort($moduleList);
+    //
+    //                        foreach ($moduleList as $option) {
+    //
+    ?>
+    <!--                            <option value="--><?php //echo $option ?><!--">-->
+    <?php //echo $option ?><!--</option>-->
+    <!--                        --><?php //} ?>
+    <!--                    </select>-->
+    <!--                </div>-->
+    <!--                <div class="col-md-12">-->
+    <!--                    <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..."-->
+    <!--                            id="submit">Execute Query-->
+    <!--                    </button>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--            <div id="result" class="col-md-9">-->
+    <!--            </div>-->
+    <!--             result -->
+    <!--        </div>-->
+    <!--    </div>-->
 
 
     <div class="row">
         <div class="col-md-3">
             <p>
-                <button type="button" class="btn btn-default btn-xs reset-filters">Databases Reset</button>
+                <button type="button" class="btn btn-default btn-xs dat-reset-filters">Databases Reset</button>
             </p>
             <select multiple class="form-control" size=10 id="DatabaseList">
                 <?php foreach (array_unique($arcadeProfile->getDatabaseList()) as $option) { ?>
                     <option value="<?php echo $option ?>">
                         <?php preg_match("/(\d+)-(\d+)-(\d)(.*)/", $option, $matches);
-                                                $databaseParsedName = ("Year " . $matches[3] . " - " . ($matches[4] == "X" ? ("Overall") : "Coursework Only"));
-                                                echo $databaseParsedName; ?></option>
+                        $databaseParsedName = ("Year " . $matches[3] . " - " . ($matches[4] == "X" ? ("Overall") : "Coursework Only"));
+                        echo $databaseParsedName; ?></option>
                 <?php } ?>
             </select>
-
-
-<!--            --><?php //$databaseList = $arcadeProfile->getDatabaseList();
-//            foreach ($databaseList as $database) {
-//
-//                ?>
-<!--                <div class="checkbox"><label><input type="checkbox" id="--><?//= $database ?><!--">-->
-<!--                        --><?php
-//                        preg_match("/(\d+)-(\d+)-(\d)(.*)/", $database, $matches);
-//                        $databaseParsedName = ("Year " . $matches[3] . " - " . ($matches[4] == "X" ? ("Overall") : "Coursework Only"));
-//                        echo $databaseParsedName;
-//                        ?>
-<!--                    </label></div>-->
-<!--            --><?php //} ?>
         </div>
 
 
         <div class="col-md-6">
             <p>
-                <button type="button" class="btn btn-default btn-xs reset-filters">Modules Reset</button>
+                <button type="button" class="btn btn-default btn-xs mod-reset-filters">Modules Reset</button>
             </p>
 
             <select multiple class="form-control" size=10 id="ModuleList">
                 <?php $twoDArray = $arcadeProfile->getTwoDimensionalArray();
-                foreach ($twoDArray as $filter) { ?>
-                    <option value="<?php echo $filter[4] ?>" class="<?= $filter[0]?>">
-                        <?php echo $filter[4]; ?></option>
+                foreach ($twoDArray as $filter) {
+                    ?>
+                    <option value="<?php echo $filter[4] ?>" data-db="<?= $filter[0] ?>">
+                        <?php
+                        //                        preg_match("/(\d+)-(\d+)-(\d)(.*)/", $filter[4], $matches);
+
+
+                        echo $filter[4];
+
+                        ?></option>
                 <?php } ?>
             </select>
 
-            </div>
+        </div>
         <div class="col-md-3">
             <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="..."
                     id="submit">GO!
@@ -122,25 +117,20 @@
 <script>
     $(document).ready(function () {
 
-        $("input:checkbox").click(function() {
-            var $this = $(this);
-            // $this will contain a reference to the checkbox
-            if ($this.is(':checked')) {
-                alert("checked");// the checkbox was checked
-                var $thisDB = "." + $this[0].id;
-                var $matchedModules = $($thisDB);
-                console.log($matchedModules);
-//                $matchedModules.show();
 
-            } else {
-                alert("unchecked");// the checkbox was unchecked
-            }
+        $("#DatabaseList").change(function() {
+            alert( "Handler for .change() called." );
         });
 
-        $(".reset-filters").click(function() {
+//        $("option[data-db="")
+
+        $(".dat-reset-filters").click(function () {
             $("#DatabaseList option:selected").removeAttr("selected");
         });
 
+        $(".mod-reset-filters").click(function () {
+            $("#ModuleList option:selected").removeAttr("selected");
+        });
 
 
         $("#submit").click(function () {
