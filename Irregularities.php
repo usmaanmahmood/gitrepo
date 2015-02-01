@@ -54,7 +54,7 @@
                                  role="tabpanel"
                                  aria-labelledby="heading<?= $currentNumber ?>">
                                 <!--                                <div class="panel-body">-->
-                                <?php foreach ($database->$irregularityList() as $irregularity) {
+                                <?php foreach ($database->getIrregularityList() as $irregularity) {
                                     ?>
                                     <table class="table table-striped table-hover">
                                         <tr>
