@@ -65,9 +65,13 @@
 
     <div class="row">
         <div class="col-md-3">
+            <p>Databases &nbsp; | &nbsp;
+                <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button>
+            </p>
             <select multiple class="form-control" size=10 id="DatabaseList">
                 <?php foreach (array_unique($arcadeProfile->getDatabaseList()) as $option) { ?>
-                    <option value="<?php echo $option ?>"><?php preg_match("/(\d+)-(\d+)-(\d)(.*)/", $option, $matches);
+                    <option value="<?php echo $option ?>">
+                        <?php preg_match("/(\d+)-(\d+)-(\d)(.*)/", $option, $matches);
                                                 $databaseParsedName = ("Year " . $matches[3] . " - " . ($matches[4] == "X" ? ("Overall") : "Coursework Only"));
                                                 echo $databaseParsedName; ?></option>
                 <?php } ?>
