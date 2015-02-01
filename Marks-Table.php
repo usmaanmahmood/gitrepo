@@ -142,7 +142,7 @@
             }
         });
 
-        $("reset-filters").click(function() {
+        $(".reset-filters").click(function() {
             $("#DatabaseList").removeAttr("selected");
         };
 
