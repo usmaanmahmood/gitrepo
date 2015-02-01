@@ -116,8 +116,8 @@
                 alert("checked");// the checkbox was checked
                 var $thisDB = $this[0].id;
                 var $matchedModules = $("." + $thisDB);
-
-                $matchedModules.show();
+                alert($matchedModules);
+//                $matchedModules.show();
 
             } else {
                 alert("unchecked");// the checkbox was unchecked
