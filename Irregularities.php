@@ -57,7 +57,7 @@
                                 <table class="table table-striped table-hover">
                                     <tr>
                                         <th>Module:</th>
-                                        <th>Module Group:</th>
+                                        <th>Group:</th>
                                         <th>Date (DD/MM):</th>
                                         <th>Note:</th>
                                     </tr>
