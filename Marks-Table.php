@@ -56,7 +56,7 @@
                     ?>
                     <option value="<?php echo $filter[4] ?>" data-db="<?= $filter[0] ?>">
                         <?php
-                        preg_match("/(\d{5})(\S)/", $option, $matches);
+                        preg_match("/(\d{5})(\S)/",  $filter[4], $matches);
 var_dump($matches);
 //                        if ($matches[2] == 'L')
 //                            $matches[2] = " Labs";
