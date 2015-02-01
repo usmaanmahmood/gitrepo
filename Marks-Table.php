@@ -119,10 +119,12 @@
 
 
         $("#DatabaseList").change(function() {
-            alert( "Handler for .change() called." );
+//            alert( "Handler for .change() called." );
+            console.log($this);
+//            $("option[data-db="")
         });
 
-//        $("option[data-db="")
+//
 
         $(".dat-reset-filters").click(function () {
             $("#DatabaseList option:selected").removeAttr("selected");
