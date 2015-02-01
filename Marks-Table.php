@@ -116,7 +116,7 @@
                 alert("checked");// the checkbox was checked
                 var $thisDB = $this[0].id;
                 var $matchedModules = $("." + $thisDB);
-                alert($matchedModules);
+                console.log($matchedModules);
 //                $matchedModules.show();
 
             } else {
