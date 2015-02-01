@@ -59,12 +59,21 @@
                         $matched = preg_match("/(\d{5})(\S)/",  $filter[4], $matches);
 
                         if ($matched) {
-                            if ($matches[2] == 'L')
-                                $matches[2] = " Labs";
-                        }
-
-
-
+                            switch ($matches[2]) {
+                                case "L":
+                                    $matches[2] = " Laboratory";
+                                    break;
+                                case "C":
+                                    $matches[2] = " Coursework";
+                                    break;
+                                case "E":
+                                    $matches[2] = " Examples-Class";
+                                    break;
+                                case "W":
+                                    $matches[2] = " Workshop";
+                                    break;
+                                }
+                        };
 
                         if ($matched)
                             echo $matches[1] . $matches[2];
