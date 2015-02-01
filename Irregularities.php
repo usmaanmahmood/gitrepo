@@ -54,25 +54,27 @@
                                  role="tabpanel"
                                  aria-labelledby="heading<?= $currentNumber ?>">
                                 <!--                                <div class="panel-body">-->
+                                <table class="table table-striped table-hover">
+                                    <tr>
+                                        <th>Module:</th>
+                                        <th>Module Group:</th>
+                                        <th>Date (DD/MM):</th>
+                                        <th>Note:</th>
+                                    </tr>
                                 <?php foreach ($database->getIrregularityList() as $irregularity) {
                                     ?>
-                                    <table class="table table-striped table-hover">
-                                        <tr>
-                                            <th>Module:</th>
-                                            <th>Module Group:</th>
-                                            <th>Date (DD/MM):</th>
-                                            <th>Note:</th>
-                                        </tr>
+
                                         <tr>
                                             <td><?= $irregularity->getModule(); ?></td>
                                             <td><?= $irregularity->getGroup(); ?></td>
                                             <td><?= $irregularity->getDate(); ?></td>
                                             <td><?= $irregularity->getIrregularity(); ?></td>
                                         </tr>
-                                    </table>
+
                                 <?php
                                 } // foreach $student
                                 ?>
+                                </table>
                                 <!--                                </div>-->
                             </div>
                         </div> <!-- panel panel-default -->
