@@ -120,7 +120,7 @@
 
         $("#DatabaseList").change(function() {
 //            alert( "Handler for .change() called." );
-            console.log($this);
+            console.log(this);
 //            $("option[data-db="")
         });
 
