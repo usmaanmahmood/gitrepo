@@ -46,10 +46,6 @@
                         echo $databaseParsedName; ?></option>
                 <?php } ?>
             </select>
-        </div>
-
-
-        <div class="col-md-6">
             <p>
                 <button type="button" class="btn btn-default btn-xs mod-reset-filters">Modules Reset</button>
             </p>
@@ -69,14 +65,12 @@
                 <?php } ?>
             </select>
 
-        </div>
-        <div class="col-md-3">
             <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="..."
                     id="submit">GO!
             </button>
         </div>
 
-        <div id="result" class="col-md-12">
+        <div id="result" class="col-md-9">
                         </div>
     </div>
 </div>
