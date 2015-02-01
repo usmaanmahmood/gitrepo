@@ -72,6 +72,9 @@
                                 case "W":
                                     $matches[2] = " Workshops";
                                     break;
+                                case "X":
+                                    $matches[2] = " Exams";
+                                    break;
                                 }
                         };
 
