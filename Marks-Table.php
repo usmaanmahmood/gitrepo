@@ -56,7 +56,7 @@
                     ?>
                     <option value="<?php echo $filter[4] ?>" data-db="<?= $filter[0] ?>">
                         <?php
-                        $matched = preg_match("/(\d+)(\S)\n/",  $filter[4], $matches);
+                        $matched = preg_match("/(\d+)(\S)$/",  $filter[4], $matches);
 
                         if ($matched) {
                             switch ($matches[2]) {
