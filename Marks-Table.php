@@ -114,7 +114,7 @@
             // $this will contain a reference to the checkbox
             if ($this.is(':checked')) {
                 alert("checked");// the checkbox was checked
-                console.log($this);
+                console.log($this[0].id);
 //                var $thisDB =
 //                $( "input[name^='news']" )
 
