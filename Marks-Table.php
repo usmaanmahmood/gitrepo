@@ -121,6 +121,7 @@
         $("#ModuleList option").hide();
 
         $("#DatabaseList").change(function() {
+            $("#ModuleList option").hide();
             $("#ModuleList option[data-db=" + this.value + "]").show();
         });
 
