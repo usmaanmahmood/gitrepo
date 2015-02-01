@@ -85,7 +85,7 @@
             foreach ($twoDArray as $filter) {
 
                 ?>
-                <div class="checkbox"><label><input type="checkbox" id="<?= $database ?>" style="visibility:hidden">
+                <div class="checkbox" id="<?= $filter[0] ?>" style="visibility:hidden"><label><input type="checkbox" id="<?= $filter[0] ?>">
                         <?php
 //                        preg_match("/(\d+)-(\d+)-(\d)(.*)/", $database, $matches);
 //                        $databaseParsedName = ("Year " . $matches[3] . " - " . ($matches[4] == "X" ? ("Overall") : "Coursework Only"));
