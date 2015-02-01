@@ -33,34 +33,34 @@
 <!-- Page Content -->
 <div class="container">
 
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="col-md-3">
-                <div class="col-md-12">
-                    <span class="text-center" style="font-size:30px;">Modules
-                        <button type="button" class="btn btn-default btn-xs reset-filters btn-block">Reset</button>
-                    </span>
-                    <select multiple class="form-control" size=20 id="ModuleList">
-                        <?php $moduleList = array_unique($arcadeProfile->getModuleList());
-                        asort($moduleList);
-
-                        foreach ($moduleList as $option) {
-                            ?>
-                            <option value="<?php echo $option ?>"><?php echo $option ?></option>
-                        <?php } ?>
-                    </select>
-                </div>
-                <div class="col-md-12">
-                    <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..."
-                            id="submit">Execute Query
-                    </button>
-                </div>
-            </div>
-            <div id="result" class="col-md-9">
-            </div>
-            <!-- result -->
-        </div>
-    </div>
+<!--    <div class="row">-->
+<!--        <div class="col-lg-12">-->
+<!--            <div class="col-md-3">-->
+<!--                <div class="col-md-12">-->
+<!--                    <span class="text-center" style="font-size:30px;">Modules-->
+<!--                        <button type="button" class="btn btn-default btn-xs reset-filters btn-block">Reset</button>-->
+<!--                    </span>-->
+<!--                    <select multiple class="form-control" size=20 id="ModuleList">-->
+<!--                        --><?php //$moduleList = array_unique($arcadeProfile->getModuleList());
+//                        asort($moduleList);
+//
+//                        foreach ($moduleList as $option) {
+//                            ?>
+<!--                            <option value="--><?php //echo $option ?><!--">--><?php //echo $option ?><!--</option>-->
+<!--                        --><?php //} ?>
+<!--                    </select>-->
+<!--                </div>-->
+<!--                <div class="col-md-12">-->
+<!--                    <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..."-->
+<!--                            id="submit">Execute Query-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div id="result" class="col-md-9">-->
+<!--            </div>-->
+<!--             result -->
+<!--        </div>-->
+<!--    </div>-->
 
 
     <div class="row">
@@ -85,7 +85,7 @@
             foreach ($twoDArray as $filter) {
 
                 ?>
-                <div class="checkbox" id="<?= $filter[0] ?>" style="display:none"><label><input type="checkbox" id="<?= $filter[0] ?>">
+                <div class="checkbox" id="<?= $filter[0] ?>" style="display:none"><label><input type="checkbox" id="<?= $filter[0] ?>" >
                         <?php
 //                        preg_match("/(\d+)-(\d+)-(\d)(.*)/", $database, $matches);
 //                        $databaseParsedName = ("Year " . $matches[3] . " - " . ($matches[4] == "X" ? ("Overall") : "Coursework Only"));
