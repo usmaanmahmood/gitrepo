@@ -31,8 +31,6 @@ $databaseList = $result->getDatabaseList();
     <div class="col-lg-12">
     <h1>Irregularities</h1>
 
-
-
     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 <?php
 

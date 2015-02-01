@@ -77,6 +77,7 @@ $result = $arcadeClient->execute($query);
                     }?>
                 </tr>
             </table>
+            <hr />
 <!-----------------------------------------------new table----------------------------------------------->
 <!--            <table class="table table-striped table-hover table-bordered table-condensed">-->
 <!--                <tr>-->
