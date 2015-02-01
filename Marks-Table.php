@@ -108,7 +108,7 @@
             </button>
         </div>
 
-        <div id="result" class="col-md-12">-->
+        <div id="result" class="col-md-12">
                         </div>
     </div>
 </div>
