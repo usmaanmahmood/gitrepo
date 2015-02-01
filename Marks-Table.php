@@ -143,6 +143,7 @@
         });
 
         $(".reset-filters").click(function() {
+            alert("lol");
             $("#DatabaseList").removeAttr("selected");
         });
 
