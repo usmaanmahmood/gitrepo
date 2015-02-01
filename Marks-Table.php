@@ -65,28 +65,33 @@
 
     <div class="row">
         <div class="col-md-3">
-            <?php $databaseList = $arcadeProfile->getDatabaseList();
-            foreach ($databaseList as $database) {
+            <select multiple class="form-control" size=10 id="DatabaseList">
+                <?php foreach (array_unique($arcadeProfile->getDatabaseList()) as $option) { ?>
+                    <option value="<?php echo $option ?>"><?php preg_match("/(\d+)-(\d+)-(\d)(.*)/", $option, $matches);
+                                                $databaseParsedName = ("Year " . $matches[3] . " - " . ($matches[4] == "X" ? ("Overall") : "Coursework Only"));
+                                                echo $databaseParsedName; ?></option>
+                <?php } ?>
+            </select>
 
-                ?>
-                <div class="checkbox"><label><input type="checkbox" id="<?= $database ?>">
-                        <?php
-                        preg_match("/(\d+)-(\d+)-(\d)(.*)/", $database, $matches);
-                        $databaseParsedName = ("Year " . $matches[3] . " - " . ($matches[4] == "X" ? ("Overall") : "Coursework Only"));
-                        echo $databaseParsedName;
-                        ?>
-                    </label></div>
-            <?php } ?>
+
+<!--            --><?php //$databaseList = $arcadeProfile->getDatabaseList();
+//            foreach ($databaseList as $database) {
+//
+//                ?>
+<!--                <div class="checkbox"><label><input type="checkbox" id="--><?//= $database ?><!--">-->
+<!--                        --><?php
+//                        preg_match("/(\d+)-(\d+)-(\d)(.*)/", $database, $matches);
+//                        $databaseParsedName = ("Year " . $matches[3] . " - " . ($matches[4] == "X" ? ("Overall") : "Coursework Only"));
+//                        echo $databaseParsedName;
+//                        ?>
+<!--                    </label></div>-->
+<!--            --><?php //} ?>
         </div>
 
 
         <div class="col-md-6">
 
-            <select multiple class="form-control" size=10 id="DatabaseList">
-                <?php foreach (array_unique($arcadeProfile->getDatabaseList()) as $option) { ?>
-                    <option value="<?php echo $option ?>"><?php echo $option ?></option>
-                <?php } ?>
-            </select>
+
 
             <?php $twoDArray = $arcadeProfile->getTwoDimensionalArray();
             foreach ($twoDArray as $filter) {
