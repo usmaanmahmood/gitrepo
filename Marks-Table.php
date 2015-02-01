@@ -65,7 +65,7 @@
 
     <div class="row">
         <div class="col-md-3">
-            <p>Databases 
+            <p>Databases
                 <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button>
             </p>
             <select multiple class="form-control" size=10 id="DatabaseList">
@@ -141,6 +141,11 @@
                 alert("unchecked");// the checkbox was unchecked
             }
         });
+
+        $("reset-filters").click(function() {
+            $("#DatabaseList").removeAttr("selected");
+        }
+
 
 
         $("#submit").click(function () {
