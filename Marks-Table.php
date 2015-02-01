@@ -85,7 +85,7 @@
             foreach ($twoDArray as $filter) {
 
                 ?>
-                <div class="checkbox" id="<?= $filter[0] ?>" style="display:none"><label><input type="checkbox" id="<?= $filter[0] ?>" >
+                <div class="checkbox" id="<?= 'DB-' . $filter[0] ?>" style="display:none"><label><input type="checkbox" id="<?= $filter[4] ?>" >
                         <?php
 //                        preg_match("/(\d+)-(\d+)-(\d)(.*)/", $database, $matches);
 //                        $databaseParsedName = ("Year " . $matches[3] . " - " . ($matches[4] == "X" ? ("Overall") : "Coursework Only"));
@@ -114,6 +114,10 @@
             // $this will contain a reference to the checkbox
             if ($this.is(':checked')) {
                 alert("checked");// the checkbox was checked
+                console.log($this);
+//                var $thisDB =
+//                $( "input[name^='news']" )
+
             } else {
                 alert("unchecked");// the checkbox was unchecked
             }
