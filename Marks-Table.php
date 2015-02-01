@@ -42,9 +42,10 @@
                     </span>
                     <select multiple class="form-control" size=20 id="ModuleList">
                         <?php $moduleList = array_unique($arcadeProfile->getModuleList());
-                            asort($moduleList);
+                        asort($moduleList);
 
-                        foreach ($moduleList as $option) { ?>
+                        foreach ($moduleList as $option) {
+                            ?>
                             <option value="<?php echo $option ?>"><?php echo $option ?></option>
                         <?php } ?>
                     </select>
@@ -56,25 +57,35 @@
                 </div>
             </div>
             <div id="result" class="col-md-9">
-            </div><!-- result -->
+            </div>
+            <!-- result -->
         </div>
     </div>
 
 
     <div class="row">
-        <?php $databaseList = $arcadeProfile->getDatabaseList();
-            foreach ($databaseList as $database)
-        {
+        <div class="col-md-3">
+            <?php $databaseList = $arcadeProfile->getDatabaseList();
+            foreach ($databaseList as $database) {
 
-        ?>
-        <div class="checkbox"><label><input type="checkbox" id="<?=$database?>">
-                <?php
-                preg_match("/(\d+)-(\d+)-(\d)(.*)/", $database, $matches);
-                $databaseParsedName = ("Year ".$matches[3]." - ".($matches[4] == "X" ? ("Overall") : "Coursework Only"));
-                echo $databaseParsedName;
                 ?>
-            </label></div>
-        <?php } ?>
+                <div class="checkbox"><label><input type="checkbox" id="<?= $database ?>">
+                        <?php
+                        preg_match("/(\d+)-(\d+)-(\d)(.*)/", $database, $matches);
+                        $databaseParsedName = ("Year " . $matches[3] . " - " . ($matches[4] == "X" ? ("Overall") : "Coursework Only"));
+                        echo $databaseParsedName;
+                        ?>
+                    </label></div>
+            <?php } ?>
+        </div>
+        <div class="col-md-6">
+
+            </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="..."
+                    id="submit">GO!
+            </button>
+        </div>
     </div>
 </div>
 <!-- /.container -->
@@ -85,6 +96,12 @@
 <script>
     $(document).ready(function () {
 
+        $(".checkbox").change(function() {
+            if(this.checked) {
+                //Do stuff
+            }
+        });
+
 
         $("#submit").click(function () {
             var $modules = $("#ModuleList").val();
@@ -94,7 +111,7 @@
             var $resultDiv = $('#result');
             $resultDiv.fadeOut('slow');
 
-            $.get("DisplayScripts/getMarksTables.php", { "modules": $modules } )
+            $.get("DisplayScripts/getMarksTables.php", {"modules": $modules})
                 .done(function (result) {
                     $resultDiv.html(result);
                     $resultDiv.fadeIn('slow');
