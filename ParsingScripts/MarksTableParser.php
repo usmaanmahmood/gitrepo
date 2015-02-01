@@ -119,7 +119,7 @@ class MarksTableParser // extends Parser
         {
             $table = new MarksTableTable();
             $table->setName($matches[0][$i][0]);
-            $table->setScalingFactor($matches[1][$i]);
+            $table->setScalingFactor($matches[1][$i][0]);
             $table->setWeightings($matches[2][$i]);
             $table->setDenominators($matches[3][$i]);
             $table->setEmailNames($matches[4][$i]);
