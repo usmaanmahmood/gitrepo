@@ -70,7 +70,7 @@
             <p>
                 <button type="button" class="btn btn-default btn-xs dat-reset-filters">Databases Reset</button>
             </p>
-            <select multiple class="form-control" size=10 id="DatabaseList">
+            <select class="form-control" size=10 id="DatabaseList">
                 <?php foreach (array_unique($arcadeProfile->getDatabaseList()) as $option) { ?>
                     <option value="<?php echo $option ?>">
                         <?php preg_match("/(\d+)-(\d+)-(\d)(.*)/", $option, $matches);
@@ -86,7 +86,7 @@
                 <button type="button" class="btn btn-default btn-xs mod-reset-filters">Modules Reset</button>
             </p>
 
-            <select multiple class="form-control" size=50 id="ModuleList">
+            <select multiple class="form-control" size=10 id="ModuleList">
                 <?php $twoDArray = $arcadeProfile->getTwoDimensionalArray();
                 foreach ($twoDArray as $filter) {
                     ?>
