@@ -86,7 +86,7 @@
                 <button type="button" class="btn btn-default btn-xs mod-reset-filters">Modules Reset</button>
             </p>
 
-            <select multiple class="form-control" size=10 id="ModuleList">
+            <select multiple class="form-control" size=50 id="ModuleList">
                 <?php $twoDArray = $arcadeProfile->getTwoDimensionalArray();
                 foreach ($twoDArray as $filter) {
                     ?>
