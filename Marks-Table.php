@@ -96,21 +96,14 @@
         <div class="col-md-6">
 
 
+            <select multiple class="form-control" size=10 id="ModuleList">
+                <?php $twoDArray = $arcadeProfile->getTwoDimensionalArray();
+                foreach ($twoDArray as $filter) { ?>
+                    <option value="<?php echo $filter[4] ?>" class="<?= $filter[0]?>">
+                        <?php echo $filter[4]; ?></option>
+                <?php } ?>
+            </select>
 
-            <?php $twoDArray = $arcadeProfile->getTwoDimensionalArray();
-            foreach ($twoDArray as $filter) {
-
-                ?>
-                <div class="checkbox" class="<?= $filter[0] ?>" style="display:none"><label><input type="checkbox" id="<?= $filter[4] ?>" >
-                        <?php
-//                        preg_match("/(\d+)-(\d+)-(\d)(.*)/", $database, $matches);
-//                        $databaseParsedName = ("Year " . $matches[3] . " - " . ($matches[4] == "X" ? ("Overall") : "Coursework Only"));
-                        echo $filter[4];
-                        ?>
-                    </label></div>
-
-
-            <?php } ?>
             </div>
         <div class="col-md-3">
             <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="..."
