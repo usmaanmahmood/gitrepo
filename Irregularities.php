@@ -54,70 +54,20 @@
                                  role="tabpanel"
                                  aria-labelledby="heading<?= $currentNumber ?>">
                                 <!--                                <div class="panel-body">-->
-                                <?php foreach ($database->getStudentList() as $student) {
+                                <?php foreach ($database->$irregularityList() as $irregularity) {
                                     ?>
                                     <table class="table table-striped table-hover">
                                         <tr>
-                                            <th>Student ID:</th>
-                                            <td><?= $student->getStudentID(); ?></td>
+                                            <th>Module:</th>
+                                            <th>Module Group:</th>
+                                            <th>Date (DD/MM):</th>
+                                            <th>Note:</th>
                                         </tr>
                                         <tr>
-                                            <th>Reg. Status:</th>
-                                            <td><?= $student->getRegStatus(); ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th>Reg number:</th>
-                                            <td><?= $student->getRegNumber(); ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th>Degree:</th>
-                                            <td><?= $student->getDegree(); ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th>Year:</th>
-                                            <td><?= $student->getYear(); ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th>Owner:</th>
-                                            <td><?= $student->getOwner(); ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th>Lab Group:</th>
-                                            <td><?= $student->getRegStatus(); ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th>Tutorial Group:</th>
-                                            <td><?= $student->getTutorialGroup(); ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th>Tutor:</th>
-                                            <td><?= $student->getTutor(); ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th>Preferred Name:</th>
-                                            <td><?= $student->getPreferredName(); ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th>DB Surname:</th>
-                                            <td><?= $student->getDbSurname(); ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th>DB First names:</th>
-                                            <td><?= $student->getDbFirstNames(); ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th>Email name:</th>
-                                            <td><?= $student->getEmailName(); ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th>Modules:</th>
-                                            <td>
-                                                <?php
-                                                foreach ($student->getModules() as $module)
-                                                    echo "<a href=\"http://studentnet.cs.manchester.ac.uk/ugt/COMP" . $module . "/syllabus/\">" . $module . "</a> ";
-                                                ?>
-
-                                            </td>
+                                            <td><?= $irregularity->getModule(); ?></td>
+                                            <td><?= $irregularity->getGroup(); ?></td>
+                                            <td><?= $irregularity->getDate(); ?></td>
+                                            <td><?= $irregularity->getIrregularity(); ?></td>
                                         </tr>
                                     </table>
                                 <?php
