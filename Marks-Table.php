@@ -79,7 +79,18 @@
             <?php } ?>
         </div>
         <div class="col-md-6">
+            <?php $twoDArray = $arcadeProfile->getTwoDimensionalArray();
+            foreach ($twoDArray as $filter) {
 
+                ?>
+                <div class="checkbox"><label><input type="checkbox" id="<?= $database ?>">
+                        <?php
+//                        preg_match("/(\d+)-(\d+)-(\d)(.*)/", $database, $matches);
+//                        $databaseParsedName = ("Year " . $matches[3] . " - " . ($matches[4] == "X" ? ("Overall") : "Coursework Only"));
+                        echo $filter[4];
+                        ?>
+                    </label></div>
+            <?php } ?>
             </div>
         <div class="col-md-3">
             <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="..."
