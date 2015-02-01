@@ -125,7 +125,7 @@
             var valueSelected = this.value;
             alert(valueSelected);
 
-            $("option[data-db="")
+//            $("option[data-db="")
         });
 
 //
