@@ -32,10 +32,14 @@ class IrregularitiesDatabase
     private $databaseName;
     private $databaseParsedName;
     private $irregularityList; // array of Irregularities
+    private $irregularityModuleList;
+
 
     public function __construct()
     {
         $this->irregularityList = array();
+        $this->irregularityModuleList = array();
+
     }
 
     public function getIrregularityList()
@@ -43,9 +47,10 @@ class IrregularitiesDatabase
         return $this->irregularityList;
     }
 
-    public function addIrregularity(Irregularity $irregularityList)
+    public function addIrregularity(Irregularity $irregularity)
     {
-        array_push($this->irregularityList, $irregularityList);
+        array_push($this->irregularityList, $irregularity);
+        array_push($this->irregularityModuleList, $irregularity->getModule());
     }
 
     public function getDatabaseName()
@@ -66,6 +71,11 @@ class IrregularitiesDatabase
     public function getDatabaseParsedName()
     {
         return $this->databaseParsedName;
+    }
+
+    public function getIrregularityModuleList()
+    {
+        return $this->irregularityModuleList;
     }
 
 }
