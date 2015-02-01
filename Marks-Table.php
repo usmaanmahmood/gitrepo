@@ -109,10 +109,13 @@
 <script>
     $(document).ready(function () {
 
-        $(".checkbox").change(function() {
-            if(this.checked) {
-                //Do stuff
-                alert("hi");
+        $(":checkbox").click(function() {
+            var $this = $(this);
+            // $this will contain a reference to the checkbox
+            if ($this.is(':checked')) {
+                alert("checked");// the checkbox was checked
+            } else {
+                alert("unchecked");// the checkbox was unchecked
             }
         });
 
