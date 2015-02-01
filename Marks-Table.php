@@ -117,6 +117,7 @@
 <script>
     $(document).ready(function () {
 
+        $("#ModuleList option").hide();
 
         $("#DatabaseList").change(function() {
 //            alert( "Handler for .change() called." );
@@ -125,7 +126,7 @@
             var valueSelected = this.value;
             alert(valueSelected);
 
-//            $("option[data-db="")
+            $("#ModuleList option[data-db=" + this.value + "]").show();
         });
 
 //
