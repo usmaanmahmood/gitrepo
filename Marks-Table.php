@@ -56,13 +56,20 @@
                     ?>
                     <option value="<?php echo $filter[4] ?>" data-db="<?= $filter[0] ?>">
                         <?php
-                        preg_match("/(\d{5})(\S)/",  $filter[4], $matches);
-//var_dump($matches);
-                        if ($matches[2] == 'L')
-                            $matches[2] = " Labs";
+                        $matched = preg_match("/(\d{5})(\S)/",  $filter[4], $matches);
 
-                        echo $matches[1] . $matches[2];
+                        if ($matched) {
+                            if ($matches[2] == 'L')
+                                $matches[2] = " Labs";
+                        }
 
+
+
+
+                        if ($matched)
+                            echo $matches[1] . $matches[2];
+                        else
+                            echo $filter[4];
                         ?></option>
                 <?php } ?>
             </select>
