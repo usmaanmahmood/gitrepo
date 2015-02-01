@@ -37,7 +37,7 @@
         <div class="col-md-3">
 
                 <button type="button" class="btn btn-default btn-block dat-reset-filters">Databases Reset</button>
-            
+
             <select class="form-control" size=8 id="DatabaseList">
                 <?php foreach (array_unique($arcadeProfile->getDatabaseList()) as $option) { ?>
                     <option value="<?php echo $option ?>">
@@ -64,7 +64,7 @@
                         ?></option>
                 <?php } ?>
             </select>
-
+            <br />
             <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="..."
                     id="submit">GO!
             </button>
