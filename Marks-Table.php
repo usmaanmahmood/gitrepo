@@ -107,6 +107,9 @@
                     id="submit">GO!
             </button>
         </div>
+
+        <div id="result" class="col-md-12">-->
+                        </div>
     </div>
 </div>
 <!-- /.container -->
