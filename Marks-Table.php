@@ -46,8 +46,8 @@
                         echo $databaseParsedName; ?></option>
                 <?php } ?>
             </select>
-            <p>
-                <button type="button" class="btn btn-default btn-xs mod-reset-filters">Modules Reset</button>
+            <p><br />
+                <button type="button" class="btn btn-default btn-block mod-reset-filters">Modules Reset</button>
             </p>
 
             <select multiple class="form-control" size=10 id="ModuleList">
