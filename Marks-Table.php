@@ -67,7 +67,12 @@
         {
 
         ?>
-        <div class="checkbox"><label><input type="checkbox"><?=$database?></label></div>
+        <div class="checkbox"><label><input type="checkbox" id="<?=$database?>">
+                <?=
+                preg_match("/(\d+)-(\d+)-(\d)(.*)/", $database, $matches);
+                $result->setDatabaseParsedName("Year: 20".$matches[1]."/20".$matches[2]." - Semester ".$matches[3]." - ".($matches[4] == "X" ? ("Overall") : "Coursework Only"));
+                ?>
+            </label></div>
         <?php } ?>
     </div>
 </div>
