@@ -115,12 +115,12 @@ class MarksTableTable {
 
     public function __construct()
     {
-        $this->marks = [];
+        $this->marks = array();
     }
 
     public function buildMarksTable()
     {
-        $this->marksTable = [];
+        $this->marksTable = array();
         $arrayLength = count($this->marks);
         $i = 0;
         while ($i < $arrayLength)
@@ -162,7 +162,7 @@ class MarksTableTable {
     }
 
     public function getPercMark() {
-        $array = [];
+        $array = array();
         foreach($this->marksTable as $marksObject)
         {
             array_push($array, $marksObject[4]);
@@ -171,7 +171,7 @@ class MarksTableTable {
     }
 
     public function getPercWeight() {
-        $array = [];
+        $array = array();
         foreach($this->marksTable as $marksObject)
         {
             array_push($array, $marksObject[5]);
@@ -180,7 +180,7 @@ class MarksTableTable {
     }
 
     public function getPercScore() {
-        $array = [];
+        $array = array();
         foreach($this->marksTable as $marksObject)
         {
             array_push($array, $marksObject[6]);

@@ -6,7 +6,7 @@
  * Date: 26/11/14
  * Time: 12:55
  */
-$sampleString = "===============================================================================
+$sampleIrregularitiesString = "===============================================================================
 Database 12-13-2
 
 Mahmood,Usmaan_Ali	I 22712L Lab 10 (22/4) (OLD): Absent on 22/4.
@@ -49,9 +49,8 @@ class IrregularitiesParser // extends Parser
     public function parse($inString)
     {
         $databaseStringArray = preg_split("/\n===============================================================================\n/", $inString,  null, PREG_SPLIT_NO_EMPTY);
-        array_shift($databaseStringArray); // remove the "For explanation of columns" line
         array_pop($databaseStringArray); // remove the "End of query results" line
-
+//        var_dump($databaseStringArray);
         $result = new IrregularitiesResult();
         // create a database object for each
         // add the database name to the object
@@ -71,35 +70,40 @@ class IrregularitiesParser // extends Parser
         $database = new IrregularitiesDatabase();
 
         // get the database name
-        preg_match("/(?:Database\s+(\S+))/", $inString, $matches);
+        preg_match("/(Database\s+(\S+))/", $inString, $matches);
         $rawDbName = $matches[1];
+//        var_dump($rawDbName);
         $database->setDatabaseName($rawDbName);
         preg_match("/(\d+)-(\d+)-(\d)(.*)/", $rawDbName, $rawDbNameMatches);
         $database->setDatabaseParsedName("20".$rawDbNameMatches[1]."/20".$rawDbNameMatches[2]." - Semester ".$rawDbNameMatches[3]." - ".($rawDbNameMatches[4] == "X" ? ("Overall") : "Coursework Only"));
 
-        // http://regex101.com/r/oE6jJ1/34#pcre
-        // split up the tables
-        preg_match_all("/Table\s+([^:]+)[\s\S]*?Weighting\s+\|([\s\S]*?)\n-+\s+Denominator\s+\|([\s\S]*?)\n-+\s+Email Name\s+\|([\s\S]*?)\n=+[\s\S]+?\|([ \S]+)\n/", $inString, $matches);
-        array_shift($matches); // remove the first match which is the entire table
+        preg_match_all("/(\S*?)\t([\S]*)\s([\S]*)\s([\S\s]*?)\s\((\S*\s*)\)\s([\S\s]*?)\n/", $inString, $matches);
+        array_shift($matches); // remove the first match which is the entire result
 
-        // parse further into perfect form
-        foreach($matches as $key => $table)
-            foreach($table as $key2 => $row)
-                $matches[$key][$key2] = array_map('trim', explode('|', $row));
+        $arrayresult = array();
+        $arrayresult[0] = $matches[0];
+        $arrayresult[1] = $matches[1];
+        $arrayresult[2] = $matches[2];
+        $arrayresult[3] = $matches[3];
+        $arrayresult[4] = $matches[4];
+        $arrayresult[5] = $matches[5];
+//        var_dump($arrayresult);
+        // a row is $arrayresult[0][0], [1][0], [2][0], etc
 
-        $numberOfTables = count($matches[0]);
 
-        // parse the tables
-        for ($i = 0; $i < $numberOfTables; $i++)
+        $numberOfIrregularities = count($matches[0]);
+
+//         parse the irregularities
+        for ($i = 0; $i < $numberOfIrregularities; $i++)
         {
-            $table = new IrregularitiesTable();
-            $table->setName($matches[0][$i][0]);
-            $table->setWeightings($matches[1][$i]);
-            $table->setDenominators($matches[2][$i]);
-            $table->setEmailNames($matches[3][$i]);
-            $table->setMarks($matches[4][$i]);
-            $table->buildIrregularities();
-            $database->addTable($table);
+            $irregularity = new Irregularity();
+            $irregularity->setStudentName($matches[0][$i]);
+            $irregularity->setGroup($matches[1][$i]);
+            $irregularity->setModule($matches[2][$i]);
+            $irregularity->setName($matches[3][$i]);
+            $irregularity->setDate($matches[4][$i]);
+            $irregularity->setIrregularity($matches[5][$i]);
+            $database->addIrregularity($irregularity);
         }
 
         return $database;
@@ -113,5 +117,5 @@ class IrregularitiesParser // extends Parser
 //include("Result.php");
 //
 //$parser = new IrregularitiesParser();
-//$result = $parser->parse($parser->sampleString);
-//var_dump($result->getDatabaseList());
+//$result = $parser->parse($sampleIrregularitiesString);
+//var_dump($result);
