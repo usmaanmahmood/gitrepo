@@ -38,7 +38,7 @@
 
                 <button type="button" class="btn btn-default btn-block dat-reset-filters">Reset Databases</button>
 
-            <select class="form-control" size=8 id="DatabaseList">
+            <select class="form-control" size=6 id="DatabaseList">
                 <?php foreach (array_unique($arcadeProfile->getDatabaseList()) as $option) { ?>
                     <option value="<?php echo $option ?>">
                         <?php preg_match("/(\d+)-(\d+)-(\d)(.*)/", $option, $matches);
@@ -65,8 +65,8 @@
                 <?php } ?>
             </select>
             <br />
-            <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="..."
-                    id="submit">GO!
+            <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..."
+                    id="submit">Execute!
             </button>
         </div>
 
