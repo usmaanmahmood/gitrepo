@@ -42,7 +42,7 @@
                 <?php foreach (array_unique($arcadeProfile->getDatabaseList()) as $option) { ?>
                     <option value="<?php echo $option ?>">
                         <?php preg_match("/(\d+)-(\d+)-(\d)(.*)/", $option, $matches);
-                        $databaseParsedName = ("Year " . $matches[3] . " - " . ($matches[4] == "X" ? ("Overall (Includes Exam)") : "Coursework Only"));
+                        $databaseParsedName = ("Year " . $matches[3] . " - " . ($matches[4] == "X" ? ("Overall (inc. Exams)") : "Coursework Only"));
                         echo $databaseParsedName; ?></option>
                 <?php } ?>
             </select>
