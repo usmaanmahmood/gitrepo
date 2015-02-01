@@ -25,7 +25,7 @@ $result = $arcadeClient->execute($query);
     <h1>Marks Table</h1>
 <?php foreach ($result->getDatabaseList() as $database) {
     if (!empty($database->getTableList())) {
-        echo "<h3>Database: " . $database->getDatabaseParsedName() . "</h3>";
+        echo "<h3>" . $database->getDatabaseParsedName() . "</h3>";
         foreach ($database->getTableList() as $table) {
             echo "<h4>Table: " . $table->getName() . "</h4>";
             echo "<h5>" . $table->getScalingFactor() . "</h5>";
