@@ -81,6 +81,13 @@
 
 
         <div class="col-md-6">
+
+            <select multiple class="form-control" size=10 id="DatabaseList">
+                <?php foreach (array_unique($arcadeProfile->getDatabaseList()) as $option) { ?>
+                    <option value="<?php echo $option ?>"><?php echo $option ?></option>
+                <?php } ?>
+            </select>
+
             <?php $twoDArray = $arcadeProfile->getTwoDimensionalArray();
             foreach ($twoDArray as $filter) {
 
@@ -92,6 +99,8 @@
                         echo $filter[4];
                         ?>
                     </label></div>
+
+
             <?php } ?>
             </div>
         <div class="col-md-3">
