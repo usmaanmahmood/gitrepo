@@ -50,15 +50,16 @@ foreach ($databaseList as $database) {
 
         ?>
         <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="heading<?= $currentNumber ?>">
-
-                    <a data-toggle="collapse" data-parent="#accordion"
-                       href="#collapse<?= $currentNumber ?>"
-                       aria-expanded="true"
-                       aria-controls="collapse<?= $currentNumber ?>"><strong>
-                            <h4 class="panel-title"><?= $module; ?></h4></strong></a>
-
-            </div>
+            <a data-toggle="collapse" data-parent="#accordion"
+               href="#collapse<?= $currentNumber ?>"
+               aria-expanded="true"
+               aria-controls="collapse<?= $currentNumber ?>">
+                <div class="panel-heading" role="tab" id="heading<?= $currentNumber ?>">
+                <h4 class="panel-title">
+                    <strong>
+                            <?= $module; ?></strong>
+                </h4>
+            </div></a>
             <!-- panel-heading -->
             <div id="collapse<?= $currentNumber ?>"
                  class="panel-collapse collapse<?= $currentNumber == "One" ? " in" : "" ?>"
