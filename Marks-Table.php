@@ -112,7 +112,7 @@
         $("input:checkbox").click(function() {
             var $this = $(this);
             // $this will contain a reference to the checkbox
-            if ($this.is(':checked')) {
+            if (this.is(':checked')) {
                 alert("checked");// the checkbox was checked
             } else {
                 alert("unchecked");// the checkbox was unchecked
