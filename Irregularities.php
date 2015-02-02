@@ -65,7 +65,6 @@ foreach ($databaseList as $database) {
                 <!--                                <div class="panel-body">-->
                 <table class="table table-striped table-hover">
                     <tr>
-                        <th>Module:</th>
                         <th>Group:</th>
                         <th>Date (DD/MM):</th>
                         <th>Note:</th>
@@ -74,7 +73,6 @@ foreach ($databaseList as $database) {
                         if ($irregularity->getModule() == $module) {
                             ?>
                             <tr>
-                                <td><?= $irregularity->getModule(); ?></td>
                                 <td><?= $irregularity->getGroup(); ?></td>
                                 <td><?= $irregularity->getDate(); ?></td>
                                 <td><?= $irregularity->getIrregularity(); ?></td>
