@@ -125,13 +125,14 @@
 
         $("#submit").click(function () {
             var $modules = $("#ModuleList").val();
+            var $databases = $("#DatabaseList").val();
 
             var $submitbutton = $('#submit').button('loading');
 
             var $resultDiv = $('#result');
             $resultDiv.fadeOut('slow');
 
-            $.get("DisplayScripts/getMarksTables.php", {"modules": $modules})
+            $.get("DisplayScripts/getMarksTables.php", {"databases": $databases, "modules": $modules})
                 .done(function (result) {
                     $resultDiv.html(result);
                     $resultDiv.fadeIn('slow');
