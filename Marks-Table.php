@@ -108,7 +108,6 @@
 
         $("#DatabaseList").change(function() {
             $("#ModuleList option").hide();
-            console.log(this.value);
             $("#ModuleList option[data-db=" + this.value + "]").show();
         });
 
@@ -125,7 +124,9 @@
 
         $("#submit").click(function () {
             var $modules = $("#ModuleList").val();
-            var $databases = $("#DatabaseList").val();
+            var $databases = [];
+            $databases.push($("#DatabaseList").val());
+
             console.log($databases);
             console.log($modules);
 
