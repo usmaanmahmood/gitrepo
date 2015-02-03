@@ -51,9 +51,9 @@ $result = $arcadeClient->execute($query);
                             $markString = $markString . "/" . $denominators[$key]; // ignores last two cols
 
                         if (!empty($percentages[$key]))
-                        $markString = $markString . " (" . $percentages[$key];
+                        $markString = $markString . " (" . $percentages[$key] . ")";
 
-                        $markString = $markString . ")</td>";
+                        $markString = $markString . "</td>";
                         echo $markString;
                     }
                     ?>
