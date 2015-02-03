@@ -61,7 +61,10 @@ $result = $arcadeClient->execute($query);
                 <tr>
                     <th width="150px">Weightings</th>
                     <?php foreach ($table->getWeightings() as $key => $weighting) {
-                        echo "<td>" . $weighting . " (<strong>" . $percWeight[$key] . "</strong>)</td>";
+                        $td = "<td>";
+                        if (!empty($weighting))
+                            $td = $td .  $weighting . " (<strong>" . $percWeight[$key] . "</strong>)";
+                        $td = $td ."</td>";
                     }?>
                 </tr>
 <!--                <tr>-->
