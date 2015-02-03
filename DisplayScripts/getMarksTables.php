@@ -51,7 +51,7 @@ $result = $arcadeClient->execute($query);
                             $markString = $markString . "/" . $denominators[$key]; // ignores last two cols
 
                         if (!empty($percentages[$key]))
-                        $markString = $markString . " (" . $percentages[$key] . ")";
+                        $markString = $markString . " (<strong>" . $percentages[$key] . "</strong>)";
 
                         $markString = $markString . "</td>";
                         echo $markString;
@@ -61,7 +61,7 @@ $result = $arcadeClient->execute($query);
                 <tr>
                     <th width="150px">Weightings</th>
                     <?php foreach ($table->getWeightings() as $key => $weighting) {
-                        echo "<td>" . $weighting . " (" . $percWeight[$key] . ")</td>";
+                        echo "<td>" . $weighting . " (<strong>" . $percWeight[$key] . "</strong>)</td>";
                     }?>
                 </tr>
 <!--                <tr>-->
