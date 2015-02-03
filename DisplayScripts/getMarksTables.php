@@ -51,9 +51,9 @@ $result = $arcadeClient->execute($query);
                             $markString = $markString . "/" . $denominators[$key]; // ignores last two cols
 
                         if (!empty($percentages[$key]))
-                        $markString = $markString . "<br />" . $percentages[$key];
+                        $markString = $markString . " (" . $percentages[$key];
 
-                        $markString = $markString . "</td>";
+                        $markString = $markString . ")</td>";
                         echo $markString;
                     }
                     ?>
@@ -61,7 +61,7 @@ $result = $arcadeClient->execute($query);
                 <tr>
                     <th width="150px">Weightings</th>
                     <?php foreach ($table->getWeightings() as $key => $weighting) {
-                        echo "<td>" . $weighting . "<br />" . $percWeight[$key] . "</td>";
+                        echo "<td>" . $weighting . " (" . $percWeight[$key] . ")</td>";
                     }?>
                 </tr>
 <!--                <tr>-->
@@ -70,12 +70,12 @@ $result = $arcadeClient->execute($query);
 //                        echo "<td>" . $percentage . "</td>";
 //                    }?>
 <!--                </tr>-->
-                <tr>
-                    <th width="150px">&percnt; of Coursework</th>
-                    <?php foreach ($table->getPercScore() as $percentage) {
-                        echo "<td>" . $percentage . "</td>";
-                    }?>
-                </tr>
+<!--                <tr>-->
+<!--                    <th width="150px">&percnt; of Coursework</th>-->
+<!--                    --><?php //foreach ($table->getPercScore() as $percentage) {
+//                        echo "<td>" . $percentage . "</td>";
+//                    }?>
+<!--                </tr>-->
             </table>
             <hr />
 <!-----------------------------------------------new table----------------------------------------------->
