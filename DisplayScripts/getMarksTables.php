@@ -34,7 +34,7 @@ $result = $arcadeClient->execute($query);
                 <tr>
                     <th width="150px">Name</th>
                     <?php foreach ($table->getEmailNames() as $weighting) {
-                        echo "<h4>" . $weighting . "</h4>";
+                        echo "<th><h4>" . $weighting . "</h4></th>";
                     }?>
                 </tr>
                 <tr>
