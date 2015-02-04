@@ -100,7 +100,7 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function () {
-            
+
         // } document ready in template end
 
 <?php include("template-end.php"); ?>
