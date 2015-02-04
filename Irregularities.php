@@ -102,7 +102,7 @@ foreach ($databaseList as $database) {
 
         // } document ready in template end
 
-<?php include("template-end.php");
+<?php include("template-end.php"); ?>
     <?php
     function convert_number_to_words($number)
     {

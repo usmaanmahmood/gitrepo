@@ -150,4 +150,4 @@
         });
         // } document ready in template end
 
-<?php include("template-end.php");
+<?php include("template-end.php"); ?>
