@@ -58,7 +58,7 @@
 <!--                        <li><a href="#" data-theme="united" class="theme-link">United</a></li>-->
 <!--                    </ul>-->
 <!--                </li>-->
-                <li class="dropdown" id="theme-dropdown" style="margin-right:30px;">
+                <li class="dropdown" id="theme-dropdown" style="float:right;">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cogs icon-large"></i> Theme<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="#" class="change-style-menu-item" rel="cerulean"><i class="icon-fixed-width icon-pencil"></i> Cerulean</a></li>
