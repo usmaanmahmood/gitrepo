@@ -2,7 +2,7 @@
 jQuery(function($) {
 $('body').on('click', '.change-style-menu-item', function() {
 var theme_name = $(this).attr('rel');
-var theme = "//netdna.bootstrapcdn.com/bootswatch/3.0.0/" + theme_name + "/bootstrap.min.css";
+var theme = "//maxcdn.bootstrapcdn.com/bootswatch/3.3.2/" + theme_name + "/bootstrap.min.css";
 set_theme(theme);
 });
 });
