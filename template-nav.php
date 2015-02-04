@@ -42,22 +42,6 @@
 <!--                <li><a href="#">full-story: with notes</a></li>-->
 <!--                <li><a href="#">full-story: without notes</a></li>-->
 <!--                <li><a href="#">full-story: chronological</a></li>-->
-<!--                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Theme Switcher<b class="caret"></b></a>-->
-<!--                    <ul class="dropdown-menu">-->
-<!--                        <li><a href="#" data-theme="default" class="theme-link">Default</a></li>-->
-<!--                        <li><a href="#" data-theme="amelia" class="theme-link">Amelia</a></li>-->
-<!--                        <li><a href="#" data-theme="cerulean" class="theme-link">Cerulean</a></li>-->
-<!--                        <li><a href="#" data-theme="cosmo" class="theme-link">Cosmo</a></li>-->
-<!--                        <li><a href="#" data-theme="cyborg" class="theme-link">Cyborg</a></li>-->
-<!--                        <li><a href="#" data-theme="flatly" class="theme-link">Flatly</a></li>-->
-<!--                        <li><a href="#" data-theme="journal" class="theme-link">Journal</a></li>-->
-<!--                        <li><a href="#" data-theme="readable" class="theme-link">Readable</a></li>-->
-<!--                        <li><a href="#" data-theme="simplex" class="theme-link">Simplex</a></li>-->
-<!--                        <li><a href="#" data-theme="slate" class="theme-link">Slate</a></li>-->
-<!--                        <li><a href="#" data-theme="spacelab" class="theme-link">Spacelab</a></li>-->
-<!--                        <li><a href="#" data-theme="united" class="theme-link">United</a></li>-->
-<!--                    </ul>-->
-<!--                </li>-->
                 <li class="dropdown" id="theme-dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cogs icon-large"></i> Theme<b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -67,7 +51,7 @@
                         <li><a href="#" class="change-style-menu-item" rel="darkly"><i class="icon-fixed-width icon-pencil"></i> Darkly</a></li>
                         <li><a href="#" class="change-style-menu-item" rel="flatly"><i class="icon-fixed-width icon-pencil"></i> Flatly</a></li>
                         <li><a href="#" class="change-style-menu-item" rel="journal"><i class="icon-fixed-width icon-pencil"></i> Journal</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="lumen"><i class="icon-fixed-width icon-pencil"></i> Lumen</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="lumen"><i class="icon-fixed-width icon-pencil"></i> Lumen (Default)</a></li>
                         <li><a href="#" class="change-style-menu-item" rel="paper"><i class="icon-fixed-width icon-pencil"></i> Paper</a></li>
                         <li><a href="#" class="change-style-menu-item" rel="readable"><i class="icon-fixed-width icon-pencil"></i> Readable</a></li>
                         <li><a href="#" class="change-style-menu-item" rel="sandstone"><i class="icon-fixed-width icon-pencil"></i> Sandstone</a></li>
