@@ -79,9 +79,7 @@
                         <li><a href="#" class="change-style-menu-item" rel="yeti"><i class="icon-fixed-width icon-pencil"></i> Yeti</a></li>
                     </ul>
                 </li>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="Logout.php">Logout</a></li>
-                </ul>
+                <li style="float:right"><a href="Logout.php">Logout</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
