@@ -154,7 +154,7 @@
 
     var themes = {
         //maxcdn.bootstrapcdn.com/bootswatch/3.3.0/lumen/bootstrap.min.css
-        "default": "//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/bootstrap.min.css",
+        "default": "//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css",
         "amelia": "//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/amelia/bootstrap.min.css",
         "cerulean": "//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/cerulean/bootstrap.min.csss",
         "cosmo": "//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/cosmo/bootstrap.min.css",
