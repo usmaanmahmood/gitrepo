@@ -100,13 +100,9 @@ foreach ($databaseList as $database) {
     <script>
         $(document).ready(function () {
 
+        // } document ready in template end
 
-        }) // document ready
-
-    </script>
-
-    </body>
-    </html>
+<?php include("template-end.php");
     <?php
     function convert_number_to_words($number)
     {

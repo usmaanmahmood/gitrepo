@@ -300,10 +300,6 @@ $(document).ready(function () {
 
     }
 
+// } document ready in template end
 
-}) // document ready
-
-</script>
-
-</body>
-</html>
+<?php include("template-end.php");
