@@ -3,6 +3,12 @@ jQuery(function($) {
 $('body').on('click', '.change-style-menu-item', function() {
 var theme_name = $(this).attr('rel');
 var theme = "//maxcdn.bootstrapcdn.com/bootswatch/3.3.2/" + theme_name + "/bootstrap.min.css";
+
+if (theme_name == "default")
+{
+var theme = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css";
+}
+
 set_theme(theme);
 });
 });
