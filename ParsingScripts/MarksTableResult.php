@@ -137,6 +137,7 @@ class MarksTableTable {
             else
                 $this->marksTable[$i][4] = "";
 
+            // below two arent even used
             // add exercise value percentage of entire result
             // arraylength-2 always stores total
             $cleanWeighting = preg_replace("/[^0-9.]+/", "", $this->weightings[$i]);

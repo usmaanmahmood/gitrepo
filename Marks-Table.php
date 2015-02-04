@@ -12,8 +12,8 @@
 <?php include("template-nav.php");
 
 //$arcadeClient = new ARCADEClient();
-//$query = new Query("marks-table: all", 0); // command, plainTextWanted
-//
+////$query = new Query("marks-table: all", 0); // command, plainTextWanted
+
 //$query->addDatabases(array("11-12-1", "11-12-1X"));
 //$query->addModules(array("162L"));
 //$result = $arcadeClient->execute($query);
@@ -36,7 +36,7 @@
     <div class="row">
         <div class="col-md-3">
 
-                <button type="button" class="btn btn-default btn-block dat-reset-filters">Reset Databases</button>
+            <button type="button" class="btn btn-default btn-block dat-reset-filters">Reset Databases</button>
 
             <select class="form-control" size=4 id="DatabaseList">
                 <?php foreach (array_unique($arcadeProfile->getDatabaseList()) as $option) { ?>
@@ -46,8 +46,8 @@
                         echo $databaseParsedName; ?></option>
                 <?php } ?>
             </select>
-            <br />
-                <button type="button" class="btn btn-default btn-block mod-reset-filters">Reset Modules</button>
+            <br/>
+            <button type="button" class="btn btn-default btn-block mod-reset-filters">Reset Modules</button>
 
 
             <select multiple class="form-control" size=15 id="ModuleList">
@@ -56,7 +56,7 @@
                     ?>
                     <option value="<?php echo $filter[4] ?>" data-db="<?= $filter[0] ?>">
                         <?php
-                        $matched = preg_match("/(\d{3,5})(\S)$/",  $filter[4], $matches);
+                        $matched = preg_match("/(\d{3,5})(\S)$/", $filter[4], $matches);
 
                         if ($matched) {
                             switch ($matches[2]) {
@@ -75,7 +75,7 @@
                                 case "X":
                                     $matches[2] = " Exams";
                                     break;
-                                }
+                            }
                         };
 
                         if ($matched)
@@ -85,14 +85,14 @@
                         ?></option>
                 <?php } ?>
             </select>
-            <br />
+            <br/>
             <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..."
                     id="submit">Execute!
             </button>
         </div>
 
         <div id="result" class="col-md-9">
-                        </div>
+        </div>
     </div>
 </div>
 <!-- /.container -->
@@ -106,7 +106,7 @@
         // hide them all to start with
         $("#ModuleList option").hide();
 
-        $("#DatabaseList").change(function() {
+        $("#DatabaseList").change(function () {
             $("#ModuleList option").hide();
             $("#ModuleList option[data-db=" + this.value + "]").show();
         });
