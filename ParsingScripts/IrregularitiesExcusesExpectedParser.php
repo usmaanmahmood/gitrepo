@@ -103,7 +103,7 @@ class IrregularitiesExcusesExpectedParser // extends Parser
             $irregularity->setName($matches[3][$i]);
             $irregularity->setDate($matches[4][$i]);
             $irregularity->setNote($matches[5][$i]);
-            $database->setNote($irregularity);
+            $database->setItem($irregularity);
         }
 
         return $database;
