@@ -93,7 +93,7 @@ class IrregularitiesExcusesExpectedParser // extends Parser
 
         $numberOfItems = count($matches[0]);
 
-//         parse the Notes
+//         parse the Items
         for ($i = 0; $i < $numberOfItems; $i++)
         {
             $irregularity = new Item();
@@ -103,7 +103,7 @@ class IrregularitiesExcusesExpectedParser // extends Parser
             $irregularity->setName($matches[3][$i]);
             $irregularity->setDate($matches[4][$i]);
             $irregularity->setNote($matches[5][$i]);
-            $database->setItem($irregularity);
+            $database->addItem($irregularity);
         }
 
         return $database;
