@@ -41,7 +41,7 @@ foreach ($databaseList as $database) {
     ?>
     <h3><?= $database->getDatabaseParsedName() . " (" . $database->getDatabaseName() . ")"; ?></h3>
     <?php
-    $irregularityModuleList = array_unique($database->getIrregularityModuleList());
+    $irregularityModuleList = array_unique($database->getItemModuleList());
     foreach ($irregularityModuleList as $key => $module) {
         $key1 = $key + 1;
         $currentNumber = ucfirst(convert_number_to_words(($key1)));
@@ -69,13 +69,13 @@ foreach ($databaseList as $database) {
                         <th>Date (DD/MM):</th>
                         <th>Note:</th>
                     </tr>
-                    <?php foreach ($database->getIrregularityList() as $irregularity) {
+                    <?php foreach ($database->getItemList() as $irregularity) {
                         if ($irregularity->getModule() == $module) {
                             ?>
                             <tr>
                                 <td><?= $irregularity->getGroup(); ?></td>
                                 <td><?= $irregularity->getDate(); ?></td>
-                                <td><?= $irregularity->getIrregularity(); ?></td>
+                                <td><?= $irregularity->getNote(); ?></td>
                             </tr>
                         <?php
                         } // if $module
