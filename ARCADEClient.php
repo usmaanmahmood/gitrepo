@@ -83,7 +83,7 @@ class ARCADEClient
                 $this->parser = new MarksTableParser();
                 break;
             case "irregularities":
-                $this->parser = new IrregularitiesParser();
+                $this->parser = new IrregularitiesExcusesExpectedParser();
                 break;
             case "":
                 return "ARCADE client error: No Query sent through";
