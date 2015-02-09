@@ -96,14 +96,14 @@ class IrregularitiesExcusesExpectedParser // extends Parser
 //         parse the Items
         for ($i = 0; $i < $numberOfItems; $i++)
         {
-            $irregularity = new Item();
-            $irregularity->setStudentName($matches[0][$i]);
-            $irregularity->setGroup($matches[1][$i]);
-            $irregularity->setModule($matches[2][$i]);
-            $irregularity->setName($matches[3][$i]);
-            $irregularity->setDate($matches[4][$i]);
-            $irregularity->setNote($matches[5][$i]);
-            $database->addItem($irregularity);
+            $item = new Item();
+            $item->setStudentName($matches[0][$i]);
+            $item->setGroup($matches[1][$i]);
+            $item->setModule($matches[2][$i]);
+            $item->setName($matches[3][$i]);
+            $item->setDate($matches[4][$i]);
+            $item->setNote($matches[5][$i]);
+            $database->addItem($item);
         }
 
         return $database;
