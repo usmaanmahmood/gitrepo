@@ -41,7 +41,7 @@ class IrregularitiesExcusesExpectedDatabase
         $this->itemModuleList = array();
     }
 
-    public function getIrregularityList()
+    public function getItemList()
     {
         return $this->itemList;
     }
