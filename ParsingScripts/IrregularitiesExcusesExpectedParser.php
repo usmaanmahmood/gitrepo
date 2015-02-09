@@ -77,7 +77,7 @@ class IrregularitiesExcusesExpectedParser // extends Parser
         preg_match("/(\d+)-(\d+)-(\d)(.*)/", $rawDbName, $rawDbNameMatches);
         $database->setDatabaseParsedName("20".$rawDbNameMatches[1]."/20".$rawDbNameMatches[2]." - Semester ".$rawDbNameMatches[3]." - ".($rawDbNameMatches[4] == "X" ? ("Overall") : "Coursework Only"));
 
-        preg_match_all("/(\S*?)\t([\S]*)\s([\S]*)\s([\S\s]*?)\s\((\S*\s*)\)\s([\S\s]*?)\n/", $inString, $matches);
+        preg_match_all("/(\S*?)\t([\S]*)\s([\S]*)\s([\S\s]*?)\s\((\S*\s*)\)([\S\s]*?)\n/", $inString, $matches);
         array_shift($matches); // remove the first match which is the entire result
 
         $arrayresult = array();
