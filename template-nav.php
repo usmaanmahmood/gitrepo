@@ -10,12 +10,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Web ARCADE</a>
+            <a class="navbar-brand" href="Classic.php">Web ARCADE</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="Classic.php">Classic ARCADE</a></li>
+                <li><a href="Classic.php">Classic</a></li>
                 <li><a href="Registration-Details.php">Registration Details</a></li>
 <!--                        <li><a href="#">registration-details: with lab groups</a></li>-->
 <!--                        <li class="divider"></li>-->
