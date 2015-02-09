@@ -35,6 +35,8 @@
 <!--                <li class="divider"></li>-->
 <!--                <li><a href="#">excuses</a></li>-->
 <!--                <li class="divider"></li>-->
+                <li><a href="Expected.php">Expected</a></li>
+                <li><a href="Excuses.php">Excuses</a></li>
                 <li><a href="Irregularities.php">Irregularities</a></li>
 <!--                <li class="divider"></li>-->
 <!--                <li><a href="#">failure-predictions</a></li>-->
