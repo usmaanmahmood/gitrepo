@@ -14,7 +14,7 @@ abstract class Parser
 include("ProfileParser.php");
 include("RegistrationDetailsParser.php");
 include("MarksTableParser.php");
-include("IrregularitiesParser.php");
+include("IrregularitiesExcusesExpectedParser.php");
 
 
 ?>
