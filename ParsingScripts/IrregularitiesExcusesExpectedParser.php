@@ -91,12 +91,12 @@ class IrregularitiesExcusesExpectedParser // extends Parser
         // a row is $arrayresult[0][0], [1][0], [2][0], etc
 
 
-        $numberOfNotes = count($matches[0]);
+        $numberOfItems = count($matches[0]);
 
 //         parse the Notes
-        for ($i = 0; $i < $numberOfNotes; $i++)
+        for ($i = 0; $i < $numberOfItems; $i++)
         {
-            $irregularity = new Note();
+            $irregularity = new Item();
             $irregularity->setStudentName($matches[0][$i]);
             $irregularity->setGroup($matches[1][$i]);
             $irregularity->setModule($matches[2][$i]);
