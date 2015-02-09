@@ -82,6 +82,12 @@ class ARCADEClient
             case "marks-table: all":
                 $this->parser = new MarksTableParser();
                 break;
+            case "expected":
+                $this->parser = new IrregularitiesExcusesExpectedParser();
+                break;
+            case "excuses":
+                $this->parser = new IrregularitiesExcusesExpectedParser();
+                break;
             case "irregularities":
                 $this->parser = new IrregularitiesExcusesExpectedParser();
                 break;
