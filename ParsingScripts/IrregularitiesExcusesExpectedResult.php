@@ -77,6 +77,11 @@ class IrregularitiesExcusesExpectedDatabase
         return $this->itemModuleList;
     }
 
+    public function getNumberOfItems()
+    {
+        return count($this->getItemList());
+    }
+
 }
 
 class Item {
