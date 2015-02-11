@@ -54,7 +54,7 @@ foreach ($databaseList as $database) {
                        href="#collapse<?= $currentNumber ?>"
                        aria-expanded="true"
                        aria-controls="collapse<?= $currentNumber ?>"><strong>
-                            <?= $module; ?></strong> - # of excuses</a>
+                            <?= $module; ?></strong> - # excuses</a>
                 </h4>
             </div>
             <!-- panel-heading -->
