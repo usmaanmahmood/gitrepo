@@ -87,14 +87,14 @@
             </select>
             <br/>
             <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..."
-                    id="submit">Execute!
+                    id="submit">Execute!LOL!
             </button>
         </div>
 
         <div id="result" class="col-md-9">
         </div>
 
-        
+
         hello
     </div>
 </div>
