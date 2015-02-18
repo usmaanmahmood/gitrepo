@@ -135,6 +135,7 @@
             });</script>
 
         <div id="test" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+        hello
     </div>
 </div>
 <!-- /.container -->
