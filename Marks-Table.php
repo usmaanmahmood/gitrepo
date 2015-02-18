@@ -94,47 +94,7 @@
         <div id="result" class="col-md-9">
         </div>
 
-        <script type="javascript">
-            $(function () {
-                $('#test').highcharts({
-                    title: {
-                        text: 'Marks Table',
-                        x: -20 //center
-                    },
-                    subtitle: {
-                        text: 'Subtitle',
-                        x: -20
-                    },
-                    xAxis: {
-                        categories: ['14D', '16D', 'Ex7D', 'Ex9D']
-                    },
-                    yAxis: {
-                        title: {
-                            text: 'Marks Percentage (%)'
-                        },
-                        plotLines: [{
-                            value: 0,
-                            width: 1,
-                            color: '#808080'
-                        }]
-                    },
-                    tooltip: {
-                        valueSuffix: '%'
-                    },
-                    legend: {
-                        layout: 'vertical',
-                        align: 'right',
-                        verticalAlign: 'middle',
-                        borderWidth: 0
-                    },
-                    series: [{
-                        name: 'Score',
-                        data: [65,55,70,70]
-                    }]
-                });
-            });</script>
-
-        <div id="test" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+        
         hello
     </div>
 </div>
