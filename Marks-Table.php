@@ -93,7 +93,6 @@
 
         <div id="result" class="col-md-9">
         </div>
-        <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
 
     </div>
