@@ -87,7 +87,7 @@
             </select>
             <br/>
             <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..."
-                    id="submit">Execute!ok
+                    id="submit">Execute!
             </button>
         </div>
 
