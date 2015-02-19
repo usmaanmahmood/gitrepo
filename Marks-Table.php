@@ -87,7 +87,7 @@
             </select>
             <br/>
             <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..."
-                    id="submit">Execute!222
+                    id="submit">Execute!
             </button>
         </div>
 
@@ -154,7 +154,7 @@
         });
     });
 </script>
-
+<script>
     $(document).ready(function () {
 
         // hide them all to start with
