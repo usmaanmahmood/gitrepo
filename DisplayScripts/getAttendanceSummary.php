@@ -30,10 +30,10 @@ $result = $arcadeClient->execute($query);
         <td>Database:</td><td><?=$database->getDatabaseParsedName();?></td>
     </tr>
     <tr>
-        <td>Group</td><td><?=implode(" ", $database->getGroup());?></td>
+        <td>Group</td><td><?=$database->getGroup();?></td>
     </tr>
     <tr>
-        <td>Module List</td><td><?=$database->getModuleList();?></td>
+        <td>Module List</td><td><?=implode(" ", $database->getModuleList());?></td>
     </tr>
     <tr>
         <td>Percentage</td><td><?=$database->getPercentage();?></td>
