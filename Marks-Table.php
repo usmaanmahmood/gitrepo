@@ -85,7 +85,10 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
+<script>
+    $(document).ready(function () {
+
+
 
         // Load the Visualization API and the piechart package.
         google.load('visualization', '1.0', {'packages':['corechart']});
@@ -119,9 +122,10 @@
             var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
             chart.draw(data, options);
         }
-    </script>
-<script>
-    $(document).ready(function () {
+
+
+
+
 
         // hide them all to start with
         $("#ModuleList option").hide();
