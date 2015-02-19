@@ -91,6 +91,9 @@ class ARCADEClient
             case "irregularities":
                 $this->parser = new IrregularitiesExcusesExpectedParser();
                 break;
+            case "attendance-summary":
+                $this->parser = new AttendanceSummaryParser();
+                break;
             case "":
                 return "ARCADE client error: No Query sent through";
                 break;

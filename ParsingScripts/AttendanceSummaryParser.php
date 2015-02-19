@@ -76,8 +76,8 @@ class AttendanceSummaryParser // extends Parser
 
 
 // all below this line is temp for testing purposes only
-include("Result.php");
-
-$parser = new AttendanceSummaryParser();
-$result = $parser->parse($sampleAttendanceSummaryString);
-var_dump($result);
+//include("Result.php");
+//
+//$parser = new AttendanceSummaryParser();
+//$result = $parser->parse($sampleAttendanceSummaryString);
+//var_dump($result);

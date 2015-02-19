@@ -25,7 +25,7 @@
 <!--                <li><a href="#">time-table: full</a></li>-->
 <!--                <li><a href="#">time-table: with extensions</a></li>-->
 <!--                <li class="divider"></li>-->
-<!--                <li><a href="#">attendance-summary</a></li>-->
+                <li><a href="Attendance-Summary.php">Attendance Summary</a></li>
 <!--                <li class="divider"></li>-->
                 <li><a href="Marks-Table.php">Marks Table</a></li>
 <!--                <li><a href="#">marks-table: fails only</a></li>-->
