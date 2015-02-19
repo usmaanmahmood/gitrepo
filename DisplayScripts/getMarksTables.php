@@ -27,7 +27,7 @@ $result = $arcadeClient->execute($query);
     if (!empty($database->getTableList())) {
         echo "<h3>" . $database->getDatabaseParsedName() . "</h3>";
         foreach ($database->getTableList() as $table) {
-            echo "<h3>Table: " . $table->getName() . "</h3lattfields park>";
+            echo "<h3>Table: " . $table->getName() . "</h3>";
             echo "<h5>" . $table->getScalingFactor() . "</h5>";
             ?>
             <table class="table table-striped table-hover table-bordered table-condensed">
