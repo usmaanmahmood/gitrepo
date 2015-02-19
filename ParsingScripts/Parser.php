@@ -16,5 +16,8 @@ include("RegistrationDetailsParser.php");
 include("MarksTableParser.php");
 include("IrregularitiesExcusesExpectedParser.php");
 
+// can add the database name parsing in here
+// and also module name parsing too
+// perhaps student name parsing
 
 ?>

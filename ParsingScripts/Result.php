@@ -15,5 +15,6 @@ include("ProfileResult.php");
 include("RegistrationDetailsResult.php");
 include("MarksTableResult.php");
 include("IrregularitiesExcusesExpectedResult.php");
+include("AttendanceSummaryResult.php");
 
 ?>
