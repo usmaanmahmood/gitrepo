@@ -27,10 +27,10 @@ $result = $arcadeClient->execute($query);
 ?>
 <table class="table table-striped table-hover table-bordered table-condensed">
     <tr>
-        <td>Database:</td><td><?=$database->getDatabaseParsedName();?></td>
+        <td>Database:</td><td><?=$database->getGroup();?></td>
     </tr>
     <tr>
-        <td>Group</td><td><?=implode(" ", $database->getGroup());?></td>
+        <td>Group</td><td><?=$database->getGroup();?></td>
     </tr>
     <tr>
         <td>Module List</td><td><?=$database->getModuleList();?></td>
