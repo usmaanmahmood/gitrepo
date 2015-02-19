@@ -102,8 +102,8 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<!--    <script src="//code.highcharts.com/highcharts.js"></script>-->
-<!--    <script src="//code.highcharts.com/modules/exporting.js"></script>-->
+    <script src="//code.highcharts.com/highcharts.js"></script>
+    <script src="//code.highcharts.com/modules/exporting.js"></script>
 <script>
     $(document).ready(function () {
 
