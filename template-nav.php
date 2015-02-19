@@ -16,6 +16,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="Classic.php">Classic</a></li>
+                <li><a href="Attendance-Summary.php">Attendance Summary</a></li>
                 <li><a href="Registration-Details.php">Registration Details</a></li>
 <!--                        <li><a href="#">registration-details: with lab groups</a></li>-->
 <!--                        <li class="divider"></li>-->
@@ -25,7 +26,6 @@
 <!--                <li><a href="#">time-table: full</a></li>-->
 <!--                <li><a href="#">time-table: with extensions</a></li>-->
 <!--                <li class="divider"></li>-->
-                <li><a href="Attendance-Summary.php">Attendance Summary</a></li>
 <!--                <li class="divider"></li>-->
                 <li><a href="Marks-Table.php">Marks Table</a></li>
 <!--                <li><a href="#">marks-table: fails only</a></li>-->
