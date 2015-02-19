@@ -10,24 +10,6 @@
 <body>
 
 <?php include("template-nav.php");
-
-//$arcadeClient = new ARCADEClient();
-////$query = new Query("marks-table: all", 0); // command, plainTextWanted
-
-//$query->addDatabases(array("11-12-1", "11-12-1X"));
-//$query->addModules(array("162L"));
-//$result = $arcadeClient->execute($query);
-//
-//
-//function objectToArray($object)
-//{
-//    if (!is_object($object) && !is_array($object))
-//        return $object;
-//
-//    return array_map('objectToArray', (array)$object);
-//}
-
-//    $result = objectToArray($result);
 ?>
 
 <!-- Page Content -->
@@ -91,7 +73,7 @@
             </button>
         </div>
 
-<!--        <div id="result" class="col-md-9"></div>-->
+        <div id="result" class="col-md-9"></div>
         <div id="containerT" class="col-md-9"></div>
 
     </div>
