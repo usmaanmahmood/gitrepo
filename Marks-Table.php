@@ -91,9 +91,8 @@
             </button>
         </div>
 
-        <div id="result" class="col-md-9">
-        </div>
-        <div id="containerT" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<!--        <div id="result" class="col-md-9"></div>-->
+        <div id="containerT" class="col-md-9" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
     </div>
 </div>
