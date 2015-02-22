@@ -36,10 +36,11 @@ $result = $arcadeClient->execute($query);
     <tr>
         <td>Percentage</td><td><?=$database->getPercentage();?></td>
     </tr>
-
+<!--
     <tr>
         <td>Pattern</td><td><?=$database->getAttendancePattern();?></td>
     </tr>
+    -->
     <tr>
         <td>Pattern</td><td>
     <?php
