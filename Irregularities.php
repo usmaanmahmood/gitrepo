@@ -54,7 +54,7 @@ foreach ($databaseList as $database) {
                        href="#collapse<?= $currentNumber ?>"
                        aria-expanded="true"
                        aria-controls="collapse<?= $currentNumber ?>"><strong>
-                            <?= $module; ?></strong></a>
+                            <?= $module; ?></strong> - <?= $database->getItemCountForModule($module);?> irregularities</a>
                 </h4>
             </div>
             <!-- panel-heading -->
