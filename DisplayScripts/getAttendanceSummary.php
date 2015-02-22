@@ -54,7 +54,7 @@ $result = $arcadeClient->execute($query);
             continue;
         }
         else if ($character == ".") {
-            echo "<br /></br>";
+            echo "<br />";
             continue;
         }
 
