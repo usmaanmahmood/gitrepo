@@ -1,6 +1,6 @@
 <?php
 
-$sampleString = "===============================================================================
+$sampleFullStoryString = "===============================================================================
 Database 12-13-2
 
     ARCADE Laboratory Details for Abedin,Shaaz
@@ -294,8 +294,9 @@ class FullStoryParser // extends Parser
 
         $result = new FullStoryResult();
 
-        foreach($databaseStringArray as $key => $database)
-            $result->addDatabase($this->parseDatabase($database));
+//        foreach($databaseStringArray as $key => $database)
+//            $result->addDatabase($this->parseDatabase($database));
+        $this->parseDatabase($databaseStringArray[0]);
 
         return $result;
 
@@ -307,6 +308,7 @@ class FullStoryParser // extends Parser
 
         // get the database name
         preg_match("/(?:Database\s+(\S+))/", $inString, $matches);
+        var_dump($matches);
         $rawDbName = $matches[1];
         $database->setDatabaseName($rawDbName);
         preg_match("/(\d+)-(\d+)-(\d)(.*)/", $rawDbName, $rawDbNameMatches);
@@ -314,7 +316,7 @@ class FullStoryParser // extends Parser
 
         preg_match_all("/===============================================================================\n[\S\s]*Group -\/(\S*?)\nSummary for module (\S*)\n\n\n[\S\s]*?-------------------------------------------------------------------------------\n([\s\S]*\|\s\n*)\n([\s\S]*)\n\n\n/", $inString, $matches);
         array_shift($matches); // remove the first match which is the entire table
-
+        var_dump($matches);
         // parse further into perfect form
 //        foreach($matches as $key => $table)
 //            foreach($table as $key2 => $row)
@@ -347,5 +349,5 @@ class FullStoryParser // extends Parser
 include("Result.php");
 
 $parser = new FullStoryParser();
-$result = $parser->parse($parser->sampleString);
-var_dump($result->getDatabaseList());
+$result = $parser->parse($sampleFullStoryString);
+//var_dump($result->getDatabaseList());
