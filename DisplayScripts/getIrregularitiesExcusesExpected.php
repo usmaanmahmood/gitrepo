@@ -28,7 +28,7 @@ $result = $arcadeClient->execute($query);
 
     foreach ($databaseList as $database) {
         ?>
-        <h3><?= $database->getDatabaseParsedName() . " (" . $database->getDatabaseName() . ")"; ?></h3>
+        <h3><?= $database->getDatabaseParsedName(); ?></h3>
         <?php
         $itemModuleList = array_unique($database->getItemModuleList());
         foreach ($itemModuleList as $key => $module) {
