@@ -107,8 +107,8 @@
             <p>A pattern of attendance. A merge of course components selected.</p>
             New line seperates weeks<br />
              means attended <div class="green"></div><br />
-             means absent <div class="red"></div><br />
              means excused <div class="orange"></div><br />
+             means absent <div class="red"></div><br />
              means no attendance taken <div class="white"></div>
         <div id="result"></div>
         </div>
