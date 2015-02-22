@@ -101,7 +101,8 @@
         <div class="col-md-9">
             <h1>Attendance Summary</h1>
             <p>A pattern of attendance. A merge of course components selected.</p>
-            New line seperates weeks<br />
+            <strong>Key:</strong><br />
+            One week per line<br />
             <div class="green pull-left"></div> means attended<br />
             <div class="orange pull-left"></div> means excused<br />
             <div class="red pull-left"></div> means absent<br />
