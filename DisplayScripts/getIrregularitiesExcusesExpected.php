@@ -13,6 +13,8 @@ if (!empty($_GET["modules"])) $query->addModules($_GET["modules"]);
 
 $result = $arcadeClient->execute($query);
 
+$type = $_GET["type"];
+
 ?>
 
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -39,7 +41,7 @@ $result = $arcadeClient->execute($query);
                            aria-expanded="true"
                            aria-controls="collapse<?= $currentNumber ?>"><strong>
                                 <?= $module; ?></strong>
-                            - <?= $database->getItemCountForModule($module); ?> irregularities</a>
+                            - <? echo $database->getItemCountForModule($module) . $type ?></a>
                     </h4>
                 </div>
                 <!-- panel-heading -->
