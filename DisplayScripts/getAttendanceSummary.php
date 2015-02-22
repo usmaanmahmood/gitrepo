@@ -50,7 +50,7 @@ $result = $arcadeClient->execute($query);
     {
 
         if ($character == "|") {
-            echo "<br />New Semester</br>";
+            echo "New Semester<br />";
             continue;
         }
         else if ($character == ".") {
