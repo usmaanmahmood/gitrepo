@@ -82,6 +82,17 @@ class IrregularitiesExcusesExpectedDatabase
         return count($this->getItemList());
     }
 
+    public function getItemCountForModule($moduleName)
+    {
+        $itemList = $this->getItemList();
+        $finalItemList = array();
+        foreach($itemList as $item)
+            if ($item->getModule() == $moduleName)
+                array_push($finalItemList, $item);
+
+        return count($finalItemList);
+    }
+
 }
 
 class Item {
