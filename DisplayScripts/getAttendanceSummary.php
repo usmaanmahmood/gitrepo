@@ -57,6 +57,8 @@ $result = $arcadeClient->execute($query);
             echo "<br />";
             continue;
         }
+        else
+            echo $character;
 
         $colour = "null";
         switch ($character) {
