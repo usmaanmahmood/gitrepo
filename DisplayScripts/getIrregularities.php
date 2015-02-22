@@ -17,7 +17,7 @@ $result = $arcadeClient->execute($query);
 
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
     <?php
-
+    $databaseList = $result->getDatabaseList()
     // database title
     // new panel for each module
 
