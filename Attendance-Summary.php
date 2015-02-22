@@ -15,7 +15,7 @@
         width: 1em;
         height: 1em;
         background: darkred;
-        float:left;
+        /*float:left;*/
         border-right: 1px solid white;
     }
 
@@ -23,14 +23,14 @@
         width: 1em;
         height: 1em;
         background: darkorange;
-        float:left;
+        /*float:left;*/
         border-right: 1px solid white;
     }
     .white {
         width: 1em;
         height: 1em;
         background: lightgrey;
-        float:left;
+        /*float:left;*/
         border-right: 1px solid white;
     }
 </style>

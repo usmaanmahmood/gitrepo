@@ -53,7 +53,7 @@ $result = $arcadeClient->execute($query);
             echo "<br />";
             continue;
         }
-        
+
         echo $character;
 
         $colour = "null";
@@ -72,7 +72,7 @@ $result = $arcadeClient->execute($query);
                 break;
         }
         if ($colour != "null")
-            echo "<div class=\"" . $colour . "\"></div>";
+            echo "<div class=\"" . $colour . " pull-left\"></div>";
     }
     ?></td>
     </tr>
