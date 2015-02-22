@@ -4,22 +4,23 @@
     body {
         padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     }
-    #red {
-        width: 10px;
-        height: 10px;
-        background: red;
-    }
-    #green {
+    .green {
         width: 10px;
         height: 10px;
         background: green;
     }
-    #orange {
+    .red {
+        width: 10px;
+        height: 10px;
+        background: red;
+    }
+
+    .orange {
         width: 10px;
         height: 10px;
         background: orange;
     }
-    #red {
+    .red {
         width: 10px;
         height: 10px;
         background: red;
@@ -115,7 +116,7 @@
         <div class="col-md-9">
             <h1>Attendance Summary</h1>
             <p>A pattern of attendance. A merge of course components selected. . seperates weeks, | seperates semesters.</p>
-            <p>/ means attended GREEN <div class="red"></div><Br>
+            <p>/ means attended GREEN <div class="GREEN"></div><Br>
                 x means absent RED<Br>
                 E means excused ORANGE<Br>
                 N means no attendance taken WHITE</p>
