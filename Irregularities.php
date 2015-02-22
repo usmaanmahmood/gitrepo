@@ -11,13 +11,13 @@
 
 <?php include("template-nav.php");
 
-$arcadeClient = new ARCADEClient();
-$query = new Query("irregularities", 0); // command, plainTextWanted
-
-$query->addDatabases($arcadeProfile->getDatabaseList());
-$result = $arcadeClient->execute($query);
-
-$databaseList = $result->getDatabaseList();
+//$arcadeClient = new ARCADEClient();
+//$query = new Query("irregularities", 0); // command, plainTextWanted
+//
+//$query->addDatabases($arcadeProfile->getDatabaseList());
+//$result = $arcadeClient->execute($query);
+//
+//$databaseList = $result->getDatabaseList();
 
 // TODO: Only autoload the latest and have a load more... button that loads the rest
 
