@@ -54,7 +54,7 @@ $result = $arcadeClient->execute($query);
             continue;
         }
         else if ($character == ".") {
-            echo "<br />New Week</br>";
+            echo "<br /></br>";
             continue;
         }
 
