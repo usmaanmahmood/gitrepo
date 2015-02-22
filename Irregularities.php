@@ -25,81 +25,187 @@ $databaseList = $result->getDatabaseList();
 ?>
 
     <!-- Page Content -->
-<div class="container">
+    <div class="container">
 
-    <div class="row">
-    <div class="col-lg-12">
-    <h1>Irregularities</h1>
+        <div class="row">
+            <div class="col-md-3">
 
-    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-<?php
+                <button type="button" class="btn btn-default btn-block dat-reset-filters">Reset Databases</button>
 
-// database title
-// new panel for each module
+                <select class="form-control" size=4 id="DatabaseList">
+                    <?php foreach (array_unique($arcadeProfile->getDatabaseList()) as $option) { ?>
+                        <option value="<?php echo $option ?>">
+                            <?php preg_match("/(\d+)-(\d+)-(\d)(.*)/", $option, $matches);
+                            $databaseParsedName = ("Year " . $matches[3] . " - " . ($matches[4] == "X" ? ("Overall (inc. Exams)") : "Coursework Only"));
+                            echo $databaseParsedName; ?></option>
+                    <?php } ?>
+                </select>
+                <br/>
+                <button type="button" class="btn btn-default btn-block mod-reset-filters">Reset Modules</button>
 
-foreach ($databaseList as $database) {
-    ?>
-    <h3><?= $database->getDatabaseParsedName() . " (" . $database->getDatabaseName() . ")"; ?></h3>
-    <?php
-    $itemModuleList = array_unique($database->getItemModuleList());
-    foreach ($itemModuleList as $key => $module) {
-        $key1 = $key + 1;
-        $currentNumber = ucfirst(convert_number_to_words(($key1)));
 
-        ?>
-        <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="heading<?= $currentNumber ?>">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion"
-                       href="#collapse<?= $currentNumber ?>"
-                       aria-expanded="true"
-                       aria-controls="collapse<?= $currentNumber ?>"><strong>
-                            <?= $module; ?></strong> - <?= $database->getItemCountForModule($module);?> irregularities</a>
-                </h4>
+                <select multiple class="form-control" size=15 id="ModuleList">
+                    <?php $twoDArray = $arcadeProfile->getTwoDimensionalArray();
+                    foreach ($twoDArray as $filter) {
+                        ?>
+                        <option value="<?php echo $filter[4] ?>" data-db="<?= $filter[0] ?>">
+                            <?php
+                            $matched = preg_match("/(\d{3,5})(\S)$/", $filter[4], $matches);
+
+                            if ($matched) {
+                                switch ($matches[2]) {
+                                    case "L":
+                                        $matches[2] = " Labs";
+                                        break;
+                                    case "C":
+                                        $matches[2] = " Coursework";
+                                        break;
+                                    case "E":
+                                        $matches[2] = " Examples-Classes";
+                                        break;
+                                    case "W":
+                                        $matches[2] = " Workshops";
+                                        break;
+                                    case "X":
+                                        $matches[2] = " Exams";
+                                        break;
+                                }
+                            };
+
+                            if ($matched)
+                                echo $matches[1] . $matches[2];
+                            else
+                                echo $filter[4];
+                            ?></option>
+                    <?php } ?>
+                </select>
+                <br/>
+                <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..."
+                        id="submit">Execute!
+                </button>
             </div>
-            <!-- panel-heading -->
-            <div id="collapse<?= $currentNumber ?>"
-                 class="panel-collapse collapse<?= $currentNumber == "One" ? " in" : "" ?>"
-                 role="tabpanel"
-                 aria-labelledby="heading<?= $currentNumber ?>">
-                <!--                                <div class="panel-body">-->
-                <table class="table table-striped table-hover">
-                    <tr>
-                        <th>Group:</th>
-                        <th>Date (DD/MM):</th>
-                        <th>Note:</th>
-                    </tr>
-                    <?php foreach ($database->getItemList() as $item) {
-                        if ($item->getModule() == $module) {
-                            ?>
-                            <tr>
-                                <td><?= $item->getGroup(); ?></td>
-                                <td><?= $item->getDate(); ?></td>
-                                <td><?= $item->getNote(); ?></td>
-                            </tr>
+
+
+            <div class="col-md-9">
+                <h1>Irregularities</h1>
+
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <?php
+
+                    // database title
+                    // new panel for each module
+
+                    foreach ($databaseList as $database) {
+                        ?>
+                        <h3><?= $database->getDatabaseParsedName() . " (" . $database->getDatabaseName() . ")"; ?></h3>
                         <?php
-                        } // if $module
-                    } // foreach $item in this module
+                        $itemModuleList = array_unique($database->getItemModuleList());
+                        foreach ($itemModuleList as $key => $module) {
+                            $key1 = $key + 1;
+                            $currentNumber = ucfirst(convert_number_to_words(($key1)));
+
+                            ?>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading<?= $currentNumber ?>">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion"
+                                           href="#collapse<?= $currentNumber ?>"
+                                           aria-expanded="true"
+                                           aria-controls="collapse<?= $currentNumber ?>"><strong>
+                                                <?= $module; ?></strong>
+                                            - <?= $database->getItemCountForModule($module); ?> irregularities</a>
+                                    </h4>
+                                </div>
+                                <!-- panel-heading -->
+                                <div id="collapse<?= $currentNumber ?>"
+                                     class="panel-collapse collapse<?= $currentNumber == "One" ? " in" : "" ?>"
+                                     role="tabpanel"
+                                     aria-labelledby="heading<?= $currentNumber ?>">
+                                    <!--                                <div class="panel-body">-->
+                                    <table class="table table-striped table-hover">
+                                        <tr>
+                                            <th>Group:</th>
+                                            <th>Date (DD/MM):</th>
+                                            <th>Note:</th>
+                                        </tr>
+                                        <?php foreach ($database->getItemList() as $item) {
+                                            if ($item->getModule() == $module) {
+                                                ?>
+                                                <tr>
+                                                    <td><?= $item->getGroup(); ?></td>
+                                                    <td><?= $item->getDate(); ?></td>
+                                                    <td><?= $item->getNote(); ?></td>
+                                                </tr>
+                                            <?php
+                                            } // if $module
+                                        } // foreach $item in this module
+                                        ?>
+                                    </table>
+                                    <!--                                </div>-->
+                                </div>
+                            </div> <!-- panel panel-default -->
+                        <?php
+                        } // foreach $module
+                    } // foreach $database
                     ?>
-                </table>
-                <!--                                </div>-->
+                </div>
+                <!-- panel-group -->
             </div>
-        </div> <!-- panel panel-default -->
-    <?php } // foreach $module
-        } // foreach $database ?>
-    </div>
-    <!-- panel-group -->
-    </div>
-    </div>
+        </div>
     </div>
     <!-- /.container -->
 
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function () {
+<script>
+$(document).ready(function () {
 
+    // hide them all to start with
+    $("#ModuleList option").hide();
+
+    $("#DatabaseList").change(function () {
+        $("#ModuleList option").hide();
+        $("#ModuleList option[data-db=" + this.value + "]").show();
+    });
+
+//
+
+    $(".dat-reset-filters").click(function () {
+        $("#DatabaseList option:selected").removeAttr("selected");
+    });
+
+    $(".mod-reset-filters").click(function () {
+        $("#ModuleList option:selected").removeAttr("selected");
+    });
+
+
+    $("#submit").click(function () {
+        var $modules = $("#ModuleList").val();
+        var $databases = [];
+        $databases.push($("#DatabaseList").val());
+
+        console.log($databases);
+        console.log($modules);
+
+        var $submitbutton = $('#submit').button('loading');
+
+        var $resultDiv = $('#result');
+        $resultDiv.fadeOut('slow');
+
+        $.get("DisplayScripts/getAttendanceSummary.php", {"databases": $databases, "modules": $modules})
+            .done(function (result) {
+                $resultDiv.html(result);
+                $resultDiv.fadeIn('slow');
+                $submitbutton.button('reset');
+            })
+            .error(function (xhr, status, error) {
+                $resultDiv.html("<h1>error: " + xhr.status + " " + xhr.statusText + "</h1><p>Please try again. If the problem is recurring, email usmaanmahmood@hotmail.com</p>");
+                $resultDiv.fadeIn('slow');
+                $submitbutton.button('reset');
+            });
+
+    });
         // } document ready in template end
 
 <?php include("template-end.php"); ?>
