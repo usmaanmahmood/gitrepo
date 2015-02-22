@@ -48,8 +48,17 @@ $result = $arcadeClient->execute($query);
 
     foreach($splitPattern as $character)
     {
+
+        if ($character == "|") {
+            echo "<br />New Semester</br>";
+            continue;
+        }
+        else if ($character == "." {
+            echo "<br />New Week</br>";
+            continue;
+        }
+
         $colour = "null";
-        $divider = "none";
         switch ($character) {
             case "/":   $colour = "green";
                 break;
@@ -66,8 +75,6 @@ $result = $arcadeClient->execute($query);
         }
         if ($colour != "null")
             echo "<div class=\"" . $colour . "\"></div>";
-        else
-            echo "<div style=\"float:left\">" . $character . "</div>";
     }
     ?></td>
     </tr>
