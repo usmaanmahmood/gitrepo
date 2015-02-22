@@ -88,9 +88,6 @@
 <script>
     $(document).ready(function () {
 
-
-
-
         // hide them all to start with
         $("#ModuleList option").hide();
 

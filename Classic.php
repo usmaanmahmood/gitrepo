@@ -121,6 +121,16 @@ $(document).ready(function () {
         else
             $('#queryWarning').hide();
 
+        // send through list of databases in the list if none provided
+//        if ($databases == null || $databases == "") {
+//            $databases = [];
+//            var $DatabaseList = $("#DatabaseList");
+//            var i;
+//            for (i = 0; i < $DatabaseList.get(0).length; i++) {
+//                $databases.push($DatabaseList.get(0).options[i].text);
+//            }
+//        }
+
         var $submitbutton = $('#submit').button('loading');
 
         $('#resultspane').fadeOut('slow');
@@ -290,6 +300,7 @@ $(document).ready(function () {
 
     }
 
-// } document ready in template end
+
+}) // document ready
 
 <?php include("template-end.php"); ?>
