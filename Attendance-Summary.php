@@ -8,52 +8,29 @@
         width: 1em;
         height: 1em;
         background: lawngreen;
-        float:left;
     }
     .red {
         width: 1em;
         height: 1em;
         background: darkred;
-        float:left;
     }
 
     .orange {
         width: 1em;
         height: 1em;
         background: darkorange;
-        float:left;
     }
     .white {
         width: 1em;
         height: 1em;
         background: lightgrey;
-        float:left;
     }
 </style>
 </head>
 
 <body>
 
-<?php include("template-nav.php");
-
-//$arcadeClient = new ARCADEClient();
-////$query = new Query("marks-table: all", 0); // command, plainTextWanted
-
-//$query->addDatabases(array("11-12-1", "11-12-1X"));
-//$query->addModules(array("162L"));
-//$result = $arcadeClient->execute($query);
-//
-//
-//function objectToArray($object)
-//{
-//    if (!is_object($object) && !is_array($object))
-//        return $object;
-//
-//    return array_map('objectToArray', (array)$object);
-//}
-
-//    $result = objectToArray($result);
-?>
+<?php include("template-nav.php");?>
 
 <!-- Page Content -->
 <div class="container">
