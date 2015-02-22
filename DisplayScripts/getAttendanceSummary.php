@@ -62,7 +62,7 @@ $result = $arcadeClient->execute($query);
         if ($colour != "null")
             echo "<div class=\"" . $colour . "\"></div>";
         else
-            echo $character;
+            echo "<div style=\"float:left\">" . $character . "</div>";
     }
     ?></td>
     </tr>
