@@ -7,7 +7,7 @@
  */
 
 
-include "config.php";
+include "../config.php";
 
 echo json_encode($arcadeProfile->getTwoDimensionalArray());
 
