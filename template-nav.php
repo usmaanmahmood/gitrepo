@@ -36,7 +36,7 @@
 <!--                <li><a href="#">full-story: without notes</a></li>-->
 <!--                <li><a href="#">full-story: chronological</a></li>-->
                 <li class="dropdown" id="theme-dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cogs icon-large"></i> Theme<b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cogs icon-large"></i> Theme <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="#" class="change-style-menu-item" rel="default"><i class="icon-fixed-width icon-pencil"></i> Default</a></li>
                         <li><a href="#" class="change-style-menu-item" rel="cerulean"><i class="icon-fixed-width icon-pencil"></i> Cerulean</a></li>
