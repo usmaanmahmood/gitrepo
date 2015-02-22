@@ -59,15 +59,15 @@ $result = $arcadeClient->execute($query);
                 break;
             case "N":   $colour = "white";
                 break;
-            case "|":   $divider = "S";
+            case "|":   $divider = "|";
                 break;
-            case ".":   $divider = "W";
+            case ".":   $divider = ".";
                 break;
         }
         if ($colour != "null")
             echo "<div class=\"" . $colour . "\"></div>";
         else
-            echo "<div style=\"float:left\">" . $divider . "</div>";
+            echo "<div style=\"float:left\">" . $character . "</div>";
     }
     ?></td>
     </tr>
