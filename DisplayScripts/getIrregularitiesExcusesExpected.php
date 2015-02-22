@@ -3,7 +3,10 @@
 include("../config.php");
 
 $arcadeClient = new ARCADEClient();
-$query = new Query("irregularities", 0); // command, plainTextWanted
+
+$type = $_GET["type"];
+
+$query = new Query($type, 0); // command, plainTextWanted
 
 // if none selected then it is empty. if it is, send the array through
 if (!empty($_GET["databases"])) $query->addDatabases($_GET["databases"]);
@@ -13,7 +16,7 @@ if (!empty($_GET["modules"])) $query->addModules($_GET["modules"]);
 
 $result = $arcadeClient->execute($query);
 
-$type = $_GET["type"];
+
 
 ?>
 
