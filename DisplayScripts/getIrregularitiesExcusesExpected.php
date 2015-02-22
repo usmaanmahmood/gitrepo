@@ -36,7 +36,7 @@ $result = $arcadeClient->execute($query);
                 $currentNumber = ucfirst(convert_number_to_words(($key1)));
 
                 ?>
-                <div class="panel panel-info">
+                <div class="panel panel-primary">
                     <div class="panel-heading" role="tab" id="heading<?= $currentNumber ?>">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion"
