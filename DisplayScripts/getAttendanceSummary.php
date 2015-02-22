@@ -49,20 +49,25 @@ $result = $arcadeClient->execute($query);
     foreach($splitPattern as $character)
     {
         $colour = "null";
+        $divider = "none";
         switch ($character) {
             case "/":   $colour = "green";
-                        break;
+                break;
             case "x":   $colour = "red";
                 break;
             case "E":   $colour = "orange";
                 break;
             case "N":   $colour = "white";
                 break;
+            case "|":   $divider = "S";
+                break;
+            case ".":   $divider = "W";
+                break;
         }
         if ($colour != "null")
             echo "<div class=\"" . $colour . "\"></div>";
         else
-            echo "<div style=\"float:left\">" . $character . "</div>";
+            echo "<div style=\"float:left\">" . $divider . "</div>";
     }
     ?></td>
     </tr>
