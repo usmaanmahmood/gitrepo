@@ -63,7 +63,6 @@ $result = $arcadeClient->execute($query);
                                 if ($item->getModule() == $module) {
 
                                     $firstfive = substr(trim($item->getNote()), 0, 5);
-                                    var_dump($firstfive);
                                     $current = false;
                                     if ($firstfive != "(OLD)")
                                         $current = true;
