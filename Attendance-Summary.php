@@ -8,22 +8,26 @@
         width: 1em;
         height: 1em;
         background: lawngreen;
+        float:left;
     }
     .red {
         width: 1em;
         height: 1em;
         background: darkred;
+        float:left;
     }
 
     .orange {
         width: 1em;
         height: 1em;
         background: darkorange;
+        float:left;
     }
     .white {
         width: 1em;
         height: 1em;
         background: lightgrey;
+        float:left;
     }
 </style>
 </head>
