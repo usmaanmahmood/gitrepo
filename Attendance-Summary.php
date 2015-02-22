@@ -11,20 +11,23 @@
         float:left;
     }
     .red {
-        width: 10px;
-        height: 10px;
-        background: red;
+        width: 1em;
+        height: 1em;
+        background: darkred;
+        float:left;
     }
 
     .orange {
-        width: 10px;
-        height: 10px;
-        background: orange;
+        width: 1em;
+        height: 1em;
+        background: darkorange;
+        float:left;
     }
-    .red {
-        width: 10px;
-        height: 10px;
-        background: red;
+    .white {
+        width: 1em;
+        height: 1em;
+        background: lightgrey;
+        float:left;
     }
 </style>
 </head>
@@ -118,9 +121,9 @@
             <h1>Attendance Summary</h1>
             <p>A pattern of attendance. A merge of course components selected. . seperates weeks, | seperates semesters.</p>
             <p>/ means attended GREEN <div class="green"></div><Br>
-                x means absent RED<Br>
-                E means excused ORANGE<Br>
-                N means no attendance taken WHITE</p>
+                x means absent RED <div class="red"></div><Br>
+                E means excused ORANGE <div class="orange"></div><Br>
+                N means no attendance taken WHITE <div class="white"></div></p>
         <div id="result"></div>
         </div>
 
