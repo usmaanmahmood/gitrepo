@@ -46,7 +46,7 @@ $result = $arcadeClient->execute($query);
     {
 
         if ($character == "|") {
-            echo "<div class=\"pull-left\">Semester Change<br /></div>";
+            echo "<div class=\"pull-left\">Semester Change</div><br />";
             continue;
         }
         else if ($character == ".") {
