@@ -43,24 +43,24 @@ $result = $arcadeClient->execute($query);
     <tr>
         <td>Pattern</td><td>
     <?php
-    $rawPattern = $database->getAttendancePattern();
-    $splitPattern = str_split($rawPattern);
-
-    foreach($splitPattern as $character)
-    {
-        $colour = "black";
-        switch ($character) {
-            case "/":   $colour = "green";
-                        break;
-            case "x":   $colour = "red";
-                break;
-            case "E":   $colour = "orange";
-                break;
-            case "N":   $colour = "white";
-                break;
-        }
-        echo "<div class=\"" . $colour . "\"></div>";
-    }
+//    $rawPattern = $database->getAttendancePattern();
+//    $splitPattern = str_split($rawPattern);
+//
+//    foreach($splitPattern as $character)
+//    {
+//        $colour = "black";
+//        switch ($character) {
+//            case "/":   $colour = "green";
+//                        break;
+//            case "x":   $colour = "red";
+//                break;
+//            case "E":   $colour = "orange";
+//                break;
+//            case "N":   $colour = "white";
+//                break;
+//        }
+//        echo "<div class=\"" . $colour . "\"></div>";
+//    }
     ?></td>
     </tr>
 </table>
