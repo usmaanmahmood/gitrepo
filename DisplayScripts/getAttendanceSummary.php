@@ -20,8 +20,6 @@ if (!empty($_GET["modules"])) $query->addModules($_GET["modules"]);
 $result = $arcadeClient->execute($query);
 
 ?>
-    <h1>Attendance Summary</h1>
-
 <?php foreach($result->getDatabaseList() as $database)
 {
 ?>
