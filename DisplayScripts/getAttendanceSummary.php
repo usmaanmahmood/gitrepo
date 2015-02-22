@@ -48,7 +48,7 @@ $result = $arcadeClient->execute($query);
 
     foreach($splitPattern as $character)
     {
-        $colour = "black";
+        $colour = "null";
         switch ($character) {
             case "/":   $colour = "green";
                         break;
@@ -59,7 +59,10 @@ $result = $arcadeClient->execute($query);
             case "N":   $colour = "white";
                 break;
         }
-        echo "<div class=\"" . $colour . "\"></div>";
+        if ($colour != "null")
+            echo "<div class=\"" . $colour . "\"></div>";
+        else
+            echo $character;
     }
     ?></td>
     </tr>
