@@ -10,15 +10,6 @@
 <body>
 
 <?php include("template-nav.php");
-
-//$arcadeClient = new ARCADEClient();
-//$query = new Query("irregularities", 0); // command, plainTextWanted
-//
-//$query->addDatabases($arcadeProfile->getDatabaseList());
-//$result = $arcadeClient->execute($query);
-//
-//$databaseList = $result->getDatabaseList();
-
 ?>
 
     <!-- Page Content -->
