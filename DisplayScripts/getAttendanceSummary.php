@@ -53,7 +53,7 @@ $result = $arcadeClient->execute($query);
             echo "<br />New Semester</br>";
             continue;
         }
-        else if ($character == "." {
+        else if ($character == ".") {
             echo "<br />New Week</br>";
             continue;
         }
