@@ -45,7 +45,7 @@
                                        href="#collapse<?= $currentNumber ?>"
                                        aria-expanded="true"
                                        aria-controls="collapse<?= $currentNumber ?>"><strong>
-                                            <?= $database->getDatabaseParsedName() . " (" . $database->getDatabaseName() . ")"; ?></strong></a>
+                                            <?= $database->getDatabaseParsedName(); ?></strong></a>
                                 </h4>
                             </div>
                             <!-- panel-heading -->
