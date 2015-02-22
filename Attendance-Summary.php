@@ -7,9 +7,9 @@
     .green {
         width: 1em;
         height: 1em;
-        background: @brand-success;
+        background: lawngreen;
         float:left;
-        border-right: 1px dotted black;
+        border-right: 1px solid 50% black;
     }
     .red {
         width: 1em;
