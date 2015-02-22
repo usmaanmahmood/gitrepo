@@ -9,12 +9,14 @@
         height: 1em;
         background: lawngreen;
         float:left;
+        border-right: 1px dotted black;
     }
     .red {
         width: 1em;
         height: 1em;
         background: darkred;
         float:left;
+        border-right: 1px dotted black;
     }
 
     .orange {
@@ -22,12 +24,14 @@
         height: 1em;
         background: darkorange;
         float:left;
+        border-right: 1px dotted black;
     }
     .white {
         width: 1em;
         height: 1em;
         background: lightgrey;
         float:left;
+        border-right: 1px dotted black;
     }
 </style>
 </head>
