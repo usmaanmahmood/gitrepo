@@ -36,11 +36,6 @@ $result = $arcadeClient->execute($query);
     <tr>
         <td>Percentage</td><td><?=$database->getPercentage();?></td>
     </tr>
-<!--
-    <tr>
-        <td>Pattern</td><td><?=$database->getAttendancePattern();?></td>
-    </tr>
-    -->
     <tr>
         <td>Pattern</td><td>
     <?php
@@ -80,6 +75,9 @@ $result = $arcadeClient->execute($query);
             echo "<div class=\"" . $colour . "\"></div>";
     }
     ?></td>
+    </tr>
+    <tr>
+        <td>Raw Pattern</td><td><?=$database->getAttendancePattern();?></td>
     </tr>
 </table>
 <?php } ?>
