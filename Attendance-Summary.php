@@ -7,7 +7,7 @@
     .green {
         width: 1em;
         height: 1em;
-        background: lawngreen;
+        background: @brand-success;
         float:left;
         border-right: 1px dotted black;
     }
@@ -31,7 +31,7 @@
         height: 1em;
         background: lightgrey;
         float:left;
-        border-right: 1px dotted black;
+        border-right: 1px solid black;
     }
 </style>
 </head>
