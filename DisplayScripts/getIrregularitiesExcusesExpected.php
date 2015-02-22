@@ -41,7 +41,7 @@ $type = $_GET["type"];
                            aria-expanded="true"
                            aria-controls="collapse<?= $currentNumber ?>"><strong>
                                 <?= $module; ?></strong>
-                            - <?= $database->getItemCountForModule($module); ?><?= " " . $type ?></a>
+                            - <?= $database->getItemCountForModule($module); ?> <?= $type ?></a>
                     </h4>
                 </div>
                 <!-- panel-heading -->
