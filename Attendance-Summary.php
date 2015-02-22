@@ -34,12 +34,7 @@
 <div class="container">
 
     <div class="row">
-        <h1>Attendance Summary</h1>
-        <p>A pattern of attendance. A merge of course components selected. . seperates weeks, | seperates semesters.</p>
-        <p>/ means attended<Br>
-            x means absent<Br>
-            E means excused<Br>
-            N means no attendance taken</p>
+
         <div class="col-md-3">
 
             <button type="button" class="btn btn-default btn-block dat-reset-filters">Reset Databases</button>
@@ -97,7 +92,14 @@
             </button>
         </div>
 
-        <div id="result" class="col-md-9">
+        <div class="col-md-9">
+            <h1>Attendance Summary</h1>
+            <p>A pattern of attendance. A merge of course components selected. . seperates weeks, | seperates semesters.</p>
+            <p>/ means attended<Br>
+                x means absent<Br>
+                E means excused<Br>
+                N means no attendance taken</p>
+        <div id="result"></div>
         </div>
 
 
