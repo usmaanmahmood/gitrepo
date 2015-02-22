@@ -21,8 +21,6 @@ $result = $arcadeClient->execute($query);
 
 ?>
 
-
-    <h1>Marks Table</h1>
 <?php foreach ($result->getDatabaseList() as $database) {
     if (!empty($database->getTableList())) {
         echo "<h3>" . $database->getDatabaseParsedName() . "</h3>";

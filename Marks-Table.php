@@ -72,10 +72,10 @@
                     id="submit">Execute!
             </button>
         </div>
-
-        <div id="result" class="col-md-9"></div>
-        <div id="chart_div"></div>
-
+        <div class="col-md-9">
+            <h1>Marks Table</h1>
+            <div id="result"></div>
+        </div>
     </div>
 </div>
 <!-- /.container -->
