@@ -62,7 +62,7 @@ $result = $arcadeClient->execute($query);
                             <?php foreach ($database->getItemList() as $item) {
                                 if ($item->getModule() == $module) {
 
-                                    $firstfive = substr($item->getNote(), 0, 5);
+                                    $firstfive = substr(trim($item->getNote()), 0, 5);
                                     var_dump($firstfive);
                                     $current = false;
                                     if ($firstfive != "(OLD)")
