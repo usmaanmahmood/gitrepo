@@ -42,7 +42,7 @@ $result = $arcadeClient->execute($query);
     </tr>
     <tr>
         <td>Pattern</td><td>
-    <?
+    <?php
     $rawPattern = $database->getAttendancePattern();
     $splitPattern = str_split($rawPattern);
 
