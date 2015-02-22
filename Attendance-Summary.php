@@ -8,7 +8,7 @@
         width: 1em;
         height: 1em;
         background: lawngreen;
-        float:left;
+        /*float:left;*/
         border-right: 1px solid white;
     }
     .red {
@@ -106,7 +106,7 @@
             <h1>Attendance Summary</h1>
             <p>A pattern of attendance. A merge of course components selected.</p>
             New line seperates weeks<br />
-             means attended <div class="green"></div><br />
+             means attended <div class="green pull-left"></div><br />
              means excused <div class="orange"></div><br />
              means absent <div class="red"></div><br />
              means no attendance taken <div class="white"></div>
