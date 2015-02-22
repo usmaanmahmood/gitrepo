@@ -104,11 +104,12 @@
 
         <div class="col-md-9">
             <h1>Attendance Summary</h1>
-            <p>A pattern of attendance. A merge of course components selected. . seperates weeks, | seperates semesters.</p>
-            / means attended GREEN <div class="green"></div><Br>
-                x means absent RED <div class="red"></div><Br>
-                E means excused ORANGE <div class="orange"></div><Br>
-                N means no attendance taken WHITE <div class="white"></div>
+            <p>A pattern of attendance. A merge of course components selected.</p>
+            New line seperates weeks<br />
+             means attended <div class="green"></div><br />
+             means absent <div class="red"></div><br />
+             means excused <div class="orange"></div><br />
+             means no attendance taken <div class="white"></div>
         <div id="result"></div>
         </div>
 
