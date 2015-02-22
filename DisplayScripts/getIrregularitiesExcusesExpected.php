@@ -49,7 +49,7 @@ $result = $arcadeClient->execute($query);
                     </div>
                     <!-- panel-heading -->
                     <div id="collapse<?= $currentNumber ?>"
-                         class="panel-collapse collapse<?= $currentNumber == "One" ? " in" : "" ?>"
+                         class="panel-primary panel-collapse collapse<?= $currentNumber == "One" ? " in" : "" ?>"
                          role="tabpanel"
                          aria-labelledby="heading<?= $currentNumber ?>">
                         <!--                                <div class="panel-body">-->
