@@ -42,7 +42,7 @@
                 </li>
                 <li class="dropdown" id="theme-dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span> Theme <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
+                    <ol class="dropdown-menu">
                         <li><a href="#" class="change-style-menu-item" rel="default">Default</a></li>
                         <li><a href="#" class="change-style-menu-item" rel="cerulean">Cerulean</a></li>
                         <li><a href="#" class="change-style-menu-item" rel="cyborg">Cyborg</a></li>
@@ -60,7 +60,7 @@
                         <li><a href="#" class="change-style-menu-item" rel="superhero">Superhero</a></li>
                         <li><a href="#" class="change-style-menu-item" rel="united">United</a></li>
                         <li><a href="#" class="change-style-menu-item" rel="yeti">Yeti</a></li>
-                    </ul>
+                    </ol>
                 </li>
                 <li><a href="Logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
             </ul>
