@@ -26,9 +26,14 @@
                 <li><a href="Marks-Table.php">Marks Table</a></li>
 <!--                <li><a href="#">marks-table: fails only</a></li>-->
 <!--                <li><a href="#">marks-table: ignore empty columns</a></li>-->
-                <li><a href="Expected.php">Expected</a></li>
-                <li><a href="Excuses.php">Excuses</a></li>
-                <li><a href="Irregularities.php">Irregularities</a></li>
+                <li class="dropdown">
+                    <a href="#" li class="dropdown" id="theme-dropdown">Other</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Expected.php">Expected</a></li>
+                        <li><a href="Excuses.php">Excuses</a></li>
+                        <li><a href="Irregularities.php">Irregularities</a></li>
+                    </ul>
+                </li>
 <!--                <li class="divider"></li>-->
 <!--                <li><a href="#">failure-predictions</a></li>-->
 <!--                <li class="divider"></li>-->
