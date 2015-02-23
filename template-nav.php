@@ -27,7 +27,7 @@
 <!--                <li><a href="#">marks-table: fails only</a></li>-->
 <!--                <li><a href="#">marks-table: ignore empty columns</a></li>-->
                 <li class="dropdown">
-                    <a href="#" class="dropdown" id="theme-dropdown">Other</a>
+                    <a href="#" class="dropdown" id="theme-dropdown">Other <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="Expected.php">Expected</a></li>
                         <li><a href="Excuses.php">Excuses</a></li>
