@@ -26,7 +26,12 @@
                 <li><a href="Marks-Table.php">Marks Table</a></li>
 <!--                <li><a href="#">marks-table: fails only</a></li>-->
 <!--                <li><a href="#">marks-table: ignore empty columns</a></li>-->
-                <li class="dropdown">
+
+                <li><a href="FullStory.php">Full Story</a></li>
+<!--                <li><a href="#">full-story: without notes</a></li>-->
+<!--                <li><a href="#">full-story: chronological</a></li>-->
+
+                <li class="dropdown" id="other-dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="Expected.php">Expected</a></li>
@@ -35,9 +40,6 @@
 <!--                        <li><a href="#">failure-predictions</a></li>-->
                     </ul>
                 </li>
-                <li><a href="FullStory.php">Full Story</a></li>
-<!--                <li><a href="#">full-story: without notes</a></li>-->
-<!--                <li><a href="#">full-story: chronological</a></li>-->
                 <li class="dropdown" id="theme-dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cogs icon-large"></i> Theme <b class="caret"></b></a>
                     <ul class="dropdown-menu">
