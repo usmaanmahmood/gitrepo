@@ -43,23 +43,23 @@
                 <li class="dropdown" id="theme-dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span> Theme <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#" class="change-style-menu-item" rel="default"><span class="glyphicon glyphicon-pencil"></span> Default</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="cerulean"><span class="glyphicon glyphicon-pencil"></span> Cerulean</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="cyborg"><span class="glyphicon glyphicon-pencil"></span> Cyborg</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="cosmo"><span class="glyphicon glyphicon-pencil"></span> Cosmo</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="darkly"><span class="glyphicon glyphicon-pencil"></span> Darkly</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="flatly"><span class="glyphicon glyphicon-pencil"></span> Flatly</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="journal"><span class="glyphicon glyphicon-pencil"></span> Journal</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="lumen"><span class="glyphicon glyphicon-pencil"></span> Lumen</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="paper"><span class="glyphicon glyphicon-pencil"></span> Paper</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="readable"><span class="glyphicon glyphicon-pencil"></span> Readable</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="sandstone"><span class="glyphicon glyphicon-pencil"></span> Sandstone</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="simplex"><span class="glyphicon glyphicon-pencil"></span> Simplex</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="slate"><span class="glyphicon glyphicon-pencil"></span> Slate</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="spacelab"><span class="glyphicon glyphicon-pencil"></span> Spacelab</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="superhero"><span class="glyphicon glyphicon-pencil"></span> Superhero</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="united"><span class="glyphicon glyphicon-pencil"></span> United</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="yeti"><span class="glyphicon glyphicon-pencil"></span> Yeti</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="default">Default</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="cerulean">Cerulean</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="cyborg">Cyborg</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="cosmo">Cosmo</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="darkly">Darkly</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="flatly">Flatly</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="journal">Journal</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="lumen">Lumen</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="paper">Paper</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="readable">Readable</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="sandstone">Sandstone</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="simplex">Simplex</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="slate">Slate</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="spacelab">Spacelab</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="superhero">Superhero</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="united">United</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="yeti">Yeti</a></li>
                     </ul>
                 </li>
                 <li><a href="Logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
