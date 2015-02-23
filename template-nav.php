@@ -62,7 +62,7 @@
                         <li><a href="#" class="change-style-menu-item" rel="yeti"><span class="glyphicon glyphicon-pencil"></span> Yeti</a></li>
                     </ul>
                 </li>
-                <li><a href="Logout.php">Logout</a></li>
+                <li><a href="Logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
