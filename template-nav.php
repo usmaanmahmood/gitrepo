@@ -42,7 +42,7 @@
                 </li>
                 <li class="dropdown" id="theme-dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span> Theme <span class="caret"></span></a>
-                    <ol class="dropdown-menu" style="list-style: decimal inside;">
+                    <ol class="dropdown-menu" style="list-style: decimal inside; padding-left:5px;">
                         <li><a href="#" class="change-style-menu-item" rel="default">Default</a></li>
                         <li><a href="#" class="change-style-menu-item" rel="cerulean">Cerulean</a></li>
                         <li><a href="#" class="change-style-menu-item" rel="cyborg">Cyborg</a></li>
