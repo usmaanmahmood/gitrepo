@@ -41,7 +41,7 @@
                     </ul>
                 </li>
                 <li class="dropdown" id="theme-dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cogs icon-large"></i> Theme <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i> Theme <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#" class="change-style-menu-item" rel="default"><span class="glyphicon glyphicon-pencil"></span> Default</a></li>
                         <li><a href="#" class="change-style-menu-item" rel="cerulean"><span class="glyphicon glyphicon-pencil"></span> Cerulean</a></li>
