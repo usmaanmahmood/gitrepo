@@ -68,6 +68,7 @@ class FullStoryModule
 {
     private $sessionList; // array
     private $sessionInfo;
+    private $moduleName;
 
     public function __construct()
     {
@@ -82,6 +83,16 @@ class FullStoryModule
     public function setSessionInfo($sessionInfo)
     {
         $this->sessionInfo = $sessionInfo;
+    }
+
+    public function getModuleName()
+    {
+        return $this->moduleName;
+    }
+
+    public function setModuleName($moduleName)
+    {
+        $this->moduleName = $moduleName;
     }
 
     public function getSessionList()

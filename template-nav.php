@@ -32,7 +32,7 @@
 <!--                <li class="divider"></li>-->
 <!--                <li><a href="#">failure-predictions</a></li>-->
 <!--                <li class="divider"></li>-->
-<!--                <li><a href="#">full-story: with notes</a></li>-->
+                <li><a href="FullStory.php">Full Story</a></li>
 <!--                <li><a href="#">full-story: without notes</a></li>-->
 <!--                <li><a href="#">full-story: chronological</a></li>-->
                 <li class="dropdown" id="theme-dropdown">

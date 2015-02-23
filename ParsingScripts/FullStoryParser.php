@@ -289,13 +289,12 @@ class FullStoryParser // extends Parser
     public function parse($inString)
     {
         $databaseStringArray = preg_split("/===============================================================================\nDatabase/", $inString,  null, PREG_SPLIT_NO_EMPTY);
-        var_dump($databaseStringArray);
 
         $result = new FullStoryResult();
 
 //        foreach($databaseStringArray as $key => $database)
 //            $result->addDatabase($this->parseDatabase($database));
-        $this->parseDatabase($databaseStringArray[0]);
+        $result->addDatabase($this->parseDatabase($databaseStringArray[0]));
 
         return $result;
 
@@ -306,39 +305,41 @@ class FullStoryParser // extends Parser
         $database = new FullStoryDatabase();
 
         // get the database name
-        preg_match("/(?:Database\s+(\S+))/", $inString, $matches);
-        var_dump($inString);
+        preg_match("/(?:\s+(\S+))/", $inString, $matches);
         $rawDbName = $matches[1];
         $database->setDatabaseName($rawDbName);
         preg_match("/(\d+)-(\d+)-(\d)(.*)/", $rawDbName, $rawDbNameMatches);
         $database->setDatabaseParsedName("20".$rawDbNameMatches[1]."/20".$rawDbNameMatches[2]." - Year ".$rawDbNameMatches[3]." - ".($rawDbNameMatches[4] == "X" ? ("Overall") : "Coursework Only"));
 
-        preg_match_all("/===============================================================================\n[\S\s]*Group -\/(\S*?)\nSummary for module (\S*)\n\n\n[\S\s]*?-------------------------------------------------------------------------------\n([\s\S]*\|\s\n*)\n([\s\S]*)\n\n\n/", $inString, $matches);
-        array_shift($matches); // remove the first match which is the entire table
-        var_dump($matches);
-        // parse further into perfect form
-//        foreach($matches as $key => $table)
-//            foreach($table as $key2 => $row)
-//                $matches[$key][$key2] = array_map('trim', explode('|', $row));
-//
-//        $numberOfTables = count($matches[0]);
-//
-        // parse the tables
-//        for ($i = 0; $i < $numberOfTables; $i++)
-//        {
-//            $table = new FullStoryTable();
-//            $table->setName($matches[0][$i][0]);
-//            $table->setScalingFactor($matches[1][$i][0]);
-//            $table->setWeightings($matches[2][$i]);
-//            $table->setDenominators($matches[3][$i]);
-//            $table->setEmailNames($matches[4][$i]);
-//            $table->setMarks($matches[5][$i]);
-//            $table->buildFullStory();
-//            $database->addTable($table);
-//        }
-//
-//        return $database;
+
+        $modulesSplit = preg_split("/===============================================================================\n/", $inString);
+        array_shift($modulesSplit); // remove garbage info from before first module
+        array_pop($modulesSplit); // remove end of queries line
+//        var_dump($modulesSplit);
+
+        // parse modules
+        foreach ($modulesSplit as $moduleString)
+        {
+            preg_match("/\w+,\w+\s\(\w+\)\n\s+Group\s\-\/(\S+)\n.*?module\s(.*)\n\n\n.*\n.*\n.*\n.*\n((?:(?:.*)\n)*?)\n((?:(?:.*)\n)*)(?:.*)/", $moduleString, $match);
+            array_shift($match); // remove first which is the whole thing
+            $module = new FullStoryModule();
+            $module->setModuleName($match[1]);
+            $module->setSessionInfo($match[3]);
+
+            // 0 = module list - do i even need? don't think so!!!!!!!!!!!!!!!!!!!!!!!!
+            // 1 = module name
+            // 2 = sessions list raw
+            // 3 = session info
+
+            // need to parse session info based on number of pipes here
+            // and add them to the session thing
+
+            $database->addModule($module);
+        }
+
+        return $database;
     } // parseDatabase
+
 
 }
 
@@ -349,4 +350,4 @@ include("Result.php");
 
 $parser = new FullStoryParser();
 $result = $parser->parse($sampleFullStoryString);
-//var_dump($result->getDatabaseList());
+var_dump($result);
