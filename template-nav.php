@@ -27,16 +27,14 @@
 <!--                <li><a href="#">marks-table: fails only</a></li>-->
 <!--                <li><a href="#">marks-table: ignore empty columns</a></li>-->
                 <li class="dropdown">
-                    <a href="#" class="dropdown" id="theme-dropdown">Other <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="Expected.php">Expected</a></li>
                         <li><a href="Excuses.php">Excuses</a></li>
                         <li><a href="Irregularities.php">Irregularities</a></li>
+<!--                        <li><a href="#">failure-predictions</a></li>-->
                     </ul>
                 </li>
-<!--                <li class="divider"></li>-->
-<!--                <li><a href="#">failure-predictions</a></li>-->
-<!--                <li class="divider"></li>-->
                 <li><a href="FullStory.php">Full Story</a></li>
 <!--                <li><a href="#">full-story: without notes</a></li>-->
 <!--                <li><a href="#">full-story: chronological</a></li>-->
