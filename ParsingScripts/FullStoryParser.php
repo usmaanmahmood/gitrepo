@@ -288,9 +288,8 @@ class FullStoryParser // extends Parser
 {
     public function parse($inString)
     {
-        $databaseStringArray = preg_split("/\n===============================================================================\n/", $inString,  null, PREG_SPLIT_NO_EMPTY);
-        array_shift($databaseStringArray); // remove the "For explanation of columns" line
-        array_pop($databaseStringArray); // remove the "End of query results" line
+        $databaseStringArray = preg_split("/===============================================================================\nDatabase/", $inString,  null, PREG_SPLIT_NO_EMPTY);
+        var_dump($databaseStringArray);
 
         $result = new FullStoryResult();
 
@@ -308,7 +307,7 @@ class FullStoryParser // extends Parser
 
         // get the database name
         preg_match("/(?:Database\s+(\S+))/", $inString, $matches);
-        var_dump($matches);
+        var_dump($inString);
         $rawDbName = $matches[1];
         $database->setDatabaseName($rawDbName);
         preg_match("/(\d+)-(\d+)-(\d)(.*)/", $rawDbName, $rawDbNameMatches);
