@@ -32,7 +32,7 @@
 <!--                <li><a href="#">full-story: chronological</a></li>-->
 
                 <li class="dropdown" id="other-dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="Expected.php">Expected</a></li>
                         <li><a href="Excuses.php">Excuses</a></li>
@@ -41,25 +41,25 @@
                     </ul>
                 </li>
                 <li class="dropdown" id="theme-dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cogs icon-large"></i> Theme <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cogs icon-large"></i> Theme <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#" class="change-style-menu-item" rel="default"><i class="icon-fixed-width icon-pencil"></i> Default</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="cerulean"><i class="icon-fixed-width icon-pencil"></i> Cerulean</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="cyborg"><i class="icon-fixed-width icon-pencil"></i> Cyborg</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="cosmo"><i class="icon-fixed-width icon-pencil"></i> Cosmo</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="darkly"><i class="icon-fixed-width icon-pencil"></i> Darkly</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="flatly"><i class="icon-fixed-width icon-pencil"></i> Flatly</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="journal"><i class="icon-fixed-width icon-pencil"></i> Journal</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="lumen"><i class="icon-fixed-width icon-pencil"></i> Lumen</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="paper"><i class="icon-fixed-width icon-pencil"></i> Paper</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="readable"><i class="icon-fixed-width icon-pencil"></i> Readable</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="sandstone"><i class="icon-fixed-width icon-pencil"></i> Sandstone</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="simplex"><i class="icon-fixed-width icon-pencil"></i> Simplex</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="slate"><i class="icon-fixed-width icon-pencil"></i> Slate</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="spacelab"><i class="icon-fixed-width icon-pencil"></i> Spacelab</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="superhero"><i class="icon-fixed-width icon-pencil"></i> Superhero</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="united"><i class="icon-fixed-width icon-pencil"></i> United</a></li>
-                        <li><a href="#" class="change-style-menu-item" rel="yeti"><i class="icon-fixed-width icon-pencil"></i> Yeti</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="default"><span class="icon-fixed-width icon-pencil"></span> Default</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="cerulean"><span class="icon-fixed-width icon-pencil"></span> Cerulean</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="cyborg"><span class="icon-fixed-width icon-pencil"></span> Cyborg</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="cosmo"><span class="icon-fixed-width icon-pencil"></span> Cosmo</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="darkly"><span class="icon-fixed-width icon-pencil"></span> Darkly</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="flatly"><span class="icon-fixed-width icon-pencil"></span> Flatly</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="journal"><span class="icon-fixed-width icon-pencil"></span> Journal</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="lumen"><span class="icon-fixed-width icon-pencil"></span> Lumen</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="paper"><span class="icon-fixed-width icon-pencil"></span> Paper</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="readable"><span class="icon-fixed-width icon-pencil"></span> Readable</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="sandstone"><span class="icon-fixed-width icon-pencil"></span> Sandstone</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="simplex"><span class="icon-fixed-width icon-pencil"></span> Simplex</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="slate"><span class="icon-fixed-width icon-pencil"></span> Slate</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="spacelab"><span class="icon-fixed-width icon-pencil"></span> Spacelab</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="superhero"><span class="icon-fixed-width icon-pencil"></span> Superhero</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="united"><span class="icon-fixed-width icon-pencil"></span> United</a></li>
+                        <li><a href="#" class="change-style-menu-item" rel="yeti"><span class="icon-fixed-width icon-pencil"></span> Yeti</a></li>
                     </ul>
                 </li>
                 <li><a href="Logout.php">Logout</a></li>
