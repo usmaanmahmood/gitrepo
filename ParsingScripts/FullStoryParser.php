@@ -196,7 +196,7 @@ class FullStoryParser // extends Parser
 
                 if (count($explodedSessionsList) == 8)
                 {
-                    $nameAndDate = array_map('trim', explode('|', $explodedSessionsList[0]));
+                    $nameAndDate = array_map('trim', explode(' ', $explodedSessionsList[0]));
                     $moduleSession->setName($nameAndDate[0]);
                     $moduleSession->setSessionDates($nameAndDate[1]);
                     $moduleSession->setAttend($explodedSessionsList[1]);
