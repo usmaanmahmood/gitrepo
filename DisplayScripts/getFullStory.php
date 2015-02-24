@@ -48,7 +48,6 @@ $result = $arcadeClient->execute($query);
                         <?php foreach ($module->getSessionList() as $session) {
                             ?>
                             <?php $getname = $session->getName();
-
                             if (!empty($getname)) { ?>
                                 <tr>
                                     <td><?= $session->getName() ?></td>
