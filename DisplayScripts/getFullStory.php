@@ -47,7 +47,7 @@ $result = $arcadeClient->execute($query);
                 </tr>
                 <?php foreach ($module->getSessionList() as $session) {
                 ?>
-                <?php (if count($session) == 8) {?>
+                <?php if (count($session) == 8) {?>
                 <tr>
                     <td><?= $session->getName() ?></td>
                     <td><?= $session->getSessionDates() ?></td>
