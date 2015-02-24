@@ -27,6 +27,10 @@ $result = $arcadeClient->execute($query);
         ?>
         <table class="table table-striped table-hover table-bordered table-condensed">
             <tr>
+                <td>Module:</td>
+                <td><pre><?= $module->getModuleName(); ?></pre></td>
+            </tr>
+            <tr>
                 <td>Raw Session:</td>
                 <td><pre><?= $module->getRawSession(); ?></pre></td>
             </tr>

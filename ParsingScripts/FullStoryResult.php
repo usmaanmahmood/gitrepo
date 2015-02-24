@@ -69,6 +69,7 @@ class FullStoryModule
     private $sessionList; // array
     private $sessionInfo;
     private $rawSession;
+    private $moduleName;
 
     public function getRawSession()
     {
@@ -79,7 +80,6 @@ class FullStoryModule
     {
         $this->rawSession = $rawSession;
     }
-    private $moduleName;
 
     public function __construct()
     {
