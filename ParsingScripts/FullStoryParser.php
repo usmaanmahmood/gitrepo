@@ -187,34 +187,34 @@ class FullStoryParser // extends Parser
             // 2 = sessions list raw
             // 3 = session info
 
-//            $explodedSessionsListByNewline = explode("\n", trim($match[2]));
-//
-//            foreach($explodedSessionsListByNewline as $sessionLine)
-//            {
-//                $explodedSessionsList = array_map('trim', explode('|', $sessionLine));
-//                $moduleSession = new FullStoryModuleSession();
-//
-//                if (count($explodedSessionsList) == 8)
-//                {
-//                    $nameAndDate = array_map('trim', explode('|', $explodedSessionsList[0]));
-//                    $moduleSession->setName($nameAndDate[0]);
-//                    $moduleSession->setSessionDates($nameAndDate[1]);
-//                    $moduleSession->setAttend($explodedSessionsList[1]);
-//                    $moduleSession->setCbd($explodedSessionsList[2]);
-//                    $moduleSession->setExt($explodedSessionsList[3]);
-//                    $moduleSession->setCbe($explodedSessionsList[4]);
-//                    $moduleSession->setDate($explodedSessionsList[5]);
-//                    $moduleSession->setMark($explodedSessionsList[6]);
-//                    $moduleSession->setOther($explodedSessionsList[7]);
-//                }
-//                else if (count($explodedSessionsList) == 2)
-//                {
-//                    $moduleSession->setOther($explodedSessionsList[1]);
-//                }
-//
-//                $module->addSession($moduleSession);
-//            }
-//
+            $explodedSessionsListByNewline = explode("\n", trim($match[2]));
+
+            foreach($explodedSessionsListByNewline as $sessionLine)
+            {
+                $explodedSessionsList = array_map('trim', explode('|', $sessionLine));
+                $moduleSession = new FullStoryModuleSession();
+
+                if (count($explodedSessionsList) == 8)
+                {
+                    $nameAndDate = array_map('trim', explode('|', $explodedSessionsList[0]));
+                    $moduleSession->setName($nameAndDate[0]);
+                    $moduleSession->setSessionDates($nameAndDate[1]);
+                    $moduleSession->setAttend($explodedSessionsList[1]);
+                    $moduleSession->setCbd($explodedSessionsList[2]);
+                    $moduleSession->setExt($explodedSessionsList[3]);
+                    $moduleSession->setCbe($explodedSessionsList[4]);
+                    $moduleSession->setDate($explodedSessionsList[5]);
+                    $moduleSession->setMark($explodedSessionsList[6]);
+                    $moduleSession->setOther($explodedSessionsList[7]);
+                }
+                else if (count($explodedSessionsList) == 2)
+                {
+                    $moduleSession->setOther($explodedSessionsList[1]);
+                }
+
+                $module->addSession($moduleSession);
+            }
+
             $database->addModule($module);
         }
 
