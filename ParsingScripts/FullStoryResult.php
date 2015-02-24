@@ -88,7 +88,7 @@ class FullStoryModule
 
     public function getSessionInfo()
     {
-        return $this->databaseName;
+        return $this->sessionInfo;
     }
 
     public function setSessionInfo($sessionInfo)
