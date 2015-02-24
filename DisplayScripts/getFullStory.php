@@ -45,16 +45,28 @@ $result = $arcadeClient->execute($query);
                             <td>Mark</td>
                             <td>Other</td>
                         </tr>
+                        <?php foreach ($module->getSessionList() as $session) {
+                            ?>
+                            <tr>
+                                <td><?= $session->getName() ?></td>
+                            </tr>
+                        <?php
+                        }
+                        ?>
                     </table>
                 </td>
             </tr>
             <tr>
                 <td>Raw Session:</td>
-                <td><pre><?= $module->getRawSession(); ?></pre></td>
+                <td>
+                    <pre><?= $module->getRawSession(); ?></pre>
+                </td>
             </tr>
             <tr>
                 <td>Session Info:</td>
-                <td><pre><?= $module->getSessionInfo(); ?></pre></td>
+                <td>
+                    <pre><?= $module->getSessionInfo(); ?></pre>
+                </td>
             </tr>
         </table>
     <?php
