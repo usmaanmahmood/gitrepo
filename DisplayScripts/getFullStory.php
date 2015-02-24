@@ -47,6 +47,7 @@ $result = $arcadeClient->execute($query);
                         </tr>
                         <?php foreach ($module->getSessionList() as $session) {
                             ?>
+                            <?php (if count($session) == 8) {?>
                             <tr>
                                 <td><?= $session->getName() ?></td>
                                 <td><?= $session->getSessionDates() ?></td>
@@ -58,6 +59,12 @@ $result = $arcadeClient->execute($query);
                                 <td><?= $session->getMark() ?></td>
                                 <td><?= $session->getOther() ?></td>
                             </tr>
+                <?php {
+                else if (count($session) == 2) {?>
+                        <tr>
+                            <td><?= $session->getOther() ?></td>
+                        </tr>
+                    <?php }?>
                         <?php
                         }
                         ?>
