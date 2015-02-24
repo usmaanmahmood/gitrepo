@@ -327,7 +327,7 @@ class FullStoryParser // extends Parser
             $module->setRawSession($match[2]);
             $module->setSessionInfo($match[3]);
 
-            // 0 = module list - do i even need? don't think so!!!!!!!!!!!!!!!!!!!!!!!!
+            // 0 = groups / module list - do i even need? don't think so!!!!!!!!!!!!!!!!!!!!!!!!
             // 1 = module name
             // 2 = sessions list raw
             // 3 = session info
