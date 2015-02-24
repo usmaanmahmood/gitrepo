@@ -94,6 +94,9 @@ class ARCADEClient
             case "attendance-summary":
                 $this->parser = new AttendanceSummaryParser();
                 break;
+            case "full-story: with notes":
+                $this->parser = new FullStoryParser();
+                break;
             case "":
                 return "ARCADE client error: No Query sent through";
                 break;
