@@ -28,11 +28,11 @@ $result = $arcadeClient->execute($query);
         <table class="table table-striped table-hover table-bordered table-condensed">
             <tr>
                 <td>Raw Session:</td>
-                <td><?= $module->getRawSession(); ?></td>
+                <td><pre><?= $module->getRawSession(); ?></pre></td>
             </tr>
             <tr>
                 <td>Session Info:</td>
-                <td><?= $module->getSessionInfo(); ?></td>
+                <td><pre><?= $module->getSessionInfo(); ?></pre></td>
             </tr>
         </table>
     <?php
