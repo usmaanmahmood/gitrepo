@@ -21,72 +21,74 @@ $result = $arcadeClient->execute($query);
 
 ?>
 <?php foreach ($result->getDatabaseList() as $database) {
-    ?>
-    <h3>Database: <?= $database->getDatabaseParsedName(); ?></h3>
-    <?php foreach ($database->getModuleList() as $module) {
-        ?>
-        <table class="table table-striped table-hover table-bordered table-condensed">
-            <tr>
-                <td>Module:</td>
-                <td><?= $module->getModuleName(); ?> </td>
-            </tr>
-            <tr>
-                <td>Session:</td>
-                <td>
-                    <table class="table table-striped table-hover table-bordered table-condensed">
-                        <tr>
-                            <td>Deadline</td>
-                            <td>Deadline Date</td>
-                            <td>Attended</td>
-                            <td>Completed By Deadline</td>
-                            <td>Extension</td>
-                            <td>Completed By Extension</td>
-                            <td>Date Submitted</td>
-                            <td>Mark</td>
-                            <td>Other</td>
-                        </tr>
-                        <?php foreach ($module->getSessionList() as $session) {
-                            ?>
-                            <?php (if count($session) == 8) {?>
-                            <tr>
-                                <td><?= $session->getName() ?></td>
-                                <td><?= $session->getSessionDates() ?></td>
-                                <td><?= $session->getAttend() ?></td>
-                                <td><?= $session->getCbd() ?></td>
-                                <td><?= $session->getExt() ?></td>
-                                <td><?= $session->getCbe() ?></td>
-                                <td><?= $session->getDate() ?></td>
-                                <td><?= $session->getMark() ?></td>
-                                <td><?= $session->getOther() ?></td>
-                            </tr>
-                <?php {
-                else if (count($session) == 2) {?>
+?>
+<h3>Database: <?= $database->getDatabaseParsedName(); ?></h3>
+<?php foreach ($database->getModuleList() as $module) {
+?>
+<table class="table table-striped table-hover table-bordered table-condensed">
+    <tr>
+        <td>Module:</td>
+        <td><?= $module->getModuleName(); ?> </td>
+    </tr>
+    <tr>
+        <td>Session:</td>
+        <td>
+            <table class="table table-striped table-hover table-bordered table-condensed">
+                <tr>
+                    <td>Deadline</td>
+                    <td>Deadline Date</td>
+                    <td>Attended</td>
+                    <td>Completed By Deadline</td>
+                    <td>Extension</td>
+                    <td>Completed By Extension</td>
+                    <td>Date Submitted</td>
+                    <td>Mark</td>
+                    <td>Other</td>
+                </tr>
+                <?php foreach ($module->getSessionList() as $session) {
+                ?>
+                <?php (if count($session) == 8) {?>
+                <tr>
+                    <td><?= $session->getName() ?></td>
+                    <td><?= $session->getSessionDates() ?></td>
+                    <td><?= $session->getAttend() ?></td>
+                    <td><?= $session->getCbd() ?></td>
+                    <td><?= $session->getExt() ?></td>
+                    <td><?= $session->getCbe() ?></td>
+                    <td><?= $session->getDate() ?></td>
+                    <td><?= $session->getMark() ?></td>
+                    <td><?= $session->getOther() ?></td>
+                </tr>
+                <?php }
+                else
+                    if (count($session) == 2) {
+                        ?>
                         <tr>
                             <td><?= $session->getOther() ?></td>
                         </tr>
-                    <?php }?>
-                        <?php
-                        }
-                        ?>
-                    </table>
-                </td>
-            </tr>
-            <tr>
-                <td>Raw Session:</td>
-                <td>
-                    <pre><?= $module->getRawSession(); ?></pre>
-                </td>
-            </tr>
-            <tr>
-                <td>Session Info:</td>
-                <td>
-                    <pre><?= $module->getSessionInfo(); ?></pre>
-                </td>
-            </tr>
-        </table>
-    <?php
-    }
-    ?>
+                    <?php } ?>
+                <?php
+                }
+                ?>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>Raw Session:</td>
+        <td>
+            <pre><?= $module->getRawSession(); ?></pre>
+        </td>
+    </tr>
+    <tr>
+        <td>Session Info:</td>
+        <td>
+            <pre><?= $module->getSessionInfo(); ?></pre>
+        </td>
+    </tr>
+</table>
+<?php
+}
+?>
 
 
 
