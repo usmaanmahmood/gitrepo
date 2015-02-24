@@ -50,7 +50,7 @@ $result = $arcadeClient->execute($query);
                             if (!empty($getname)) {
                                 ?>
                                 <tr>
-                                    <td><?= $session->getName() ?></td>
+                                    <th><?= $session->getName() ?></th>
                                     <td><?= $session->getSessionDates() ?></td>
                                     <td><?= $session->getAttend() ?></td>
                                     <td><?= $session->getCbd() ?></td>
