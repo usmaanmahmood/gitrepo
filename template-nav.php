@@ -15,7 +15,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="Classic.php">Classic</a></li>
+                <li><a href="Classic.php"><span class="glyphicon glyphicon-home"></span> Classic</a></li>
                 <li><a href="Attendance-Summary.php">Attendance Summary</a></li>
 <!--                <li><a href="#">display-picture</a></li>-->
 <!--                <li class="divider"></li>-->

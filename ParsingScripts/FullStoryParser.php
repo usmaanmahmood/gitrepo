@@ -332,6 +332,8 @@ class FullStoryParser // extends Parser
             // 2 = sessions list raw
             // 3 = session info
 
+
+
             // need to parse session info based on number of pipes here
             // and add them to the session thing
 
@@ -347,8 +349,8 @@ class FullStoryParser // extends Parser
 
 
 // all below this line is temp for testing purposes only
-//include("Result.php");
-
-//$parser = new FullStoryParser();
-//$result = $parser->parse($sampleFullStoryString);
-//var_dump($result);
+include("Result.php");
+//
+$parser = new FullStoryParser();
+$result = $parser->parse($sampleFullStoryString);
+var_dump($result);

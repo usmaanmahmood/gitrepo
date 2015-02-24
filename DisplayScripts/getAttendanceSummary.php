@@ -34,7 +34,7 @@ $result = $arcadeClient->execute($query);
         <td>Module List</td><td><?=implode(" ", $database->getModuleList());?></td>
     </tr>
     <tr>
-        <td>Percentage</td><td><?=$database->getPercentage();?></td>
+        <td>Percentage</td><td><?=$database->getPercentage();?>&percnt;</td>
     </tr>
     <tr>
         <td>Pattern</td><td>
