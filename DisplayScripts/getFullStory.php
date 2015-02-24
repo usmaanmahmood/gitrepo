@@ -49,6 +49,14 @@ $result = $arcadeClient->execute($query);
                             ?>
                             <tr>
                                 <td><?= $session->getName() ?></td>
+                                <td><?= $session->getSessionDates() ?></td>
+                                <td><?= $session->getAttend() ?></td>
+                                <td><?= $session->getCbd() ?></td>
+                                <td><?= $session->getExt() ?></td>
+                                <td><?= $session->getCbe() ?></td>
+                                <td><?= $session->getDate() ?></td>
+                                <td><?= $session->getMark() ?></td>
+                                <td><?= $session->getOther() ?></td>
                             </tr>
                         <?php
                         }
