@@ -68,6 +68,17 @@ class FullStoryModule
 {
     private $sessionList; // array
     private $sessionInfo;
+    private $rawSession;
+
+    public function getRawSession()
+    {
+        return $this->rawSession;
+    }
+
+    public function setRawSession($rawSession)
+    {
+        $this->rawSession = $rawSession;
+    }
     private $moduleName;
 
     public function __construct()

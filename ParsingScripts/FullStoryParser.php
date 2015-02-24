@@ -324,6 +324,7 @@ class FullStoryParser // extends Parser
             array_shift($match); // remove first which is the whole thing
             $module = new FullStoryModule();
             $module->setModuleName($match[1]);
+            $module->setRawSession($match[2]);
             $module->setSessionInfo($match[3]);
 
             // 0 = module list - do i even need? don't think so!!!!!!!!!!!!!!!!!!!!!!!!
