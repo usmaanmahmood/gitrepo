@@ -1,13 +1,16 @@
 <?php
 
 $sampleFullStoryString = "===============================================================================
+Database 12-13-2X
+
+===============================================================================
 Database 12-13-2
 
-    ARCADE Laboratory Details for Abedin,Shaaz
-           -----------------------------------
+    ARCADE Laboratory Details for Mahmood,Usmaan_Ali
+           -----------------------------------------
 
 This summary is for:
-         21111C 21111E 23111E 23111L 22712L
+         23111E 23111L
 (where taken)
 
 There is one page for each module, each containing the SESSION DETAILS table,
@@ -50,8 +53,8 @@ is only fixed if the scaling factor is final.
 There is also a table entry for each sub-module, if any.
 
 ===============================================================================
-Abedin,Shaaz (abedins1)
-        Group -/21111E=K,22712L=I,23111E=K,23111L=F,23421L=G,23421W=G,23422L=F,24111L=H,24412L=G,25111L=G,25212L=I,26121L=H,26122L=H,27112L=G,Tut1=X6,Tut2=X6
+Mahmood,Usmaan_Ali (mahmoou1)
+        Group -/21111E=J,22712L=I,23111E=K,23111L=F,23421L=I,23421W=I,23422L=F,25111L=G,25212L=G,26121L=H,26122L=H,27112L=H,28112L=I,28411L=F,28411W=J,Tut1=X6,Tut2=X6
 Summary for module 23111E
 
 
@@ -59,13 +62,14 @@ Summary for module 23111E
 ----------------------
  |    Session (& dates)   | Attend| C.B.D.| Ext   | C.B.E.| Date  | Mark  |
 -------------------------------------------------------------------------------
-Ex1 5/10                  | x     | -     | -     | -     | -     | -     |
+Ex1 5/10                  | /     | -     | -     | -     | -     | -     |
 Ex2 19/10                 | x     | -     | -     | -     | -     | -     |
 Ex3 9/11                  | x     | -     | -     | -     | -     | -     |
 Ex4 23/11                 | x     | -     | -     | -     | -     | -     |
 Ex5 7/12                  | x     | -     | -     | -     | -     | -     |
 
-Attend  :  x       = absent without excuse
+Attend  :  /       = attended
+           x       = absent without excuse
 C.B.D.  :  -       = there was no deadline for that session
 Ext     :  -       = either no deadline, or completed by deadline
 C.B.E.  :  -       = there was no deadline
@@ -74,8 +78,8 @@ Mark    :  -       = either no deadline, or work not done
 
 
 ===============================================================================
-Abedin,Shaaz (abedins1)
-        Group -/21111E=K,22712L=I,23111E=K,23111L=F,23421L=G,23421W=G,23422L=F,24111L=H,24412L=G,25111L=G,25212L=I,26121L=H,26122L=H,27112L=G,Tut1=X6,Tut2=X6
+Mahmood,Usmaan_Ali (mahmoou1)
+        Group -/21111E=J,22712L=I,23111E=K,23111L=F,23421L=I,23421W=I,23422L=F,25111L=G,25212L=G,26121L=H,26122L=H,27112L=H,28112L=I,28411L=F,28411W=J,Tut1=X6,Tut2=X6
 Summary for module 23111L
 
 
@@ -84,37 +88,32 @@ Summary for module 23111L
  |    Session (& dates)   | Attend| C.B.D.| Ext   | C.B.E.| Date  | Mark  |
 -------------------------------------------------------------------------------
 1 12/10                   | /     | -     | -     | -     | -     | -     |
-1D 19/10>26/10>9/11       | N     | /     | -     | /     | -     | 16    |
- |   Submitted: on 18/10/12 at 17:44
+1D 19/10>26/10>9/11       | N     | /     | -     | /     | -     | 20    |
+ |   Submitted: on 19/10/12 at 12:10
 2 26/10                   | x     | -     | -     | -     | -     | -     |
-2D 9/11>16/11>23/11       | N     | /     | -     | /     | -     | 19    |
- |   Submitted: on 08/11/12 at 21:37
+2D 9/11>16/11>23/11       | N     | /     | -     | /     | -     | 18    |
+ |   Submitted: on 08/11/12 at 15:49
 3 16/11                   | x     | -     | -     | -     | -     | -     |
-3D 23/11>30/11>7/12       | N     | /     | -     | /     | -     | 4     |
- |   Submitted: on 23/11/12 at 16:16
+3D 23/11>30/11>7/12       | N     | /     | -     | /     | -     | 13    |
+ |   Submitted: on 22/11/12 at 13:00
 4 30/11                   | x     | -     | -     | -     | -     | -     |
-4D 7/12>14/12>21/12       | N     | x     | x     | x     | X     | -     | L
+4D 7/12>14/12>21/12       | N     | /     | -     | /     | -     | 13    |
+ |   Submitted: on 06/12/12 at 11:52
 5 14/12                   | x     | -     | -     | -     | -     | -     |
-5D 21/12>1/2>none         | N     | x     | x     | x     | X     | -     | L
+5D 21/12>1/2>none         | N     | /     | -     | /     | -     | 15    |
+ |   Submitted: on 20/12/12 at 20:52
 
 Attend  :  /       = attended
            x       = absent without excuse
            N       = no attendance was necessary or attendance not taken
 C.B.D.  :  /       = did complete by deadline
-           x       = did not complete by deadline
            -       = there was no deadline for that session
-Ext     :  x       = should have got extension but did not, or none available
-           -       = either no deadline, or completed by deadline
+Ext     :  -       = either no deadline, or completed by deadline
 C.B.E.  :  /       = did complete by extension
-           x       = should have completed by extension, but did not
            -       = there was no deadline
 Date    :  -       = either no deadline, or completed by extension
-           X       = has not done work
 Mark    :  -       = either no deadline, or work not done
            A real number           = mark
-
-Where there is an `L' after the Mark column, that work is flagged as late
-because student did not get an extension, or missed it, or excuse ran out.
 
 `Submitted: on  at ' moment of electronic submission.
 
@@ -130,11 +129,15 @@ because student did not get an extension, or missed it, or excuse ran out.
 ------------------------------------------------------------------
       Denominator   |20   |20   |20   |20   |20   |%       |%
 ------------------------------------------------------------------
-abedins1 Abedin,Shaa|16   |19   |4    |-L   |-L   |32.4L   |32.4
+mahmoou1 Mahmood,Usm|20   |18   |13   |13   |15   |65.6    |65.6
 
-  -       = student did not do it / missed demo.
-  L       = work was or is late.
-
+===============================================================================
+Database 11-12-1X
+
+===============================================================================
+Database 11-12-1
+
+
 ===============================================================================
 End of query results";
 
