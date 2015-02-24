@@ -127,6 +127,17 @@ class FullStoryModuleSession
     private $cbe;
     private $date;
     private $mark;
+    private $other;
+
+    public function getOther()
+    {
+        return $this->other;
+    }
+
+    public function setOther($other)
+    {
+        $this->other = $other;
+    }
 
     public function getAttend()
     {

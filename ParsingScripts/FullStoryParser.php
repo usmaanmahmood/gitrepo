@@ -52,76 +52,6 @@ There is also a table entry for each sub-module, if any.
 ===============================================================================
 Abedin,Shaaz (abedins1)
         Group -/21111E=K,22712L=I,23111E=K,23111L=F,23421L=G,23421W=G,23422L=F,24111L=H,24412L=G,25111L=G,25212L=I,26121L=H,26122L=H,27112L=G,Tut1=X6,Tut2=X6
-Summary for module 21111C
-
-
-21111C SESSION DETAILS
-----------------------
- |    Session (& dates)   | Attend| C.B.D.| Ext   | C.B.E.| Date  | Mark  |
--------------------------------------------------------------------------------
-Ex1D 4/10>11/10>18/10     | N     | /     | -     | /     | -     | 20    |
-Ex2D 11/10>18/10>25/10    | N     | /     | -     | /     | -     | 20    |
-Ex3D 18/10>25/10>8/11     | N     | /     | -     | /     | -     | 17    |
-Ex4D 25/10>8/11>15/11     | N     | /     | -     | /     | -     | 19    |
-Ex5D 8/11>15/11>22/11     | N     | /     | -     | /     | -     | 20    |
-Ex6D 15/11>22/11>29/11    | N     | /     | -     | /     | -     | 17    |
-Ex7D 22/11>29/11>6/12     | N     | /     | -     | /     | -     | 19    |
-Ex8D 29/11>6/12>13/12     | N     | /     | -     | /     | -     | 16    |
-Ex9D 6/12>13/12>14/12     | N     | /     | -     | /     | -     | 16    |
-Ex10D 13/12>14/12>none    | N     | /     | -     | /     | -     | 9     |
-
-Attend  :  N       = no attendance was necessary or attendance not taken
-C.B.D.  :  /       = did complete by deadline
-Ext     :  -       = either no deadline, or completed by deadline
-C.B.E.  :  /       = did complete by extension
-Date    :  -       = either no deadline, or completed by extension
-Mark    :  A real number           = mark
-
-
-21111C MODULE TABLE ENTRY
--------------------------
-21111C No module scaling factor applied
-
-------------------------------------------------------------------------------------------------
-      Component     |Ex1D |Ex2D |Ex3D |Ex4D |Ex5D |Ex6D |Ex7D |Ex8D |Ex9D |Ex10D|Total   |Marked
-------------------------------------------------------------------------------------------------
-      Weighting     |1    |1    |1    |1    |1    |1    |1    |1    |1    |1    |10      |
-------------------------------------------------------------------------------------------------
-      Denominator   |20   |20   |20   |20   |20   |20   |20   |20   |20   |20   |%       |%
-------------------------------------------------------------------------------------------------
-abedins1 Abedin,Shaa|20   |20   |17   |19   |20   |17   |19   |16   |16   |9    |86.5    |86.5
-
-===============================================================================
-Abedin,Shaaz (abedins1)
-        Group -/21111E=K,22712L=I,23111E=K,23111L=F,23421L=G,23421W=G,23422L=F,24111L=H,24412L=G,25111L=G,25212L=I,26121L=H,26122L=H,27112L=G,Tut1=X6,Tut2=X6
-Summary for module 21111E
-
-
-21111E SESSION DETAILS
-----------------------
- |    Session (& dates)   | Attend| C.B.D.| Ext   | C.B.E.| Date  | Mark  |
--------------------------------------------------------------------------------
-Ex1 8/10                  | N     | -     | -     | -     | -     | -     |
-Ex2 15/10                 | N     | -     | -     | -     | -     | -     |
-Ex3 22/10                 | N     | -     | -     | -     | -     | -     |
-Ex4 5/11                  | N     | -     | -     | -     | -     | -     |
-Ex5 12/11                 | N     | -     | -     | -     | -     | -     |
-Ex6 19/11                 | N     | -     | -     | -     | -     | -     |
-Ex7 26/11                 | N     | -     | -     | -     | -     | -     |
-Ex8 3/12                  | N     | -     | -     | -     | -     | -     |
-Ex9 10/12                 | N     | -     | -     | -     | -     | -     |
-
-Attend  :  N       = no attendance was necessary or attendance not taken
-C.B.D.  :  -       = there was no deadline for that session
-Ext     :  -       = either no deadline, or completed by deadline
-C.B.E.  :  -       = there was no deadline
-Date    :  -       = either no deadline, or completed by extension
-Mark    :  -       = either no deadline, or work not done
-
-
-===============================================================================
-Abedin,Shaaz (abedins1)
-        Group -/21111E=K,22712L=I,23111E=K,23111L=F,23421L=G,23421W=G,23422L=F,24111L=H,24412L=G,25111L=G,25212L=I,26121L=H,26122L=H,27112L=G,Tut1=X6,Tut2=X6
 Summary for module 23111E
 
 
@@ -206,82 +136,6 @@ abedins1 Abedin,Shaa|16   |19   |4    |-L   |-L   |32.4L   |32.4
   L       = work was or is late.
 
 ===============================================================================
-Abedin,Shaaz (abedins1)
-        Group -/21111E=K,22712L=I,23111E=K,23111L=F,23421L=G,23421W=G,23422L=F,24111L=H,24412L=G,25111L=G,25212L=I,26121L=H,26122L=H,27112L=G,Tut1=X6,Tut2=X6
-Summary for module 22712L
-
-
-22712L SESSION DETAILS
-----------------------
- |    Session (& dates)   | Attend| C.B.D.| Ext   | C.B.E.| Date  | Mark  |
--------------------------------------------------------------------------------
-1 28/1                    | /     | -     | -     | -     | -     | -     |
-12 30/1                   | /     | -     | -     | -     | -     | -     |
-2 4/2                     | /     | -     | -     | -     | -     | -     |
-13 6/2                    | /     | -     | -     | -     | -     | -     |
-3 11/2                    | /     | -     | -     | -     | -     | -     |
-14D 13/2>18/2>20/2        | E-att | /     | -     | /     | -     | 16    |
- |      Attend = E-attendance-optional
-4 18/2                    | /     | -     | -     | -     | -     | -     |
-15 20/2                   | x     | -     | -     | -     | -     | -     |
-5 25/2                    | x     | -     | -     | -     | -     | -     |
-16D 27/2>4/3>6/3          | /     | x     | /     | x     | N     | 16    | L
-6 4/3                     | x     | -     | -     | -     | -     | -     |
-17 6/3                    | x     | -     | -     | -     | -     | -     |
-7 11/3                    | x     | -     | -     | -     | -     | -     |
-18 13/3                   | x     | -     | -     | -     | -     | -     |
-8 18/3                    | x     | -     | -     | -     | -     | -     |
-19 20/3                   | x     | -     | -     | -     | -     | -     |
-9 15/4                    | x     | -     | -     | -     | -     | -     |
-20 17/4                   | x     | -     | -     | -     | -     | -     |
-10 22/4                   | x     | -     | -     | -     | -     | -     |
-21 24/4                   | x     | -     | -     | -     | -     | -     |
-11 29/4                   | x     | -     | -     | -     | -     | -     |
-22 1/5                    | x     | -     | -     | -     | -     | -     |
-Ex7D 3/5>3/5>10/5         | N     | x     | E     | x     | X     | -     | L
-Ex9D 3/5>10/5>none        | N     | x     | E     | x     | X     | -     | L
-
-Attend  :  /       = attended
-           x       = absent without excuse
-           E-blah  = excused for non-attendance
-           N       = no attendance was necessary or attendance not taken
-C.B.D.  :  /       = did complete by deadline
-           x       = did not complete by deadline
-           -       = there was no deadline for that session
-Ext     :  /       = did get extension
-           E-blah  = excused for not getting extension
-           -       = either no deadline, or completed by deadline
-C.B.E.  :  /       = did complete by extension
-           x       = should have completed by extension, but did not
-           -       = there was no deadline
-Date    :  -       = either no deadline, or completed by extension
-           N       = unknown date
-           X       = has not done work
-Mark    :  -       = either no deadline, or work not done
-           A real number           = mark
-
-Where there is an `L' after the Mark column, that work is flagged as late
-because student did not get an extension, or missed it, or excuse ran out.
-
-
-22712L MODULE TABLE ENTRY
--------------------------
-22712L Final dynamic scaling factor (range 60%-65%) is 1.00
-
-------------------------------------------------------------
-      Component     |14D  |16D  |Ex7D |Ex9D |Total   |Marked
-------------------------------------------------------------
-      Weighting     |1    |1    |1    |1    |4       |
-------------------------------------------------------------
-      Denominator   |20   |20   |20   |20   |%       |%
-------------------------------------------------------------
-abedins1 Abedin,Shaa|16   |16L  |-L   |-L   |40L     |40
-
-  -       = student did not do it / missed demo.
-  L       = work was or is late.
-
-
-===============================================================================
 End of query results";
 
 class FullStoryParser // extends Parser
@@ -315,7 +169,6 @@ class FullStoryParser // extends Parser
         $modulesSplit = preg_split("/===============================================================================\n/", $inString);
         array_shift($modulesSplit); // remove garbage info from before first module
         array_pop($modulesSplit); // remove end of queries line
-//        var_dump($modulesSplit);
 
         // parse modules
         foreach ($modulesSplit as $moduleString)
@@ -332,10 +185,34 @@ class FullStoryParser // extends Parser
             // 2 = sessions list raw
             // 3 = session info
 
+            $explodedSessionsListByNewline = explode("\n", trim($match[2]));
 
+            foreach($explodedSessionsListByNewline as $sessionLine)
+            {
+                $explodedSessionsList = array_map('trim', explode('|', $sessionLine));
+                // 8 long or 2 long
+                $moduleSession = new FullStoryModuleSession();
 
-            // need to parse session info based on number of pipes here
-            // and add them to the session thing
+                if (count($explodedSessionsList) == 8)
+                {
+                    $nameAndDate = array_map('trim', explode('|', $explodedSessionsList[0]));
+                    $moduleSession->setName($nameAndDate[0]);
+                    $moduleSession->setSessionDates($nameAndDate[1]);
+                    $moduleSession->setAttend($explodedSessionsList[1]);
+                    $moduleSession->setCbd($explodedSessionsList[2]);
+                    $moduleSession->setExt($explodedSessionsList[3]);
+                    $moduleSession->setCbe($explodedSessionsList[4]);
+                    $moduleSession->setDate($explodedSessionsList[5]);
+                    $moduleSession->setMark($explodedSessionsList[6]);
+                    $moduleSession->setOther($explodedSessionsList[7]);
+                }
+                else if (count($explodedSessionsList) == 2)
+                {
+                    $moduleSession->setOther($explodedSessionsList[1]);
+                }
+
+                $module->addSession($moduleSession);
+            }
 
             $database->addModule($module);
         }

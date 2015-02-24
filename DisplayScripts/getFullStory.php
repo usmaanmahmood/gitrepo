@@ -36,12 +36,12 @@ $result = $arcadeClient->execute($query);
                     <table class="table table-striped table-hover table-bordered table-condensed">
                         <tr>
                             <td>Deadline</td>
-                            <td>Dates</td>
+                            <td>Deadline Date</td>
                             <td>Attended</td>
                             <td>Completed By Deadline</td>
                             <td>Extension</td>
                             <td>Completed By Extension</td>
-                            <td>Date</td>
+                            <td>Date Submitted</td>
                             <td>Mark</td>
                             <td>Other</td>
                         </tr>
