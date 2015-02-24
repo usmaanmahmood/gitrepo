@@ -31,7 +31,7 @@ $result = $arcadeClient->execute($query);
                 <td><?= $module->getModuleName(); ?> </td>
             </tr>
             <tr>
-                <td>
+                <td colspan="2">
                     <table class="table table-hover table-bordered table-condensed">
                         <tr>
                             <th>Session</th>
