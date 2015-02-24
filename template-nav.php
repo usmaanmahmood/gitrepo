@@ -17,7 +17,6 @@
             <ul class="nav navbar-nav">
                 <li><a href="Classic.php">Classic</a></li>
                 <li><a href="Attendance-Summary.php">Attendance Summary</a></li>
-                <li><a href="Registration-Details.php">Registration Details</a></li>
 <!--                <li><a href="#">display-picture</a></li>-->
 <!--                <li class="divider"></li>-->
 <!--                <li><a href="#">time-table: remaining</a></li>-->
@@ -34,6 +33,7 @@
                 <li class="dropdown" id="other-dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other <span class="caret"></span></a>
                     <ul class="dropdown-menu">
+                        <li><a href="Registration-Details.php">Registration Details</a></li>
                         <li><a href="Expected.php">Expected</a></li>
                         <li><a href="Excuses.php">Excuses</a></li>
                         <li><a href="Irregularities.php">Irregularities</a></li>
