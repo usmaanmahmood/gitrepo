@@ -35,15 +35,15 @@ $result = $arcadeClient->execute($query);
                 <td>
                     <table class="table table-hover table-bordered table-condensed">
                         <tr>
-                            <td>Session</td>
-                            <td>Session Date(s)</td>
-                            <td>Attended</td>
-                            <td>Completed By Deadline</td>
-                            <td>Extension</td>
-                            <td>Completed By Extension</td>
-                            <td>Date Submitted</td>
-                            <td>Mark</td>
-                            <td>Other</td>
+                            <th>Session</th>
+                            <th>Session Date(s)</th>
+                            <th>Attended</th>
+                            <th>Completed By Deadline</th>
+                            <th>Extension</th>
+                            <th>Completed By Extension</th>
+                            <th>Date Submitted</th>
+                            <th>Mark</th>
+                            <th>Other</th>
                         </tr>
                         <?php foreach ($module->getSessionList() as $session) {
                             $getname = $session->getName();
