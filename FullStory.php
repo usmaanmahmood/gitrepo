@@ -69,7 +69,7 @@
             </select>
             <br/>
             <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..."
-                    id="submit">Execute!
+                    id="submit"><span class="glyphicon glyphicon-search"></span> Execute!
             </button>
         </div>
         <div class="col-md-9">
