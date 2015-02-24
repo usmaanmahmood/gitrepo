@@ -77,8 +77,8 @@
                     </div>
                     <div class="col-md-12">
                         <br />
-                        <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Executing..."
-                                id="submit">Execute Query
+                        <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Searching..."
+                                id="submit"><span class="glyphicon glyphicon-search"></span> Search
                         </button>
                     </div>
                 </div>
