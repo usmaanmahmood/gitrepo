@@ -33,10 +33,10 @@ $result = $arcadeClient->execute($query);
             <tr>
                 <td>Session:</td>
                 <td>
-                    <table class="table table-striped table-hover table-bordered table-condensed">
+                    <table class="table table-hover table-bordered table-condensed">
                         <tr>
-                            <td>Deadline</td>
-                            <td>Deadline Date</td>
+                            <td>Session</td>
+                            <td>Session Date(s)</td>
                             <td>Attended</td>
                             <td>Completed By Deadline</td>
                             <td>Extension</td>
