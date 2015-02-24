@@ -65,7 +65,7 @@ $result = $arcadeClient->execute($query);
                             } else
                                     ?>
                                     <tr>
-                                        <td colspan="8"><?= $session->getOther() ?></td>
+                                        <td colspan="9"><?= $session->getOther() ?></td>
                                     </tr>
                         <?php
                         }
