@@ -347,8 +347,8 @@ class FullStoryParser // extends Parser
 
 
 // all below this line is temp for testing purposes only
-include("Result.php");
+//include("Result.php");
 
-$parser = new FullStoryParser();
-$result = $parser->parse($sampleFullStoryString);
-var_dump($result);
+//$parser = new FullStoryParser();
+//$result = $parser->parse($sampleFullStoryString);
+//var_dump($result);
