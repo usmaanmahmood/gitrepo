@@ -46,9 +46,9 @@ $result = $arcadeClient->execute($query);
                             <td>Other</td>
                         </tr>
                         <?php foreach ($module->getSessionList() as $session) {
-                            ?>
-                            <?php $getname = $session->getName();
-                            if (!empty($getname)) { ?>
+                            $getname = $session->getName();
+                            if (!empty($getname)) {
+                                ?>
                                 <tr>
                                     <td><?= $session->getName() ?></td>
                                     <td><?= $session->getSessionDates() ?></td>
@@ -61,23 +61,23 @@ $result = $arcadeClient->execute($query);
                                     <td><?= $session->getOther() ?></td>
                                 </tr>
                             <?php
-                            } else
-                                    ?>
-                                    <tr>
-                                        <td colspan="9"><?= $session->getOther() ?></td>
-                                    </tr>
-                        <?php
+                            } else {
+                                ?>
+                                <tr>
+                                    <td colspan="9"><?= $session->getOther() ?></td>
+                                </tr>
+                        <?php }
                         }
                         ?>
                     </table>
                 </td>
             </tr>
-<!--            <tr>-->
-<!--                <td>Raw Session:</td>-->
-<!--                <td>-->
-<!--                    <pre>--><?//= $module->getRawSession(); ?><!--</pre>-->
-<!--                </td>-->
-<!--            </tr>-->
+            <!--            <tr>-->
+            <!--                <td>Raw Session:</td>-->
+            <!--                <td>-->
+            <!--                    <pre>--><? //= $module->getRawSession(); ?><!--</pre>-->
+            <!--                </td>-->
+            <!--            </tr>-->
             <tr>
                 <td>Session Info:</td>
                 <td>
