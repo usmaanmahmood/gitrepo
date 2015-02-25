@@ -102,11 +102,8 @@ $(document).ready(function () {
 
     $("#submit").click(function () {
         var $command = $("#CommandList option:selected").text();
-        if ($command == null)
-        {
-            console.log($("#CommandList"));
-        }
         var $databases = $("#DatabaseList").val();
+        console.log($databases);
         var $groups = $("#GroupList").val();
         var $students = $("#StudentList").val();
         var $modules = $("#ModuleList").val();
