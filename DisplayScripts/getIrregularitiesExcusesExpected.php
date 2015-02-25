@@ -44,7 +44,7 @@ $result = $arcadeClient->execute($query);
                                aria-expanded="true"
                                aria-controls="collapse<?= $currentNumber ?>"><strong>
                                     <?= $module; ?></strong>
-                                - <span class="label label-danger"><?= $database->getItemCountForModule($module); ?></span></a>
+                                - <span class="label label-danger"><?= $database->getItemCountForModule($module); ?> <?= $type ?></span></a>
                         </h4>
                     </div>
                     <!-- panel-heading -->
