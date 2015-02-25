@@ -67,8 +67,7 @@ $result = $arcadeClient->execute($query);
             ?>
         </table>
         <h4>Key:</h4>
-        <?php $var = preg_replace('/[ ](?=[^>]*(?:<|$))/', '&nbsp', $module->getSessionInfo());
-        echo nl2br($var); ?>
+        <pre><?= $module->getSessionInfo(); ?></pre>
         <hr />
     <?php
     }
