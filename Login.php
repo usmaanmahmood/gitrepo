@@ -42,16 +42,6 @@
             margin-bottom: 10px;
             }
 
-            .form-signin .form-control {
-            position: relative;
-            height: auto;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            padding: 10px;
-            font-size: 16px;
-            }
-
             .form-signin .form-control:focus {
             z-index: 2;
             }
