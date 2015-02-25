@@ -74,7 +74,7 @@
                maxlength=8>
         <input type="password" class="form-control" placeholder="Web App Password" name="webpassword" required>
         <input type="password" class="form-control" placeholder="ARCADE Password" name="arcadepassword" required> run:
-        cat $HOME/.ARCADE/serverAuthentication
+        <code>cat $HOME/.ARCADE/serverAuthentication</code>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
     </form>
     <?php
