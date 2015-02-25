@@ -72,7 +72,7 @@
 
             <div class="input-group input-group-lg">
                 <span class="input-group-addon">
-                    <span class="glyphicons glyphicons-user"></span>
+                    <span class="glyphicon glyphicon-user"></span>
                 </span>
                 <input type="text" class="form-control" placeholder="Central Username" name="username" id="username"
                        required
