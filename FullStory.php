@@ -29,7 +29,7 @@
                 <?php } ?>
             </select>
             <br/>
-            <button type="button" class="btn btn-default btn-block mod-reset-filters">Reset Modules</button>
+            <button type="button" class="btn btn-default btn-block mod-reset-filters"><span class="glyphicon glyphicon-remove"></span> Reset Modules</button>
 
 
             <select multiple class="form-control" size=15 id="ModuleList">
