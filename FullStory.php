@@ -87,8 +87,6 @@
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script>
     $(document).ready(function () {
-           $('[data-toggle="tooltip"]').tooltip()
-
 
         // hide them all to start with
         $("#ModuleList option").hide();
