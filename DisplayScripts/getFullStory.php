@@ -27,10 +27,7 @@ $result = $arcadeClient->execute($query);
         ?>
 
         <h3>Module: <?= $module->getModuleName(); ?> </h3>
-        <?php foreach ($module->getSessionList() as $session) {
-            $getname = $session->getName();
-            if (!empty($getname)) {
-                ?>
+
                 <table class="table table-hover table-bordered table-condensed">
                 <tr>
                     <th>Session</th>
@@ -45,7 +42,10 @@ $result = $arcadeClient->execute($query);
                     <th>Mark</th>
                     <th>Other</th>
                 </tr>
-
+                <?php foreach ($module->getSessionList() as $session) {
+                    $getname = $session->getName();
+                    if (!empty($getname)) {
+                        ?>
                 <tr>
                     <th><?= $session->getName() ?></th>
                     <td><?= $session->getSessionDates() ?></td>
