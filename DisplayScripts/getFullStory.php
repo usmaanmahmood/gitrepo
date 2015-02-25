@@ -35,8 +35,7 @@ $result = $arcadeClient->execute($query);
                 <th>Attended</th>
                 <th><abbr title="Completed By Deadline">C.B.D.</th>
                 <th><abbr title="Extension">Ext</th>
-                <th><abbr title="Completed By Extension">C.B.E.</abbr>
-                </th>
+                <th><abbr title="Completed By Extension">C.B.E.</abbr></th>
                 <th>Date Submitted</th>
                 <th>Mark</th>
                 <th>Other</th>

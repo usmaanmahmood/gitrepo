@@ -180,12 +180,15 @@ class FullStoryParser // extends Parser
             $module = new FullStoryModule();
             $module->setModuleName($match[1]);
             $module->setRawSession($match[2]);
-            $module->setSessionInfo($match[3]);
+            $sessionSplit = preg_split("/\n\n\n/", $match[3]);
+            $module->setSessionInfo($sessionSplit[0]);
 
             // 0 = groups / module list - do i even need? don't think so!!!!!!!!!!!!!!!!!!!!!!!!
             // 1 = module name
             // 2 = sessions list raw
             // 3 = session info
+
+
 
             $explodedSessionsListByNewline = explode("\n", trim($match[2]));
 
