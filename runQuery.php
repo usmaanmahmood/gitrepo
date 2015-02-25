@@ -13,7 +13,6 @@ $query = new Query($_GET["command"], $_GET["plainResult"]); // command, plainTex
 
 // if none selected then it is empty. if it is, send the array through
 if (!empty($_GET["databases"])) $query->addDatabases($_GET["databases"]);
-var_dump($_GET["databases"]);
 if (!empty($_GET["groups"])) $query->addGroups($_GET["groups"]);
 if (!empty($_GET["students"])) $query->addStudents($_GET["students"]);
 if (!empty($_GET["modules"])) $query->addModules($_GET["modules"]);
