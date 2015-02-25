@@ -104,10 +104,8 @@ $(document).ready(function () {
         var $command = $("#CommandList option:selected").text();
 
         if ($("#DatabaseList").val() == null)
-        {
             $("#DatabaseList option").prop("selected", true);
-
-        }
+        
         var $databases = $("#DatabaseList").val();
         var $groups = $("#GroupList").val();
         var $students = $("#StudentList").val();
