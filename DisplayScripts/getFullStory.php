@@ -25,52 +25,50 @@ $result = $arcadeClient->execute($query);
     <h3>Database: <?= $database->getDatabaseParsedName(); ?></h3>
     <?php foreach ($database->getModuleList() as $module) {
         ?>
+
+        <h3>Module: <?= $module->getModuleName(); ?> </h3>
+        <?php foreach ($module->getSessionList() as $session) {
+            $getname = $session->getName();
+            if (!empty($getname)) {
+                ?>
+                <table class="table table-hover table-bordered table-condensed">
+                <tr>
+                    <th>Session</th>
+                    <th>Session Date(s)</th>
+                    <th>Attended</th>
+                    <th data-toggle="tooltip" data-placement="top" title="Tooltip on top">Completed By
+                        Deadline
+                    </th>
+                    <th>Extension</th>
+                    <th>Completed By Extension</th>
+                    <th>Date Submitted</th>
+                    <th>Mark</th>
+                    <th>Other</th>
+                </tr>
+
+                <tr>
+                    <th><?= $session->getName() ?></th>
+                    <td><?= $session->getSessionDates() ?></td>
+                    <td><?= $session->getAttend() ?></td>
+                    <td><?= $session->getCbd() ?></td>
+                    <td><?= $session->getExt() ?></td>
+                    <td><?= $session->getCbe() ?></td>
+                    <td><?= $session->getDate() ?></td>
+                    <td><?= $session->getMark() ?></td>
+                    <td><?= $session->getOther() ?></td>
+                </tr>
+            <?php
+            } else {
+                ?>
+                <tr>
+                    <td colspan="9"><strong>Note: </strong><?= $session->getOther() ?></td>
+                </tr>
+            <?php
+            }
+        }
+        ?>
+        </table>
         <table class="table table-striped table-hover table-bordered table-condensed">
-            <tr>
-                <td>Module:</td>
-                <td><?= $module->getModuleName(); ?> </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <table class="table table-hover table-bordered table-condensed">
-                        <tr>
-                            <th>Session</th>
-                            <th>Session Date(s)</th>
-                            <th>Attended</th>
-                            <th data-toggle="tooltip" data-placement="top" title="Tooltip on top">Completed By Deadline</th>
-                            <th>Extension</th>
-                            <th>Completed By Extension</th>
-                            <th>Date Submitted</th>
-                            <th>Mark</th>
-                            <th>Other</th>
-                        </tr>
-                        <?php foreach ($module->getSessionList() as $session) {
-                            $getname = $session->getName();
-                            if (!empty($getname)) {
-                                ?>
-                                <tr>
-                                    <th><?= $session->getName() ?></th>
-                                    <td><?= $session->getSessionDates() ?></td>
-                                    <td><?= $session->getAttend() ?></td>
-                                    <td><?= $session->getCbd() ?></td>
-                                    <td><?= $session->getExt() ?></td>
-                                    <td><?= $session->getCbe() ?></td>
-                                    <td><?= $session->getDate() ?></td>
-                                    <td><?= $session->getMark() ?></td>
-                                    <td><?= $session->getOther() ?></td>
-                                </tr>
-                            <?php
-                            } else {
-                                ?>
-                                <tr>
-                                    <td colspan="9"><strong>Note: </strong><?= $session->getOther() ?></td>
-                                </tr>
-                        <?php }
-                        }
-                        ?>
-                    </table>
-                </td>
-            <tr>
                 <td>Session Info:</td>
                 <td>
                     <pre><?= $module->getSessionInfo(); ?></pre>
@@ -80,11 +78,11 @@ $result = $arcadeClient->execute($query);
     <?php
     }
     ?>
-<script>
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-    })
-</script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
 
 
 <?php } ?>
