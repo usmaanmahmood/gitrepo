@@ -57,7 +57,6 @@
                        required
                        autofocus maxlength=8 value="mahmoou1">
             </div>
-            <br />
             <div class="input-group input-group-lg">
                 <span class="input-group-addon">
                     <span class="glyphicon glyphicon-lock"></span>
