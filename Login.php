@@ -57,7 +57,7 @@
                        required
                        autofocus maxlength=8 value="mahmoou1">
             </div>
-
+            <br />
             <div class="input-group input-group-lg">
                 <span class="input-group-addon">
                     <span class="glyphicon glyphicon-lock"></span>
@@ -66,6 +66,7 @@
                        required
                        value="webpassword">
             </div>
+            <br />
             <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit"><span
                     class="glyphicon glyphicon-log-in"></span> Log in
             </button>
