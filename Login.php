@@ -77,6 +77,7 @@
               <span class="glyphicon glyphicon-lock"></span>
 
             </span>
+            </div>
             <input type="password" class="form-control" placeholder="Web Password" name="password" id="password" required
                value="webpassword">
             </div>
