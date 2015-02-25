@@ -106,7 +106,9 @@ $(document).ready(function () {
         if ($databases == null)
         {
             $("#DatabaseList option").prop("selected", true);
+            $databases = $("#DatabaseList").val();
         }
+
 
         var $groups = $("#GroupList").val();
         var $students = $("#StudentList").val();
