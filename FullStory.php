@@ -18,7 +18,7 @@
     <div class="row">
         <div class="col-md-3">
 
-            <button type="button" class="btn btn-default btn-block dat-reset-filters">Reset Databases <span class="glyphicon glyphicon-remove-2"></span></button>
+            <button type="button" class="btn btn-default btn-block dat-reset-filters"><span class="glyphicon glyphicon-remove"></span> Reset Databases</button>
 
             <select class="form-control" size=4 id="DatabaseList">
                 <?php foreach (array_unique($arcadeProfile->getDatabaseList()) as $option) { ?>
