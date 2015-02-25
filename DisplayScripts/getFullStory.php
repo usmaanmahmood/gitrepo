@@ -70,6 +70,7 @@ $result = $arcadeClient->execute($query);
                         ?>
                     </table>
                 </td>
+            <tr>
                 <td>Session Info:</td>
                 <td>
                     <pre><?= $module->getSessionInfo(); ?></pre>
