@@ -26,7 +26,7 @@ $result = $arcadeClient->execute($query);
     <?php foreach ($database->getModuleList() as $module) {
         ?>
 
-        <h3>Module: <?= $module->getModuleName(); ?> </h3>
+        <h3 class="text-center">Module: <?= $module->getModuleName(); ?> </h3>
 
         <table class="table table-hover table-bordered table-condensed">
             <tr>
