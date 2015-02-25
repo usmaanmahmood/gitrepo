@@ -100,7 +100,7 @@
 
         <div class="col-md-9">
             <h1>Attendance Summary</h1>
-            <p>A pattern of attendance. A merge of course components selected.</p>
+            <p class="lead">A pattern of attendance. A merge of course components selected.</p>
             <strong>Key:</strong><br />
             One week per line<br />
             <div class="green pull-left"></div> : attended<br />
