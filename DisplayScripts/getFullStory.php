@@ -37,7 +37,7 @@ $result = $arcadeClient->execute($query);
                             <th>Session</th>
                             <th>Session Date(s)</th>
                             <th>Attended</th>
-                            <th>Completed By Deadline</th>
+                            <th data-toggle="tooltip" data-placement="top" title="Tooltip on top">Completed By Deadline</th>
                             <th>Extension</th>
                             <th>Completed By Extension</th>
                             <th>Date Submitted</th>
@@ -80,7 +80,9 @@ $result = $arcadeClient->execute($query);
     <?php
     }
     ?>
-
+<script>$(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })</script>
 
 
 <?php } ?>
