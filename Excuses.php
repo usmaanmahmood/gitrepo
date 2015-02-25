@@ -20,7 +20,6 @@
                 <?php include("SearchBarDatabaseModule.php"); ?>
             </div>
 
-
             <div class="col-md-9">
                 <h1>Excuses</h1>
 
