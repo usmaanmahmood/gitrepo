@@ -32,34 +32,34 @@
             }
 
             /*.form-signin {*/
-                /*max-width: 330px;*/
-                /*padding: 15px;*/
-                /*margin: 0 auto;*/
+            /*max-width: 330px;*/
+            /*padding: 15px;*/
+            /*margin: 0 auto;*/
             /*}*/
-/**/
+            /**/
             /*.form-signin .form-signin-heading,*/
             /*.form-signin .checkbox {*/
-                /*margin-bottom: 10px;*/
+            /*margin-bottom: 10px;*/
             /*}*/
-/**/
+            /**/
             /*.form-signin .form-control {*/
-                /*position: relative;*/
-                /*height: auto;*/
-                /*-webkit-box-sizing: border-box;*/
-                /*-moz-box-sizing: border-box;*/
-                /*box-sizing: border-box;*/
-                /*padding: 10px;*/
-                /*font-size: 16px;*/
+            /*position: relative;*/
+            /*height: auto;*/
+            /*-webkit-box-sizing: border-box;*/
+            /*-moz-box-sizing: border-box;*/
+            /*box-sizing: border-box;*/
+            /*padding: 10px;*/
+            /*font-size: 16px;*/
             /*}*/
-/**/
+            /**/
             /*.form-signin .form-control:focus {*/
-                /*z-index: 2;*/
+            /*z-index: 2;*/
             /*}*/
-/**/
+            /**/
             /*.form-signin input[type="password"] {*/
-                /*margin-bottom: -1px;*/
-                /*border-top-left-radius: 0;*/
-                /*border-top-right-radius: 0;*/
+            /*margin-bottom: -1px;*/
+            /*border-top-left-radius: 0;*/
+            /*border-top-right-radius: 0;*/
             /*}*/
         </style>
     </head>
@@ -69,13 +69,14 @@
     <div class="container text-center">
         <form class="form-signin" role="form" method="post" action="LoginCheck.php">
             <h1 class="form-signin-heading">ARCADE: Login</h1>
+
             <div class="input-group input-group-lg">
                 <span class="input-group-addon">
                     <span class="glyphicons glyphicons-user"></span>
                 </span>
                 <input type="text" class="form-control" placeholder="Central Username" name="username" id="username"
-                   required
-                   autofocus maxlength=8 value="mahmoou1">
+                       required
+                       autofocus maxlength=8 value="mahmoou1">
             </div>
 
             <div class="input-group input-group-lg">
@@ -90,23 +91,24 @@
                     class="glyphicon glyphicon-log-in"></span> Log in
             </button>
 
-<?php
-if (isset($_GET["message"]) && $_GET["message"] == 1) {
-    ?>
-    <div class="alert alert-danger" role="alert"><b>Oh snap!</b> Change a few things up and try submitting
-        again.
-    </div>
-<?php
-} else if (isset($_GET["message"]) && $_GET["message"] == 2) {
-    ?>
-    <div class="alert alert-success" role="alert"><b>Thanks for using ARCADE!</b><br/>Please send any feedback /
-        suggestions to usmaanmahmood@hotmail.com
-    </div>
-<?php
-}
-?>
-    </form>
-    <p>Not have an account yet? <a href="Register.php">Register easy &amp; quickly here!</a></p>
+            <?php
+            if (isset($_GET["message"]) && $_GET["message"] == 1) {
+                ?>
+                <div class="alert alert-danger" role="alert"><b>Oh snap!</b> Change a few things up and try submitting
+                    again.
+                </div>
+            <?php
+            } else if (isset($_GET["message"]) && $_GET["message"] == 2) {
+                ?>
+                <div class="alert alert-success" role="alert"><b>Thanks for using ARCADE!</b><br/>Please send any
+                    feedback /
+                    suggestions to usmaanmahmood@hotmail.com
+                </div>
+            <?php
+            }
+            ?>
+        </form>
+        <p>Not have an account yet? <a href="Register.php">Register easy &amp; quickly here!</a></p>
 
     </div>
     <!-- /container -->
