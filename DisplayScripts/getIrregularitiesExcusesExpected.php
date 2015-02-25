@@ -36,7 +36,7 @@ $result = $arcadeClient->execute($query);
                 $currentNumber = ucfirst(convert_number_to_words(($key1)));
 
                 ?>
-                <div class="panel panel-default">
+                <div class="panel panel-primary">
                     <div class="panel-heading" role="tab" id="heading<?= $currentNumber ?>">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion"
@@ -44,7 +44,7 @@ $result = $arcadeClient->execute($query);
                                aria-expanded="true"
                                aria-controls="collapse<?= $currentNumber ?>"><strong>
                                     <?= $module; ?></strong>
-                                - <span class="label label-danger"><?= $database->getItemCountForModule($module); ?> <?= $type ?></span></a>
+                                - <span class="badge"><?= $database->getItemCountForModule($module); ?></span></a>
                         </h4>
                     </div>
                     <!-- panel-heading -->
