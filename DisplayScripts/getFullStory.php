@@ -33,11 +33,10 @@ $result = $arcadeClient->execute($query);
                 <th>Session</th>
                 <th>Session Date(s)</th>
                 <th>Attended</th>
-                <th data-toggle="tooltip" data-placement="top" title="Tooltip on top">Completed By
-                    Deadline
-                </th>
+                <th><abbr title="Completed By Deadline">C.B.D.</th>
                 <th>Extension</th>
-                <th>Completed By Extension</th>
+                <th><abbr title="Completed By Extension">C.B.E.</abbr>
+                </th>
                 <th>Date Submitted</th>
                 <th>Mark</th>
                 <th>Other</th>
