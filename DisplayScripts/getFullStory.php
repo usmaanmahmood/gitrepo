@@ -80,9 +80,6 @@ $result = $arcadeClient->execute($query);
     <?php
     }
     ?>
-<script>$(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })</script>
 
 
 <?php } ?>
