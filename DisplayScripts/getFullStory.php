@@ -67,7 +67,7 @@ $result = $arcadeClient->execute($query);
             ?>
         </table>
         <h4>Key:</h4>
-        <pre><?= $module->getSessionInfo(); ?></pre>
+        <?= nl2br($module->getSessionInfo()); ?>
         <hr />
     <?php
     }
