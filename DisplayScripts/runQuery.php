@@ -6,7 +6,7 @@
  * Time: 17:29
  */
 
-include("config.php");
+include("../config.php");
 
 $arcadeClient = new ARCADEClient();
 $query = new Query($_GET["command"], $_GET["plainResult"]); // command, plainTextWanted
