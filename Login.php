@@ -86,11 +86,19 @@
                        required
                        value="webpassword">
             </div>
+        </form>
+        <div class="input-group input-group-lg">
 
+            <span class="input-group-addon">
+
+              <span class="glyphicon glyphicon-log-in"></span>
+
+            </span>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit">Log in
+            </button>
+        </div>
     </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit"><span
-            class="glyphicon glyphicon-log-in"></span> Log in
-    </button>
+
 <?php
 if (isset($_GET["message"]) && $_GET["message"] == 1) {
     ?>
