@@ -71,8 +71,15 @@
         <h1 class="form-signin-heading">ARCADE: Login</h1>
         <input type="text" class="form-control" placeholder="Central Username" name="username" id="username" required
                autofocus maxlength=8 value="mahmoou1">
-        <input type="password" class="form-control" placeholder="Web Password" name="password" id="password" required
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon">
+
+              <span class="glyphicon glyphicon-lock"></span>
+
+            </span>
+            <input type="password" class="form-control" placeholder="Web Password" name="password" id="password" required
                value="webpassword">
+            </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit"><span class="glyphicon glyphicon-log-in"></span> Log in</button>
         <?php
         if (isset($_GET["message"]) && $_GET["message"] == 1) {
