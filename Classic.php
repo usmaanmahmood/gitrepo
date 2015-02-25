@@ -103,7 +103,11 @@ $(document).ready(function () {
     $("#submit").click(function () {
         var $command = $("#CommandList option:selected").text();
         var $databases = $("#DatabaseList").val();
-        console.log($databases);
+        if ($databases == null)
+        {
+            $("#DatabaseList option").prop("selected", true);
+        }
+
         var $groups = $("#GroupList").val();
         var $students = $("#StudentList").val();
         var $modules = $("#ModuleList").val();
