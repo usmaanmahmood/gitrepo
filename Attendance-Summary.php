@@ -46,8 +46,8 @@
         </div>
 
         <div class="col-md-9">
-            <div class="page-header"><h1>Attendance Summary<small>A pattern of attendance. A merge of course components selected.</small></h1></div>
-            <p class="lead"></p>
+            <h1>Attendance Summary</h1>
+            <p class="lead">A pattern of attendance. A merge of course components selected.</p>
             <strong>Key:</strong><br />
             One week per line<br />
             <div class="green pull-left"></div> : attended<br />
