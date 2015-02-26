@@ -19,6 +19,18 @@ if (!empty($_GET["modules"])) $query->addModules($_GET["modules"]);
 
 $result = $arcadeClient->execute($query);
 
+function getTDClass($inCharacter) {
+    $tdClass = "";
+    switch ($inCharacter) {
+        case "/":
+            $tdClass = "success";
+            break;
+        case "x":
+            $tdClass = "danger";
+            break;
+    }
+    return $tdClass;
+}
 ?>
 <?php foreach ($result->getDatabaseList() as $database) {
     ?>
@@ -49,15 +61,20 @@ $result = $arcadeClient->execute($query);
                         <td><?= $session->getSessionDates() ?></td>
                         <?php
                         $attend = $session->getAttend();
-                        if ($attend == "/")
-                            echo "<td class=\"success\">";
-                        else if ($attend == "x")
-                            echo "<td class=\"danger\">";
-                        else
-                            echo "<td>";
+                        switch ($attend) {
+                            case "/":
+                                echo "<td class=\"success\">";
+                                break;
+                            case "x":
+                                echo "<td class=\"danger\">";
+                                break;
+                            default:
+                                echo "<td>";
+                                break;
+                        }
                         echo $attend . "</td>"
                         ?>
-                        <td><?= $session->getCbd() ?></td>
+                        <?php $data = $session->getCbd(); echo "<td class=\"" . getTDClass($data) . "\">" . $data . "</td>" ?>
                         <td><?= $session->getExt() ?></td>
                         <td><?= $session->getCbe() ?></td>
                         <td><?= $session->getDate() ?></td>
@@ -77,7 +94,7 @@ $result = $arcadeClient->execute($query);
         </table>
         <h4>Key:</h4>
         <pre><?= $module->getSessionInfo(); ?></pre>
-        <hr />
+        <hr/>
     <?php
     }
     ?>
