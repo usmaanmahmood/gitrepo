@@ -47,14 +47,7 @@ $result = $arcadeClient->execute($query);
                     <tr>
                         <th><?= $session->getName() ?></th>
                         <td><?= $session->getSessionDates() ?></td>
-                        <?php
-                        $attend = $session->getAttend();
-                        if ($attend == "/")
-                            echo "<td class=\"success\">";
-                        else if ($attend == "x")
-                            echo "<td class=\"danger\">";
-                        echo $attend . "</td>"
-                        ?>
+                        <td><?= $session->getAttend() ?></td>
                         <td><?= $session->getCbd() ?></td>
                         <td><?= $session->getExt() ?></td>
                         <td><?= $session->getCbe() ?></td>
