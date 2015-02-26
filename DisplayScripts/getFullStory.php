@@ -59,25 +59,11 @@ function getTDClass($inCharacter) {
                     <tr>
                         <th><?= $session->getName() ?></th>
                         <td><?= $session->getSessionDates() ?></td>
-                        <?php
-                        $attend = $session->getAttend();
-                        switch ($attend) {
-                            case "/":
-                                echo "<td class=\"success\">";
-                                break;
-                            case "x":
-                                echo "<td class=\"danger\">";
-                                break;
-                            default:
-                                echo "<td>";
-                                break;
-                        }
-                        echo $attend . "</td>"
-                        ?>
+                        <?php $data = $session->getAttend(); echo "<td class=\"" . getTDClass($data) . "\">" . $data . "</td>" ?>
                         <?php $data = $session->getCbd(); echo "<td class=\"" . getTDClass($data) . "\">" . $data . "</td>" ?>
-                        <td><?= $session->getExt() ?></td>
-                        <td><?= $session->getCbe() ?></td>
-                        <td><?= $session->getDate() ?></td>
+                        <?php $data = $session->getExt(); echo "<td class=\"" . getTDClass($data) . "\">" . $data . "</td>" ?>
+                        <?php $data = $session->getCbe(); echo "<td class=\"" . getTDClass($data) . "\">" . $data . "</td>" ?>
+                        <?php $data = $session->getDate(); echo "<td class=\"" . getTDClass($data) . "\">" . $data . "</td>" ?>
                         <td><?= $session->getMark() ?></td>
                         <td><?= $session->getOther() ?></td>
                     </tr>
