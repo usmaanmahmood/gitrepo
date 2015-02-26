@@ -48,12 +48,6 @@
         <div class="col-md-9">
             <h1>Attendance Summary</h1>
             <p class="lead">A pattern of attendance. A merge of course components selected.</p>
-            <strong>Key:</strong><br />
-            One week per line<br />
-            <div class="green pull-left"></div> : attended<br />
-            <div class="orange pull-left"></div> : excused<br />
-            <div class="red pull-left"></div> : absent<br />
-            <div class="white pull-left"></div> : no attendance taken
         <div id="result"></div>
         </div>
 
