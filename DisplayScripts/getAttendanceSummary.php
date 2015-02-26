@@ -42,7 +42,7 @@ $result = $arcadeClient->execute($query);
         <tr>
             <td>Pattern</td>
             <td><div class="pull-right bg-info" style="margin: 10px; padding:20px;"><strong>Key:</strong><br />
-                    One week per line<br />
+                    One line per week<br />
                     <div class="green pull-left"></div> : attended<br />
                     <div class="orange pull-left"></div> : excused<br />
                     <div class="red pull-left"></div> : absent<br />
