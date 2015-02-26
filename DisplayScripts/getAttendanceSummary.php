@@ -41,7 +41,12 @@ $result = $arcadeClient->execute($query);
         </tr>
         <tr>
             <td>Pattern</td>
-            <td>
+            <td><div class="pull-right"><strong>Key:</strong><br />
+                    One week per line<br />
+                    <div class="green pull-left"></div> : attended<br />
+                    <div class="orange pull-left"></div> : excused<br />
+                    <div class="red pull-left"></div> : absent<br />
+                    <div class="white pull-left"></div> : no attendance taken</div>
                 <?php
                 $rawPattern = $database->getAttendancePattern();
                 $splitPattern = str_split($rawPattern);
