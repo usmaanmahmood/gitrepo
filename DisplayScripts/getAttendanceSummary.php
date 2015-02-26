@@ -45,10 +45,10 @@ $result = $arcadeClient->execute($query);
                 <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Key:"
                         data-content="<strong>Key:</strong><br />
             One week per line<br />
-            <div class="green pull-left"></div> : attended<br />
-                <div class="orange pull-left"></div> : excused<br />
-                <div class="red pull-left"></div> : absent<br />
-                <div class="white pull-left"></div> : no attendance taken">
+            <div class=\'green pull-left\'></div> : attended<br />
+                <div class='orange pull-left'></div> : excused<br />
+                <div class='red pull-left'></div> : absent<br />
+                <div class='white pull-left'></div> : no attendance taken">
                     Click to view Key
                 </button>
                 <?php
