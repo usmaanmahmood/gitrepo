@@ -42,7 +42,7 @@ $result = $arcadeClient->execute($query);
         <tr>
             <td>Pattern</td>
             <td>
-                <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Key:"
+                <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Key:" html="true"
                         data-content="<strong>Key:</strong><br />
             One week per line<br />
             <div class=\'green pull-left\'></div> : attended<br />
