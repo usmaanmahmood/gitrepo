@@ -21,6 +21,7 @@
         </div>
         <div class="col-md-9">
             <h1>Full Story</h1>
+            <p class="lead">There is one page for each module, each containing the SESSION DETAILS table, and the corresponding entry in the MODULE TABLE.</p>
             <div id="result"></div>
         </div>
     </div>
