@@ -99,3 +99,6 @@ $result = $arcadeClient->execute($query);
         </tr>
     </table>
 <?php } ?>
+<script>$(function () {
+        $('[data-toggle="popover"]').popover()
+    })</script>
