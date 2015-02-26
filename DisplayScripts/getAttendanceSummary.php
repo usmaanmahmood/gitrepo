@@ -42,7 +42,6 @@ $result = $arcadeClient->execute($query);
         <tr>
             <td>Pattern</td>
             <td>
-                <div class="popover" role="tooltip"><div class="arrow">arrow</div><h3 class="popover-title">title</h3><div class="popover-content">content</div></div>
                 <?php
                 $rawPattern = $database->getAttendancePattern();
                 $splitPattern = str_split($rawPattern);
