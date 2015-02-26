@@ -48,7 +48,7 @@ $result = $arcadeClient->execute($query);
                         <th><?= $session->getName() ?></th>
                         <td><?= $session->getSessionDates() ?></td>
                         <?php
-                        $attend = $session->getAttend();
+                        $attend = trim($session->getAttend());
                         if ($attend == "/")
                             echo "<td class=\"success\">";
                         else if ($attend == "x")
