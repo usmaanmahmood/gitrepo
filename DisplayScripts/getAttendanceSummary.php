@@ -24,7 +24,7 @@ $result = $arcadeClient->execute($query);
     ?>
     <table class="table table-striped table-hover table-bordered table-condensed">
         <tr>
-            <td>Database:</td>
+            <td>Database</td>
             <td><?= $database->getDatabaseParsedName(); ?></td>
         </tr>
         <tr>
