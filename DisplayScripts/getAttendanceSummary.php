@@ -42,15 +42,7 @@ $result = $arcadeClient->execute($query);
         <tr>
             <td>Pattern</td>
             <td>
-                <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Key:" data-html="true"
-                        data-content="<strong>Key:</strong><br />
-            One week per line<br />
-            <div class=\'green pull-left\'></div> : attended<br />
-                <div class='orange pull-left'></div> : excused<br />
-                <div class='red pull-left'></div> : absent<br />
-                <div class='white pull-left'></div> : no attendance taken">
-                    Click to view Key
-                </button>
+                <div class="popover" role="tooltip"><div class="arrow">arrow</div><h3 class="popover-title">title</h3><div class="popover-content">content</div></div>
                 <?php
                 $rawPattern = $database->getAttendancePattern();
                 $splitPattern = str_split($rawPattern);
