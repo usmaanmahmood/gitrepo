@@ -29,20 +29,20 @@ $result = $arcadeClient->execute($query);
     <?php
 
     $infoList = $database->getSessionInfoList();
-    foreach($infoList as $infoLine)
+    foreach ($infoList as $infoLine)
         echo $infoLine . "<br />";
 
     foreach ($database->getWeekList() as $week) {
         echo "Week <br />";
 
-        foreach($week->getDayList() as $day)
-        {
+        foreach ($week->getDayList() as $day) {
             echo "Day <br />";
 
-            foreach($day->getSessionList() as $daySession)
-            {
+            foreach ($day->getSessionList() as $daySession) {
                 echo "Session <br />";
-                echo $daySession->getName() . "<br />";
+
+                $daySessionName = $daySession->getName() == "" ? "empty" : $daySession->getName();
+                echo $daySessionName . "<br />";
             }
         }
 
