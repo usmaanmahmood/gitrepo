@@ -17,6 +17,7 @@ include("MarksTableParser.php");
 include("IrregularitiesExcusesExpectedParser.php");
 include("AttendanceSummaryParser.php");
 include("FullStoryParser.php");
+include("TimetableParser.php");
 
 // can add the database name parsing in here
 // and also module name parsing too
