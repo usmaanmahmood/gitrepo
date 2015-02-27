@@ -26,7 +26,10 @@ $result = $arcadeClient->execute($query);
     <h3>Database: <?= $database->getDatabaseParsedName(); ?></h3>
     <?php foreach ($database->getWeekList() as $week) {
 
-        echo nl2br(var_dump($database->getSessionInfoList()));
+        $infoList = $database->getSessionInfoList();
+        foreach($infoList as $infoLine)
+            echo "<br />" . $infoLine;
+
 
 
         echo "<br />Week<br />>";
