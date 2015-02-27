@@ -52,7 +52,7 @@ $result = $arcadeClient->execute($query);
                 foreach ($day->getSessionList() as $daySession) {
                     $daySessionName = $daySession->getName();
                     ?>
-                    <?= $daySessionName ?>
+                    <?= $daySessionName . "<br />" ?>
                 <?php
                 }?></td><?php
             }
