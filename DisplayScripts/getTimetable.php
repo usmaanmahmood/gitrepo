@@ -36,7 +36,7 @@ $result = $arcadeClient->execute($query);
         echo "Week " . ($weekKey+1) . "<br />";
 
         foreach ($week->getDayList() as $dayListKey => $day) {
-            echo "-Day " . ($dayListKey+1) . "<br />";
+            echo "-----Day " . ($dayListKey+1) . "<br />";
 //
 //            foreach ($day->getSessionList() as $daySession) {
 //                echo "--Session <br />";
