@@ -39,10 +39,10 @@ $result = $arcadeClient->execute($query);
             echo "-----Day " . ($dayListKey+1) . "<br />";
 
             foreach ($day->getSessionList() as $daySession) {
-                echo "----------Session <br />";
-                
+//                echo "----------Session <br />";
+
                 $daySessionName = $daySession->getName() == "" ? "empty" : $daySession->getName();
-                echo "--" . $daySessionName . "<br />";
+                echo "----------" . $daySessionName . "<br />";
             }
         }
 
