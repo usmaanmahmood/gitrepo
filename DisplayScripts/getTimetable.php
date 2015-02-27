@@ -45,22 +45,24 @@ $result = $arcadeClient->execute($query);
         foreach ($database->getWeekList() as $weekKey => $week) {
             ?><tr>
             <td><?=($weekKey + 1)?></td>
-            <td><?php echo "Week " . ($weekKey + 1) . "<br />";
+            <?php
+//                echo "Week " . ($weekKey + 1) . "<br />";
 
             foreach ($week->getDayList() as $dayListKey => $day) {
-                echo "-----Day " . ($dayListKey + 1) . "<br />";
-
+//                echo "Day " . ($dayListKey + 1) . "<br />";
                 foreach ($day->getSessionList() as $daySession) {
 //                echo "----------Session <br />";
 
-                    $daySessionName = $daySession->getName() == "" ? "" : $daySession->getName();
-                    echo "----------" . $daySessionName . "<br />";
-                }
+                    $daySessionName = $daySession->getName();
+//                    echo "----------" . $daySessionName . "<br />";
+            ?>
+            <td><?=$daySessionName?></td>
+                <?}
             }
 
         }
-        ?></td
-                ></tr>
+        ?>
+                </tr>
     </table>
 
 <?php } ?>
