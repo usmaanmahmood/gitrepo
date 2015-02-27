@@ -30,15 +30,15 @@ $result = $arcadeClient->execute($query);
 
     $infoList = $database->getSessionInfoList();
     foreach($infoList as $infoLine)
-        echo "<br />" . $infoLine;
+        echo $infoLine . "<br />";
 
     foreach ($database->getWeekList() as $week) {
-
-
-
-
-
-        echo "<br />Week<br />>";
+        echo "Week <br />";
+        
+        foreach($week->getDayList() as $day)
+        {
+            echo "Day <br />";
+        }
 
     }
     ?>
