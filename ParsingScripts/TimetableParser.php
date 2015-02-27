@@ -175,20 +175,47 @@ class TimetableParser // extends Parser
 
             $weekEntity = new TimetableWeek();
             // now explode and week line by line
+
+            $monday = new TimetableWeekDay();
+            $tuesday = new TimetableWeekDay();
+            $wednesday = new TimetableWeekDay();
+            $thursday = new TimetableWeekDay();
+            $friday = new TimetableWeekDay();
+
             foreach ($explodedWeekLineList as $weekLine) {
                 $explodedDayList = array_map('trim', explode('|', $weekLine));
                 array_shift($explodedDayList); // remove empty first item
                 array_pop($explodedDayList); // remove empty last item
 //                var_dump($explodedDayList);
+//                var_dump("----------------------------------------------------------------");
+                // need to add each one
 
-                $weekDayEntity = new TimetableWeekDay();
-                // now day by day parsing
-                foreach ($explodedDayList as $dayLine) {
-                    $daySession = new TimeTableWeekDaySession();
-                    $daySession->setName($dayLine);
-                    $weekDayEntity->addSession($daySession);
-                }
-                $weekEntity->addDay($weekDayEntity);
+                $daySession = new TimeTableWeekDaySession();
+                $daySession->setName($explodedDayList[0]);
+                $monday->addSession($daySession);
+
+                $daySession = new TimeTableWeekDaySession();
+                $daySession->setName($explodedDayList[1]);
+                $tuesday->addSession($daySession);
+
+                $daySession = new TimeTableWeekDaySession();
+                $daySession->setName($explodedDayList[2]);
+                $wednesday->addSession($daySession);
+
+                $daySession = new TimeTableWeekDaySession();
+                $daySession->setName($explodedDayList[3]);
+                $thursday->addSession($daySession);
+
+                $daySession = new TimeTableWeekDaySession();
+                $daySession->setName($explodedDayList[4]);
+                $friday->addSession($daySession);
+
+                $weekEntity->addDay($monday);
+                $weekEntity->addDay($tuesday);
+                $weekEntity->addDay($wednesday);
+                $weekEntity->addDay($thursday);
+                $weekEntity->addDay($friday);
+
             }
 
             $database->addWeek($weekEntity);
