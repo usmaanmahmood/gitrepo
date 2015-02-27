@@ -31,23 +31,34 @@ $result = $arcadeClient->execute($query);
     $infoList = $database->getSessionInfoList();
     foreach ($infoList as $infoLine)
         echo $infoLine . "<br />";
+    ?>
+    <table class="table table-striped table-hover table-bordered table-condensed">
+        <tr>
+            <td>Week #</td>
+            <td>Monday</td>
+            <td>Tuesday</td>
+            <td>Wednesday</td>
+            <td>Thursday</td>
+            <td>Friday</td>
+        </tr>
+        <?php
+        foreach ($database->getWeekList() as $weekKey => $week) {
+            ?><td><?=($weekKey + 1)?></td>
+            <td><?php echo "Week " . ($weekKey + 1) . "<br />";
 
-    foreach ($database->getWeekList() as $weekKey => $week) {
-        echo "Week " . ($weekKey+1) . "<br />";
+            foreach ($week->getDayList() as $dayListKey => $day) {
+                echo "-----Day " . ($dayListKey + 1) . "<br />";
 
-        foreach ($week->getDayList() as $dayListKey => $day) {
-            echo "-----Day " . ($dayListKey+1) . "<br />";
-
-            foreach ($day->getSessionList() as $daySession) {
+                foreach ($day->getSessionList() as $daySession) {
 //                echo "----------Session <br />";
 
-                $daySessionName = $daySession->getName() == "" ? "" : $daySession->getName();
-                echo "----------" . $daySessionName . "<br />";
+                    $daySessionName = $daySession->getName() == "" ? "" : $daySession->getName();
+                    echo "----------" . $daySessionName . "<br />";
+                }
             }
+
         }
-
-    }
-    ?>
-
+        ?></td>
+    </table>
 
 <?php } ?>
