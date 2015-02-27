@@ -24,11 +24,17 @@ $result = $arcadeClient->execute($query);
 <?php foreach ($result->getDatabaseList() as $database) {
     ?>
     <h3>Database: <?= $database->getDatabaseParsedName(); ?></h3>
-    <?php foreach ($database->getWeekList() as $week) {
 
-        $infoList = $database->getSessionInfoList();
-        foreach($infoList as $infoLine)
-            echo "<br />" . $infoLine;
+
+    <?php
+
+    $infoList = $database->getSessionInfoList();
+    foreach($infoList as $infoLine)
+        echo "<br />" . $infoLine;
+
+    foreach ($database->getWeekList() as $week) {
+
+
 
 
 
