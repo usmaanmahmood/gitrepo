@@ -43,7 +43,8 @@ $result = $arcadeClient->execute($query);
         </tr>
         <?php
         foreach ($database->getWeekList() as $weekKey => $week) {
-            ?><td><?=($weekKey + 1)?></td>
+            ?><tr>
+            <td><?=($weekKey + 1)?></td>
             <td><?php echo "Week " . ($weekKey + 1) . "<br />";
 
             foreach ($week->getDayList() as $dayListKey => $day) {
@@ -58,7 +59,8 @@ $result = $arcadeClient->execute($query);
             }
 
         }
-        ?></td>
+        ?></td
+                ></tr>
     </table>
 
 <?php } ?>
