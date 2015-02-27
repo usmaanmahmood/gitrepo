@@ -32,8 +32,8 @@ $result = $arcadeClient->execute($query);
     foreach ($infoList as $infoLine)
         echo $infoLine . "<br />";
 
-    foreach ($database->getWeekList() as $week) {
-        echo "Week <br />";
+    foreach ($database->getWeekList() as $key => $week) {
+        echo "Week " . $key . "<br />";
 //
 //        foreach ($week->getDayList() as $day) {
 //            echo "-Day <br />";
