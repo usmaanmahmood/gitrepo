@@ -17,5 +17,6 @@ include("MarksTableResult.php");
 include("IrregularitiesExcusesExpectedResult.php");
 include("AttendanceSummaryResult.php");
 include("FullStoryResult.php");
+include("TimetableResult.php");
 
 ?>

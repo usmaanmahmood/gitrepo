@@ -97,6 +97,9 @@ class ARCADEClient
             case "full-story: with notes":
                 $this->parser = new FullStoryParser();
                 break;
+            case "time-table: full":
+                $this->parser = new TimetableParser();
+                break;
             case "":
                 return "ARCADE client error: No Query sent through";
                 break;
