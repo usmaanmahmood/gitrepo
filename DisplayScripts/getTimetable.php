@@ -36,13 +36,13 @@ $result = $arcadeClient->execute($query);
         echo "Week <br />";
 
         foreach ($week->getDayList() as $day) {
-            echo "&nsbp;&nsbp;Day <br />";
+            echo "-Day <br />";
 
             foreach ($day->getSessionList() as $daySession) {
-                echo "&nsbp;&nsbp;&nsbp;&nsbp;Session <br />";
+                echo "--Session <br />";
 
                 $daySessionName = $daySession->getName() == "" ? "empty" : $daySession->getName();
-                echo "&nsbp;&nsbp;&nsbp;&nsbp;&nsbp;&nsbp;" . $daySessionName . "<br />";
+                echo "---" . $daySessionName . "<br />";
             }
         }
 
