@@ -210,13 +210,15 @@ class TimetableParser // extends Parser
                 $daySession->setName($explodedDayList[4]);
                 $friday->addSession($daySession);
 
-                $weekEntity->addDay($monday);
-                $weekEntity->addDay($tuesday);
-                $weekEntity->addDay($wednesday);
-                $weekEntity->addDay($thursday);
-                $weekEntity->addDay($friday);
+
 
             }
+
+            $weekEntity->addDay($monday);
+            $weekEntity->addDay($tuesday);
+            $weekEntity->addDay($wednesday);
+            $weekEntity->addDay($thursday);
+            $weekEntity->addDay($friday);
 
             $database->addWeek($weekEntity);
         }
