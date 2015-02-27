@@ -44,7 +44,7 @@ $result = $arcadeClient->execute($query);
 //                $daySessionName = $daySession->getName() == "" ? "empty" : $daySession->getName();
 //                echo "--" . $daySessionName . "<br />";
 //            }
-        }
+//        }
 
     }
     ?>
