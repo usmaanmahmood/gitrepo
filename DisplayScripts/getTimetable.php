@@ -34,16 +34,16 @@ $result = $arcadeClient->execute($query);
 
     foreach ($database->getWeekList() as $week) {
         echo "Week <br />";
-
-        foreach ($week->getDayList() as $day) {
-            echo "-Day <br />";
-
-            foreach ($day->getSessionList() as $daySession) {
+//
+//        foreach ($week->getDayList() as $day) {
+//            echo "-Day <br />";
+//
+//            foreach ($day->getSessionList() as $daySession) {
 //                echo "--Session <br />";
-
-                $daySessionName = $daySession->getName() == "" ? "empty" : $daySession->getName();
+//
+//                $daySessionName = $daySession->getName() == "" ? "empty" : $daySession->getName();
 //                echo "--" . $daySessionName . "<br />";
-            }
+//            }
         }
 
     }
