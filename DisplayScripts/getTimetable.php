@@ -34,10 +34,16 @@ $result = $arcadeClient->execute($query);
 
     foreach ($database->getWeekList() as $week) {
         echo "Week <br />";
-        
+
         foreach($week->getDayList() as $day)
         {
             echo "Day <br />";
+
+            foreach($day->getSessionList() as $daySession)
+            {
+                echo "Session <br />";
+                echo $daySession->getName() . "<br />";
+            }
         }
 
     }
