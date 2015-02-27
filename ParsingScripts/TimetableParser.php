@@ -179,7 +179,7 @@ class TimetableParser // extends Parser
                 $explodedDayList = array_map('trim', explode('|', $weekLine));
                 array_shift($explodedDayList); // remove empty first item
                 array_pop($explodedDayList); // remove empty last item
-                var_dump($explodedDayList);
+//                var_dump($explodedDayList);
 
                 $weekDayEntity = new TimetableWeekDay();
                 // now day by day parsing
