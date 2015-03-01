@@ -84,7 +84,7 @@ $result = $arcadeClient->execute($query);
                 $count = count($percentages);
                 foreach($percentages as $key => $percentage)
                 {
-                    if ($key <= $count -2)
+                    if ($key <= $count - 3)
                     echo $names[$key] . "," . $percentage . ",\n";
                 }
                 ?>
