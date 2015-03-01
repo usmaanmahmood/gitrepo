@@ -88,28 +88,7 @@
                     $resultDiv.fadeIn('slow');
                     $submitbutton.button('reset');
 
-                        $('#highcharts').highcharts({
-                            data: {
-                                csv: document.getElementById('csv').innerHTML
-                            },
 
-                            plotOptions: {
-                                series: {
-                                    marker: {
-                                        radius: 4
-                                    }
-                                }
-                            },
-
-                            series: [{
-                                lineWidth: 3
-                            }, {
-                                type: 'areaspline',
-                                color: '#c4392d',
-                                negativeColor: '#5679c4',
-                                fillOpacity: 0.5
-                            }]
-                        });
 
                     });
                 })
