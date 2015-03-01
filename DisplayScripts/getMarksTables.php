@@ -89,7 +89,7 @@ $result = $arcadeClient->execute($query);
                 foreach($percentages as $key => $percentage)
                 {
                     if ($key <= $count - 3)
-                        echo "Deadline:" . $names[$key] . "," . $percentage . ",\n";
+                        echo "Deadline" . $names[$key] . "," . $percentage . ",\n";
                 }
                 ?>
             </pre>
