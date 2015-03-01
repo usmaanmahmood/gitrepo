@@ -121,6 +121,30 @@
                     $resultDiv.html(result);
                     $resultDiv.fadeIn('slow');
                     $submitbutton.button('reset');
+
+                    $('#highcharts').highcharts({
+                        data: {
+                            table: 'datatable'
+                        },
+                        chart: {
+                            type: 'column'
+                        },
+                        title: {
+                            text: 'Graph of Marks'
+                        },
+                        yAxis: {
+                            allowDecimals: false,
+                            title: {
+                                text: 'Percent'
+                            }
+                        },
+                        tooltip: {
+                            formatter: function () {
+                                return '<b>' + this.series.name + '</b><br/>' +
+                                this.point.y + ' ' + this.point.name.toLowerCase();
+                            }
+                        }
+                    });
                 })
                 .error(function (xhr, status, error) {
                     $resultDiv.html("<h1>error: " + xhr.status + " " + xhr.statusText + "</h1><p>Please try again. If the problem is recurring, email usmaanmahmood@hotmail.com</p>");
@@ -128,29 +152,7 @@
                     $submitbutton.button('reset');
                 });
 
-            $('#highcharts').highcharts({
-                data: {
-                    table: 'datatable'
-                },
-                chart: {
-                    type: 'column'
-                },
-                title: {
-                    text: 'Graph of Marks'
-                },
-                yAxis: {
-                    allowDecimals: false,
-                    title: {
-                        text: 'Percent'
-                    }
-                },
-                tooltip: {
-                    formatter: function () {
-                        return '<b>' + this.series.name + '</b><br/>' +
-                        this.point.y + ' ' + this.point.name.toLowerCase();
-                    }
-                }
-            });
+
 
 //            drawChart();
         });
