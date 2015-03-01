@@ -1,7 +1,7 @@
 {
 "cols": [
-{"id":"","label":"Topping","pattern":"","type":"string"},
-{"id":"","label":"Slices","pattern":"","type":"number"}
+{"id":"","label":"Deadline","pattern":"","type":"string"},
+{"id":"","label":"Mark","pattern":"","type":"number"}
 ],
 "rows": [
 {"c":[{"v":"Mushrooms","f":null},{"v":3,"f":null}]},
