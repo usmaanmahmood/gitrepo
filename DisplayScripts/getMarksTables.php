@@ -28,7 +28,7 @@ $result = $arcadeClient->execute($query);
             echo "<h3>Table: " . $table->getName() . "</h3>";
             echo "<h5>" . $table->getScalingFactor() . "</h5>";
             ?>
-            <table class="table table-striped table-hover table-bordered table-condensed" id="datatable">
+            <table class="table table-striped table-hover table-bordered table-condensed">
                 <tr>
                     <th width="150px"><h4>Deadline</h4></th>
                     <?php foreach ($table->getEmailNames() as $weighting) {
@@ -76,7 +76,7 @@ $result = $arcadeClient->execute($query);
                 </tr>
             </table>
             <hr />
-            <table class="table table-striped table-hover table-bordered table-condensed" id="datatable">
+            <table class="table table-striped table-hover table-bordered table-condensed" id="datatable" id="datatable">
                 <tr>
 
                     <?php foreach ($table->getEmailNames() as $weighting) {
