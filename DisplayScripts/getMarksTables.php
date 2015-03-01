@@ -89,7 +89,10 @@ $result = $arcadeClient->execute($query);
                 foreach($percentages as $key => $percentage)
                 {
                     if ($key <= $count - 3)
-                        echo "\"" . $names[$key] . "\"," . $percentage . ",\n";
+                        if (is_numeric($names[$key]))
+                            echo "Deadline " . $names[$key] . "," . $percentage . ",\n";
+                        else
+                            echo $names[$key] . "," . $percentage . ",\n";
                 }
                 ?>
             </pre>
