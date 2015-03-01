@@ -111,6 +111,9 @@
                                     }
                                 }
                             },
+                            credits: {
+                                enabled: false
+                            },
 
                             series: [{
                                 lineWidth: 3
