@@ -60,7 +60,7 @@ $result = $arcadeClient->execute($query);
                         <br/>
                         <span class="label label-default">Group: <?= $daySession->getGroup() ?></span>
                         <span class="label label-default">Info: <?= $daySession->getInfo() ?></span>
-                        <br/><br/>
+                        <br/><br/><hr/>
                     <?php
                     }?>
 <?php }?>
