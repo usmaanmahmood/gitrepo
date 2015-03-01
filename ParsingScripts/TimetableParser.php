@@ -181,7 +181,6 @@ class TimetableParser // extends Parser
                 array_shift($explodedDayList); // remove empty first item
                 array_pop($explodedDayList); // remove empty last item
 
-//                 monday here
                 $daySession = $this->parseDaySession($explodedDayList[0]); // TimetableWeekDaySession
                 $monday->addSession($daySession);
 
@@ -252,6 +251,7 @@ class TimetableParser // extends Parser
             $daySession->setInfo($restMatches[2]);
         }
 
+//        var_dump($daySession);
         return $daySession;
     }
 
@@ -259,8 +259,8 @@ class TimetableParser // extends Parser
 
 
 // all below this line is temp for testing purposes only
-//include("Result.php");
-//
-//$parser = new TimetableParser();
-//$result = $parser->parse($sampleTimetableString);
+include("Result.php");
+
+$parser = new TimetableParser();
+$result = $parser->parse($sampleTimetableString);
 //var_dump($result);
