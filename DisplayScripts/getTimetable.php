@@ -54,7 +54,7 @@ $result = $arcadeClient->execute($query);
                     $daySessionName = $daySession->getName();
                     if ($daySessionName != "") {
                         ?>
-                        <?= $daySessionName . "<br />" ?>
+<!--                        --><?//= $daySessionName . "<br />" ?>
 
                     <?= $daySession->getDateDay() . "/" . $daySession->getDateMonth() . " - "?>
                     <?= $daySession->getModule() . " - "?>
