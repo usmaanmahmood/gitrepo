@@ -130,7 +130,7 @@
                     $submitbutton.button('reset');
                 });
 
-            drawChart();
+//            drawChart();
         });
         // } document ready in template end
 
