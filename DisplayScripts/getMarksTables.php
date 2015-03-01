@@ -92,7 +92,7 @@ $result = $arcadeClient->execute($query);
 
                         foreach ($percentages as $key => $percentage) {
                             if (!empty($percentage)) {
-                                echo "<td>". $percentage "</td>";
+                                echo "<td>". $percentage . "</td>";
                             }
                         }
                         ?>
