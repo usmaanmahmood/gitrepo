@@ -62,11 +62,11 @@ $result = $arcadeClient->execute($query);
                     <?= $daySession->getModule() ?> -
                     <?= $daySession->getGroup() ?> -
                     <?= $daySession->getInfo() ?>
-
+<?php }?>
                     </td>
 
                 <?php
-                }
+
             }
 
             }
