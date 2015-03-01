@@ -11,10 +11,7 @@
     <script type="text/javascript">
 
         // Load the Visualization API and the piechart package.
-        google.load('visualization', '1', {'packages':['corechart']});
-
-        // Set a callback to run when the Google Visualization API is loaded.
-        google.setOnLoadCallback(drawChart);
+        google.load('visualization', '1', {'packages':['line']});
 
         function drawChart() {
             var jsonData = $.ajax({
@@ -27,7 +24,7 @@
             var data = new google.visualization.DataTable(jsonData);
 
             // Instantiate and draw our chart, passing in some options.
-            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
             chart.draw(data, {width: 400, height: 240});
         }
 
@@ -112,6 +109,13 @@
                     $resultDiv.fadeIn('slow');
                     $submitbutton.button('reset');
                 });
+
+            $.get("ChartRawData.json")
+            .done(function (result) {
+                drawChart();
+            })
+
+        }
 
         });
         // } document ready in template end
