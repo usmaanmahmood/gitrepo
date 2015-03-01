@@ -16,11 +16,11 @@
 <div class="container">
 
     <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-3">
             <?php include("SearchBarDatabaseModule.php"); ?>
         </div>
 
-        <div class="col-md-10">
+        <div class="col-md-9">
             <h1>Timetable: Full</h1>
             <div id="result"></div>
         </div>
