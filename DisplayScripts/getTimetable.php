@@ -58,10 +58,10 @@ $result = $arcadeClient->execute($query);
                     <?php
                     }?>
                     <br/>
-                    <?= $daySession->getDateDay() ?>/<?= $daySession->getDateMonth() ?> -
-                    <?= $daySession->getModule() ?> -
-                    <?= $daySession->getGroup() ?> -
-                    <?= $daySession->getInfo() ?><br/><br/>
+                    <?= $daySession->getDateDay() . "/" . $daySession->getDateMonth() . " - "?>
+                    <?= $daySession->getModule() . " - "?>
+                    <?= $daySession->getGroup()  . " - "?>
+                    <?= $daySession->getInfo()?><br/><br/>
 <?php }?>
                     </td>
 
