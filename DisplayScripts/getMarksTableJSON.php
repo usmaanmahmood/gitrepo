@@ -19,7 +19,35 @@ if (!empty($_GET["modules"])) $query->addModules($_GET["modules"]);
 
 $result = $arcadeClient->execute($query);
 
+
+
+
+$array = array(
+    "cols" => array(),
+    "rows" => array(),
+);
+
+
+
+
+
+
+
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <?php foreach ($result->getDatabaseList() as $database) {
     if (!empty($database->getTableList())) {

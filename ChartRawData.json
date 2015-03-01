@@ -1,10 +1,21 @@
 {
-"cols": [
-{"label":"Deadline","type":"string"},
-{"label":"Mark","type":"number"}
-],
-"rows": [
-{"c":[{"v":"Ex1D"},{"v":60}]},
-{"c":[{"v":"Ex2D"},{"v":40}]}
-]
+    "cols": [
+        {"label": "Deadline", "type": "string"},
+        {"label": "Mark", "type": "number"}
+    ],
+    "rows": [
+        {
+            "c": [
+                {"v": "Ex1D"},
+                {"v": 60}
+            ]
+        },
+        {
+            "c": [
+                {"v": "Ex2D"},
+                {"v": 40}
+            ]
+        }
+    ]
 }
+
