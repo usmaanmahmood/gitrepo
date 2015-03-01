@@ -82,38 +82,7 @@
     $(document).ready(function () {
 
 
-            $('#highcharts').highcharts({
-                title: {
-                    text: 'Module: ',
-                    x: -20 //center
-                },
-                xAxis: {
-                    categories: ['1', '2', '3', '4', '5', '6', '7', '8', '9']
-                },
-                yAxis: {
-                    title: {
-                        text: 'Mark (%)'
-                    },
-                    plotLines: [{
-                        value: 0,
-                        width: 1,
-                        color: '#808080'
-                    }]
-                },
-                tooltip: {
-                    valueSuffix: '%'
-                },
-                legend: {
-                    layout: 'vertical',
-                    align: 'right',
-                    verticalAlign: 'middle',
-                    borderWidth: 0
-                },
-                series: [{
-                    name: 'COMP27712L',
-                    data: [55, 70, 64, 82, 61, 65, 72, 90, 80]
-                }]
-            });
+
 
 
 

@@ -28,7 +28,7 @@ $result = $arcadeClient->execute($query);
             echo "<h3>Table: " . $table->getName() . "</h3>";
             echo "<h5>" . $table->getScalingFactor() . "</h5>";
             ?>
-            <table class="table table-striped table-hover table-bordered table-condensed">
+            <table class="table table-striped table-hover table-bordered table-condensed" id="datatable">
                 <tr>
                     <th width="150px"><h4>Deadline</h4></th>
                     <?php foreach ($table->getEmailNames() as $weighting) {
@@ -80,4 +80,31 @@ $result = $arcadeClient->execute($query);
         }
     }
 }?>
+<script type="javascript">
+    $(function () {
+        $('#container').highcharts({
+            data: {
+                table: 'datatable'
+            },
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Data extracted from a HTML table in the page'
+            },
+            yAxis: {
+                allowDecimals: false,
+                title: {
+                    text: 'Units'
+                }
+            },
+            tooltip: {
+                formatter: function () {
+                    return '<b>' + this.series.name + '</b><br/>' +
+                    this.point.y + ' ' + this.point.name.toLowerCase();
+                }
+            }
+        });
+    });
 
+</script>
