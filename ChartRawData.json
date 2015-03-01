@@ -1,7 +1,7 @@
 {
     "cols": [
-        {"id": "", "label": "Topping", "pattern": "", "type": "string"},
-        {"id": "", "label": "Slices", "pattern": "", "type": "number"}
+        {"id": "", "label": "Ex1D", "pattern": "", "type": "number"},
+        {"id": "", "label": "Ex2D", "pattern": "", "type": "number"}
     ],
     "rows": [
         {
