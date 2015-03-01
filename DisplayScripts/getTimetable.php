@@ -55,10 +55,10 @@ $result = $arcadeClient->execute($query);
                     if ($daySessionName != "") {
                         ?>
 
-                        <span class="label label-info">Module: <?= $daySession->getModule() ?></span>
-                        <span class="label label-info">Group: <?= $daySession->getGroup() ?></span>
+                        <span class="label label-success">Module: <?= $daySession->getModule() ?></span>
+                        <span class="label label-default">Group: <?= $daySession->getGroup() ?></span>
                         <span class="label label-info">Date: <?= $daySession->getDateDay() . "/" . $daySession->getDateMonth() ?></span>
-                        <span class="label label-info">Info: <?= $daySession->getInfo() ?></span>
+                        <span class="label label-default">Info: <?= $daySession->getInfo() ?></span>
                         <br/><br/>
                     <?php
                     }?>
