@@ -9,7 +9,7 @@
     <?php } ?>
 </select>
 <br/>
-<h2 style="text-center">Modules<br />
+<h2 class="text-center">Modules<br />
     <button type="button" class="btn btn-default btn-xs btn-warning mod-reset-filters"><span class="glyphicon glyphicon-remove"></span> Clear Selection</button></h2>
 
 
