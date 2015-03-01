@@ -5,37 +5,6 @@
         padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     }
 </style>
-    <!--Load the AJAX API-->
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-
-    <script type="text/javascript">
-        google.load('visualization', '1.1', {packages: ['line']});
-
-
-        function drawChart() {
-            var jsonData = $.ajax({
-                url: "ChartRawData.json",
-                dataType:"json",
-                async: false
-            }).responseText;
-
-            // Create our data table out of JSON data loaded from server.
-            var data = new google.visualization.DataTable(jsonData);
-
-            // Instantiate and draw our chart, passing in some options.
-            var options = {
-                title: 'Company Performance',
-                curveType: 'function',
-                legend: { position: 'bottom' },
-                pointSize: 20
-            };
-
-            var chart = new google.charts.Line(document.getElementById('linechart_material'));
-
-            chart.draw(data, options);
-        }
-
-    </script>
 
     <script src="http://code.highcharts.com/highcharts.js"></script>
     <script src="http://code.highcharts.com/modules/exporting.js"></script>
@@ -173,7 +142,7 @@
                     $submitbutton.button('reset');
                 });
 
-            drawChart();
+//            drawChart();
         });
         // } document ready in template end
 
