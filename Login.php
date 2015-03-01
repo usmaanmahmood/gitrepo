@@ -89,10 +89,8 @@
         </form>
         <p>Not have an account yet? <a href="Register.php">Register easy &amp; quickly here!</a></p>
 <hr/>
-        <h3>You don't trust me? Use a temporary login instead!</h3>
+        <h3>You don't trust me? Use a temporary login instead! <small>Lasts as long as the session</small></h3>
         <form class="form-signin" role="form" method="post" action="TempLogin.php">
-            <h1 class="form-signin-heading">Temporary Login <small>Lasts as long as the session</h1>
-
             <div class="input-group input-group-lg">
                 <span class="input-group-addon">
                     <span class="glyphicon glyphicon-user"></span>
