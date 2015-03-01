@@ -23,10 +23,10 @@
         <div class="col-md-9">
             <h1>Marks Table</h1>
             <div>
-                <span class="label label-success">=>70&37;</span>
-                <span class="label label-warning">=>60&37;</span>
-                <span class="label label-danger">=>50&37;</span>
-                <span class="label label-default"><50&37;</span>
+                <span class="label label-success">=>70%</span>
+                <span class="label label-warning">=>60%</span>
+                <span class="label label-danger">=>50%</span>
+                <span class="label label-default"><50%</span>
             </div>
             <div id="result"></div>
         </div>
