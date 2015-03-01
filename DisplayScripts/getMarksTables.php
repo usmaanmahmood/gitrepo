@@ -82,9 +82,9 @@ $result = $arcadeClient->execute($query);
                 $percentages = $table->getPercMark();
                 $names = $table->getEmailNames();
 
-                foreach($names as $key => $name)
+                foreach($percentages as $key => $percentage)
                 {
-echo $name . "," . $percentages[$key] . ",\n";
+echo $names[$key] . "," . $percentage . ",\n";
                 }
                 ?>
             </pre>
