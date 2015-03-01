@@ -78,18 +78,16 @@ $result = $arcadeClient->execute($query);
             <hr/>
             <div id="highcharts" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
-            <pre id="csv" class="hide"><?php
+            <pre id="csv" class="hide">Deadline, Mark,
+<?php
                 $percentages = $table->getPercMark();
                 $names = $table->getEmailNames();
                 $count = count($percentages);
-                $string = "Deadline, Mark,";
                 foreach($percentages as $key => $percentage)
                 {
                     if ($key <= $count - 3)
-                        $string = $string . $names[$key] . "," . $percentage . ",\n";
+                        echo $names[$key] . "," . $percentage . ",\n";
                 }
-                $string = substr($string, 0, -1);
-                echo $string;
                 ?>
             </pre>
 
