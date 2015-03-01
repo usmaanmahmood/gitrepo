@@ -81,10 +81,11 @@ $result = $arcadeClient->execute($query);
                 <?php
                 $percentages = $table->getPercMark();
                 $names = $table->getEmailNames();
-
+                $count = count($percentages);
                 foreach($percentages as $key => $percentage)
                 {
-echo $names[$key] . "," . $percentage . ",\n";
+                    if ($key <= $count)
+                    echo $names[$key] . "," . $percentage . ",\n";
                 }
                 ?>
             </pre>
