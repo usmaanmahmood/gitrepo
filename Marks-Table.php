@@ -109,7 +109,7 @@
                     $resultDiv.fadeIn('slow');
                     $submitbutton.button('reset');
                 });
-
+            drawChart();
         });
         // } document ready in template end
 
