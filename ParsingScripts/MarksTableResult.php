@@ -132,7 +132,7 @@ class MarksTableTable {
             // add percentage of Mark
             if ($cleanMark != "" && $cleanDen != "") {
                 $percMark = number_format((float)(((float)$cleanMark / (float)$cleanDen) * 100), 1, '.', '');
-                $this->marksTable[$i][4] = $percMark . "%";
+                $this->marksTable[$i][4] = $percMark;
             }
             else
                 $this->marksTable[$i][4] = "";
