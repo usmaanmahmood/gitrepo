@@ -58,8 +58,8 @@ $result = $arcadeClient->execute($query);
                         <span class="label label-info">Module: <?= $daySession->getModule() ?></span>
                         <span class="label label-info">Group: <?= $daySession->getGroup() ?></span>
                         <span class="label label-info">Date: <?= $daySession->getDateDay() . "/" . $daySession->getDateMonth() ?></span>
+                        <span class="label label-info">Info: <?= $daySession->getInfo() ?></span>
 
-                    <?= $daySession->getInfo()?><br/><br/>
                     <?php
                     }?>
 <?php }?>
