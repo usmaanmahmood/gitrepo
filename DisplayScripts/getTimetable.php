@@ -54,8 +54,9 @@ $result = $arcadeClient->execute($query);
                     $daySessionName = $daySession->getName();
                     if ($daySessionName != "") {
                         ?>
-                        <span><?= $daySession->getModule() ?></span><br/>
-                        <span class="label label-info"><?= $daySession->getDateDay() . "/" . $daySession->getDateMonth() ?><?php if($daySession->getTime() != "") echo " @ " . $daySession->getTime() ?></span>
+                        <span class="label label-success">><?= $daySession->getModule() ?></span><br/>
+                        <span class="label label-info"><?php if($daySession->getTime() != "") echo $daySession->getTime() . " on ";
+                            echo $daySession->getDateDay() . "/" . $daySession->getDateMonth() ?><?php  ?></span>
                         <br/>
                         <span class="label label-default">Group: <?= $daySession->getGroup() ?></span>
                         <span class="label label-default">Info: <?= $daySession->getInfo() ?></span>
