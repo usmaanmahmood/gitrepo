@@ -107,7 +107,7 @@
                        required
                        value="">
             </div>
-            run:<br/><code>cat $HOME/.ARCADE/serverAuthentication</code>
+            to get your ARCADE password execute:<br/><code>cat $HOME/.ARCADE/serverAuthentication</code>
             <br />
             <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit"><span
                     class="glyphicon glyphicon-log-in"></span> Log in
