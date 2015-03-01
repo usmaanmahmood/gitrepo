@@ -51,8 +51,9 @@
                 <span class="label label-warning">60% - 69.9%</span>
                 <span class="label label-success">70% - 100%</span>
             </div>
-<!--            <div id="result"></div>-->
+
             <div id="chart_div"></div>
+            <div id="result"></div>
         </div>
     </div>
 </div>
