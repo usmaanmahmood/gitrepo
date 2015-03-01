@@ -32,13 +32,13 @@
             }
 
             .form-signin {
-            max-width: 330px;
-            padding: 15px;
-            margin: 0 auto;
+                max-width: 330px;
+                padding: 15px;
+                margin: 0 auto;
             }
 
             .form-signin .form-control:focus {
-            z-index: 2;
+                z-index: 2;
             }
         </style>
     </head>
@@ -65,7 +65,7 @@
                        required
                        value="webpassword">
             </div>
-            <br />
+            <br/>
             <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit"><span
                     class="glyphicon glyphicon-log-in"></span> Log in
             </button>
@@ -87,15 +87,19 @@
             }
             ?>
         </form>
+
+
         <p>Not have an account yet? <a href="Register.php">Register easy &amp; quickly here!</a></p>
-<hr/>
-        <h3>You don't trust me? Use a temporary login instead! <small>Lasts as long as the session</small></h3>
+        <hr/>
+        <h3>You don't trust me? Use a temporary login instead!
+            <small>Lasts as long as the session</small>
+        </h3>
         <form class="form-signin" role="form" method="post" action="TempLogin.php">
             <div class="input-group input-group-lg">
                 <span class="input-group-addon">
                     <span class="glyphicon glyphicon-user"></span>
                 </span>
-                <input type="text" class="form-control" placeholder="Central Username" name="username" id="username"
+                <input type="text" class="form-control" placeholder="Central Username" name="tempusername" id="tempusername"
                        required
                        autofocus maxlength=8>
             </div>
@@ -103,11 +107,12 @@
                 <span class="input-group-addon">
                     <span class="glyphicon glyphicon-lock"></span>
                 </span>
-                <input type="password" class="form-control" placeholder="ARCADE Password" name="arcadepassword" id="password"
+                <input type="password" class="form-control" placeholder="ARCADE Password" name="arcadepassword"
+                       id="arcadepassword"
                        required value="LQKUGRIRDE">
             </div>
             to get your ARCADE password execute:<br/><code>cat $HOME/.ARCADE/serverAuthentication</code>
-            <br />
+            <br/>
             <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit"><span
                     class="glyphicon glyphicon-log-in"></span> Log in
             </button>
