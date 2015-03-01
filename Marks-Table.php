@@ -5,6 +5,33 @@
         padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     }
 </style>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        // Load the Visualization API and the piechart package.
+        google.load('visualization', '1', {'packages':['corechart']});
+
+        // Set a callback to run when the Google Visualization API is loaded.
+        google.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var jsonData = $.ajax({
+                url: "getData.php",
+                dataType:"json",
+                async: false
+            }).responseText;
+
+            // Create our data table out of JSON data loaded from server.
+            var data = new google.visualization.DataTable(jsonData);
+
+            // Instantiate and draw our chart, passing in some options.
+            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+            chart.draw(data, {width: 400, height: 240});
+        }
+
+    </script>
 </head>
 
 <body>
@@ -14,7 +41,7 @@
 
 <!-- Page Content -->
 <div class="container">
-
+    <div id="chart_div"></div>
     <div class="row">
         <div class="col-md-3">
             <?php include("SearchBarDatabaseModule.php"); ?>
