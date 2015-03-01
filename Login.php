@@ -89,6 +89,49 @@
         </form>
         <p>Not have an account yet? <a href="Register.php">Register easy &amp; quickly here!</a></p>
 
+        <h3>You don't trust me? Use a temporary login instead!</h3>
+        <form class="form-signin" role="form" method="post" action="TempLogin.php">
+            <h1 class="form-signin-heading">Temporary Login <small>Lasts as long as the session</h1>
+
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-user"></span>
+                </span>
+                <input type="text" class="form-control" placeholder="Central Username" name="username" id="username"
+                       required
+                       autofocus maxlength=8 value="mahmoou1">
+            </div>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-lock"></span>
+                </span>
+                <input type="password" class="form-control" placeholder="ARCADE Password" name="arcadepassword" id="password"
+                       required
+                       value="">run: <code>cat $HOME/.ARCADE/serverAuthentication</code>
+            </div>
+            <br />
+            <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit"><span
+                    class="glyphicon glyphicon-log-in"></span> Log in
+            </button>
+
+            <?php
+            if (isset($_GET["message"]) && $_GET["message"] == 1) {
+                ?>
+                <div class="alert alert-danger" role="alert"><b>Oh snap!</b> Change a few things up and try submitting
+                    again.
+                </div>
+            <?php
+            } else if (isset($_GET["message"]) && $_GET["message"] == 2) {
+                ?>
+                <div class="alert alert-success" role="alert"><b>Thanks for using ARCADE!</b><br/>Please send any
+                    feedback /
+                    suggestions to usmaanmahmood@hotmail.com
+                </div>
+            <?php
+            }
+            ?>
+        </form>
+
     </div>
     <!-- /container -->
 
