@@ -29,9 +29,10 @@
                 <span class="label label-success">70% - 100%</span>
             </div>
 
-            <div id="highcharts" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
             <div id="result"></div>
+            <div id="highcharts" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
         </div>
     </div>
 </div>
