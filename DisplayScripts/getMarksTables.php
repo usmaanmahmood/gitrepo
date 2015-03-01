@@ -48,8 +48,8 @@ $result = $arcadeClient->execute($query);
                         if (is_numeric($denominators[$key]))
                             $markString = $markString . "/" . $denominators[$key]; // ignores last two cols
 
-                        if (!empty($percentages[$key]))
-                            $markString = $markString . " (<strong>" . $percentages[$key] . "</strong>)";
+//                        if (!empty($percentages[$key]))
+//                            $markString = $markString . " (<strong>" . $percentages[$key] . "</strong>)";
 
                         if (!empty($percentages[$key])) {
                             if ($percentages[$key] >= 70)
