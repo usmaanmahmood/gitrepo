@@ -31,8 +31,8 @@ $result = $arcadeClient->execute($query);
             <table class="table table-striped table-hover table-bordered table-condensed">
                 <tr>
                     <th width="150px"><h4>Deadline</h4></th>
-                    <?php foreach ($table->getEmailNames() as $weighting) {
-                        echo "<th><h4>" . $weighting . "</h4></th>";
+                    <?php foreach ($table->getEmailNames() as $name) {
+                        echo "<th><h4>" . $name . "</h4></th>";
                     }?>
                 </tr>
                 <tr>
@@ -76,18 +76,27 @@ $result = $arcadeClient->execute($query);
                 </tr>
             </table>
             <hr />
+
+
             <table class="table table-striped table-hover table-bordered table-condensed" id="datatable" id="datatable">
                 <tr>
-
-                    <?php foreach ($table->getEmailNames() as $weighting) {
-                        echo "<th><h4>" . $weighting . "</h4></th>";
+                    <?php foreach ($table->getEmailNames() as $name) {
+                        echo "<td>" . $name . "</td>";
                     }?>
                 </tr>
-                <tr><td>
+                <tr>
+                    <th width="150px"><h4>Marks</h4></th>
+                    <td>
+                    <?php
+                    $percentages = $table->getPercMark();
 
-                    <?= $percentages = $table->getPercMark(); ?></td><?php
+                    foreach ($percentages as $key => $percentage) {
+                        if (!empty($percentage)) {
+                            echo $percentage;
+                        }
                     }
                     ?>
+                    </td>
                 </tr>
             </table>
         <?php
