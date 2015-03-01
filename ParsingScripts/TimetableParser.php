@@ -329,6 +329,7 @@ class TimetableParser // extends Parser
             $weekEntity->addDay($friday);
 
             $database->addWeek($weekEntity);
+            var_dump($weekEntity);
         }
         return $database;
     } // parseDatabase
@@ -337,11 +338,10 @@ class TimetableParser // extends Parser
     {
         $daySession = new TimetableWeekDaySession();
         $daySession->setName($inString); // stores raw line
+        $remainingString = $inString;
 
         // remove [semester.week] if it's there
-        $remainingString = $inString;
         preg_match("/(\[\S+\])/", $remainingString, $squareBracketsMatches);
-
         if (!empty($squareBracketsMatches)) {
             $remainingString = substr($remainingString, strlen($squareBracketsMatches[0]));
         }
