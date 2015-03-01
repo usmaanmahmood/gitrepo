@@ -91,35 +91,7 @@ $result = $arcadeClient->execute($query);
                 ?>
             </pre>
 
-            <script src="https://code.highcharts.com/highcharts.js"></script>
-            <script src="https://code.highcharts.com/modules/data.js"></script>
-            <script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script type="javascript">
 
-
-    $('#highcharts').highcharts({
-        data: {
-            csv: document.getElementById('csv').innerHTML
-        },
-
-        plotOptions: {
-            series: {
-                marker: {
-                    radius: 4
-                }
-            }
-        },
-
-        series: [{
-            lineWidth: 3
-        }, {
-            type: 'areaspline',
-            color: '#c4392d',
-            negativeColor: '#5679c4',
-            fillOpacity: 0.5
-        }]
-    });
-</script>
 
 
 
