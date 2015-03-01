@@ -27,7 +27,8 @@
                     <span class="label label-default">0% - 49.9%</span>
                     <span class="label label-danger">50% - 59.9%</span>
                     <span class="label label-warning">60% - 69.9%</span>
-                    <span class="label label-success">70% - 100%</span>
+                    <span class="label label-success">70% - 79.9%</span>
+                    <span class="label label-success">80% - 100% <span class="glyphicon glyphicon-star"></span></span></span>
                 </div>
 
 
