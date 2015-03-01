@@ -61,7 +61,7 @@
                 <span class="label label-warning">60% - 69.9%</span>
                 <span class="label label-success">70% - 100%</span>
             </div>
-            
+
             <div id="highcharts" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
             <div id="result"></div>
@@ -81,9 +81,6 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script>
     $(document).ready(function () {
-
-
-
 
 
 
@@ -131,7 +128,7 @@
                     $submitbutton.button('reset');
                 });
 
-            $('#container').highcharts({
+            $('#highcharts').highcharts({
                 data: {
                     table: 'datatable'
                 },
