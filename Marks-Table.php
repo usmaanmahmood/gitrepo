@@ -50,10 +50,10 @@
         <div class="col-md-9">
             <h1>Marks Table</h1>
             <div>Key:
-                <span class="label label-success">70% - 100%</span>
-                <span class="label label-warning">60% - 69.9%</span>
-                <span class="label label-danger">50% - 59.9%</span>
                 <span class="label label-default">0% - 49.9%</span>
+                <span class="label label-danger">50% - 59.9%</span>
+                <span class="label label-warning">60% - 69.9%</span>
+                <span class="label label-success">70% - 100%</span>
             </div>
             <div id="result"></div>
         </div>
