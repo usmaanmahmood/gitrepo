@@ -92,6 +92,10 @@
                             data: {
                                 csv: document.getElementById('csv').innerHTML
                             },
+                            title: {
+                                text: '',
+                                x: -20 //center
+                            },
 
                             plotOptions: {
                                 series: {
