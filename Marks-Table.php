@@ -108,7 +108,8 @@
                                 series: {
                                     marker: {
                                         radius: 4
-                                    }
+                                    },
+                                    threshold: 60
                                 }
                             },
                             credits: {
