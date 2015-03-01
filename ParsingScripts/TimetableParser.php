@@ -208,6 +208,7 @@ class TimetableParser // extends Parser
         return $database;
     } // parseDatabase
 
+    // https://regex101.com/r/oE6jJ1/56
     private function parseDaySession($inString)
     {
         $daySession = new TimetableWeekDaySession();
