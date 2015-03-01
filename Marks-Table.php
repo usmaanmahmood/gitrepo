@@ -32,8 +32,6 @@
             <div id="highcharts" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
             <div id="result"></div>
-
-            <div id="linechart_material" style="width: 500px; height: 300px"></div>
         </div>
     </div>
 </div>
@@ -112,7 +110,7 @@
                             },
 
                             series: [{
-                                lineWidth: 1
+                                lineWidth: 3
                             }, {
                                 type: 'areaspline',
                                 color: '#c4392d',
