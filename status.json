@@ -1,6 +1,6 @@
 {
-   "path" : "gitrepo",
-   "timestamp" : "2015-03-01T20:34:19Z",
+   "status" : "success",
    "origin" : "https://github.com/usmaanmahmood/gitrepo.git",
-   "status" : "success"
+   "path" : "gitrepo",
+   "timestamp" : "2015-03-01T20:34:43Z"
 }
