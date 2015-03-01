@@ -113,7 +113,7 @@
 
                 drawChart();
 
-        };
+        }
 
         // } document ready in template end
 
