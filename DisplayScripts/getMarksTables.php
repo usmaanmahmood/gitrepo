@@ -80,8 +80,11 @@ $result = $arcadeClient->execute($query);
 
             <table class="table table-striped table-hover table-bordered table-condensed" id="datatable">
                 <tr>
-                    <?php foreach ($table->getEmailNames() as $name) {
-                        echo "<td>" . $name . "</td>";
+                    <?php   $count = count($table->getEmailNames());
+
+                    foreach ($table->getEmailNames() as $key => $name) {
+                        if ($key != $count - 1)
+                            echo "<td>" . $name . "</td>";
                     }?>
                 </tr>
                 <tr>
