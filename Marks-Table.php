@@ -39,8 +39,10 @@
 
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script>$(function () {
-        $('#container').highcharts({
+<script type="javascript">
+
+    $(function () {
+        $('#highcharts').highcharts({
             title: {
                 text: 'Monthly Average Temperature',
                 x: -20 //center
@@ -114,7 +116,7 @@
 
             <div id="result"></div>
 
-            <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+            <div id="highcharts" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
             <div id="linechart_material" style="width: 500px; height: 300px"></div>
         </div>
     </div>
