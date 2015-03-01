@@ -22,6 +22,12 @@
 
         <div class="col-md-9">
             <h1>Marks Table</h1>
+            <div>
+                <span class="label label-success">=>70&perc;</span>
+                <span class="label label-warning">=>60&perc;</span>
+                <span class="label label-danger">=>50&perc;</span>
+                <span class="label label-default"><50&perc;</span>
+            </div>
             <div id="result"></div>
         </div>
     </div>

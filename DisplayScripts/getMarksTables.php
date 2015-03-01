@@ -48,9 +48,6 @@ $result = $arcadeClient->execute($query);
                         if (is_numeric($denominators[$key]))
                             $markString = $markString . "/" . $denominators[$key]; // ignores last two cols
 
-//                        if (!empty($percentages[$key]))
-//                            $markString = $markString . " (<strong>" . $percentages[$key] . "</strong>)";
-
                         if (!empty($percentages[$key])) {
                             if ($percentages[$key] >= 70)
                                 $markString = $markString . " <span class=\"label label-success\">" . $percentages[$key] . "</span>";
@@ -60,7 +57,6 @@ $result = $arcadeClient->execute($query);
                                 $markString = $markString . " <span class=\"label label-danger\">" . $percentages[$key] . "</span>";
                             else
                                 $markString = $markString . " <span class=\"label label-default\">" . $percentages[$key] . "</span>";
-
                         }
 
                         $markString = $markString . "</td>";
