@@ -251,7 +251,7 @@ class TimetableParser // extends Parser
     public function parse($inString)
     {
         $databaseStringArray = preg_split("/===============================================================================\n/", $inString, null, PREG_SPLIT_NO_EMPTY);
-//        array_pop($databaseStringArray); // remove the garbage line
+//        array_pop($databaseStringArray); // remove the garbage line - with this uncommented, web gui breaks
         array_pop($databaseStringArray); // remove the "End of query results" line
 
         $result = new TimetableResult();
@@ -329,7 +329,6 @@ class TimetableParser // extends Parser
             $weekEntity->addDay($friday);
 
             $database->addWeek($weekEntity);
-            var_dump($weekEntity);
         }
         return $database;
     } // parseDatabase
