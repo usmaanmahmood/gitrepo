@@ -88,8 +88,7 @@
                     x: -20 //center
                 },
                 xAxis: {
-                    categories: ['Deadline1', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+                    categories: ['1', '2', '3', '4', '5', '6', '7', '8', '9']
                 },
                 yAxis: {
                     title: {
@@ -112,7 +111,7 @@
                 },
                 series: [{
                     name: 'COMP27712L',
-                    data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+                    data: [55, 70, 64, 82, 61, 65, 72, 90, 80]
                 }]
             });
 
