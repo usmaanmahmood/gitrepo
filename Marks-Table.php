@@ -26,7 +26,8 @@
             var options = {
                 title: 'Company Performance',
                 curveType: 'function',
-                legend: { position: 'bottom' }
+                legend: { position: 'bottom' },
+                pointSize: 20
             };
 
             var chart = new google.charts.Line(document.getElementById('linechart_material'));
