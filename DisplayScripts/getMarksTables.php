@@ -76,6 +76,20 @@ $result = $arcadeClient->execute($query);
                 </tr>
             </table>
             <hr />
+            <table class="table table-striped table-hover table-bordered table-condensed" id="datatable">
+                <tr>
+
+                    <?php foreach ($table->getEmailNames() as $weighting) {
+                        echo "<th><h4>" . $weighting . "</h4></th>";
+                    }?>
+                </tr>
+                <tr><td>
+
+                    <?= $percentages = $table->getPercMark(); ?></td><?php
+                    }
+                    ?>
+                </tr>
+            </table>
         <?php
         }
     }
