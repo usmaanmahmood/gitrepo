@@ -37,8 +37,8 @@
 
     </script>
 
-    <script src="//code.highcharts.com/highcharts.js"></script>
-    <script src="//code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script>$(function () {
         $('#container').highcharts({
             title: {
