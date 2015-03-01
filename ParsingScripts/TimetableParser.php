@@ -236,8 +236,9 @@ class TimetableParser // extends Parser
 //        if ($remainingString != "") var_dump($remainingString);
 
         // remove time if it's there
-        preg_match("/\S*((?:a|p)m)\s+|(noon)\s+/", $remainingString, $timeMatches);
+        preg_match("/(\S*(?:a|p)m)\s+|(noon)\s+/", $remainingString, $timeMatches);
         if (!empty($timeMatches)) {
+            $daySession->setTime($timeMatches[0]);
             $remainingString = trim(substr($remainingString, strlen($timeMatches[0])));
         }
 //        if ($remainingString != "") var_dump($remainingString);
