@@ -104,7 +104,7 @@
                     <span class="glyphicon glyphicon-lock"></span>
                 </span>
                 <input type="password" class="form-control" placeholder="ARCADE Password" name="arcadepassword" id="password"
-                       required>
+                       required value="LQKUGRIRDE">
             </div>
             to get your ARCADE password execute:<br/><code>cat $HOME/.ARCADE/serverAuthentication</code>
             <br />
