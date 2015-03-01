@@ -126,9 +126,6 @@
                         data: {
                             table: 'datatable'
                         },
-                        chart: {
-                            type: 'line'
-                        },
                         title: {
                             text: 'Graph of Marks'
                         },
