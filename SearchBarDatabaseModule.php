@@ -10,7 +10,7 @@
 </select>
 <br/>
 <h2>Modules
-    <button type="button" class="btn btn-default btn-xs btn-warning mod-reset-filters text-right"><span class="glyphicon glyphicon-remove"></span> Clear</button></h2>
+    <button type="button" class="btn btn-default btn-xs btn-warning mod-reset-filters pull-right"><span class="glyphicon glyphicon-remove"></span> Clear</button></h2>
 
 
 <select multiple class="form-control" size=15 id="ModuleList">
