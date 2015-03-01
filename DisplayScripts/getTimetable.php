@@ -55,12 +55,13 @@ $result = $arcadeClient->execute($query);
                     if ($daySessionName != "") {
                         ?>
                         <?= $daySessionName . "<br />" ?>
-                    <?php
-                    }?>
+
                     <?= $daySession->getDateDay() . "/" . $daySession->getDateMonth() . " - "?>
                     <?= $daySession->getModule() . " - "?>
                     <?= $daySession->getGroup()  . " - "?>
                     <?= $daySession->getInfo()?><br/><br/>
+                    <?php
+                    }?>
 <?php }?>
                     </td>
 
