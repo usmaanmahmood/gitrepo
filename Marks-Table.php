@@ -13,9 +13,9 @@
         // Load the Visualization API and the piechart package.
         google.load('visualization', '1', {'packages':['line']});
 
-        function drawChart() {
+        function drawChart(data) {
             var jsonData = $.ajax({
-                url: "getData.php",
+                url: "ChartRawData.json",
                 dataType:"json",
                 async: false
             }).responseText;
@@ -110,10 +110,8 @@
                     $submitbutton.button('reset');
                 });
 
-            $.get("ChartRawData.json")
-            .done(function (result) {
+
                 drawChart();
-            })
 
         }
 
