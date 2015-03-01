@@ -88,7 +88,7 @@
             ?>
         </form>
         <p>Not have an account yet? <a href="Register.php">Register easy &amp; quickly here!</a></p>
-
+<hr/>
         <h3>You don't trust me? Use a temporary login instead!</h3>
         <form class="form-signin" role="form" method="post" action="TempLogin.php">
             <h1 class="form-signin-heading">Temporary Login <small>Lasts as long as the session</h1>
@@ -113,23 +113,6 @@
             <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit"><span
                     class="glyphicon glyphicon-log-in"></span> Log in
             </button>
-
-            <?php
-            if (isset($_GET["message"]) && $_GET["message"] == 1) {
-                ?>
-                <div class="alert alert-danger" role="alert"><b>Oh snap!</b> Change a few things up and try submitting
-                    again.
-                </div>
-            <?php
-            } else if (isset($_GET["message"]) && $_GET["message"] == 2) {
-                ?>
-                <div class="alert alert-success" role="alert"><b>Thanks for using ARCADE!</b><br/>Please send any
-                    feedback /
-                    suggestions to usmaanmahmood@hotmail.com
-                </div>
-            <?php
-            }
-            ?>
         </form>
 
     </div>
