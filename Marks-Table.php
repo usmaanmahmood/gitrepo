@@ -129,7 +129,7 @@
                     $submitbutton.button('reset');
                 });
 
-        });
+
         // } document ready in template end
 
 <?php include("template-end.php"); ?>
