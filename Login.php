@@ -105,8 +105,9 @@
                 </span>
                 <input type="password" class="form-control" placeholder="ARCADE Password" name="arcadepassword" id="password"
                        required
-                       value="">run: <code>cat $HOME/.ARCADE/serverAuthentication</code>
+                       value="">
             </div>
+            run: <code>cat $HOME/.ARCADE/serverAuthentication</code>
             <br />
             <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit"><span
                     class="glyphicon glyphicon-log-in"></span> Log in
