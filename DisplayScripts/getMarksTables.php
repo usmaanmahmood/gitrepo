@@ -86,7 +86,7 @@ $result = $arcadeClient->execute($query);
                 foreach($percentages as $key => $percentage)
                 {
                     if ($key <= $count - 3)
-                        $string = $string + $names[$key] . "," . $percentage . ",\n";
+                        $string = $string . $names[$key] . "," . $percentage . ",\n";
                 }
                 $string = substr($string, 0, -1);
                 echo $string;
