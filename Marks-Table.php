@@ -38,7 +38,7 @@
 
 <!-- Page Content -->
 <div class="container">
-    <div id="chart_div"></div>
+
     <div class="row">
         <div class="col-md-3">
             <?php include("SearchBarDatabaseModule.php"); ?>
@@ -53,6 +53,7 @@
                 <span class="label label-success">70% - 100%</span>
             </div>
             <div id="result"></div>
+            <div id="chart_div"></div>
         </div>
     </div>
 </div>
@@ -109,6 +110,7 @@
                     $resultDiv.fadeIn('slow');
                     $submitbutton.button('reset');
                 });
+
             drawChart();
         });
         // } document ready in template end
