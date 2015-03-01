@@ -4,10 +4,10 @@
         {"id":"","label":"Ex2D","pattern":"","type":"number"}
     ],
     "rows": [
-        {"r":[{"v":"Mushrooms","f":null},{"v":3,"f":null}]},
-        {"r":[{"v":"Onions","f":null},{"v":1,"f":null}]},
-        {"r":[{"v":"Olives","f":null},{"v":1,"f":null}]},
-        {"r":[{"v":"Zucchini","f":null},{"v":1,"f":null}]},
-        {"r":[{"v":"Pepperoni","f":null},{"v":2,"f":null}]}
+        {"c":[{"v":"Mushrooms","f":null},{"v":3,"f":null}]},
+        {"c":[{"v":"Onions","f":null},{"v":1,"f":null}]},
+        {"c":[{"v":"Olives","f":null},{"v":1,"f":null}]},
+        {"c":[{"v":"Zucchini","f":null},{"v":1,"f":null}]},
+        {"c":[{"v":"Pepperoni","f":null},{"v":2,"f":null}]}
     ]
 }
