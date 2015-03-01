@@ -4,7 +4,7 @@
 {"id":"","label":"Mark","pattern":"","type":"number"}
 ],
 "rows": [
-{"c":[{"v":"Ex1D","f":null},{"v":60,"f":null}]},
-{"c":[{"v":"Ex2D","f":null},{"v":40,"f":null}]}
+{"c":[{"v":"Ex1D"},{"v":60,"f":null}]},
+{"c":[{"v":"Ex2D"},{"v":40,"f":null}]}
 ]
 }
