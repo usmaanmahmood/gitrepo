@@ -181,21 +181,21 @@ class TimetableParser // extends Parser
                 array_shift($explodedDayList); // remove empty first item
                 array_pop($explodedDayList); // remove empty last item
 
-                // monday here
-//                $daySession = $this->parseDaySession($explodedDayList[0]); // TimetableWeekDaySession
-//                $monday->addSession($daySession);
-//
-//                $daySession = $this->parseDaySession($explodedDayList[1]); // TimetableWeekDaySession
-//                $tuesday->addSession($daySession);
+//                 monday here
+                $daySession = $this->parseDaySession($explodedDayList[0]); // TimetableWeekDaySession
+                $monday->addSession($daySession);
 
-//                $daySession = $this->parseDaySession($explodedDayList[2]); // TimetableWeekDaySession
-//                $wednesday->addSession($daySession);
-//
+                $daySession = $this->parseDaySession($explodedDayList[1]); // TimetableWeekDaySession
+                $tuesday->addSession($daySession);
+
+                $daySession = $this->parseDaySession($explodedDayList[2]); // TimetableWeekDaySession
+                $wednesday->addSession($daySession);
+
                 $daySession = $this->parseDaySession($explodedDayList[3]); // TimetableWeekDaySession
                 $thursday->addSession($daySession);
-//
-//                $daySession = $this->parseDaySession($explodedDayList[4]); // TimetableWeekDaySession
-//                $friday->addSession($daySession);
+
+                $daySession = $this->parseDaySession($explodedDayList[4]); // TimetableWeekDaySession
+                $friday->addSession($daySession);
             }
 
             $weekEntity->addDay($monday);
