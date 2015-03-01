@@ -9,8 +9,8 @@
     <?php } ?>
 </select>
 <br/>
-<h2 class="text-center">Modules<br />
-    <button type="button" class="btn btn-default btn-xs btn-warning mod-reset-filters"><span class="glyphicon glyphicon-remove"></span> Clear Selection</button></h2>
+<h2 class="text-center">Modules
+    <button type="button" class="btn btn-default btn-xs btn-warning mod-reset-filters"><span class="glyphicon glyphicon-remove"></span> Clear</button></h2>
 
 
 <select multiple class="form-control" size=15 id="ModuleList">
