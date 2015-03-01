@@ -115,11 +115,10 @@
                             credits: {
                                 enabled: false
                             },
-
                             series: [{
                                 lineWidth: 3
                             }, {
-                                type: 'areaspline',
+                                type: 'line',
                                 color: '#c4392d',
                                 negativeColor: '#5679c4',
                                 fillOpacity: 0.5
