@@ -127,7 +127,7 @@
                             table: 'datatable'
                         },
                         chart: {
-                            type: 'column'
+                            type: 'line'
                         },
                         title: {
                             text: 'Graph of Marks'
