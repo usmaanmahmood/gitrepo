@@ -107,7 +107,7 @@
                             plotOptions: {
                                 series: {
                                     marker: {
-                                        radius: 4
+                                        radius: 8
                                     },
                                     threshold: 60
                                 }
