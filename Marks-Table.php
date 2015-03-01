@@ -59,8 +59,8 @@
                 <span class="label label-success">70% - 100%</span>
             </div>
 
-            <div id="linechart_material" style="width: 500px; height: 500px"></div>
             <div id="result"></div>
+            <div id="linechart_material" style="width: 500px; height: 300px"></div>
         </div>
     </div>
 </div>
