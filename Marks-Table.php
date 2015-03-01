@@ -104,7 +104,7 @@
                             plotOptions: {
                                 series: {
                                     marker: {
-                                        enabled: false
+                                        radius: 4
                                     }
                                 }
                             },
