@@ -182,20 +182,20 @@ class TimetableParser // extends Parser
                 array_pop($explodedDayList); // remove empty last item
 
                 // monday here
-                $daySession = $this->parseDaySession($explodedDayList[0]); // TimetableWeekDaySession
-                $monday->addSession($daySession);
+//                $daySession = $this->parseDaySession($explodedDayList[0]); // TimetableWeekDaySession
+//                $monday->addSession($daySession);
+//
+//                $daySession = $this->parseDaySession($explodedDayList[1]); // TimetableWeekDaySession
+//                $tuesday->addSession($daySession);
 
-                $daySession = $this->parseDaySession($explodedDayList[1]); // TimetableWeekDaySession
-                $tuesday->addSession($daySession);
-
-                $daySession = $this->parseDaySession($explodedDayList[2]); // TimetableWeekDaySession
-                $wednesday->addSession($daySession);
-
+//                $daySession = $this->parseDaySession($explodedDayList[2]); // TimetableWeekDaySession
+//                $wednesday->addSession($daySession);
+//
                 $daySession = $this->parseDaySession($explodedDayList[3]); // TimetableWeekDaySession
                 $thursday->addSession($daySession);
-
-                $daySession = $this->parseDaySession($explodedDayList[4]); // TimetableWeekDaySession
-                $friday->addSession($daySession);
+//
+//                $daySession = $this->parseDaySession($explodedDayList[4]); // TimetableWeekDaySession
+//                $friday->addSession($daySession);
             }
 
             $weekEntity->addDay($monday);
@@ -213,6 +213,10 @@ class TimetableParser // extends Parser
     {
         $daySession = new TimetableWeekDaySession();
         $daySession->setName($inString); // stores raw line
+        if ($inString == "")
+            return $daySession;
+
+
         $remainingString = $inString;
 
         // remove [semester.week] if it's there
@@ -220,6 +224,7 @@ class TimetableParser // extends Parser
         if (!empty($squareBracketsMatches)) {
             $remainingString = substr($remainingString, strlen($squareBracketsMatches[0]));
         }
+//        if ($remainingString != "") var_dump($remainingString);
 
         // remove date
         preg_match("/(\S*?(\d{1,2})\/(\d{1,2})\s+)/", $remainingString, $dateMatches);
@@ -229,16 +234,18 @@ class TimetableParser // extends Parser
             $daySession->setDateMonth($dateMatches[2]);
             $remainingString = trim(substr($remainingString, strlen($dateMatches[0])));
         }
+//        if ($remainingString != "") var_dump($remainingString);
 
         // remove time if it's there
         preg_match("/\S*((?:a|p)m)\s+|(noon)\s+/", $remainingString, $timeMatches);
         if (!empty($timeMatches)) {
             $remainingString = trim(substr($remainingString, strlen($timeMatches[0])));
         }
+//        if ($remainingString != "") var_dump($remainingString);
 
         // save three important items of info
         preg_match("/(\w+)\s+(\w+)\s(.*)/", $remainingString, $restMatches);
-        if (!empty($timeMatches)) {
+        if (!empty($restMatches)) {
             array_shift($restMatches); // remove complete match
             $daySession->setModule($restMatches[0]);
             $daySession->setGroup($restMatches[1]);
