@@ -70,12 +70,12 @@ $result = $arcadeClient->execute($query);
                         $td = "<td>";
                         if (!empty($percWeight[$key]))
                             $td = $td . $weighting . " (<strong>" . $percWeight[$key] . "</strong>)";
-                        $td = $td ."</td>";
+                        $td = $td . "</td>";
                         echo $td;
                     }?>
                 </tr>
             </table>
-            <hr />
+            <hr/>
 
 
             <table class="table table-striped table-hover table-bordered table-condensed" id="datatable" id="datatable">
@@ -86,17 +86,17 @@ $result = $arcadeClient->execute($query);
                 </tr>
                 <tr>
                     <th width="150px"><h4>Marks</h4></th>
-                    <td>
-                    <?php
-                    $percentages = $table->getPercMark();
 
-                    foreach ($percentages as $key => $percentage) {
-                        if (!empty($percentage)) {
-                            echo $percentage;
+                        <?php
+                        $percentages = $table->getPercMark();
+
+                        foreach ($percentages as $key => $percentage) {
+                            if (!empty($percentage)) {
+                                echo "<td>". $percentage "</td>";
+                            }
                         }
-                    }
-                    ?>
-                    </td>
+                        ?>
+
                 </tr>
             </table>
         <?php
