@@ -53,13 +53,13 @@ $result = $arcadeClient->execute($query);
 
                         if (!empty($percentages[$key])) {
                             if ($percentages[$key] >= 70)
-                                $markString = $markString . " <span class=\"label label-success\"" . $percentages[$key] . "</span>";
+                                $markString = $markString . " <span class=\"label label-success\">" . $percentages[$key] . "</span>";
                             elseif ($percentages[$key] >= 60)
-                                $markString = $markString . " <span class=\"label label-warning\"" . $percentages[$key] . "</span>";
+                                $markString = $markString . " <span class=\"label label-warning\">" . $percentages[$key] . "</span>";
                             elseif ($percentages[$key] >= 50)
-                                $markString = $markString . " <span class=\"label label-danger\"" . $percentages[$key] . "</span>";
+                                $markString = $markString . " <span class=\"label label-danger\">" . $percentages[$key] . "</span>";
                             else
-                                $markString = $markString . " <span class=\"label label-default\"" . $percentages[$key] . "</span>";
+                                $markString = $markString . " <span class=\"label label-default\">" . $percentages[$key] . "</span>";
 
                         }
 
