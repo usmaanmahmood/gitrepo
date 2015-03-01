@@ -1,7 +1,7 @@
 {
 "cols": [
 {"id":"","label":"Deadline","pattern":"","type":"string"},
-{"id":"","label":"Mark","pattern":"","type":"string"}
+{"id":"","label":"Mark","pattern":"","type":"number"}
 ],
 "rows": [
 {"c":[{"v":"Ex1D","f":null},{"v":60,"f":null}]},
