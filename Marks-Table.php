@@ -122,24 +122,58 @@
                     $resultDiv.fadeIn('slow');
                     $submitbutton.button('reset');
 
-                    $('#highcharts').highcharts({
-                        data: {
-                            table: 'datatable'
-                        },
-                        title: {
-                            text: 'Graph of Marks'
-                        },
-                        yAxis: {
-                            allowDecimals: false,
+//                    $('#highcharts').highcharts({
+//                        data: {
+//                            table: 'datatable'
+//                        },
+//                        title: {
+//                            text: 'Graph of Marks'
+//                        },
+//                        yAxis: {
+//                            allowDecimals: false,
+//                            title: {
+//                                text: 'Percent'
+//                            }
+//                        },
+//                        tooltip: {
+//                            formatter: function () {
+//                                return '<b>' + this.series.name + '</b><br/>' +
+//                                this.point.y + ' ' + this.point.name.toLowerCase();
+//                            }
+
+                    $(function () {
+                        $('#highcharts').highcharts({
+
                             title: {
-                                text: 'Percent'
-                            }
-                        },
-                        tooltip: {
-                            formatter: function () {
-                                return '<b>' + this.series.name + '</b><br/>' +
-                                this.point.y + ' ' + this.point.name.toLowerCase();
-                            }
+                                text: 'Global temperature change'
+                            },
+
+                            subtitle: {
+                                text: 'Data input from CSV'
+                            },
+
+                            data: {
+                                csv: document.getElementById('csv').innerHTML
+                            },
+
+                            plotOptions: {
+                                series: {
+                                    marker: {
+                                        enabled: false
+                                    }
+                                }
+                            },
+
+                            series: [{
+                                lineWidth: 1
+                            }, {
+                                type: 'areaspline',
+                                color: '#c4392d',
+                                negativeColor: '#5679c4',
+                                fillOpacity: 0.5
+                            }]
+                        });
+                    });
                         }
                     });
                 })

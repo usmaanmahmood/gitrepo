@@ -78,7 +78,7 @@ $result = $arcadeClient->execute($query);
             <hr/>
 
 
-            <table class="table table-striped table-hover table-bordered table-condensed" id="datatable">
+            <table class="table table-striped table-hover table-bordered table-condensed" id="datatable2">
                 <tr>
                     <?php   $count = count($table->getEmailNames());
 
@@ -92,7 +92,6 @@ $result = $arcadeClient->execute($query);
 
                         <?php
                         $percentages = $table->getPercMark();
-
                         foreach ($percentages as $key => $percentage) {
                             if (!empty($percentage)) {
                                 echo "<td>". $percentage . "</td>";
@@ -102,6 +101,19 @@ $result = $arcadeClient->execute($query);
 
                 </tr>
             </table>
+
+            <pre id="csv" style="display:none">Deadline, Mark
+                <?php
+                $percentages = $table->getPercMark();
+                $names = $table->getEmailNames();
+
+                foreach($names as $key => $name)
+                {
+                    echo $name . "," . $percentages[$key] . ",";
+                }
+                ?>
+            </pre>
+
         <?php
         }
     }
