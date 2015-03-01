@@ -259,8 +259,8 @@ class TimetableParser // extends Parser
 
 
 // all below this line is temp for testing purposes only
-include("Result.php");
-
-$parser = new TimetableParser();
-$result = $parser->parse($sampleTimetableString);
+//include("Result.php");
+//
+//$parser = new TimetableParser();
+//$result = $parser->parse($sampleTimetableString);
 //var_dump($result);
