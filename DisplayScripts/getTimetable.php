@@ -48,13 +48,23 @@ $result = $arcadeClient->execute($query);
             <td><?= ($weekKey + 1) ?></td>
             <?php
             foreach ($week->getDayList() as $dayListKey => $day) {
-                ?><td><?php
+                ?>
+                <td><?php
                 foreach ($day->getSessionList() as $daySession) {
                     $daySessionName = $daySession->getName();
                     ?>
                     <?= $daySessionName . "<br />" ?>
                 <?php
-                }?></td><?php
+                }?>
+                    <br />
+                    <?= $daySession->getDateDay() ?>/<? $daySession->getDateMonth() ?> -
+                    <?= $daySession->getModule() ?> -
+                    <?= $daySession->getGroup() ?> -
+                    <?= $daySession->getInfo() ?>
+
+                </td>
+
+            <?php
             }
 
             }

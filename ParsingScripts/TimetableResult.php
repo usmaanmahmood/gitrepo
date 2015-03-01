@@ -98,7 +98,7 @@ class TimetableWeek
 class TimetableWeekDay
 {
     private $sessionList; // array
-    private $empty;
+    private $isEmpty;
 
     function __construct()
     {
@@ -117,32 +117,54 @@ class TimetableWeekDay
 
     public function getEmpty()
     {
-        return $this->empty;
+        return $this->isEmpty;
     }
 
-    public function setEmpty($empty)
+    public function setEmpty($isEmpty)
     {
-        $this->empty = $empty;
+        $this->isEmpty = $isEmpty;
     }
 }
 
-class TimeTableWeekDaySession
+class TimetableWeekDaySession
 {
     private $week;
-    private $date;
+    private $dateDay;
+    private $dateMonth;
     private $time;
     private $module;
     private $group;
     private $name;
+    private $info;
 
-    public function getDate()
+    public function getInfo()
     {
-        return $this->date;
+        return $this->info;
     }
 
-    public function setDate($date)
+    public function setInfo($info)
     {
-        $this->date = $date;
+        $this->info = $info;
+    }
+
+    public function getDateDay()
+    {
+        return $this->dateDay;
+    }
+
+    public function setDateDay($dateDay)
+    {
+        $this->dateDay = $dateDay;
+    }
+
+    public function getDateMonth()
+    {
+        return $this->dateMonth;
+    }
+
+    public function setDateMonth($dateMonth)
+    {
+        $this->dateMonth = $dateMonth;
     }
 
     public function getGroup()
@@ -196,10 +218,7 @@ class TimeTableWeekDaySession
     }
 
 
-
 }
-
-
 
 
 ?>
