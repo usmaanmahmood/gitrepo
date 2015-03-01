@@ -77,8 +77,7 @@ $result = $arcadeClient->execute($query);
             </table>
             <hr/>
 
-            <pre id="csv">Deadline, Mark,
-                <?php
+            <pre id="csv">Deadline, Mark,<?php
                 $percentages = $table->getPercMark();
                 $names = $table->getEmailNames();
                 $count = count($percentages);
