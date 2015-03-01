@@ -52,19 +52,21 @@ $result = $arcadeClient->execute($query);
                 <td><?php
                 foreach ($day->getSessionList() as $daySession) {
                     $daySessionName = $daySession->getName();
-                    ?>
-                    <?= $daySessionName . "<br />" ?>
-                <?php
-                }?>
-                    <br />
+                    if ($daySessionName != "") {
+                        ?>
+                        <?= $daySessionName . "<br />" ?>
+                    <?php
+                    }?>
+                    <br/>
                     <?= $daySession->getDateDay() ?>/<?= $daySession->getDateMonth() ?> -
                     <?= $daySession->getModule() ?> -
                     <?= $daySession->getGroup() ?> -
                     <?= $daySession->getInfo() ?>
 
-                </td>
+                    </td>
 
-            <?php
+                <?php
+                }
             }
 
             }
