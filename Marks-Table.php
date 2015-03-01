@@ -31,7 +31,7 @@
 
 
             <div id="result"></div>
-            <div id="highcharts" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
 
         </div>
     </div>
