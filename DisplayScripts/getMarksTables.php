@@ -84,14 +84,14 @@ $result = $arcadeClient->execute($query);
 
                 foreach($names as $key => $name)
                 {
-                    echo $name . "," . $percentages[$key] . ",";
+                    echo $name . "," . $percentages[$key] . ",\n";
                 }
                 ?>
             </pre>
 
 
 
-            
+
 
 
         <?php
