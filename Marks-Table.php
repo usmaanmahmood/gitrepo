@@ -136,12 +136,12 @@
                     type: 'column'
                 },
                 title: {
-                    text: 'Data extracted from a HTML table in the page'
+                    text: 'Graph of Marks'
                 },
                 yAxis: {
                     allowDecimals: false,
                     title: {
-                        text: 'Units'
+                        text: 'Percent'
                     }
                 },
                 tooltip: {

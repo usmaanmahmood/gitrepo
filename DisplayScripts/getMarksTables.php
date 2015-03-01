@@ -78,7 +78,7 @@ $result = $arcadeClient->execute($query);
             <hr/>
 
 
-            <table class="table table-striped table-hover table-bordered table-condensed hide" id="datatable">
+            <table class="table table-striped table-hover table-bordered table-condensed" id="datatable">
                 <tr>
                     <?php foreach ($table->getEmailNames() as $name) {
                         echo "<td>" . $name . "</td>";
