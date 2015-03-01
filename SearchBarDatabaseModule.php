@@ -9,7 +9,8 @@
     <?php } ?>
 </select>
 <br/>
-<button type="button" class="btn btn-default btn-block mod-reset-filters"><span class="glyphicon glyphicon-remove"></span> Reset Modules</button>
+<h2>Modules
+    <button type="button" class="btn btn-default btn-xs btn-warning mod-reset-filters"><span class="glyphicon glyphicon-remove"></span> Clear Selection</button></h2>
 
 
 <select multiple class="form-control" size=15 id="ModuleList">
