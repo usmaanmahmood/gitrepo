@@ -96,6 +96,10 @@
                                 text: '',
                                 x: -20 //center
                             },
+                            yAxis: {
+                                title: {
+                                    text: 'Percentage (%)'
+                                },
 
                             plotOptions: {
                                 series: {
