@@ -99,11 +99,11 @@
                             yAxis: {
                                 title: {
                                     text: 'Percentage (%)'
-                                },
+                                }
+                            },
                             tooltip: {
                                 valueSuffix: '%'
                             },
-
                             plotOptions: {
                                 series: {
                                     marker: {
