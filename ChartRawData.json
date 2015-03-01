@@ -4,10 +4,7 @@
 {"id":"","label":"Mark","pattern":"","type":"number"}
 ],
 "rows": [
-{"c":[{"v":"Mushrooms","f":null},{"v":3,"f":null}]},
-{"c":[{"v":"Onions","f":null},{"v":1,"f":null}]},
-{"c":[{"v":"Olives","f":null},{"v":1,"f":null}]},
-{"c":[{"v":"Zucchini","f":null},{"v":1,"f":null}]},
-{"c":[{"v":"Pepperoni","f":null},{"v":2,"f":null}]}
+{"c":[{"v":"Ex1D","f":null},{"v":60,"f":null}]},
+{"c":[{"v":"Ex2D","f":null},{"v":40,"f":null}]}
 ]
 }
