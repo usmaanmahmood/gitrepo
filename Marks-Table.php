@@ -122,26 +122,6 @@
                     $resultDiv.fadeIn('slow');
                     $submitbutton.button('reset');
 
-//                    $('#highcharts').highcharts({
-//                        data: {
-//                            table: 'datatable'
-//                        },
-//                        title: {
-//                            text: 'Graph of Marks'
-//                        },
-//                        yAxis: {
-//                            allowDecimals: false,
-//                            title: {
-//                                text: 'Percent'
-//                            }
-//                        },
-//                        tooltip: {
-//                            formatter: function () {
-//                                return '<b>' + this.series.name + '</b><br/>' +
-//                                this.point.y + ' ' + this.point.name.toLowerCase();
-//                            }
-
-                    $(function () {
                         $('#highcharts').highcharts({
 
                             title: {
@@ -173,8 +153,7 @@
                                 fillOpacity: 0.5
                             }]
                         });
-                    });
-                        
+
                     });
                 })
                 .error(function (xhr, status, error) {
