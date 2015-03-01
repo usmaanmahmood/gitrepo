@@ -7,10 +7,10 @@
 </style>
     <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
 
-        // Load the Visualization API and the piechart package.
-        google.load('visualization', '1', {'packages':['line']});
+    <script type="text/javascript">
+        google.load('visualization', '1.1', {packages: ['line']});
+
 
         function drawChart() {
             var jsonData = $.ajax({
@@ -23,8 +23,15 @@
             var data = new google.visualization.DataTable(jsonData);
 
             // Instantiate and draw our chart, passing in some options.
-            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-            chart.draw(data, {width: 400, height: 240});
+            var options = {
+                title: 'Company Performance',
+                curveType: 'function',
+                legend: { position: 'bottom' }
+            };
+
+            var chart = new google.charts.Line(document.getElementById('linechart_material'));
+
+            chart.draw(data, options);
         }
 
     </script>
@@ -52,7 +59,7 @@
                 <span class="label label-success">70% - 100%</span>
             </div>
 
-            <div id="chart_div"></div>
+            <div id="linechart_material" style="width: 900px; height: 500px"></div>
             <div id="result"></div>
         </div>
     </div>
