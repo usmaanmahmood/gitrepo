@@ -1,4 +1,4 @@
-<button type="button" class="btn btn-default btn-block dat-reset-filters"><span class="glyphicon glyphicon-remove"></span> Reset Databases</button>
+<h2>Databases <button type="button" class="btn btn-default btn-s btn-warning dat-reset-filters pull-right"><span class="glyphicon glyphicon-remove"></span> Clear</button></h2>
 
 <select class="form-control" size=4 id="DatabaseList">
     <?php foreach (array_unique($arcadeProfile->getDatabaseList()) as $option) { ?>
@@ -9,8 +9,7 @@
     <?php } ?>
 </select>
 <br/>
-<h2>Modules
-    <button type="button" class="btn btn-default btn-s btn-warning mod-reset-filters pull-right"><span class="glyphicon glyphicon-remove"></span> Clear</button></h2>
+<h2>Modules <button type="button" class="btn btn-default btn-s btn-warning mod-reset-filters pull-right"><span class="glyphicon glyphicon-remove"></span> Clear</button></h2>
 
 
 <select multiple class="form-control" size=15 id="ModuleList">
