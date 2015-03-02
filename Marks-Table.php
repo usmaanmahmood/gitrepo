@@ -101,7 +101,9 @@
                             yAxis: {
                                 title: {
                                     text: 'Percentage (%)'
-                                }
+                                },
+                                min: 0,
+                                max: 100
                             },
                             xAxis: {
                                 title: {
