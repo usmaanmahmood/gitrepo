@@ -41,7 +41,7 @@
 
     <!-- Select Basic -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="selectbasicGUI">GUI - Page</label>
+        <label class="col-md-4 control-label" for="selectbasicGUI">Website Area</label>
 
         <div class="col-md-4">
             <select id="selectbasicGUI" name="selectbasicGUI" class="form-control">
