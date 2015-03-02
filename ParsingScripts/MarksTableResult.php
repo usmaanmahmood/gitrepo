@@ -142,7 +142,10 @@ class MarksTableTable {
             // arraylength-2 always stores total
             $cleanWeighting = preg_replace("/[^0-9.]+/", "", $this->weightings[$i]);
             if ($cleanWeighting != "" && is_numeric($this->weightings[$arrayLength - 2])) {
-                $percWeight = number_format((float)(((float)$this->weightings[$i] / (float)$this->weightings[$arrayLength - 2]) * 100), 1, '.', '');
+                if ($this->weightings[$arrayLength - 2] != 0)
+                    $percWeight = number_format((float)(((float)$this->weightings[$i] / (float)$this->weightings[$arrayLength - 2]) * 100), 1, '.', '');
+                else
+                    $percWeight = 0;
                 $this->marksTable[$i][5] = $percWeight . "%" ;
             }
             else
