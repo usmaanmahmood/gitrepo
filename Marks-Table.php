@@ -31,7 +31,7 @@
                     <span class="label label-success">80% - 100% <span class="glyphicon glyphicon-star"></span></span></span>
                 </div>
 
-                <div id="highcharts" style="min-width: 310px; height: 300px; margin: 0 auto"></div>
+
                 <div id="result"></div>
 
 
