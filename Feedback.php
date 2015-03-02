@@ -14,19 +14,6 @@
 
     <!-- Page Content -->
     <div class="container">
-    <?php
-    if (isset($_GET["message"]) && $_GET["message"] == 2 & 1==0) {
-        ?>
-        <div class="alert alert-danger" role="alert"><b>Oh snap!</b> SQL insert failed.
-        </div>
-    <?php
-    } else if (isset($_GET["message"]) && $_GET["message"] == 1 & 1==0) {
-        ?>
-        <div class="alert alert-success" role="alert"><b>Thanks for your feedback!</b><br/>You can contact me at usmaanmahmood@hotmail.com
-        </div>
-    <?php
-    }
-    ?>
     <div class="row">
     <div class="col-md-12">
 
@@ -336,6 +323,8 @@
     </form>
 
 
+    <div id="submissionmessage"></div>
+
     </div>
     </div>
     </div>
@@ -350,23 +339,29 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script>
         $(document).ready(function () {
-
             $("#form").submit(function(e)
             {
                 var postData = $(this).serializeArray();
                 var formURL = $(this).attr("action");
+
+                var $resultDiv = $('#submissionmessage');
+                $resultDiv.fadeOut('slow');
+
                 $.ajax(
                     {
                         url : formURL,
                         type: "POST",
                         data : postData,
-                        success:function(data, textStatus, jqXHR)
+                        success:function(result)
                         {
-                            //data: return data from server
+                            $resultDiv.html(result);
+                            $resultDiv.fadeIn('slow');
                         },
-                        error: function(jqXHR, textStatus, errorThrown)
+                        error: function(xhr, status, error)
                         {
-                            //if fails
+                            $resultDiv.html("<h1>error: " + xhr.status + " " + xhr.statusText + "</h1><p>Please try again. If the problem is recurring, email usmaanmahmood@hotmail.com</p>");
+                            $resultDiv.fadeIn('slow');
+                            $submitbutton.button('reset');
                         }
                     });
                 e.preventDefault(); //STOP default action

@@ -31,15 +31,22 @@ $otherComments = $mysqli->real_escape_string(stripslashes($_POST['textareaOtherC
 
 
 $sql = "INSERT INTO Feedback(username, submissionTime, year, websiteArea, device, intuitivenessJava, intuitivenessWeb, intuitivenessComments, presentationJava, presentationWeb, presentationComments, otherComments)";
-$sql = $sql . " VALUES (\"".$username."\",".$submissionTime.",\"".$year."\",\"".$websiteArea."\",\"".$device."\",".$intuitivenessJava.",".$intuitivenessWeb.",\"".$intuitivenessComments;
-$sql = $sql."\",".$presentationJava.",".$presentationWeb.",\"".$presentationComments."\",\"".$otherComments."\")";
+$sql = $sql . " VALUES (\"" . $username . "\"," . $submissionTime . ",\"" . $year . "\",\"" . $websiteArea . "\",\"" . $device . "\"," . $intuitivenessJava . "," . $intuitivenessWeb . ",\"" . $intuitivenessComments;
+$sql = $sql . "\"," . $presentationJava . "," . $presentationWeb . ",\"" . $presentationComments . "\",\"" . $otherComments . "\")";
 
 //echo $sql;
 if ($mysqli->query($sql) === true) {
     $mysqli->close();
-    header("location:Feedback.php?message=1"); // success
+    ?>
+    <div class="alert alert-success" role="alert"><b>Thanks for your feedback!</b><br/>You can contact me at
+        usmaanmahmood@hotmail.com
+    </div>
+<?php
 } else {
     $mysqli->close();
-    header("location:Feedback.php?message=2"); // fail
+
+    ?>
+    <div class="alert alert-danger" role="alert"><b>Oh snap!</b> SQL insert failed.
+    </div><?php
 }
 ?>
