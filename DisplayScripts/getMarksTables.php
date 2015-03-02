@@ -96,7 +96,7 @@ $result = $arcadeClient->execute($query);
                             $echoString = $echoString . $names[$key] . "," . $percentage . ",\n";
                     }
                 }
-                $echoString = rtrim($echoString, ',');
+                $echoString = rtrim($echoString, ",\n");
                 echo $echoString;
                 ?>
             </pre>
