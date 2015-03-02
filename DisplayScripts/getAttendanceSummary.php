@@ -93,6 +93,10 @@ $result = $arcadeClient->execute($query);
                 }
                 ?></td>
         </tr>
+        <tr class="hide">
+            <td>Raw Pattern</td>
+            <td><?= $database->getAttendancePattern(); ?></td>
+        </tr>
     </table>
 <?php } ?>
 <script type="javascript">
