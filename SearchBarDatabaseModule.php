@@ -11,7 +11,6 @@
             echo $databaseParsedName; ?></option>
     <?php } ?>
 </select>
-<br/>
 <h2>Modules <button type="button" class="btn btn-default btn-xs btn-warning mod-reset-filters pull-right"><span class="glyphicon glyphicon-remove"></span> Clear</button></h2>
 
 
