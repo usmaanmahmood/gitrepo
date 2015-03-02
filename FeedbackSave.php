@@ -1,8 +1,8 @@
 <?php
 
 require_once('config.inc.php');
-
-print_R($_POST);
+session_start();
+//print_R($_POST);
 
 
 $database_host = 'dbhost.cs.man.ac.uk';
