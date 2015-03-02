@@ -19,13 +19,13 @@
         <div class="col-md-3">
             <?php include("SearchBarDatabaseModule.php"); ?>
             <button type="button" class="btn btn-default btn-block" data-loading-text="Searching..."
-                    id="submitButton"><span class="glyphicon glyphicon-search"></span> Remaining Timetable
+                    id="submitButton" data-search="remaining"><span class="glyphicon glyphicon-search"></span> Remaining Timetable
             </button>
             <button type="button" class="btn btn-default btn-block" data-loading-text="Searching..."
-                    id="submitButton"><span class="glyphicon glyphicon-search"></span> Full Timetable
+                    id="submitButton" data-search="full"><span class="glyphicon glyphicon-search"></span> Full Timetable
             </button>
             <button type="button" class="btn btn-default btn-block" data-loading-text="Searching..."
-                    id="submitButton"><span class="glyphicon glyphicon-search"></span> Full Timetable with Extensions
+                    id="submitButton" data-search="with-extensions"><span class="glyphicon glyphicon-search"></span> Full Timetable with Extensions
             </button>
         </div>
 
@@ -76,6 +76,8 @@
             var $resultDiv = $('#result');
             $resultDiv.fadeOut('slow');
 
+            $search = $(this).data("search");
+            alert($search);
             $.get("DisplayScripts/getTimetable.php", {"databases": $databases, "modules": $modules})
                 .done(function (result) {
                     $resultDiv.html(result);
