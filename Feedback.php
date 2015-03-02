@@ -18,12 +18,11 @@
     <div class="row">
     <div class="col-md-12">
 
-    <form class="form-horizontal">
+    <form class="form-horizontal" role="form" method="post" action="FeedbackSave.php">
     <fieldset>
 
     <!-- Form Name -->
     <legend class="text-center">Web Arcade Feedback Form</legend>
-
     <!-- Select Basic -->
     <div class="form-group">
         <label class="col-md-4 control-label" for="selectbasicYear">Year</label>
@@ -72,10 +71,13 @@
             </select>
         </div>
     </div>
-    <h4 class="text-center"><abbr title="intuitive: using without conscious reasoning; instinctive.">Intuitiveness</abbr></h4>
+    <h4 class="text-center"><abbr
+            title="intuitive: using without conscious reasoning; instinctive.">Intuitiveness</abbr></h4>
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="radiosIntuitivenessJava">Java Arcade<br/><small>(1 worst - 10 best)</small></label>
+        <label class="col-md-4 control-label" for="radiosIntuitivenessJava">Java Arcade<br/>
+            <small>(1 worst - 10 best)</small>
+        </label>
 
         <div class="col-md-4">
             <label class="radio-inline" for="radiosIntuitivenessJava-0">
@@ -124,7 +126,9 @@
 
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="radiosIntuitivenessWeb">Web Arcade<br/><small>(1 worst - 10 best)</small></label>
+        <label class="col-md-4 control-label" for="radiosIntuitivenessWeb">Web Arcade<br/>
+            <small>(1 worst - 10 best)</small>
+        </label>
 
         <div class="col-md-4">
             <label class="radio-inline" for="radiosIntuitivenessWeb-0">
@@ -185,7 +189,9 @@
 ">Presentation</abbr></h4>
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="radiosPresentationJava">Java Arcade<br/><small>(1 worst - 10 best)</small></label>
+        <label class="col-md-4 control-label" for="radiosPresentationJava">Java Arcade<br/>
+            <small>(1 worst - 10 best)</small>
+        </label>
 
 
         <div class="col-md-4">
@@ -235,7 +241,9 @@
 
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="radiosPresentationWeb">Web Arcade<br/><small>(1 worst - 10 best)</small></label>
+        <label class="col-md-4 control-label" for="radiosPresentationWeb">Web Arcade<br/>
+            <small>(1 worst - 10 best)</small>
+        </label>
 
         <div class="col-md-4">
             <label class="radio-inline" for="radiosPresentationWeb-0">
@@ -306,7 +314,8 @@
         <label class="col-md-4 control-label" for="singlebuttonSubmit"></label>
 
         <div class="col-md-4">
-            <button id="singlebuttonSubmit" name="singlebuttonSubmit" class="btn btn-primary btn-block btn-lg">Submit</span></button>
+            <button id="singlebuttonSubmit" name="singlebuttonSubmit" class="btn btn-primary btn-block btn-lg">
+                Submit</span></button>
         </div>
 
     </div>
