@@ -30,7 +30,7 @@
         </div>
 
         <div class="col-md-9">
-            <h1>Timetable: Full</h1>
+            <h1>Timetable</h1>
             <div id="result"></div>
         </div>
     </div>
