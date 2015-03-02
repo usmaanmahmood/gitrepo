@@ -116,7 +116,7 @@
                            id="arcadepassword"
                            required value="LQKUGRIRDE">
                 </div>
-                to get your ARCADE password execute:<br/><code>cat $HOME/.ARCADE/serverAuthentication</code>
+                copy ARCADE password to clipboard:<br/><code>cat $HOME/.ARCADE/serverAuthentication | pbcopy</code>
                 <br/>
                 <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit"><span
                         class="glyphicon glyphicon-log-in"></span> Log in
