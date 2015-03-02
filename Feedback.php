@@ -71,7 +71,7 @@
             </select>
         </div>
     </div>
-    <h3><abbr title="intuitive: using or based on what one feels to be true even without conscious reasoning; instinctive.
+    <h3 class="text-center"><abbr title="intuitive: using or based on what one feels to be true even without conscious reasoning; instinctive.
 ">Intuitiveness</abbr></h3>
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
