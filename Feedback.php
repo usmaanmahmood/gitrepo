@@ -44,15 +44,15 @@
         <div class="col-md-4">
             <select id="selectbasicGUI" name="selectbasicGUI" class="form-control">
                 <option value="Entire Website">Entire Website</option>
-                <option value="Classic">Classic</option>
                 <option value="Attendance Summary">Attendance Summary</option>
-                <option value="Timetable: Full">Timetable: Full</option>
-                <option value="Marks Table">Marks Table</option>
-                <option value="Full Story">Full Story</option>
-                <option value="Registration Details">Registration Details</option>
-                <option value="Expected">Expected</option>
+                <option value="Classic">Classic</option>
                 <option value="Excuses">Excuses</option>
+                <option value="Expected">Expected</option>
+                <option value="Full Story">Full Story</option>
                 <option value="Irregularities">Irregularities</option>
+                <option value="Marks Table">Marks Table</option>
+                <option value="Registration Details">Registration Details</option>
+                <option value="Timetable: Full">Timetable: Full</option>
             </select>
         </div>
     </div>
