@@ -76,8 +76,7 @@
                     <div class="col-md-12">
                         <br />
                         <button type="button" class="btn btn-default btn-lg btn-block" data-loading-text="Searching..."
-                                id="submit"><span class="glyphicon glyphicon-search"></span> Search
-                        </button>
+                                id="submit">Search <span class="glyphicon glyphicon-search"></span></button>
                     </div>
                 </div>
             </div>
