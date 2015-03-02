@@ -309,11 +309,6 @@
             <button id="singlebuttonSubmit" name="singlebuttonSubmit" class="btn btn-primary btn-block btn-lg"><span class="glyphicon glyphicon-ok"></span> Submit</button>
         </div>
 
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-ok"></span></span>
-            <button id="singlebuttonSubmit" name="singlebuttonSubmit" class="btn btn-primary btn-block btn-lg"  aria-describedby="sizing-addon1"> Submit</button>
-        </div>
-
     </div>
 
     </fieldset>
