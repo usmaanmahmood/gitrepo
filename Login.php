@@ -89,11 +89,11 @@
                 }
                 ?>
             </form>
+            <p>Not have an account yet? <a href="Register.php">Register easy &amp; quickly here!</a></p>
         </div>
 
         <div class="col-md-6">
-            <p>Not have an account yet? <a href="Register.php">Register easy &amp; quickly here!</a></p>
-            <hr/>
+
             <h3>You don't trust me? Use a temporary login instead!
                 <small>Lasts as long as the session</small>
             </h3>
