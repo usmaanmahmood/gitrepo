@@ -9,13 +9,14 @@
         height: 1em;
         background: lawngreen;
         border-right: 1px solid rgba(255, 255, 255, .5);
-        margin-top: 3px;
+        margin-top: 2px;
     }
     .red {
         width: 1em;
         height: 1em;
         background: darkred;
         border-right: 1px solid rgba(255, 255, 255, .5);
+        margin-top: 2px;
     }
 
     .orange {
@@ -23,13 +24,14 @@
         height: 1em;
         background: darkorange;
         border-right: 1px solid rgba(255, 255, 255, .5);
+        margin-top: 2px;
     }
     .white {
         width: 1em;
         height: 1em;
         background: lightgrey;
         border-right: 1px solid rgba(255, 255, 255, .5);
-
+        margin-top: 2px;
     }
 </style>
 </head>
