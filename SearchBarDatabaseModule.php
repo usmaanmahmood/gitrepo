@@ -1,7 +1,5 @@
-<ol style="list-style: decimal inside;">
-    <li>Select a Database</li>
-    <li>Select a Module (optional - selecting none is the same as selecting them all)</li>
-</ol>
+    <h4>1. Select a Database</h4>
+    <h4>2. Select a Module (optional - selecting none is the same as selecting them all)</h4>
 <h2>Databases <button type="button" class="btn btn-default btn-xs btn-warning dat-reset-filters pull-right"><span class="glyphicon glyphicon-remove"></span> Clear</button></h2>
 
 <select class="form-control" size=4 id="DatabaseList">
