@@ -58,7 +58,7 @@ $result = $arcadeClient->execute($query);
 
                     if ($character == "|") {
                         $weekCount = 1;
-                        echo "<br /><div class=\"pull-left\">Semester Change</div><br /><span class=\"pull-left\">Week " . $weekCount . " </span>";
+                        echo "<br /><br /><div class=\"pull-left\">Semester Change</div><br /><span class=\"pull-left\">Week " . $weekCount . " </span>";
                         $lastWasSemester = 1;
                         continue;
                     } else if ($character == ".") {
