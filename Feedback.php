@@ -52,7 +52,7 @@
                 <option value="Irregularities">Irregularities</option>
                 <option value="Marks Table">Marks Table</option>
                 <option value="Registration Details">Registration Details</option>
-                <option value="Timetable: Full">Timetable</option>
+                <option value="Timetable">Timetable</option>
             </select>
         </div>
     </div>
