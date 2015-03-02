@@ -63,6 +63,11 @@
 
         $("#submit").hide(); // hide original button
 
+        // for this page
+        $("#modulessearchsection").hide() // hide module search for this
+        $("#listitemthree").hide() // hide module search for this
+        $("#listitemtwo").html("2. Choose your search!"); // hide module search for this
+
         $("#submitButton1").click(function () {
             var $modules = $("#ModuleList").val();
             var $databases = [];
