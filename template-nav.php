@@ -32,7 +32,7 @@
                         <li><a href="Registration-Details.php"><span class="glyphicon glyphicon-education"></span> Registration Details</a></li>
                         <li><a href="Expected.php"><span class="glyphicon glyphicon-question-sign"></span> Expected</a></li>
                         <li><a href="Excuses.php"><span class="glyphicon glyphicon-info-sign"></span> Excuses</a></li>
-                        <li><a href="Irregularities.php"><span class="glyphicon glyphicon-warning-sign"></span> Irregularities</a></li>
+                        <li><a href="Irregularities.php"><span class="glyphicon glyphicon-flag"></span> Irregularities</a></li>
                     </ul>
                 </li>
                 <li class="dropdown" id="theme-dropdown">
