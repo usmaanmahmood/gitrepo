@@ -9,7 +9,8 @@
 include("../config.php");
 
 $arcadeClient = new ARCADEClient();
-$query = new Query("time-table: full", 0); // command, plainTextWanted
+$querystr = "time-table: " . $_GET["search"];
+$query = new Query($querystr, 0); // command, plainTextWanted
 
 // if none selected then it is empty. if it is, send the array through
 if (!empty($_GET["databases"])) $query->addDatabases($_GET["databases"]);

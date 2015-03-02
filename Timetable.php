@@ -25,7 +25,7 @@
                     id="submitButton" data-search="full"><span class="glyphicon glyphicon-search"></span> Full Timetable
             </button>
             <button type="button" class="btn btn-default btn-block" data-loading-text="Searching..."
-                    id="submitButton" data-search="with-extensions"><span class="glyphicon glyphicon-search"></span> Full Timetable with Extensions
+                    id="submitButton" data-search="with extensions"><span class="glyphicon glyphicon-search"></span> Full Timetable with Extensions
             </button>
         </div>
 
@@ -76,9 +76,9 @@
             var $resultDiv = $('#result');
             $resultDiv.fadeOut('slow');
 
-            $search = $(this).data("search");
-            alert($search);
-            $.get("DisplayScripts/getTimetable.php", {"databases": $databases, "modules": $modules})
+            var $search = $(this).data("search");
+
+            $.get("DisplayScripts/getTimetable.php", {"databases": $databases, "modules": $modules, "search": $search})
                 .done(function (result) {
                     $resultDiv.html(result);
                     $resultDiv.fadeIn('slow');
