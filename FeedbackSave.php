@@ -2,6 +2,7 @@
 
 require_once('config.inc.php');
 
+var_dump($_POST);
 
 
 //$database_host = 'dbhost.cs.man.ac.uk';
@@ -38,5 +39,5 @@ require_once('config.inc.php');
 //} else {
 //    $mysqli->close();
 //    header("location:Feedback.php?message=1");
-}
+//}
 ?>
