@@ -182,7 +182,7 @@
     </div>
 
     <h3 class="text-center"><abbr title="presentation: the manner or style in which something is given, offered, or displayed.
-">Presentation</abbr</h3>
+">Presentation</abbr></h3>
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
         <label class="col-md-4 control-label" for="radiosPresentationJava">Java Arcade<br/><small>(1 worst - 10 best)</small></label>
