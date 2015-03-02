@@ -91,9 +91,9 @@ $result = $arcadeClient->execute($query);
                     if ($key <= $count - 3) {
 
                         if (is_numeric($names[$key]))
-                            $echoString = $echoString . "Deadline" . $names[$key] . "," . $percentage . ",\n";
+                            $echoString = $echoString . "Deadline" . $names[$key] . "," . $percentage . "\n";
                         else
-                            $echoString = $echoString . $names[$key] . "," . $percentage . ",\n";
+                            $echoString = $echoString . $names[$key] . "," . $percentage . "\n";
                     }
                 }
                 $echoString = rtrim($echoString, ",\n");
