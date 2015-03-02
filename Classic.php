@@ -20,7 +20,7 @@
 
             <div class="row">
                 <div class="col-md-4">
-                    <p>Command</p>
+                    <p class="text-center">Command</p>
                     <select class="form-control" size=10 id="CommandList">
                         <?php foreach ($arcadeProfile->getCommandList() as $command) { ?>
                             <option><?php echo $command ?></option>
