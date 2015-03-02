@@ -14,10 +14,10 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="Classic.php"><span class="glyphicon glyphicon-home"></span> Classic</a></li>
-                <li><a href="Attendance-Summary.php"><span class="glyphicon glyphicon-calendar"></span> Attendance Summary</a></li>
+                <li><a href="Attendance-Summary.php">Attendance Summary</a></li>
 <!--                <li><a href="#">display-picture</a></li>-->
 <!--                <li><a href="#">time-table: remaining</a></li>-->
-                <li><a href="Timetable.php">Timetable: Full</a></li>
+                <li><a href="Timetable.php"><span class="glyphicon glyphicon-calendar"></span> Timetable: Full</a></li>
 <!--                <li><a href="#">time-table: with extensions</a></li>-->
                 <li><a href="Marks-Table.php">Marks Table</a></li>
 <!--                <li><a href="#">marks-table: fails only</a></li>-->
