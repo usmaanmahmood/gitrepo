@@ -2,7 +2,7 @@
 
 require_once('config.inc.php');
 
-var_dump($_POST);
+print_R($_POST);
 
 
 //$database_host = 'dbhost.cs.man.ac.uk';
