@@ -64,8 +64,8 @@
                         </select>
                     </div>
                     <div class="col-md-3">
-                        <p>Modules &nbsp; | &nbsp;
-                            <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button>
+                        <p>Modules
+                            <button type="button" class="btn btn-default btn-xs reset-filters pull-right">Reset</button>
                         </p>
                         <select multiple class="form-control" size=10 id="ModuleList">
                             <?php foreach (array_unique($arcadeProfile->getModuleList()) as $option) { ?>
