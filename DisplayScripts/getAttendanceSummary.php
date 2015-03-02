@@ -101,7 +101,7 @@ $result = $arcadeClient->execute($query);
                 }
                 ?></td>
         </tr>
-        <tr>
+        <tr class="hide">
             <td>Raw Pattern</td>
             <td><?= $database->getAttendancePattern(); ?></td>
         </tr>
