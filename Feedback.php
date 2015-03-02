@@ -73,7 +73,7 @@
     </div>
 
     <!-- Multiple Radios -->
-    <div class="col-md-6">
+    
     <div class="form-group">
         <label class="col-md-4 control-label" for="radiosIntuitivenessJava">Java Arcade - Intuitiveness</label>
 
@@ -141,8 +141,7 @@
             </div>
         </div>
     </div>
-</div>
-    <div class="col-md-6">
+
     <!-- Multiple Radios -->
     <div class="form-group">
         <label class="col-md-4 control-label" for="radiosIntuitivenessWeb">Web Arcade - Intuitiveness</label>
