@@ -94,7 +94,7 @@
 
         <div class="col-md-6">
 
-            <h1>Temporary login
+            <h1>Temporary login<br/>
                 <small>Lasts as long as the session</small>
             </h1>
             <form class="form-signin" role="form" method="post" action="TempLogin.php">
