@@ -18,14 +18,14 @@
     <div class="row">
         <div class="col-md-3">
             <?php include("SearchBarDatabaseModule.php"); ?>
-            <button type="button" class="btn btn-default col-md-4" data-loading-text="Searching..."
-                    id="submit"><span class="glyphicon glyphicon-search"></span> Remaining
+            <button type="button" class="btn btn-default btn-block" data-loading-text="Searching..."
+                    id="submitButton"><span class="glyphicon glyphicon-search"></span> Remaining
             </button>
-            <button type="button" class="btn btn-default col-md-4" data-loading-text="Searching..."
-                    id="submit"><span class="glyphicon glyphicon-search"></span> Full
+            <button type="button" class="btn btn-default btn-block" data-loading-text="Searching..."
+                    id="submitButton"><span class="glyphicon glyphicon-search"></span> Full
             </button>
-            <button type="button" class="btn btn-default col-md-4" data-loading-text="Searching..."
-                    id="submit"><span class="glyphicon glyphicon-search"></span> Extensions
+            <button type="button" class="btn btn-default btn-block" data-loading-text="Searching..."
+                    id="submitButton"><span class="glyphicon glyphicon-search"></span> Extensions
             </button>
         </div>
 
@@ -53,8 +53,6 @@
             $("#ModuleList option[data-db=" + this.value + "]").show();
         });
 
-//
-
         $(".dat-reset-filters").click(function () {
             $("#DatabaseList option:selected").removeAttr("selected");
         });
@@ -63,8 +61,9 @@
             $("#ModuleList option:selected").removeAttr("selected");
         });
 
+        $("#submit").hide(); // hide original button
 
-        $("#submit").click(function () {
+        $("#submitButton").click(function () {
             var $modules = $("#ModuleList").val();
             var $databases = [];
             $databases.push($("#DatabaseList").val());
