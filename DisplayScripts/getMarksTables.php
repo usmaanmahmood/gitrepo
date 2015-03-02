@@ -80,8 +80,7 @@ $result = $arcadeClient->execute($query);
             </table>
             <hr/>
 
-            <pre id="csv" class="hide" data-type="csv">Deadline, Mark
-<?php
+            <pre id="csv" class="hide" data-type="csv">Deadline, Mark<?php
                 $percentages = $table->getPercMark();
                 $names = $table->getEmailNames();
                 $count = count($percentages);
@@ -96,10 +95,8 @@ $result = $arcadeClient->execute($query);
                             $echoString = $echoString . $names[$key] . "," . $percentage . "\n";
                     }
                 }
-                $echoString = rtrim($echoString, ",\n");
                 echo $echoString;
-                ?>
-            </pre>
+                ?></pre>
 
 
 
