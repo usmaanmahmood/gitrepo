@@ -235,7 +235,7 @@
 
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="radiosPresentationWeb">Web Arcade - Presentation</label>
+        <label class="col-md-4 control-label" for="radiosPresentationWeb">Web Arcade - Presentation<br/><small>(1 worst - 10 best)</small></label>
 
         <div class="col-md-4">
             <label class="radio-inline" for="radiosPresentationWeb-0">
