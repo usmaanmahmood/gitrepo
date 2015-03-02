@@ -33,12 +33,12 @@ $otherComments = $mysqli->real_escape_string(stripslashes($_POST['textareaOtherC
 $sql = "INSERT INTO Feedback VALUES (".$username.",".$submissionTime.",".$year.",".$websiteArea.",".$device.",".$intuitivenessJava.",".$intuitivenessWeb.",".$intuitivenessComments;
 $sql = $sql.",".$presentationJava.",".$presentationWeb.",".$presentationComments.",".$otherComments.")";
 
-//echo $sql;
-if ($mysqli->query($sql) === true) {
-    $mysqli->close();
-    header("location:Feedback.php?message=1"); // success
-} else {
-    $mysqli->close();
-    header("location:Feedback.php?message=2"); // fail
-}
+echo $sql;
+//if ($mysqli->query($sql) === true) {
+//    $mysqli->close();
+//    header("location:Feedback.php?message=1"); // success
+//} else {
+//    $mysqli->close();
+//    header("location:Feedback.php?message=2"); // fail
+//}
 ?>
