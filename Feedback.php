@@ -14,7 +14,19 @@
 
     <!-- Page Content -->
     <div class="container">
-
+    <?php
+    if (isset($_GET["message"]) && $_GET["message"] == 2) {
+        ?>
+        <div class="alert alert-danger" role="alert"><b>Oh snap!</b> SQL insert failed.
+        </div>
+    <?php
+    } else if (isset($_GET["message"]) && $_GET["message"] == 1) {
+        ?>
+        <div class="alert alert-success" role="alert"><b>Thanks for your feedback!</b><br/>You can contact me at usmaanmahmood@hotmail.com
+        </div>
+    <?php
+    }
+    ?>
     <div class="row">
     <div class="col-md-12">
 
@@ -60,7 +72,7 @@
 
     <!-- Select Multiple -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="selectmultipleDevice">Device</label>
+        <label class="col-md-4 control-label" for="selectbasicDevice">Device</label>
 
         <div class="col-md-4">
             <select id="selectbasicDevice" name="selectbasicDevice" class="form-control">
