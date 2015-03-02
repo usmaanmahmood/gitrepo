@@ -21,7 +21,8 @@ $result = $arcadeClient->execute($query);
 
 ?>
 <?php foreach ($result->getDatabaseList() as $database) {
-    if (!empty($database->getAttendancePattern())) {
+    $pattern = $database->getAttendancePattern();
+    if (!empty($pattern)) {
         ?>
         <table class="table table-striped table-hover table-bordered table-condensed">
             <tr>
@@ -114,11 +115,12 @@ $result = $arcadeClient->execute($query);
                 <td><?= $database->getAttendancePattern(); ?></td>
             </tr>
         </table>
-    <?php }
-    else
-    {?>
-<h3>ARCADE didn't return any results.</h3>
-    <?php}
+    <?php
+    } else {
+        ?>
+        <h3>ARCADE didn't return any results.</h3>
+    <?php
+    }
 } ?>
 <script type="javascript">
     $(function () {
