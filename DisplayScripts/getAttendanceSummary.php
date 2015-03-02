@@ -64,7 +64,7 @@ $result = $arcadeClient->execute($query);
                     } else if ($character == ".") {
                         if (!$lastWasSemester) {
                             $weekCount++;
-                            echo "<br /><span class=\"pull-left\" style=\"margin-right:10px\">Week " . $weekCount . " </span>";
+                            echo "<br /><span class=\"pull-left\" style=\"width:80px\">Week " . $weekCount . " </span>";
                         }
                         continue;
                     }
