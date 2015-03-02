@@ -27,7 +27,7 @@
 <!--                <li><a href="#">full-story: chronological</a></li>-->
 
                 <li class="dropdown" id="other-dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-plus"></span> More <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="Registration-Details.php"><span class="glyphicon glyphicon-education"></span> Registration Details</a></li>
                         <li><a href="Expected.php"><span class="glyphicon glyphicon-question-sign"></span> Expected</a></li>
