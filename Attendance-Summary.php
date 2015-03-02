@@ -9,7 +9,7 @@
         height: 1em;
         background: lawngreen;
         border-right: 1px solid rgba(255, 255, 255, .5);
-        margin-top:5px;
+        margin-top: 3px;
     }
     .red {
         width: 1em;
