@@ -17,7 +17,7 @@
     <div class="row">
         <div class="col-lg-12">
             <h1>Classic ARCADE <small>A complete replica of the JAVA ARCADE Client!</small></h1>
-            
+
             <div class="row">
                 <div class="col-md-4">
                     <p>Command</p>
@@ -69,7 +69,35 @@
                         </p>
                         <select multiple class="form-control" size=10 id="ModuleList">
                             <?php foreach (array_unique($arcadeProfile->getModuleList()) as $option) { ?>
-                                <option value="<?php echo $option ?>"><?php echo $option ?></option>
+                                <option value="<?php echo $filter[4] ?>" data-db="<?= $filter[0] ?>">
+                                    <?php
+                                    $matched = preg_match("/(\d{3,5})(\S)$/", $filter[4], $matches);
+
+                                    if ($matched) {
+                                        switch ($matches[2]) {
+                                            case "L":
+                                                $matches[2] = " Labs";
+                                                break;
+                                            case "C":
+                                                $matches[2] = " Coursework";
+                                                break;
+                                            case "E":
+                                                $matches[2] = " Examples-Classes";
+                                                break;
+                                            case "W":
+                                                $matches[2] = " Workshops";
+                                                break;
+                                            case "X":
+                                                $matches[2] = " Exams";
+                                                break;
+                                        }
+                                    };
+
+                                    if ($matched)
+                                        echo $matches[1] . $matches[2];
+                                    else
+                                        echo $filter[4];
+                                    ?></option>
                             <?php } ?>
                         </select>
                     </div>
