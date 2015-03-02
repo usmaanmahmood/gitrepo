@@ -48,7 +48,7 @@
     <div class="container text-center">
         <div class="col-md-6">
             <form class="form-signin" role="form" method="post" action="LoginCheck.php">
-                <h1 class="form-signin-heading">ARCADE Login</h1>
+                <h1 class="form-signin-heading">Main login</h1>
 
                 <div class="input-group input-group-lg">
                 <span class="input-group-addon">
@@ -94,7 +94,7 @@
 
         <div class="col-md-6">
 
-            <h1>Or use a temporary login instead!
+            <h1>Temporary login
                 <small>Lasts as long as the session</small>
             </h1>
             <form class="form-signin" role="form" method="post" action="TempLogin.php">
