@@ -74,7 +74,7 @@
 
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="radiosIntuitivenessJava">Java Arcade - Intuitiveness</label>
+        <label class="col-md-4 control-label" for="radiosIntuitivenessJava">Java Arcade - Intuitiveness<br/><small>(1 worst - 10 best)</small></label>
 
         <div class="col-md-4">
             <label class="radio-inline" for="radiosIntuitivenessJava-0">
@@ -124,7 +124,7 @@
 
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="radiosIntuitivenessWeb">Web Arcade - Intuitiveness</label>
+        <label class="col-md-4 control-label" for="radiosIntuitivenessWeb">Web Arcade - Intuitiveness<br/><small>(1 worst - 10 best)</small></label>
 
         <div class="col-md-4">
             <label class="radio-inline" for="radiosIntuitivenessWeb-0">
@@ -185,7 +185,7 @@
 
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="radiosPresentationJava">Java Arcade - Presentation</label>
+        <label class="col-md-4 control-label" for="radiosPresentationJava">Java Arcade - Presentation<br/><small>(1 worst - 10 best)</small></label>
 
         <div class="col-md-4">
             <label class="radio-inline" for="radiosPresentationJava-0">
