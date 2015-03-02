@@ -51,14 +51,17 @@ $result = $arcadeClient->execute($query);
                 <?php
                 $rawPattern = $database->getAttendancePattern();
                 $splitPattern = str_split($rawPattern);
+                $weekCount = 0;
 
                 foreach ($splitPattern as $character) {
 
                     if ($character == "|") {
+                        $weekCount = 0;
                         echo "<br /><div class=\"pull-left\">Semester Change</div><br />";
                         continue;
                     } else if ($character == ".") {
-                        echo "<br />";
+                        $weekCount++;
+                        echo "<br />" . $weekCount . ": ";
                         continue;
                     }
 
