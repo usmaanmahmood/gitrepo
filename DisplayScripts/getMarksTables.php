@@ -79,8 +79,8 @@ $result = $arcadeClient->execute($query);
                 </tr>
             </table>
             <hr/>
-            <div id="highcharts" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-            <pre id="csv2" class="hide" data-type="csv">Deadline, Mark,
+
+            <pre id="csv" class="hide" data-type="csv">Deadline, Mark,
 <?php
                 $percentages = $table->getPercMark();
                 $names = $table->getEmailNames();
@@ -96,6 +96,10 @@ $result = $arcadeClient->execute($query);
                 }
                 ?>
             </pre>
+
+
+
+
 
 
         <?php
