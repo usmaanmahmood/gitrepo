@@ -34,8 +34,8 @@
                 </div>
                 <div class="col-md-8">
                     <div class="col-md-3">
-                        <p>Databases &nbsp; | &nbsp;
-                            <button type="button" class="btn btn-default btn-xs reset-filters">Reset</button>
+                        <p class="text-center">Databases
+                            <button type="button" class="btn btn-default btn-xs reset-filters pull-right">Reset</button>
                         </p>
                         <select multiple class="form-control" size=10 id="DatabaseList">
                             <?php foreach (array_unique($arcadeProfile->getDatabaseList()) as $option) { ?>
