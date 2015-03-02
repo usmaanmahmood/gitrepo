@@ -100,6 +100,12 @@ class ARCADEClient
             case "time-table: full":
                 $this->parser = new TimetableParser();
                 break;
+            case "time-table: remaining":
+                $this->parser = new TimetableParser();
+                break;
+            case "time-table: with extensions":
+                $this->parser = new TimetableParser();
+                break;
             case "":
                 return "ARCADE client error: No Query sent through";
                 break;
