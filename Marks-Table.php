@@ -101,6 +101,11 @@
                                     text: 'Percentage (%)'
                                 }
                             },
+                            xAxis: {
+                                title: {
+                                    text: 'Deadlines'
+                                }
+                            },
                             tooltip: {
                                 valueSuffix: '%'
                             },
