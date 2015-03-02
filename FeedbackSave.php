@@ -30,8 +30,9 @@ $presentationComments = $mysqli->real_escape_string(stripslashes($_POST['textare
 $otherComments = $mysqli->real_escape_string(stripslashes($_POST['textareaOtherComments']));
 
 
-$sql = "INSERT INTO Feedback VALUES (".$username.",".$submissionTime.",".$year.",".$websiteArea.",".$device.",".$intuitivenessJava.",".$intuitivenessWeb.",".$intuitivenessComments;
-$sql = $sql.",".$presentationJava.",".$presentationWeb.",".$presentationComments.",".$otherComments.")";
+$sql = "INSERT INTO Feedback(username, submissionTime, year, websiteArea, device, intuitivenessJava, intuitivenessWeb, intuitivenessComments, presentationJava, presentationWeb, presentationComments, otherComments)";
+$sql = $sql . " VALUES (\"".$username."\",".$submissionTime.",\"".$year."\",\"".$websiteArea."\",\"".$device."\",".$intuitivenessJava.",".$intuitivenessWeb.",\"".$intuitivenessComments;
+$sql = $sql."\",".$presentationJava.",".$presentationWeb.",\"".$presentationComments."\",\"".$otherComments."\")";
 
 echo $sql;
 //if ($mysqli->query($sql) === true) {
