@@ -71,7 +71,7 @@
             </select>
         </div>
     </div>
-    <legend class="text-center"><abbr title="intuitive: using without conscious reasoning; instinctive.">Intuitiveness</abbr></legend>
+    <h4 class="text-center"><abbr title="intuitive: using without conscious reasoning; instinctive.">Intuitiveness</abbr></h4>
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
         <label class="col-md-4 control-label" for="radiosIntuitivenessJava">Java Arcade<br/><small>(1 worst - 10 best)</small></label>
@@ -181,8 +181,8 @@
         </div>
     </div>
 
-    <h3 class="text-center"><abbr title="presentation: the manner or style in which something is given, offered, or displayed.
-">Presentation</abbr></h3>
+    <h4 class="text-center"><abbr title="presentation: the manner or style in which something is given, offered, or displayed.
+">Presentation</abbr></h4>
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
         <label class="col-md-4 control-label" for="radiosPresentationJava">Java Arcade<br/><small>(1 worst - 10 best)</small></label>
