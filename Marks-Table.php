@@ -121,6 +121,9 @@
                             },
                             credits: {
                                 enabled: false
+                            },
+                            legend: {
+                                enabled: false
                             }
                         });
 
