@@ -19,13 +19,13 @@
         <div class="col-md-3">
             <?php include("SearchBarDatabaseModule.php"); ?>
             <button type="button" class="btn btn-default col-md-4" data-loading-text="Searching..."
-                    id="submit"><span class="glyphicon glyphicon-search"></span> Search: Remaining
+                    id="submit"><span class="glyphicon glyphicon-search"></span> Remaining
             </button>
             <button type="button" class="btn btn-default col-md-4" data-loading-text="Searching..."
-                    id="submit"><span class="glyphicon glyphicon-search"></span> Search: Full
+                    id="submit"><span class="glyphicon glyphicon-search"></span> Full
             </button>
             <button type="button" class="btn btn-default col-md-4" data-loading-text="Searching..."
-                    id="submit"><span class="glyphicon glyphicon-search"></span> Search: Full + Extensions
+                    id="submit"><span class="glyphicon glyphicon-search"></span> Extensions
             </button>
         </div>
 
