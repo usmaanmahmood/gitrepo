@@ -17,7 +17,7 @@
                 <li><a href="Attendance-Summary.php"><span class="glyphicon glyphicon-stats"></span> Attendance Summary</a></li>
 <!--                <li><a href="#">display-picture</a></li>-->
 <!--                <li><a href="#">time-table: remaining</a></li>-->
-                <li><a href="Timetable.php"><span class="glyphicon glyphicon-calendar"></span> Timetable: Full</a></li>
+                <li><a href="Timetable.php"><span class="glyphicon glyphicon-calendar"></span> Timetable</a></li>
 <!--                <li><a href="#">time-table: with extensions</a></li>-->
                 <li><a href="Marks-Table.php"><span class="glyphicon glyphicon-th-list"></span> Marks Table</a></li>
 <!--                <li><a href="#">marks-table: fails only</a></li>-->
