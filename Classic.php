@@ -16,10 +16,8 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h1>Classic ARCADE<small>A complete replica of the JAVA ARCADE Client!</small></h1>
-
-
-
+            <h1>Classic ARCADE <small>A complete replica of the JAVA ARCADE Client!</small></h1>
+            
             <div class="row">
                 <div class="col-md-4">
                     <p>Command</p>
