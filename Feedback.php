@@ -306,7 +306,7 @@
         <label class="col-md-4 control-label" for="singlebuttonSubmit"></label>
 
         <div class="col-md-4">
-            <button id="singlebuttonSubmit" name="singlebuttonSubmit" class="btn btn-primary btn-block btn-lg">Submit <span class="glyphicon glyphicon-ok"></span></button>
+            <button id="singlebuttonSubmit" name="singlebuttonSubmit" class="btn btn-primary btn-block btn-lg">Submit <span class="glyphicon glyphicon-ok pull-right"></span></button>
         </div>
 
     </div>
