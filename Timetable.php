@@ -18,6 +18,15 @@
     <div class="row">
         <div class="col-md-3">
             <?php include("SearchBarDatabaseModule.php"); ?>
+            <button type="button" class="btn btn-default btn-lg" data-loading-text="Searching..."
+                    id="submit"><span class="glyphicon glyphicon-search"></span> Search: Remaining
+            </button>
+            <button type="button" class="btn btn-default btn-lg" data-loading-text="Searching..."
+                    id="submit"><span class="glyphicon glyphicon-search"></span> Search: Full
+            </button>
+            <button type="button" class="btn btn-default btn-lg" data-loading-text="Searching..."
+                    id="submit"><span class="glyphicon glyphicon-search"></span> Search: Full + Extensions
+            </button>
         </div>
 
         <div class="col-md-9">
