@@ -1,5 +1,5 @@
     <h4>1. Select a Database</h4>
-    <h4>2. Select a Module (optional - selecting none is the same as selecting them all)</h4>
+    <h4>2. Select a Module <small>(optional - selecting none is the same as selecting them all)</small></h4>
 <h2>Databases <button type="button" class="btn btn-default btn-xs btn-warning dat-reset-filters pull-right"><span class="glyphicon glyphicon-remove"></span> Clear</button></h2>
 
 <select class="form-control" size=4 id="DatabaseList">
