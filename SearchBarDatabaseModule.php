@@ -4,8 +4,8 @@
 </h4>
 <h4 id="listitemthree">3. Click Search!</h4>
 <h2>Databases
-    <button type="button" class="btn btn-default btn-xs btn-warning dat-reset-filters pull-right"><span
-            class="glyphicon glyphicon-remove" style="margin-top:20px"></span> Clear
+    <button type="button" class="btn btn-default btn-xs btn-warning dat-reset-filters pull-right" style="margin-top:20px"><span
+            class="glyphicon glyphicon-remove"></span> Clear
     </button>
 </h2>
 
