@@ -61,7 +61,7 @@ $result = $arcadeClient->execute($query);
                         continue;
                     } else if ($character == ".") {
                         $weekCount++;
-                        echo "<span class=\"text-left\">" . $weekCount . ": </span><br />";
+                        echo "<br /><span class=\"pull-left\">" . $weekCount . ": </span>";
                         continue;
                     }
 
@@ -93,7 +93,7 @@ $result = $arcadeClient->execute($query);
                 }
                 ?></td>
         </tr>
-        <tr class="hide">
+        <tr>
             <td>Raw Pattern</td>
             <td><?= $database->getAttendancePattern(); ?></td>
         </tr>
