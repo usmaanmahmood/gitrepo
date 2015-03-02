@@ -111,7 +111,8 @@
                                 }
                             },
                             tooltip: {
-                                valueSuffix: '%'
+                                valueSuffix: '%',
+                                crosshairs: true
                             },
                             plotOptions: {
                                 series: {
