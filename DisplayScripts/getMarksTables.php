@@ -80,7 +80,7 @@ $result = $arcadeClient->execute($query);
             </table>
             <hr/>
 
-            <pre id="csv" class="hide" data-type="csv">Deadline, Mark,
+            <pre id="csv" class="hide" data-type="csv">Deadline, Mark
 <?php
                 $percentages = $table->getPercMark();
                 $names = $table->getEmailNames();
