@@ -95,7 +95,7 @@
                                 csv: document.getElementById('csv').innerHTML
                             },
                             title: {
-                                text: '',
+                                text: 'Graph of Results',
                                 x: -20 //center
                             },
                             yAxis: {
