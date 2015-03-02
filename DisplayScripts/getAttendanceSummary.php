@@ -56,11 +56,12 @@ $result = $arcadeClient->execute($query);
                 foreach ($splitPattern as $character) {
 
                     if ($character == "|") {
-                        $weekCount = 0;
+                        $weekCount = 1;
                         echo "<br /><div class=\"pull-left\">Semester Change</div><br />";
                         continue;
                     } else if ($character == ".") {
-                        $weekCount++;
+                        if ($weekCount != 1)
+                            $weekCount++;
                         echo "<br /><span class=\"pull-left\">Week " . $weekCount . " </span>";
                         continue;
                     }
