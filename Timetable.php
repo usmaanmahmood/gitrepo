@@ -71,7 +71,7 @@
             console.log($databases);
             console.log($modules);
 
-            var $submitbutton = $('#submitButton').button('loading');
+            var $submitbutton = $(this).button('loading');
 
             var $resultDiv = $('#result');
             $resultDiv.fadeOut('slow');
