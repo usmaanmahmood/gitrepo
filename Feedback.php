@@ -71,7 +71,7 @@
             </select>
         </div>
     </div>
-    <h3 class="text-center"><abbr title="intuitive: using or based on what one feels to be true even without conscious reasoning; instinctive.">Intuitiveness</abbr></h3>
+    <h3 class="text-center"><abbr title="intuitive: using without conscious reasoning; instinctive.">Intuitiveness</abbr></h3>
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
         <label class="col-md-4 control-label" for="radiosIntuitivenessJava">Java Arcade<br/><small>(1 worst - 10 best)</small></label>
