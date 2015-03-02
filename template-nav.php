@@ -19,7 +19,7 @@
 <!--                <li><a href="#">time-table: remaining</a></li>-->
                 <li><a href="Timetable.php"><span class="glyphicon glyphicon-calendar"></span> Timetable: Full</a></li>
 <!--                <li><a href="#">time-table: with extensions</a></li>-->
-                <li><a href="Marks-Table.php">Marks Table</a></li>
+                <li><a href="Marks-Table.php"><span class="glyphicon glyphicon-table"></span>Marks Table</a></li>
 <!--                <li><a href="#">marks-table: fails only</a></li>-->
 <!--                <li><a href="#">marks-table: ignore empty columns</a></li>-->
 
