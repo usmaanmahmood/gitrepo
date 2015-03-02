@@ -73,7 +73,7 @@
         <input type="text" class="form-control" placeholder="Central University Username" name="centralusername" required autofocus
                maxlength=8>
         <input type="password" class="form-control" placeholder="Web App Password" name="webpassword" required>
-        <input type="password" class="form-control" placeholder="ARCADE Password" name="arcadepassword" required>ARCADE password finder:<br/><pre>cat $HOME/.ARCADE/serverAuthentication</pre><br/>
+        <input type="password" class="form-control" placeholder="ARCADE Password" name="arcadepassword" required>ARCADE password finder:<br/><pre>cat $HOME/.ARCADE/serverAuthentication</pre>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
     </form>
     <?php

@@ -117,7 +117,6 @@
                            required value="LQKUGRIRDE">
                 </div>
                 ARCADE password finder:<br/><pre>cat $HOME/.ARCADE/serverAuthentication</pre>
-                <br/>
                 <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit"><span
                         class="glyphicon glyphicon-log-in"></span> Log in
                 </button>
