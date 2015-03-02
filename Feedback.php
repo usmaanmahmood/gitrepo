@@ -22,7 +22,7 @@
     <fieldset>
 
     <!-- Form Name -->
-    <legend>Web Arcade Feedback Form</legend>
+    <legend class="text-centre">Web Arcade Feedback Form</legend>
 
     <!-- Select Basic -->
     <div class="form-group">
