@@ -81,7 +81,7 @@
 
         <div class="col-md-4">
             <label class="radio-inline" for="radiosIntuitivenessJava-0">
-                <input type="radio" name="radiosIntuitivenessJava" id="radiosIntuitivenessJava-0" value="1">
+                <input type="radio" name="radiosIntuitivenessJava" id="radiosIntuitivenessJava-0" value="1" required>
                 1
             </label>
             <label class="radio-inline" for="radiosIntuitivenessJava-1">
@@ -132,7 +132,7 @@
 
         <div class="col-md-4">
             <label class="radio-inline" for="radiosIntuitivenessWeb-0">
-                <input type="radio" name="radiosIntuitivenessWeb" id="radiosIntuitivenessWeb-0" value="1">
+                <input type="radio" name="radiosIntuitivenessWeb" id="radiosIntuitivenessWeb-0" value="1" required>
                 1
             </label>
             <label class="radio-inline" for="radiosIntuitivenessWeb-1">
@@ -196,7 +196,7 @@
 
         <div class="col-md-4">
             <label class="radio-inline" for="radiosPresentationJava-0">
-                <input type="radio" name="radiosPresentationJava" id="radiosPresentationJava-0" value="1">
+                <input type="radio" name="radiosPresentationJava" id="radiosPresentationJava-0" value="1" required>
                 1
             </label>
             <label class="radio-inline" for="radiosPresentationJava-1">
@@ -247,7 +247,7 @@
 
         <div class="col-md-4">
             <label class="radio-inline" for="radiosPresentationWeb-0">
-                <input type="radio" name="radiosPresentationWeb" id="radiosPresentationWeb-0" value="1">
+                <input type="radio" name="radiosPresentationWeb" id="radiosPresentationWeb-0" value="1" required>
                 1
             </label>
             <label class="radio-inline" for="radiosPresentationWeb-1">
