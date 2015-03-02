@@ -61,7 +61,7 @@ $result = $arcadeClient->execute($query);
                         continue;
                     } else if ($character == ".") {
                         $weekCount++;
-                        echo "<br /><span class=\"pull-left\">" . $weekCount . ": </span>";
+                        echo "<br /><span class=\"pull-left\">Week " . $weekCount . ": </span>";
                         continue;
                     }
 
