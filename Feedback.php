@@ -22,7 +22,7 @@
     <fieldset>
 
     <!-- Form Name -->
-    <legend class="text-centre">Web Arcade Feedback Form</legend>
+    <legend class="text-center">Web Arcade Feedback Form</legend>
 
     <!-- Select Basic -->
     <div class="form-group">
@@ -74,7 +74,8 @@
 
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="radiosIntuitivenessJava">Java Arcade - Intuitiveness<br/><small>(1 worst - 10 best)</small></label>
+        <label class="col-md-4 control-label" for="radiosIntuitivenessJava">Java Arcade - <abbr title="intuitive: using or based on what one feels to be true even without conscious reasoning; instinctive.
+">Intuitiveness</abbr><br/><small>(1 worst - 10 best)</small></label>
 
         <div class="col-md-4">
             <label class="radio-inline" for="radiosIntuitivenessJava-0">
@@ -123,7 +124,8 @@
 
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="radiosIntuitivenessWeb">Web Arcade - Intuitiveness<br/><small>(1 worst - 10 best)</small></label>
+        <label class="col-md-4 control-label" for="radiosIntuitivenessWeb">Web Arcade - <abbr title="intuitive: using or based on what one feels to be true even without conscious reasoning; instinctive.
+">Intuitiveness</abbr><br/><small>(1 worst - 10 best)</small></label>
 
         <div class="col-md-4">
             <label class="radio-inline" for="radiosIntuitivenessWeb-0">
@@ -172,7 +174,8 @@
 
     <!-- Textarea -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="textareaIntuitivenessComments">Intuitiveness - Comments &amp;
+        <label class="col-md-4 control-label" for="textareaIntuitivenessComments"><abbr title="intuitive: using or based on what one feels to be true even without conscious reasoning; instinctive.
+">Intuitiveness</abbr> - Comments &amp;
             Suggestions</label>
 
         <div class="col-md-4">
@@ -183,7 +186,9 @@
 
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="radiosPresentationJava">Java Arcade - Presentation<br/><small>(1 worst - 10 best)</small></label>
+        <label class="col-md-4 control-label" for="radiosPresentationJava">Java Arcade - <abbr title="presentation: the manner or style in which something is given, offered, or displayed.
+">Presentation</abbr><br/><small>(1 worst - 10 best)</small></label>
+
 
         <div class="col-md-4">
             <label class="radio-inline" for="radiosPresentationJava-0">
@@ -232,7 +237,8 @@
 
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="radiosPresentationWeb">Web Arcade - Presentation<br/><small>(1 worst - 10 best)</small></label>
+        <label class="col-md-4 control-label" for="radiosPresentationWeb">Web Arcade - <abbr title="presentation: the manner or style in which something is given, offered, or displayed.
+">Presentation</abbr><br/><small>(1 worst - 10 best)</small></label>
 
         <div class="col-md-4">
             <label class="radio-inline" for="radiosPresentationWeb-0">
@@ -281,7 +287,8 @@
 
     <!-- Textarea -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="textareaPresentationComments">Presentation - Comments &amp;
+        <label class="col-md-4 control-label" for="textareaPresentationComments"><abbr title="presentation: the manner or style in which something is given, offered, or displayed.
+">Presentation</abbr> - Comments &amp;
             Suggestions</label>
 
         <div class="col-md-4">
