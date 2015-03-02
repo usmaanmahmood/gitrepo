@@ -34,7 +34,7 @@
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
-                <option value="Straff">Straff</option>
+                <option value="Staff">Staff</option>
             </select>
         </div>
     </div>
@@ -98,6 +98,7 @@
                 <input type="radio" name="radiosIntuitivenessJava" id="radiosIntuitivenessJava-4" value="5">
                 5
             </label>
+            <br/>
             <label class="radio-inline" for="radiosIntuitivenessJava-5">
                 <input type="radio" name="radiosIntuitivenessJava" id="radiosIntuitivenessJava-5" value="6">
                 6
@@ -147,6 +148,7 @@
                 <input type="radio" name="radiosIntuitivenessWeb" id="radiosIntuitivenessWeb-4" value="5">
                 5
             </label>
+            <br/>
             <label class="radio-inline" for="radiosIntuitivenessWeb-5">
                 <input type="radio" name="radiosIntuitivenessWeb" id="radiosIntuitivenessWeb-5" value="6">
                 6
@@ -207,6 +209,7 @@
                 <input type="radio" name="radiosPresentationJava" id="radiosPresentationJava-4" value="5">
                 5
             </label>
+            <br/>
             <label class="radio-inline" for="radiosPresentationJava-5">
                 <input type="radio" name="radiosPresentationJava" id="radiosPresentationJava-5" value="6">
                 6
@@ -256,6 +259,7 @@
                 <input type="radio" name="radiosPresentationWeb" id="radiosPresentationWeb-4" value="5">
                 5
             </label>
+            <br/>
             <label class="radio-inline" for="radiosPresentationWeb-5">
                 <input type="radio" name="radiosPresentationWeb" id="radiosPresentationWeb-5" value="6">
                 6
