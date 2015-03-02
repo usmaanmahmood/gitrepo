@@ -20,10 +20,12 @@ if (!empty($_GET["modules"])) $query->addModules($_GET["modules"]);
 $result = $arcadeClient->execute($query);
 
 ?>
-    <div id="highcharts" style="min-width: 310px; height: 300px; margin: 20px auto 0px auto"></div>
 <?php foreach ($result->getDatabaseList() as $database) {
     if (!empty($database->getTableList())) {
         echo "<h3>" . $database->getDatabaseParsedName() . "</h3>";
+    ?>
+        <div id="highcharts" style="min-width: 310px; height: 300px; margin: 20px auto 0px auto"></div>
+        <?php
         foreach ($database->getTableList() as $table) {
             echo "<h3>Table: " . $table->getName() . "</h3>";
             echo "<h5>" . $table->getScalingFactor() . "</h5>";
