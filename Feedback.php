@@ -63,7 +63,7 @@
         <label class="col-md-4 control-label" for="selectmultipleDevice">Device</label>
 
         <div class="col-md-4">
-            <select id="selectmultipleDevice" name="selectmultipleDevice" class="form-control" multiple="multiple">
+            <select id="selectbasicDevice" name="selectbasicDevice" class="form-control">
                 <option value="Mobile Phone">Mobile Phone</option>
                 <option value="Tablet">Tablet</option>
                 <option value="Laptop">Laptop</option>
