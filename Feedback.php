@@ -314,7 +314,7 @@
         <label class="col-md-4 control-label" for="singlebuttonSubmit"></label>
 
         <div class="col-md-4">
-            <button id="singlebuttonSubmit" name="singlebuttonSubmit" class="btn btn-primary btn-block btn-lg">
+            <button id="singlebuttonSubmit" name="singlebuttonSubmit" class="btn btn-primary btn-block btn-lg" type="submit">
                 Submit</span></button>
         </div>
 
