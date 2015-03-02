@@ -84,7 +84,7 @@ $result = $arcadeClient->execute($query);
                 $percentages = $table->getPercMark();
                 $names = $table->getEmailNames();
                 $count = count($percentages);
-                $echoString = "";
+                $echoString = "\n";
                 foreach($percentages as $key => $percentage)
                 {
                     if ($key <= $count - 3) {
