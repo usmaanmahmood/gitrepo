@@ -14,7 +14,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="Classic.php"><span class="glyphicon glyphicon-home"></span> Classic</a></li>
-                <li><a href="Attendance-Summary.php">Attendance Summary</a></li>
+                <li><a href="Attendance-Summary.php"><span class="glyphicon glyphicon-stats"></span> Attendance Summary</a></li>
 <!--                <li><a href="#">display-picture</a></li>-->
 <!--                <li><a href="#">time-table: remaining</a></li>-->
                 <li><a href="Timetable.php"><span class="glyphicon glyphicon-calendar"></span> Timetable: Full</a></li>
@@ -32,7 +32,7 @@
                         <li><a href="Registration-Details.php"><span class="glyphicon glyphicon-education"></span> Registration Details</a></li>
                         <li><a href="Expected.php">Expected</a></li>
                         <li><a href="Excuses.php">Excuses</a></li>
-                        <li><a href="Irregularities.php">Irregularities</a></li>
+                        <li><a href="Irregularities.php"><span class="glyphicon glyphicon-alert"></span> Irregularities</a></li>
                     </ul>
                 </li>
                 <li class="dropdown" id="theme-dropdown">
