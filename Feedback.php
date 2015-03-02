@@ -181,7 +181,7 @@
         </div>
     </div>
 
-    <h4 class="text-center"><abbr title="presentation: the manner or style in which something is given, offered, or displayed.
+    <h4 class="text-center"><abbr title="presentation: the manner or style in which something is displayed.
 ">Presentation</abbr></h4>
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
