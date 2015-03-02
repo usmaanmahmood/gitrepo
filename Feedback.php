@@ -172,8 +172,7 @@
 
     <!-- Textarea -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="textareaIntuitivenessComments">Intuitiveness - Comments &amp;
-            Suggestions</label>
+        <label class="col-md-4 control-label" for="textareaIntuitivenessComments">Comments &amp; Suggestions</label>
 
         <div class="col-md-4">
             <textarea class="form-control" id="textareaIntuitivenessComments"
@@ -284,8 +283,7 @@
 
     <!-- Textarea -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="textareaPresentationComments">Presentation - Comments &amp;
-            Suggestions</label>
+        <label class="col-md-4 control-label" for="textareaPresentationComments">Comments &amp; Suggestions</label>
 
         <div class="col-md-4">
             <textarea class="form-control" id="textareaPresentationComments"
