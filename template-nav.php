@@ -29,7 +29,7 @@
                 <li class="dropdown" id="other-dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="Registration-Details.php">Registration Details</a></li>
+                        <li><a href="Registration-Details.php"><span class="glyphicon glyphicon-education"></span> Registration Details</a></li>
                         <li><a href="Expected.php">Expected</a></li>
                         <li><a href="Excuses.php">Excuses</a></li>
                         <li><a href="Irregularities.php">Irregularities</a></li>
