@@ -27,8 +27,7 @@ $result = $arcadeClient->execute($query);
         <div id="highcharts" style="min-width: 310px; height: 300px; margin: 20px auto 0px auto"></div>
         <?php
         foreach ($database->getTableList() as $table) {
-            echo "<h3>Table: " . $table->getName() . "</h3>";
-            echo "<h5>" . $table->getScalingFactor() . "</h5>";
+            echo "<h3>Table: " . $table->getName() . "<small>" . $table->getScalingFactor() . "</small></h3>";
             ?>
             <table class="table table-striped table-hover table-bordered table-condensed">
                 <tr>
