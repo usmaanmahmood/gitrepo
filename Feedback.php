@@ -15,12 +15,12 @@
     <!-- Page Content -->
     <div class="container">
     <?php
-    if (isset($_GET["message"]) && $_GET["message"] == 2) {
+    if (isset($_GET["message"]) && $_GET["message"] == 2 & 1==0) {
         ?>
         <div class="alert alert-danger" role="alert"><b>Oh snap!</b> SQL insert failed.
         </div>
     <?php
-    } else if (isset($_GET["message"]) && $_GET["message"] == 1) {
+    } else if (isset($_GET["message"]) && $_GET["message"] == 1 & 1==0) {
         ?>
         <div class="alert alert-success" role="alert"><b>Thanks for your feedback!</b><br/>You can contact me at usmaanmahmood@hotmail.com
         </div>
@@ -30,7 +30,7 @@
     <div class="row">
     <div class="col-md-12">
 
-    <form class="form-horizontal" role="form" method="post" action="FeedbackSave.php">
+    <form id="form" class="form-horizontal" role="form" method="post" action="FeedbackSave.php">
     <fieldset>
 
     <!-- Form Name -->
@@ -351,32 +351,27 @@
     <script>
         $(document).ready(function () {
 
-
-            $("#submit").click(function () {
-                var $modules = $("#ModuleList").val();
-                var $databases = [];
-                $databases.push($("#DatabaseList").val());
-
-                console.log($databases);
-                console.log($modules);
-
-                var $submitbutton = $('#submit').button('loading');
-
-                var $resultDiv = $('#result');
-                $resultDiv.fadeOut('slow');
-
-                $.get("DisplayScripts/getMarksTables.php", {"databases": $databases, "modules": $modules})
-                    .done(function (result) {
-                        $resultDiv.html(result);
-                        $resultDiv.fadeIn('slow');
-                        $submitbutton.button('reset');
+            $("#form").submit(function(e)
+            {
+                var postData = $(this).serializeArray();
+                var formURL = $(this).attr("action");
+                $.ajax(
+                    {
+                        url : formURL,
+                        type: "POST",
+                        data : postData,
+                        success:function(data, textStatus, jqXHR)
+                        {
+                            //data: return data from server
+                        },
+                        error: function(jqXHR, textStatus, errorThrown)
+                        {
+                            //if fails
+                        }
                     });
-            })
-                .error(function (xhr, status, error) {
-                    $resultDiv.html("<h1>error: " + xhr.status + " " + xhr.statusText + "</h1><p>Please try again. If the problem is recurring, email usmaanmahmood@hotmail.com</p>");
-                    $resultDiv.fadeIn('slow');
-                    $submitbutton.button('reset');
-                });
+                e.preventDefault(); //STOP default action
+                e.unbind(); //unbind. to stop multiple form submit.
+            });
 
 
         // } document ready in template end
