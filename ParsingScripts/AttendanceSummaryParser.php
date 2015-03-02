@@ -62,7 +62,7 @@ class AttendanceSummaryParser // extends Parser
         preg_match_all("/\n\nAttendance summary for group (\S+) modules ((?:(?:[\S]*)\s)*?)\n(\S*)\s(\S*)%\s(\S*)/", $inString, $matches);
         array_shift($matches); // remove the first match which is the entire result
         var_dump($matches);
-        if ($matches) {
+        if ($matches[0][0]) {
             $database->setGroup($matches[0][0]);
             $database->setModuleList(explode(" ", trim($matches[1][0]))); // modules list
 //        $database->setGroup($matches[2]); // name - dont need
