@@ -25,7 +25,7 @@
                     id="submitButton"><span class="glyphicon glyphicon-search"></span> Full Timetable
             </button>
             <button type="button" class="btn btn-default btn-block" data-loading-text="Searching..."
-                    id="submitButton"><span class="glyphicon glyphicon-search"></span> Full with Extensions
+                    id="submitButton"><span class="glyphicon glyphicon-search"></span> Full Timetable with Extensions
             </button>
         </div>
 
