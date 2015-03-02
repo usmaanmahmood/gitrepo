@@ -10,15 +10,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-<!--            <a class="navbar-brand" href="Classic.php">Web ARCADE</a>-->
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="Classic.php"><span class="glyphicon glyphicon-home"></span> Classic</a></li>
                 <li><a href="Attendance-Summary.php">Attendance Summary</a></li>
 <!--                <li><a href="#">display-picture</a></li>-->
-<!--                <li class="divider"></li>-->
 <!--                <li><a href="#">time-table: remaining</a></li>-->
                 <li><a href="Timetable.php">Timetable: Full</a></li>
 <!--                <li><a href="#">time-table: with extensions</a></li>-->
@@ -27,7 +24,6 @@
 <!--                <li><a href="#">marks-table: ignore empty columns</a></li>-->
 
                 <li><a href="FullStory.php">Full Story</a></li>
-<!--                <li><a href="#">full-story: without notes</a></li>-->
 <!--                <li><a href="#">full-story: chronological</a></li>-->
 
                 <li class="dropdown" id="other-dropdown">
@@ -37,7 +33,6 @@
                         <li><a href="Expected.php">Expected</a></li>
                         <li><a href="Excuses.php">Excuses</a></li>
                         <li><a href="Irregularities.php">Irregularities</a></li>
-<!--                        <li><a href="#">failure-predictions</a></li>-->
                     </ul>
                 </li>
                 <li class="dropdown" id="theme-dropdown">
@@ -62,6 +57,7 @@
                         <li><a href="#" class="change-style-menu-item" rel="yeti"> Yeti</a></li>
                     </ol>
                 </li>
+                <li><a href="Feedback.php"><span class="glyphicon glyphicon-notes-2"></span> Feedback</a></li>
                 <li><a href="Logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
             </ul>
         </div>
