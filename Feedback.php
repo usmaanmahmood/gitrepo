@@ -44,7 +44,7 @@
 
         <div class="col-md-4">
             <select id="selectbasicGUI" name="selectbasicGUI" class="form-control">
-                <option value="EntireWebsite">Entire Website</option>
+                <option value="Entire Website">Entire Website</option>
                 <option value="Classic">Classic</option>
                 <option value="Attendance Summary">Attendance Summary</option>
                 <option value="Timetable: Full">Timetable: Full</option>
