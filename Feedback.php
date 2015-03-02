@@ -78,8 +78,7 @@
 
         <div class="col-md-4">
             <label class="radio-inline" for="radiosIntuitivenessJava-0">
-                <input type="radio" name="radiosIntuitivenessJava" id="radiosIntuitivenessJava-0" value="1"
-                       checked="checked">
+                <input type="radio" name="radiosIntuitivenessJava" id="radiosIntuitivenessJava-0" value="1">
                 1
             </label>
             <label class="radio-inline" for="radiosIntuitivenessJava-1">
@@ -128,8 +127,7 @@
 
         <div class="col-md-4">
             <label class="radio-inline" for="radiosIntuitivenessWeb-0">
-                <input type="radio" name="radiosIntuitivenessWeb" id="radiosIntuitivenessWeb-0" value="1"
-                       checked="checked">
+                <input type="radio" name="radiosIntuitivenessWeb" id="radiosIntuitivenessWeb-0" value="1">
                 1
             </label>
             <label class="radio-inline" for="radiosIntuitivenessWeb-1">
@@ -189,8 +187,7 @@
 
         <div class="col-md-4">
             <label class="radio-inline" for="radiosPresentationJava-0">
-                <input type="radio" name="radiosPresentationJava" id="radiosPresentationJava-0" value="1"
-                       checked="checked">
+                <input type="radio" name="radiosPresentationJava" id="radiosPresentationJava-0" value="1">
                 1
             </label>
             <label class="radio-inline" for="radiosPresentationJava-1">
@@ -239,8 +236,7 @@
 
         <div class="col-md-4">
             <label class="radio-inline" for="radiosPresentationWeb-0">
-                <input type="radio" name="radiosPresentationWeb" id="radiosPresentationWeb-0" value="1"
-                       checked="checked">
+                <input type="radio" name="radiosPresentationWeb" id="radiosPresentationWeb-0" value="1">
                 1
             </label>
             <label class="radio-inline" for="radiosPresentationWeb-1">
@@ -308,7 +304,7 @@
         <label class="col-md-4 control-label" for="singlebuttonSubmit"></label>
 
         <div class="col-md-4">
-            <button id="singlebuttonSubmit" name="singlebuttonSubmit" class="btn btn-primary">Submit</button>
+            <button id="singlebuttonSubmit" name="singlebuttonSubmit" class="btn btn-primary btn-block btn-lg">Submit</button>
         </div>
     </div>
 
