@@ -19,13 +19,13 @@
         <div class="col-md-3">
             <?php include("SearchBarDatabaseModule.php"); ?>
             <button type="button" class="btn btn-default btn-block" data-loading-text="Searching..."
-                    id="submitButton" data-search="remaining"><span class="glyphicon glyphicon-search"></span> Remaining Timetable
+                    id="submitButton1" data-search="remaining"><span class="glyphicon glyphicon-search"></span> Remaining Timetable
             </button>
             <button type="button" class="btn btn-default btn-block" data-loading-text="Searching..."
-                    id="submitButton" data-search="full"><span class="glyphicon glyphicon-search"></span> Full Timetable
+                    id="submitButton2" data-search="full"><span class="glyphicon glyphicon-search"></span> Full Timetable
             </button>
             <button type="button" class="btn btn-default btn-block" data-loading-text="Searching..."
-                    id="submitButton" data-search="with extensions"><span class="glyphicon glyphicon-search"></span> Full Timetable with Extensions
+                    id="submitButton3" data-search="with extensions"><span class="glyphicon glyphicon-search"></span> Full Timetable with Extensions
             </button>
         </div>
 
@@ -63,7 +63,65 @@
 
         $("#submit").hide(); // hide original button
 
-        $("#submitButton").click(function () {
+        $("#submitButton1").click(function () {
+            var $modules = $("#ModuleList").val();
+            var $databases = [];
+            $databases.push($("#DatabaseList").val());
+
+            console.log($databases);
+            console.log($modules);
+
+            var $submitbutton = $(this).button('loading');
+
+            var $resultDiv = $('#result');
+            $resultDiv.fadeOut('slow');
+
+            var $search = $(this).data("search");
+
+            $.get("DisplayScripts/getTimetable.php", {"databases": $databases, "modules": $modules, "search": $search})
+                .done(function (result) {
+                    $resultDiv.html(result);
+                    $resultDiv.fadeIn('slow');
+                    $submitbutton.button('reset');
+                })
+                .error(function (xhr, status, error) {
+                    $resultDiv.html("<h1>error: " + xhr.status + " " + xhr.statusText + "</h1><p>Please try again. If the problem is recurring, email usmaanmahmood@hotmail.com</p>");
+                    $resultDiv.fadeIn('slow');
+                    $submitbutton.button('reset');
+                });
+
+        });
+
+        $("#submitButton2").click(function () {
+            var $modules = $("#ModuleList").val();
+            var $databases = [];
+            $databases.push($("#DatabaseList").val());
+
+            console.log($databases);
+            console.log($modules);
+
+            var $submitbutton = $(this).button('loading');
+
+            var $resultDiv = $('#result');
+            $resultDiv.fadeOut('slow');
+
+            var $search = $(this).data("search");
+
+            $.get("DisplayScripts/getTimetable.php", {"databases": $databases, "modules": $modules, "search": $search})
+                .done(function (result) {
+                    $resultDiv.html(result);
+                    $resultDiv.fadeIn('slow');
+                    $submitbutton.button('reset');
+                })
+                .error(function (xhr, status, error) {
+                    $resultDiv.html("<h1>error: " + xhr.status + " " + xhr.statusText + "</h1><p>Please try again. If the problem is recurring, email usmaanmahmood@hotmail.com</p>");
+                    $resultDiv.fadeIn('slow');
+                    $submitbutton.button('reset');
+                });
+
+        });
+
+        $("#submitButton3").click(function () {
             var $modules = $("#ModuleList").val();
             var $databases = [];
             $databases.push($("#DatabaseList").val());
