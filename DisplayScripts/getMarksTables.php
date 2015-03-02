@@ -85,15 +85,19 @@ $result = $arcadeClient->execute($query);
                 $percentages = $table->getPercMark();
                 $names = $table->getEmailNames();
                 $count = count($percentages);
+                $echoString = "";
                 foreach($percentages as $key => $percentage)
                 {
                     if ($key <= $count - 3) {
+
                         if (is_numeric($names[$key]))
-                            echo "Deadline" . $names[$key] . "," . $percentage . ",\n";
+                            $echoString = $echoString . "Deadline" . $names[$key] . "," . $percentage . ",\n";
                         else
-                            echo $names[$key] . "," . $percentage . ",\n";
+                            $echoString = $echoString . $names[$key] . "," . $percentage . ",\n";
                     }
                 }
+                $echoString = rtrim($echoString, ',');
+                echo $echoString;
                 ?>
             </pre>
 
