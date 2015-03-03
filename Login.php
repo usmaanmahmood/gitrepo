@@ -89,7 +89,7 @@
                 }
                 ?>
             </form>
-            <p>Not have an account yet? <a href="Register.php">Register easy &amp; quickly here!</a></p>
+            <p>Not registered? <a href="Register.php">Register easy &amp; quickly here!</a></p>
         </div>
 
         <div class="col-md-6">
