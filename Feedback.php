@@ -75,7 +75,7 @@
     </div>
     <h4 class="text-center"><abbr
             title="intuitive: using without conscious reasoning; instinctive.">Intuitiveness</abbr></h4>
-    <p class="lead">Please rate the intuitiveness of the old Java Arcade system and the new Web Arcade system on a scale from 1-10.</p>
+    <p class="text-center">Please rate the intuitiveness of the old Java Arcade system and the new Web Arcade system on a scale from 1-10.</p>
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
         <label class="col-md-4 control-label" for="radiosIntuitivenessJava">Java Arcade*<br/>
@@ -190,7 +190,7 @@
 
     <h4 class="text-center"><abbr title="presentation: the manner or style in which something is displayed.
 ">Presentation</abbr></h4>
-    <p class="lead">Please rate the presentation of the old Java Arcade system and the new Web Arcade system on a scale from 1-10.</p>
+    <p class="text-center">Please rate the presentation of the old Java Arcade system and the new Web Arcade system on a scale from 1-10.</p>
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
         <label class="col-md-4 control-label" for="radiosPresentationJava">Java Arcade*<br/>
