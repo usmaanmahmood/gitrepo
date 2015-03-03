@@ -27,7 +27,8 @@
         <label class="col-md-4 control-label" for="selectbasicYear">Year*</label>
 
         <div class="col-md-4">
-            <select id="selectbasicYear" name="selectbasicYear" class="form-control">
+            <select id="selectbasicYear" name="selectbasicYear" class="form-control" required>
+                <option value="" disabled selected>Please select</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -42,7 +43,8 @@
         <label class="col-md-4 control-label" for="selectbasicGUI">Website Area*</label>
 
         <div class="col-md-4">
-            <select id="selectbasicGUI" name="selectbasicGUI" class="form-control">
+            <select id="selectbasicGUI" name="selectbasicGUI" class="form-control" required>
+                <option value="" disabled selected>Please select</option>
                 <option value="Entire Website">Entire Website</option>
                 <option value="Attendance Summary">Attendance Summary</option>
                 <option value="Classic">Classic</option>
@@ -62,7 +64,8 @@
         <label class="col-md-4 control-label" for="selectbasicDevice">Device*</label>
 
         <div class="col-md-4">
-            <select id="selectbasicDevice" name="selectbasicDevice" class="form-control">
+            <select id="selectbasicDevice" name="selectbasicDevice" class="form-control" required>
+                <option value="" disabled selected>Please select</option>
                 <option value="Mobile Phone">Mobile Phone</option>
                 <option value="Tablet">Tablet</option>
                 <option value="Laptop">Laptop</option>
