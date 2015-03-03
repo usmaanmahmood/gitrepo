@@ -105,8 +105,7 @@
                     <input type="text" class="form-control" placeholder="Central Username" name="tempusername"
                            id="tempusername"
                            required
-                           autofocus maxlength=8
-                           value="mahmoou1">
+                           autofocus maxlength=8>
                 </div>
                 <div class="input-group input-group-lg">
                 <span class="input-group-addon">
@@ -114,7 +113,7 @@
                 </span>
                     <input type="password" class="form-control" placeholder="ARCADE Password" name="arcadepassword"
                            id="arcadepassword"
-                           required value="LQKUGRIRDE">
+                           required>
                 </div>
                 ARCADE password finder:<br/><pre>cat $HOME/.ARCADE/serverAuthentication</pre>
                 <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit"><span
