@@ -73,8 +73,7 @@
             </select>
         </div>
     </div>
-    <h4 class="text-center"><abbr
-            title="intuitive: using without conscious reasoning; instinctive.">Intuitiveness</abbr></h4>
+    <h4 class="text-center">Intuitiveness</h4>
     <p class="text-center">Please rate the <abbr title="intuitive: using without conscious reasoning; instinctive.">intuitiveness</abbr> of the old Java Arcade system vs the new Web Arcade system on a scale from 1-10.</p>
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
@@ -188,8 +187,7 @@
         </div>
     </div>
 
-    <h4 class="text-center"><abbr title="presentation: the manner or style in which something is displayed.
-">Presentation</abbr></h4>
+    <h4 class="text-center">Presentation</h4>
     <p class="text-center">Please rate the <abbr title="presentation: the manner or style in which something is displayed.">presentation</abbr> of the old Java Arcade system vs the new Web Arcade system on a scale from 1-10.</p>
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
