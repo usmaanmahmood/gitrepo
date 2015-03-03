@@ -24,7 +24,7 @@
     <legend class="text-center">Web Arcade Feedback Form</legend>
     <!-- Select Basic -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="selectbasicYear">Year</label>
+        <label class="col-md-4 control-label" for="selectbasicYear">Year*</label>
 
         <div class="col-md-4">
             <select id="selectbasicYear" name="selectbasicYear" class="form-control">
@@ -39,7 +39,7 @@
 
     <!-- Select Basic -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="selectbasicGUI">Website Area</label>
+        <label class="col-md-4 control-label" for="selectbasicGUI">Website Area*</label>
 
         <div class="col-md-4">
             <select id="selectbasicGUI" name="selectbasicGUI" class="form-control">
@@ -59,7 +59,7 @@
 
     <!-- Select Multiple -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="selectbasicDevice">Device</label>
+        <label class="col-md-4 control-label" for="selectbasicDevice">Device*</label>
 
         <div class="col-md-4">
             <select id="selectbasicDevice" name="selectbasicDevice" class="form-control">
@@ -74,7 +74,7 @@
             title="intuitive: using without conscious reasoning; instinctive.">Intuitiveness</abbr></h4>
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="radiosIntuitivenessJava">Java Arcade<br/>
+        <label class="col-md-4 control-label" for="radiosIntuitivenessJava">Java Arcade*<br/>
             <small>(1 worst - 10 best)</small>
         </label>
 
@@ -125,7 +125,7 @@
 
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="radiosIntuitivenessWeb">Web Arcade<br/>
+        <label class="col-md-4 control-label" for="radiosIntuitivenessWeb">Web Arcade*<br/>
             <small>(1 worst - 10 best)</small>
         </label>
 
@@ -188,7 +188,7 @@
 ">Presentation</abbr></h4>
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="radiosPresentationJava">Java Arcade<br/>
+        <label class="col-md-4 control-label" for="radiosPresentationJava">Java Arcade*<br/>
             <small>(1 worst - 10 best)</small>
         </label>
 
@@ -240,7 +240,7 @@
 
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="radiosPresentationWeb">Web Arcade<br/>
+        <label class="col-md-4 control-label" for="radiosPresentationWeb">Web Arcade*<br/>
             <small>(1 worst - 10 best)</small>
         </label>
 
