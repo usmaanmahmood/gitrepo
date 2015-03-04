@@ -357,14 +357,14 @@
                         data : postData,
                         success:function(result)
                         {
-                            $resultDiv.html(result);
+
                             $resultDiv.fadeIn('slow');
+                            $resultDiv.html(result);
                         },
                         error: function(xhr, status, error)
                         {
                             $resultDiv.html("<h1>error: " + xhr.status + " " + xhr.statusText + "</h1><p>Please try again. If the problem is recurring, email usmaanmahmood@hotmail.com</p>");
                             $resultDiv.fadeIn('slow');
-                            $submitbutton.button('reset');
                         }
                     });
                 e.preventDefault(); //STOP default action
