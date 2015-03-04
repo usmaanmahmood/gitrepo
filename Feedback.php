@@ -356,7 +356,7 @@
                         data : postData,
                         success:function(result)
                         {
-                            $resultDiv.html(result);
+                            $resultDiv.html(result).fadeOut('slow');
                             $resultDiv.fadeIn('slow');
                         },
                         error: function(xhr, status, error)
