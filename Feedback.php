@@ -326,7 +326,7 @@
     </form>
 
 
-    <div id="submissionmessage" class="hide"></div>
+    <div id="submissionmessage" class="text-center"></div>
 
     </div>
     </div>
@@ -357,8 +357,8 @@
                         data : postData,
                         success:function(result)
                         {
-                            $resultDiv.hide().fadeIn('slow');
                             $resultDiv.html(result);
+                            $resultDiv.show().fadeIn('slow');
                         },
                         error: function(xhr, status, error)
                         {
