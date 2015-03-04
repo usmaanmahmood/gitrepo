@@ -323,10 +323,11 @@
     </div>
 
     </fieldset>
+
+    <div id="submissionmessage" class="text-center"></div>
     </form>
 
 
-    <div id="submissionmessage" class="text-center"></div>
 
     </div>
     </div>
