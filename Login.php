@@ -56,14 +56,14 @@
                 </span>
                     <input type="text" class="form-control" placeholder="Central Username" name="username" id="username"
                            required
-                           autofocus maxlength=8>
+                           autofocus maxlength=8 value="mahmoou1">
                 </div>
                 <div class="input-group input-group-lg">
                 <span class="input-group-addon">
                     <span class="glyphicon glyphicon-lock"></span>
                 </span>
                     <input type="password" class="form-control" placeholder="Web Password" name="password" id="password"
-                           required>
+                           required value="webpassword">
                 </div>
                 <br/>
                 <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit"><span
