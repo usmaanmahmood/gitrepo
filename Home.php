@@ -4,7 +4,7 @@
         body {
             padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
         }
-        h2 {
+        h2, p {
             text-align: center;
         }
     </style>
