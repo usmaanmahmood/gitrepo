@@ -25,7 +25,7 @@
             </div>
             <div class="col-md-4">
                 <h2><span class="glyphicon glyphicon-stats"></span> Attendance Summary</h2>
-                <p>A pattern of your attendance summary. Use it to get a rough idea of your attendance.</p>
+                <p>A rough pattern of your attendance summary.</p>
                 <p><a class="btn btn-default btn-block" href="#" role="button">Go &raquo;</a></p>
             </div>
             <div class="col-md-4">
