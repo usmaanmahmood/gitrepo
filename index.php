@@ -15,8 +15,8 @@
     <div class="container">
         <div class="jumbotron">
             <h1>Web ARCADE</h1>
-            <p>...</p>
-            <p><a class="btn btn-primary btn-lg" href="Classic.php" role="button">Learn more</a></p>
+            <p>A web version of </p>
+            <p><a class="btn btn-primary btn-lg" href="Classic.php" role="button">Get started</a></p>
         </div>
 
     </div>
