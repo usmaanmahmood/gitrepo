@@ -16,7 +16,7 @@
         <!-- Example row of columns -->
         <div class="row">
             <div class="col-md-4">
-                <h2><span class="glyphicon glyphicon-heart"></span>Classic ARCADE</h2>
+                <h2><span class="glyphicon glyphicon-heart"></span> Classic ARCADE</h2>
                 <p>A web replica of the existing JAVA GUI.</p>
                 <p><a class="btn btn-default" href="#" role="button">Go &raquo;</a></p>
             </div>
