@@ -24,7 +24,7 @@
 <!--                <li><a href="#">marks-table: fails only</a></li>-->
 <!--                <li><a href="#">marks-table: ignore empty columns</a></li>-->
 
-                <li><a href="FullStory.php"><span class="glyphicon glyphicon-list-alt"></span> Fullstory</a></li>
+                <li><a href="FullStory.php"><span class="glyphicon glyphicon-list-alt"></span> Full Story</a></li>
 <!--                <li><a href="#">full-story: chronological</a></li>-->
 
                 <li class="dropdown" id="other-dropdown">
