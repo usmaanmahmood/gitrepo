@@ -17,8 +17,8 @@
     <div class="row">
         <div class="col-lg-12">
             <h2 class="text-center">The good stuff is up here^</h2>
-            <h1>Classic ARCADE <small>A complete replica of the JAVA ARCADE Client!</small></h1>
-
+            <h1>Classic ARCADE</h1>
+            <p class="lead">A complete replica of the JAVA ARCADE Client!</p>
             <div class="row">
                 <div class="col-md-4">
                     <p class="text-center">Command</p>
