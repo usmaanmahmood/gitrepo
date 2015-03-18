@@ -40,12 +40,12 @@
             </div>
             <div class="col-md-4">
                 <h2>Full Story</h2>
-                <p>A web replica of the existing JAVA GUI.</p>
+                <p>Includes specific attendance details, deadlines, marks. The whole lot.</p>
                 <p><a class="btn btn-default" href="#" role="button">Go &raquo;</a></p>
             </div>
             <div class="col-md-4">
                 <h2>Registration Details</h2>
-                <p>A web replica of the existing JAVA GUI.</p>
+                <p>All of the data ARCADE stores about you.</p>
                 <p><a class="btn btn-default" href="#" role="button">Go &raquo;</a></p>
             </div>
         </div>
@@ -53,17 +53,17 @@
         <div class="row">
             <div class="col-md-4">
                 <h2>Expected</h2>
-                <p>A web replica of the existing JAVA GUI.</p>
+                <p>A list of what is expected from you.</p>
                 <p><a class="btn btn-default" href="#" role="button">Go &raquo;</a></p>
             </div>
             <div class="col-md-4">
                 <h2>Excuses</h2>
-                <p>A web replica of the existing JAVA GUI.</p>
+                <p>A list of your excuses.</p>
                 <p><a class="btn btn-default" href="#" role="button">Go &raquo;</a></p>
             </div>
             <div class="col-md-4">
                 <h2>Irregularities</h2>
-                <p>A web replica of the existing JAVA GUI.</p>
+                <p>A list of your irregularities.</p>
                 <p><a class="btn btn-default" href="#" role="button">Go &raquo;</a></p>
             </div>
         </div>
