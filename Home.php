@@ -18,35 +18,35 @@
             <div class="col-md-4">
                 <h2>Classic ARCADE</h2>
                 <p>A web replica of the existing JAVA GUI.</p>
-                <p><a class="btn btn-default" href="#" role="button">View &raquo;</a></p>
+                <p><a class="btn btn-default" href="#" role="button">Go &raquo;</a></p>
             </div>
             <div class="col-md-4">
                 <h2>Attendance Summary</h2>
-                <p>A web replica of the existing JAVA GUI.</p>
-                <p><a class="btn btn-default" href="#" role="button">View &raquo;</a></p>
+                <p>A pattern of your attendance summary. Use it to get a rough idea of your attendance.</p>
+                <p><a class="btn btn-default" href="#" role="button">Go &raquo;</a></p>
             </div>
             <div class="col-md-4">
                 <h2>Timetable</h2>
-                <p>A web replica of the existing JAVA GUI.</p>
-                <p><a class="btn btn-default" href="#" role="button">View &raquo;</a></p>
+                <p>Check your University timetable online.</p>
+                <p><a class="btn btn-default" href="#" role="button">Go &raquo;</a></p>
             </div>
         </div>
         <!-- Example row of columns -->
         <div class="row">
             <div class="col-md-4">
                 <h2>Marks Tables</h2>
-                <p>A web replica of the existing JAVA GUI.</p>
-                <p><a class="btn btn-default" href="#" role="button">View &raquo;</a></p>
+                <p>View/print your marks across modules. Includes tables and graphs!</p>
+                <p><a class="btn btn-default" href="#" role="button">Go &raquo;</a></p>
             </div>
             <div class="col-md-4">
                 <h2>Full Story</h2>
                 <p>A web replica of the existing JAVA GUI.</p>
-                <p><a class="btn btn-default" href="#" role="button">View &raquo;</a></p>
+                <p><a class="btn btn-default" href="#" role="button">Go &raquo;</a></p>
             </div>
             <div class="col-md-4">
                 <h2>Registration Details</h2>
                 <p>A web replica of the existing JAVA GUI.</p>
-                <p><a class="btn btn-default" href="#" role="button">View &raquo;</a></p>
+                <p><a class="btn btn-default" href="#" role="button">Go &raquo;</a></p>
             </div>
         </div>
         <!-- Example row of columns -->
@@ -54,17 +54,17 @@
             <div class="col-md-4">
                 <h2>Expected</h2>
                 <p>A web replica of the existing JAVA GUI.</p>
-                <p><a class="btn btn-default" href="#" role="button">View &raquo;</a></p>
+                <p><a class="btn btn-default" href="#" role="button">Go &raquo;</a></p>
             </div>
             <div class="col-md-4">
                 <h2>Excuses</h2>
                 <p>A web replica of the existing JAVA GUI.</p>
-                <p><a class="btn btn-default" href="#" role="button">View &raquo;</a></p>
+                <p><a class="btn btn-default" href="#" role="button">Go &raquo;</a></p>
             </div>
             <div class="col-md-4">
                 <h2>Irregularities</h2>
                 <p>A web replica of the existing JAVA GUI.</p>
-                <p><a class="btn btn-default" href="#" role="button">View &raquo;</a></p>
+                <p><a class="btn btn-default" href="#" role="button">Go &raquo;</a></p>
             </div>
         </div>
     </div>
