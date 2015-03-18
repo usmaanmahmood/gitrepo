@@ -13,7 +13,8 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="Classic.php"><span class="glyphicon glyphicon-home"></span> Classic</a></li>
+                <li><a href="Home.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                <li><a href="Classic.php"><span class="glyphicon glyphicon-heart"></span> Classic</a></li>
                 <li><a href="Attendance-Summary.php"><span class="glyphicon glyphicon-stats"></span> Attendance Summary</a></li>
 <!--                <li><a href="#">display-picture</a></li>-->
 <!--                <li><a href="#">time-table: remaining</a></li>-->
