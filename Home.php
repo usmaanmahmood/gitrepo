@@ -9,7 +9,6 @@
 
 <body>
 
-<?php include("template-nav.php"); ?>
 
     <!-- Page Content -->
     <div class="container">
