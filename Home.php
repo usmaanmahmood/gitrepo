@@ -48,7 +48,7 @@
             </div>
             <div class="col-md-4">
                 <h2><span class="glyphicon glyphicon-education"></span> Registration Details</h2>
-                <p>All of the data ARCADE stores about you, in one place.</p>
+                <p>All of the data ARCADE stores about you,<br />in one place.</p>
                 <p><a class="btn btn-default btn-block" href="#" role="button">Go &raquo;</a></p>
             </div>
         </div>
