@@ -19,6 +19,7 @@
             <p><a class="btn btn-primary btn-lg" href="Classic.php" role="button">Get started!</a></p>
         </div>
     <p class="lead">What is this?</p>
+    <p>The existing JAVA ARCADE app has it's problems, as we all know. This is my solution.</p>
     <p>Web ARCADE is my Third Year Project for my final year here in the School of Computer Science at the University of Manchester.</p>
     </div>
     <!-- /.container -->
