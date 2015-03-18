@@ -15,10 +15,11 @@
     <div class="container">
         <div class="jumbotron">
             <h1>Web ARCADE</h1>
-            <p>The new and improved ARCADE web app. Tested on all modern devices.</p>
+            <p>The new and improved ARCADE web app.</p>
             <p><a class="btn btn-primary btn-lg" href="Classic.php" role="button">Get started!</a></p>
         </div>
-
+    <p class="lead">What is this?</p>
+    <p>Web ARCADE is my Third Year Project for my final year here in the School of Computer Science at the University of Manchester.</p>
     </div>
     <!-- /.container -->
 
