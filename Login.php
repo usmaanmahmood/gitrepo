@@ -46,6 +46,7 @@
 <body>
 
     <div class="container text-center">
+        <h1>Web ARCADE</h1>
         <div class="col-md-6">
             <form class="form-signin" role="form" method="post" action="LoginCheck.php">
                 <h1 class="form-signin-heading">Main login</h1>
