@@ -4,5 +4,5 @@
 session_start();
 $_SESSION["username"] = $_POST['tempusername'];;
 $_SESSION["arcadepassword"] = $_POST['arcadepassword'];
-header("location:Classic.php");
+header("location:Home.php");
 ?>
