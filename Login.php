@@ -67,6 +67,8 @@
                            required>
                 </div>
                 <br/>
+                <span>This is not your central univeristy password. If this is your first time, you must register or use the temporary login.</span>
+                <br/>
                 <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit"><span
                         class="glyphicon glyphicon-log-in"></span> Log in
                 </button>
