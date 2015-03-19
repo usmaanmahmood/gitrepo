@@ -74,7 +74,7 @@
                maxlength=8>
         <input type="password" class="form-control" placeholder="Web App Password" name="webpassword" required>
         <input type="password" class="form-control" placeholder="ARCADE Password" name="arcadepassword" required>ARCADE password finder:<br/><pre>cat $HOME/.ARCADE/serverAuthentication</pre>
-        <span>If the inputs are incorrect, the system will not work.</span>
+        <span>If your inputs are incorrect, the system will not work.</span>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
     </form>
     <?php
