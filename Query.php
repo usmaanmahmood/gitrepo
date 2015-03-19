@@ -19,10 +19,10 @@ class Query
     public function __construct($inCommand, $inPlainResult)
     {
         $this->command = $inCommand;
-        $this->databaseList = [];
-        $this->groupList = [];
-        $this->studentList = [];
-        $this->moduleList = [];
+        $this->databaseList = array();
+        $this->groupList = array();
+        $this->studentList = array();
+        $this->moduleList = array();
         $this->plainResult = $inPlainResult;
     }
 
@@ -35,25 +35,25 @@ class Query
     // they all need arrays to be passed in or fail
     public function addDatabases($inList)
     {
-        if (empty($inList)) $inList = [];
+        if (empty($inList)) $inList = array();
         $this->databaseList = array_merge($this->databaseList, $inList);
     }
 
     public function addGroups($inList)
     {
-        if (empty($inList)) $inList = [];
+        if (empty($inList)) $inList = array();
         $this->groupList = array_merge($this->groupList, $inList);
     }
 
     public function addStudents($inList)
     {
-        if (empty($inList)) $inList = [];
+        if (empty($inList)) $inList = array();
         $this->studentList = array_merge($this->studentList, $inList);
     }
 
     public function addModules($inList)
     {
-        if (empty($inList)) $inList = [];
+        if (empty($inList)) $inList = array();
         $this->moduleList = array_merge($this->moduleList, $inList);
     }
 
