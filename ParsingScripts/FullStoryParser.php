@@ -178,6 +178,8 @@ class FullStoryParser // extends Parser
             preg_match("/\w+,\w+\s\(\w+\)\n\s+Group\s\-\/(\S+)\n.*?module\s(.*)\n\n\n.*\n.*\n.*\n.*\n((?:(?:.*)\n)*?)\n((?:(?:.*)\n)*)(?:.*)/", $moduleString, $match);
             array_shift($match); // remove first which is the whole thing
             $module = new FullStoryModule();
+            if (empty($match[1]))
+                continue;
             $module->setModuleName($match[1]);
             $module->setRawSession($match[2]);
             $sessionSplit = preg_split("/\n\n\n/", $match[3]);
