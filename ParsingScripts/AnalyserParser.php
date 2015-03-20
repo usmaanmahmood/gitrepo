@@ -17,9 +17,8 @@ class AnalyserParser // extends Parser
         // do the same for marks-table
 
         // set up lists
-        $arcadeClient = new ARCADEClient();
-        $query = new Query("profile", 0);
-//        $arcadeProfile = $arcadeClient->execute($query);
+
+//
 //        $twoDArray = $arcadeProfile->getTwoDimensionalArray();
 //
 //        var_dump($twoDArray);
@@ -27,7 +26,9 @@ class AnalyserParser // extends Parser
 
         foreach($inModuleList as $module)
         {
-
+            $arcadeClient = new ARCADEClient();
+            $query = new Query("attendance-summary", 0);
+            $queryResult = $arcadeClient->execute($query);
         }
 
 //        $result = new AnalyserResult();
