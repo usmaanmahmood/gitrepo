@@ -50,7 +50,7 @@ class AnalyserParser // extends Parser
 
             if (!empty($tableList[0])) {
                 $marksArray = $tableList[0]->getMarks();
-
+                $moduleResult->setTotalMark($marksArray[count($marksArray)-2]);
                 var_dump($marksArray);
             }
 
