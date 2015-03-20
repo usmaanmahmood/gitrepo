@@ -15,7 +15,6 @@
 $analyserParser = new AnalyserParser();
 
 $twoDArray = $arcadeProfile->getTwoDimensionalArray();
-//var_dump($twoDArray);
 
 $applicableModuleList = array();
 
@@ -45,7 +44,7 @@ $moduleList = $result->getModuleList();
             <?php
             foreach($moduleList as $module)
             {
-                continue;
+//                continue;
                 echo "<tr>";
                 echo "<td>" . $module->getModuleId() . "</td>";
                 echo "<td>" . $module->getAttendancePercentage() . "</td>";
