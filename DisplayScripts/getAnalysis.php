@@ -28,8 +28,6 @@ $result = $analyserParser->parse($_GET["databases"], $applicableModuleList);
 $moduleList = $result->getModuleList();
 
 ?>
-<?php foreach ($result->getDatabaseList() as $database) {
-    ?>
     <table class="table table-striped table-hover table-bordered table-condensed">
         <tr>
             <th><h4>Module</h4></th>
@@ -48,5 +46,3 @@ $moduleList = $result->getModuleList();
         }
         ?>
     </table>
-
-<?php } ?>
