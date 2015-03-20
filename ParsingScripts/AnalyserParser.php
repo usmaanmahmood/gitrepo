@@ -23,7 +23,7 @@ class AnalyserParser // extends Parser
 //        $twoDArray = $arcadeProfile->getTwoDimensionalArray();
 //
 //        var_dump($twoDArray);
-        var_dump($inDatabaseID);
+//        var_dump($inDatabaseID);
 
 //        $result = new AnalyserResult();
 //        return $result;
@@ -32,13 +32,3 @@ class AnalyserParser // extends Parser
 
 
 }
-
-
-
-// all below this line is temp for testing purposes only
-//include("../ARCADEClient.php");
-//include("Result.php");
-
-//$parser = new AnalyserParser();
-//$result = $parser->parse('12-13-2X');
-//var_dump($result);
