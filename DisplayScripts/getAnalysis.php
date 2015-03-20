@@ -13,7 +13,7 @@ $analyserParser = new AnalyserParser();
 $twoDArray = $arcadeProfile->getTwoDimensionalArray();
 
 $applicableModuleList = array();
-echo $_GET["databases"];
+echo $_GET["databases"][0];
 foreach($twoDArray as $oneDArray)
 {
     if ($oneDArray[0] == $_GET["databases"])
