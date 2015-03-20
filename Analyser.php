@@ -12,23 +12,6 @@
 <?php include("template-nav.php");
 
 
-//$analyserParser = new AnalyserParser();
-//
-//$twoDArray = $arcadeProfile->getTwoDimensionalArray();
-//
-//$applicableModuleList = array();
-//
-//foreach($twoDArray as $oneDArray)
-//{
-//    if ($oneDArray[0] == "12-13-2")
-//    {
-//        array_push($applicableModuleList, $oneDArray[4]);
-//    }
-//}
-//
-//$result = $analyserParser->parse("12-13-2", $applicableModuleList);
-//
-//$moduleList = $result->getModuleList();
 
 ?>
 
