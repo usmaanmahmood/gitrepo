@@ -23,7 +23,7 @@ class AnalyserParser // extends Parser
 //        $twoDArray = $arcadeProfile->getTwoDimensionalArray();
 //
 //        var_dump($twoDArray);
-//        var_dump($inDatabaseID);
+        var_dump($inDatabaseID);
 
 //        $result = new AnalyserResult();
 //        return $result;
