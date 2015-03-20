@@ -20,7 +20,10 @@ $twoDArray = $arcadeProfile->getTwoDimensionalArray();
 
 foreach($twoDArray as $oneDArray)
 {
-    echo $oneDArray[0];
+    if ($oneDArray[0] == "12-13-2")
+    {
+        echo $oneDArray[1];
+    }
 }
 
 //$result = $analyserParser->parse("12-13-2", array("21111E", "22712L"));
