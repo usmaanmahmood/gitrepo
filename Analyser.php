@@ -17,16 +17,18 @@ $analyserParser = new AnalyserParser();
 $twoDArray = $arcadeProfile->getTwoDimensionalArray();
 //var_dump($twoDArray);
 
+$applicableModuleList = array();
 
 foreach($twoDArray as $oneDArray)
 {
     if ($oneDArray[0] == "12-13-2")
     {
-        echo $oneDArray[4] . "<br/>";
+//        echo $oneDArray[4] . "<br/>";
+        array_push($applicableModuleList, $oneDArray[4]);
     }
 }
 
-//$result = $analyserParser->parse("12-13-2", array("21111E", "22712L"));
+$result = $analyserParser->parse("12-13-2", $applicableModuleList);
 
 $moduleList = $result->getModuleList();
 
