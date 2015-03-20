@@ -1,17 +1,41 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: mmapxum2
- * Date: 19/03/15
- * Time: 14:38
- */
+<?php include "template-head.php" ?>
+    <title>Registration Details | ARCADE</title>
+    <style>
+        body {
+            padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        }
+    </style>
+    </head>
 
-// for selected database
+<body>
 
-// for each module in list
+<?php include("template-nav.php");
 
-// run attendance-summary query with that db and module selected
+$arcadeClient = new ARCADEClient();
+$query = new Query("analyser", 0); // command, plainTextWanted
 
-// extract the attendance percentage into the analyser result object
+$query->addDatabases("12-13-2");
+$result = $arcadeClient->execute($query);
 
-// do the same for marks-table
+
+
+
+?>
+
+    <!-- Page Content -->
+    <div class="container">
+
+
+    </div>
+    <!-- /.container -->
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function () {
+
+
+        // } document ready in template end
+
+<?php include("template-end.php"); ?>
