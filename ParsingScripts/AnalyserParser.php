@@ -17,13 +17,13 @@ class AnalyserParser // extends Parser
         // do the same for marks-table
 
         // set up lists
-        $arcadeClient = new ARCADEClient();
-        $query = new Query("profile", 0);
-        $arcadeProfile = $arcadeClient->execute($query);
-        $twoDArray = $arcadeProfile->getTwoDimensionalArray();
-
-        var_dump($twoDArray);
-
+//        $arcadeClient = new ARCADEClient();
+//        $query = new Query("profile", 0);
+//        $arcadeProfile = $arcadeClient->execute($query);
+//        $twoDArray = $arcadeProfile->getTwoDimensionalArray();
+//
+//        var_dump($twoDArray);
+        var_dump($inDatabaseID);
 
 //        $result = new AnalyserResult();
 //        return $result;
