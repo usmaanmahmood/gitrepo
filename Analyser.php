@@ -15,7 +15,13 @@
 $analyserParser = new AnalyserParser();
 
 $twoDArray = $arcadeProfile->getTwoDimensionalArray();
-var_dump($twoDArray);
+//var_dump($twoDArray);
+
+
+foreach($twoDArray as $oneDArray)
+{
+    echo $oneDArray[0];
+}
 
 //$result = $analyserParser->parse("12-13-2", array("21111E", "22712L"));
 
