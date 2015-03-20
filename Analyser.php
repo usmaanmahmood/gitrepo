@@ -85,6 +85,12 @@ $moduleList = $result->getModuleList();
 $(document).ready(function () {
 
     $("#ModuleList option").hide();
+
+
+    // for this page
+    $("#modulessearchsection").hide() // hide module search for this
+    $("#listitemthree").hide() // hide module search for this
+    $("#listitemtwo").html("2. Choose your search!"); // hide module search for this
         // } document ready in template end
 
 <?php include("template-end.php"); ?>
