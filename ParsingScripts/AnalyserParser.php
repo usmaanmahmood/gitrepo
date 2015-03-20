@@ -37,6 +37,22 @@ class AnalyserParser // extends Parser
             $moduleResult->setModuleId($module);
             $moduleResult->setAttendancePercentage($dbList[0]->getPercentage());
             $moduleResult->setAttendancePattern($dbList[0]->getAttendancePattern());
+
+            $query = new Query("marks-table: all", 0);
+            $query->addDatabase($inDatabaseID);
+            $query->addModule($module);
+            $queryResult = $arcadeClient->execute($query);
+            $dbList = $queryResult->getDatabaseList();
+
+            $tableList = $dbList[0]->getTableList();
+
+            $marksArray = $tableList[0]->getMarks();
+
+            var_dump($marksArray);
+
+
+
+
             $result->addModule($moduleResult);
         }
 
