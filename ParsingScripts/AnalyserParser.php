@@ -6,6 +6,8 @@ class AnalyserParser // extends Parser
 {
     public function parse($inDatabaseID, $inModuleList)
     {
+        error_reporting(0);
+
         // for selected database
 
         // for each module in list
