@@ -53,7 +53,8 @@ class AttendanceSummaryParser // extends Parser
 
         // get the database name
         preg_match("/(Database\s+(\S+))/", $inString, $matches);
-        $rawDbName = $matches[1];
+        if (!empty($matches[1]))
+            $rawDbName = $matches[1];
 
         $database->setDatabaseName($rawDbName);
         preg_match("/(\d+)-(\d+)-(\d)(.*)/", $rawDbName, $rawDbNameMatches);
