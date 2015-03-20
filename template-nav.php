@@ -58,8 +58,8 @@
                         <li><a href="#" class="change-style-menu-item" rel="yeti"> Yeti</a></li>
                     </ol>
                 </li>
-                <li><a href="Analyser.php"><span class="glyphicon glyphicon-check"></span> Analyser</a></li>
-                <li><a href="Feedback.php"><span class="glyphicon glyphicon-book"></span> Feedback</a></li>
+                <li><a href="Analyser.php"><span class="glyphicon glyphicon-book"></span> Analyser</a></li>
+                <li><a href="Feedback.php"><span class="glyphicon glyphicon-check"></span> Feedback</a></li>
                 <li><a href="Logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
             </ul>
         </div>
