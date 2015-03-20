@@ -35,6 +35,7 @@ $moduleList = $result->getModuleList();
 
     <!-- Page Content -->
     <div class="container">
+        <h1>Analayser<small>Warning: can take an extended period of time (up to 3 minutes) to analyse your data.</small></h1>
         <table class="table table-striped table-hover table-bordered table-condensed">
             <tr>
                 <th><h4>Module</h4></th>
