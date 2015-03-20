@@ -18,14 +18,15 @@ class AnalyserParser // extends Parser
 
         // set up lists
 
-//
-//        $twoDArray = $arcadeProfile->getTwoDimensionalArray();
-//
-//        var_dump($twoDArray);
-        var_dump($inDatabaseID, $inModuleList);
+
+        $result = new AnalyserResult();
+
+//        var_dump($inDatabaseID, $inModuleList);
 
         foreach($inModuleList as $module)
         {
+            $moduleResult = new AnalyserModule();
+
             $arcadeClient = new ARCADEClient();
             $query = new Query("attendance-summary", 0);
             $query->addDatabase($inDatabaseID);
@@ -34,10 +35,13 @@ class AnalyserParser // extends Parser
             $dbList = $queryResult->getDatabaseList();
 
             var_dump($dbList[0]->getPercentage());
+            $moduleResult->setModuleId($module);
+            $moduleResult->setAttendancePercentage($dbList[0]->getPercentage());
+            $moduleResult->setAttendancePattern($dbList[0]->getAttendancePattern());
+            $result->addModule($moduleResult);
         }
 
-//        $result = new AnalyserResult();
-//        return $result;
+        var_dump($result);
     }
 
 }
