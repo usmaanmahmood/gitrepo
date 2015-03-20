@@ -11,11 +11,12 @@
 
 <?php include("template-nav.php");
 
-$arcadeClient = new ARCADEClient();
-$query = new Query("analyser", 0); // command, plainTextWanted
 
-$query->addDatabase("12-13-2");
-$result = $arcadeClient->execute($query);
+$analyserParser = new AnalyserParser();
+
+$result = $analyserParser->parse("12-13-2", array("21111E", "22712L"));
+
+var_dump($result);
 
 
 

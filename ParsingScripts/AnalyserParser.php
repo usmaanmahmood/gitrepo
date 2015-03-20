@@ -4,7 +4,7 @@
 
 class AnalyserParser // extends Parser
 {
-    public function parse($inDatabaseID)
+    public function parse($inDatabaseID, $inModuleList)
     {
         // for selected database
 
@@ -23,12 +23,10 @@ class AnalyserParser // extends Parser
 //        $twoDArray = $arcadeProfile->getTwoDimensionalArray();
 //
 //        var_dump($twoDArray);
-        var_dump($inDatabaseID);
+        var_dump($inDatabaseID, $inModuleList);
 
 //        $result = new AnalyserResult();
 //        return $result;
     }
-
-
 
 }

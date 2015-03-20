@@ -107,7 +107,7 @@ class ARCADEClient
                 $this->parser = new TimetableParser();
                 break;
             case "analyser":
-                $this->parser = new AnalyserParser($arcadeProfile->getTwoDimensionalArray());
+                $this->parser = new AnalyserParser();
                 break;
             case "":
                 return "ARCADE client error: No Query sent through";
