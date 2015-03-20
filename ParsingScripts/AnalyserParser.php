@@ -50,9 +50,10 @@ class AnalyserParser // extends Parser
 
             if (!empty($tableList[0])) {
                 $marksArray = $tableList[0]->getMarks();
+
+                var_dump($marksArray);
             }
 
-            var_dump($marksArray);
 
 
 
