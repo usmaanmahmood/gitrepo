@@ -18,7 +18,7 @@ foreach($twoDArray as $oneDArray)
 {
     if ($oneDArray[0] == $_GET["databases"])
     {
-//        echo $oneDArray[4] . "<br/>";
+        echo $oneDArray[4] . "<br/>";
         array_push($applicableModuleList, $oneDArray[4]);
     }
 }

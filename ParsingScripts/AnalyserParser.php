@@ -8,18 +8,6 @@ class AnalyserParser // extends Parser
     {
         error_reporting(0);
 
-        // for selected database
-
-        // for each module in list
-
-        // run attendance-summary query with that db and module selected - get the value out of the result object
-
-        // extract the attendance percentage into the analyser result object
-
-        // do the same for marks-table
-
-        // set up lists
-
 
         $result = new AnalyserResult();
 
@@ -54,9 +42,6 @@ class AnalyserParser // extends Parser
                 $marksArray = $tableList[0]->getMarks();
                 $moduleResult->setTotalMark($marksArray[count($marksArray)-2]);
             }
-
-
-
 
 
             $result->addModule($moduleResult);
