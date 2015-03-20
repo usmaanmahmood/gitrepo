@@ -106,6 +106,9 @@ class ARCADEClient
             case "time-table: with extensions":
                 $this->parser = new TimetableParser();
                 break;
+            case "analyser":
+                $this->parser = new AnalyserParser();
+                break;
             case "":
                 return "ARCADE client error: No Query sent through";
                 break;
