@@ -36,7 +36,7 @@ class AnalyserParser // extends Parser
 
 
 // all below this line is temp for testing purposes only
-include("../ARCADEClient.php");
+//include("../ARCADEClient.php");
 //include("Result.php");
 
 //$parser = new AnalyserParser();
