@@ -16,15 +16,29 @@ $analyserParser = new AnalyserParser();
 
 $result = $analyserParser->parse("12-13-2", array("21111E", "22712L"));
 
-var_dump($result);
-
-
-
+$moduleList = $result->getModuleList();
 
 ?>
 
     <!-- Page Content -->
     <div class="container">
+        <table class="table table-striped table-hover table-bordered table-condensed">
+            <tr>
+                <th><h4>Module</h4></th>
+                <th><h4>Attendance %</h4></th>
+                <th><h4>Total Mark</h4></th>
+            </tr>
+            <tr>
+                <?php
+                foreach($moduleList as $module)
+                {
+                    echo "<td>" . $module->getModuleId() . "</td>";
+                    echo "<td>" . $module->getAttendancePercentage() . "</td>";
+                    echo "<td>" . $module->getTotalMark() . "</td>";
+                }
+                ?>
+            </tr>
+        </table>
 
 
     </div>
