@@ -14,7 +14,7 @@
 $arcadeClient = new ARCADEClient();
 $query = new Query("analyser", 0); // command, plainTextWanted
 
-$query->addDatabases("12-13-2");
+$query->addDatabase("12-13-2");
 $result = $arcadeClient->execute($query);
 
 
