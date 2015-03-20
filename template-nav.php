@@ -13,7 +13,7 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="Home.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                <li><a href="Home.php"><span class="glyphicon glyphicon-home navbar-brand"></span></a></li>
                 <li><a href="Classic.php"><span class="glyphicon glyphicon-heart"></span> Classic</a></li>
                 <li><a href="Attendance-Summary.php"><span class="glyphicon glyphicon-stats"></span> Attendance</a></li>
 <!--                <li><a href="#">display-picture</a></li>-->
@@ -59,7 +59,7 @@
                     </ol>
                 </li>
                 <li><a href="Analyser.php"><span class="glyphicon glyphicon-check"></span> Analyser</a></li>
-                <li><a href="Feedback.php"><span class="glyphicon glyphicon-check"></span> Feedback</a></li>
+                <li><a href="Feedback.php"><span class="glyphicon glyphicon-book"></span> Feedback</a></li>
                 <li><a href="Logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
             </ul>
         </div>

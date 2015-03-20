@@ -13,12 +13,10 @@ $analyserParser = new AnalyserParser();
 $twoDArray = $arcadeProfile->getTwoDimensionalArray();
 
 $applicableModuleList = array();
-echo $_GET["databases"][0];
 foreach($twoDArray as $oneDArray)
 {
     if ($oneDArray[0] == $_GET["databases"][0])
     {
-        echo $oneDArray[4] . "<br/>";
         array_push($applicableModuleList, $oneDArray[4]);
     }
 }
@@ -31,8 +29,8 @@ $moduleList = $result->getModuleList();
     <table class="table table-striped table-hover table-bordered table-condensed">
         <tr>
             <th><h4>Module</h4></th>
-            <th><h4>Attendance %</h4></th>
             <th><h4>Total Mark</h4></th>
+            <th><h4>Attendance %</h4></th>
         </tr>
         <?php
         foreach($moduleList as $module)
