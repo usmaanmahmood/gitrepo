@@ -44,9 +44,13 @@ class AnalyserParser // extends Parser
             $queryResult = $arcadeClient->execute($query);
             $dbList = $queryResult->getDatabaseList();
 
-            $tableList = $dbList[0]->getTableList();
+            if (!empty($dbList[0])) {
+                $tableList = $dbList[0]->getTableList();
+            }
 
-            $marksArray = $tableList[0]->getMarks();
+            if (!empty($tableList[0])) {
+                $marksArray = $tableList[0]->getMarks();
+            }
 
             var_dump($marksArray);
 
