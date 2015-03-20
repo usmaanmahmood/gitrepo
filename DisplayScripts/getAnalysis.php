@@ -16,14 +16,14 @@ $applicableModuleList = array();
 echo $_GET["databases"][0];
 foreach($twoDArray as $oneDArray)
 {
-    if ($oneDArray[0] == $_GET["databases"])
+    if ($oneDArray[0] == $_GET["databases"][0])
     {
         echo $oneDArray[4] . "<br/>";
         array_push($applicableModuleList, $oneDArray[4]);
     }
 }
 
-$result = $analyserParser->parse($_GET["databases"], $applicableModuleList);
+$result = $analyserParser->parse($_GET["databases"][0], $applicableModuleList);
 
 $moduleList = $result->getModuleList();
 
