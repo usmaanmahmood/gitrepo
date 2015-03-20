@@ -51,6 +51,11 @@ class Query
         $this->studentList = array_merge($this->studentList, $inList);
     }
 
+    public function addModule($inModule)
+    {
+        array_push($this->moduleList, $inModule);
+    }
+
     public function addModules($inList)
     {
         if (empty($inList)) $inList = array();

@@ -28,6 +28,8 @@ class AnalyserParser // extends Parser
         {
             $arcadeClient = new ARCADEClient();
             $query = new Query("attendance-summary", 0);
+            $query->addDatabase($inDatabaseID);
+            $query->addModule($module);
             $queryResult = $arcadeClient->execute($query);
             var_dump($queryResult);
         }
