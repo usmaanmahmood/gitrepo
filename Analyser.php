@@ -35,26 +35,44 @@ $moduleList = $result->getModuleList();
 
     <!-- Page Content -->
     <div class="container">
-        <h1>Analayser <small>Warning: can take an extended period of time (up to 3 minutes) to analyse your data.</small></h1>
+        <h1>Analyser <small>Warning: can take an extended period of time (up to 3 minutes) to analyse your data.</small></h1>
         <p>Where values are missing, it means they are not stored on the ARCADE server.</p>
-        <table class="table table-striped table-hover table-bordered table-condensed">
-            <tr>
-                <th><h4>Module</h4></th>
-                <th><h4>Attendance %</h4></th>
-                <th><h4>Total Mark</h4></th>
-            </tr>
-            <?php
-            foreach($moduleList as $module)
-            {
+
+        <div class="row">
+            <div class="col-md-3">
+                <?php include("SearchBarDatabaseModule.php"); ?>
+            </div>
+
+            <div class="col-md-9">
+                <div id="result">
+
+                    <table class="table table-striped table-hover table-bordered table-condensed">
+                        <tr>
+                            <th><h4>Module</h4></th>
+                            <th><h4>Attendance %</h4></th>
+                            <th><h4>Total Mark</h4></th>
+                        </tr>
+                        <?php
+                        foreach($moduleList as $module)
+                        {
 //                continue;
-                echo "<tr>";
-                echo "<td>" . $module->getModuleId() . "</td>";
-                echo "<td>" . $module->getAttendancePercentage() . "</td>";
-                echo "<td>" . $module->getTotalMark() . "</td>";
-                echo "</tr>";
-            }
-            ?>
-        </table>
+                            echo "<tr>";
+                            echo "<td>" . $module->getModuleId() . "</td>";
+                            echo "<td>" . $module->getAttendancePercentage() . "</td>";
+                            echo "<td>" . $module->getTotalMark() . "</td>";
+                            echo "</tr>";
+                        }
+                        ?>
+                    </table>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+
 
 
     </div>
@@ -66,7 +84,7 @@ $moduleList = $result->getModuleList();
 <script>
 $(document).ready(function () {
 
-
+    $("#ModuleList option").hide();
         // } document ready in template end
 
 <?php include("template-end.php"); ?>
