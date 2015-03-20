@@ -31,6 +31,7 @@ $moduleList = $result->getModuleList();
             <?php
             foreach($moduleList as $module)
             {
+                continue;
                 echo "<tr>";
                 echo "<td>" . $module->getModuleId() . "</td>";
                 echo "<td>" . $module->getAttendancePercentage() . "</td>";
