@@ -34,14 +34,13 @@ class AnalyserParser // extends Parser
             $queryResult = $arcadeClient->execute($query);
             $dbList = $queryResult->getDatabaseList();
 
-            var_dump($dbList[0]->getPercentage());
             $moduleResult->setModuleId($module);
             $moduleResult->setAttendancePercentage($dbList[0]->getPercentage());
             $moduleResult->setAttendancePattern($dbList[0]->getAttendancePattern());
             $result->addModule($moduleResult);
         }
 
-        var_dump($result);
+        return $result;
     }
 
 }
