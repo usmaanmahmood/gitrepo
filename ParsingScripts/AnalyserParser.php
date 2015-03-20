@@ -31,7 +31,7 @@ class AnalyserParser // extends Parser
             $query->addDatabase($inDatabaseID);
             $query->addModule($module);
             $queryResult = $arcadeClient->execute($query);
-            var_dump($queryResult->getPercentage());
+            var_dump($queryResult);
         }
 
 //        $result = new AnalyserResult();
