@@ -22,7 +22,7 @@ foreach($twoDArray as $oneDArray)
 {
     if ($oneDArray[0] == "12-13-2")
     {
-        echo $oneDArray[1];
+        echo $oneDArray[2];
     }
 }
 
