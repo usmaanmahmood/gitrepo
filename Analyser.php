@@ -17,8 +17,7 @@
 
     <!-- Page Content -->
     <div class="container">
-        <h1>Analyser <small>Warning: can take an extended period of time (up to 3 minutes) to analyse your data.</small></h1>
-        <p>Where values are missing, it means they are not stored on the ARCADE server.</p>
+
 
         <div class="row">
             <div class="col-md-3">
@@ -26,6 +25,8 @@
             </div>
 
             <div class="col-md-9">
+                <h1>Analyser <small>Warning: can take an extended period of time (up to 3 minutes) to analyse your data.</small></h1>
+                <p>Where values are missing, it means they are not stored on the ARCADE server.</p>
                 <div id="result">
 
 
