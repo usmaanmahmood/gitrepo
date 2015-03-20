@@ -28,16 +28,16 @@ $moduleList = $result->getModuleList();
                 <th><h4>Attendance %</h4></th>
                 <th><h4>Total Mark</h4></th>
             </tr>
-            <tr>
-                <?php
-                foreach($moduleList as $module)
-                {
-                    echo "<td>" . $module->getModuleId() . "</td>";
-                    echo "<td>" . $module->getAttendancePercentage() . "</td>";
-                    echo "<td>" . $module->getTotalMark() . "</td>";
-                }
-                ?>
-            </tr>
+            <?php
+            foreach($moduleList as $module)
+            {
+                echo "<tr>";
+                echo "<td>" . $module->getModuleId() . "</td>";
+                echo "<td>" . $module->getAttendancePercentage() . "</td>";
+                echo "<td>" . $module->getTotalMark() . "</td>";
+                echo "</tr>";
+            }
+            ?>
         </table>
 
 
